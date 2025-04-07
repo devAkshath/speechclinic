@@ -204,7 +204,7 @@ export default function Navbar() {
                 
                 <h2 className="font-bold my-4">About Us
                 </h2>
-                <p className="my-4">There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don&lsquo;t look even slightly believable.</p>
+                <p className="my-4">There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don&rsquo;t look even slightly believable.</p>
 
                 {/* Contact Info (For Mobile Sidebar) */}
                 <div className="space-y-2 mt-8">
