@@ -194,7 +194,7 @@ export default function Navbar() {
                 <button onClick={toggleWideMenu} aria-label="Close Menu" className="text-gray-800 text-xl absolute top-4 right-4"><FaTimes /></button>
                 <Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={200} height={200} priority />
                 <h2 className="font-bold my-4">About Us</h2>
-                <p className="my-4">There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don't look even slightly believable.</p>
+                <p className="my-4">There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don&apos;t look even slightly believable.</p>
                 <div className="space-y-2 mt-8">
                     <span className="flex items-center gap-3 text-gray-800"><FaEnvelope /> info@thespeechclinic.ae</span>
                     <span className="flex items-center gap-3 text-gray-800"><FaPhone /> +971-5088571468</span>
