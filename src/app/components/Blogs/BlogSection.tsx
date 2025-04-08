@@ -84,6 +84,7 @@ export default function Blogs() {
            <img
              src={card.image}
              alt={card.title}
+             
              className="rounded-[20px] mt-4 mb-4 w-full h-60 object-cover mx-auto block"
            />
            <h3 className="text-2xl font-semibold text-gray-800 text-left mb-2">

@@ -1,4 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export default function Gallery() {
   const images = [
@@ -46,22 +52,53 @@ export default function Gallery() {
       </h1>
 
       {/* Row of 3 Images */}
-      <div className="flex flex-wrap justify-center gap-6 mb-10">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="rounded-[30px] overflow-hidden shadow-md w-101 h-70 relative"
-          >
+      <>
+  {/* Desktop View (3 static images) */}
+  <div className="hidden md:flex flex-wrap justify-center gap-6 mb-10">
+    {images.map((src, index) => (
+      <div
+        key={index}
+        className="rounded-[30px] overflow-hidden shadow-md w-101 h-70 relative"
+      >
+        <Image
+          src={src}
+          alt={`gallery-${index}`}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+    ))}
+  </div>
+
+  {/* Mobile View (Swiper Slider with Autoplay) */}
+  <div className="md:hidden w-full mb-10 px-4">
+    <Swiper
+      modules={[Pagination, Autoplay]}
+      spaceBetween={20}
+      slidesPerView={1.1}
+      centeredSlides={true}
+      pagination={{ clickable: true }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+    >
+      {images.map((src, index) => (
+        <SwiperSlide key={index}>
+          <div className="rounded-[30px] overflow-hidden shadow-md h-70 relative w-full">
             <Image
               src={src}
-              alt={`gallery-${index}`}
+              alt={`gallery-slide-${index}`}
               layout="fill"
               objectFit="cover"
             />
           </div>
-        ))}
-      </div>
-
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</>
       {/* Features Row */}
       <div className="flex flex-wrap justify-center  gap-6">
         {features.map((feature, index) => (
@@ -97,7 +134,9 @@ export default function Gallery() {
         ))}
       </div>
       {/* New Section - Two Column Row */}
-      <div className="flex flex-wrap lg:flex-nowrap justify-center items-start mt-16 gap-100 px-4">
+      <div className="flex flex-col lg:flex-row justify-center items-start mt-16 gap-6 lg:gap-100 px-4">
+
+
         {/* Left Column */}
         <div className="max-w-md space-y-4 text-left">
           {/* Row 1: Label */}

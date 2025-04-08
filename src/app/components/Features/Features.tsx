@@ -21,19 +21,19 @@ export default function TherapyPromo() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex sm:flex-col md:flex-row items-start gap-4 text-left"
+                className="flex flex-col md:flex-row items-start gap-4 text-left    border-2  border-pink-400 rounded-[20px] md:border-0  md:rounded-[30%]  p-4 md:p-0"
               >
                 {/* Icon Section */}
-                <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center w-30 h-23">
+                <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center   w-18 h-18 md:w-30 md:h-23">
                   <img
                     src={feature.iconPath}
                     alt={feature.title}
-                  className="w-full h-full object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
                 {/* Text Section */}
-                <div>
+                <div className="flex flex-col gap-1">
                   <h3 className="text-xl font-medium text-gray-700 mb-1.5">
                     {feature.title}
                   </h3>
