@@ -1,79 +1,86 @@
-export default function Footer() {
-    return (
-      <footer className="relative bg-[#3F3243] text-white pt-24 pb-10">
-        {/* Background SVG */}
-        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-          <svg
-            className="relative block w-full h-[120px]"
-            viewBox="0 0 1440 320"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="#3F3243"
-              d="M0,160L48,154.7C96,149,192,139,288,138.7C384,139,480,149,576,144C672,139,768,117,864,106.7C960,96,1056,96,1152,96C1248,96,1344,96,1392,96L1440,96V320H0Z"
-            ></path>
-          </svg>
-        </div>
-  
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+
+const Footer = () => {
+  const Year = new Date().getFullYear();
+
+  return (
+    <footer className="relative bg-black text-white ">
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] bg-[#3F3243]">
+        {/* <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,
+              82.39-16.72,168.19-17.73,250.45-.39C823.78,31,
+              906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,
+              214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            className="relative block h-[100px] fill-[#3F3243]"
+          ></path>
+        </svg> */}
+
         {/* Footer Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left Section - Logo & Description */}
-          <div>
-            <h2 className="text-2xl font-bold">THE SPEECH CLINIC DUBAI</h2>
-            <p className="text-sm mt-4">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm">
+          {/* Column 1: Logo + Description + Copyright */}
+          <div className="space-y-12">
+            <img src="/speechclininclogoW.svg" alt="Speech Clinic Logo" className="w-60" />
+            <p>
               Speech Clinic offers specialized therapy services to enhance communication,
               learning, and daily life skills for children, fostering growth through expert care.
             </p>
-          </div>
-  
-          {/* Center Section - Links */}
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Company</h3>
-              <ul className="text-sm space-y-2">
-                <li><a href="#" className="hover:text-gray-400">About Us</a></li>
-                <li><a href="#" className="hover:text-gray-400">Contact Us</a></li>
-                <li><a href="#" className="hover:text-gray-400">Terms Of Service</a></li>
-                <li><a href="#" className="hover:text-gray-400">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Services</h3>
-              <ul className="text-sm space-y-2">
-                <li><a href="#" className="hover:text-gray-400">Speech Therapist</a></li>
-                <li><a href="#" className="hover:text-gray-400">Occupational Therapist</a></li>
-                <li><a href="#" className="hover:text-gray-400">Physio Therapist</a></li>
-                <li><a href="#" className="hover:text-gray-400">ABA Therapist</a></li>
-                <li><a href="#" className="hover:text-gray-400">School Readiness Program</a></li>
-                <li><a href="#" className="hover:text-gray-400">Feeding Therapy</a></li>
-              </ul>
-            </div>
-          </div>
-  
-          {/* Right Section - Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Get In Touch</h3>
-            <p className="text-sm">
-              Dubai Healthcare City, Building 47, Unit 301 & 302
+            <p className="opacity-80">
+              © Copyright {Year} The Speech Clinic. All Rights Reserved.
             </p>
-            <p className="text-sm mt-2">+971-508857146</p>
-            <p className="text-sm mt-2">info@thespeechclinic.ae</p>
-  
-            {/* Social Icons */}
-            <div className="flex mt-4 space-x-4">
-              <a href="#" className="hover:text-gray-400"><i className="fab fa-linkedin"></i></a>
-              <a href="#" className="hover:text-gray-400"><i className="fab fa-youtube"></i></a>
-              <a href="#" className="hover:text-gray-400"><i className="fab fa-instagram"></i></a>
-              <a href="#" className="hover:text-gray-400"><i className="fab fa-facebook"></i></a>
+          </div>
+
+          {/* Column 2 & 3: Links */}
+          <div className="col-span-1 lg:col-span-2 grid grid-cols-2 gap-0">
+            <div>
+              <h3 className="text-lg font-semibold mb-8">Company</h3>
+              <ul className="space-y-4">
+                <li><a href="#" className="hover:text-gray-400 font-light">About Us</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">Contact Us</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">Terms Of Service</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-8">Services</h3>
+              <ul className="space-y-4">
+                <li><a href="#" className="hover:text-gray-400 font-light">Speech Therapist</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">Occupational Therapist</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">Physio Therapist</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">ABA Therapist</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">School Readiness Program</a></li>
+                <li><a href="#" className="hover:text-gray-400 font-light">Feeding Therapy</a></li>
+              </ul>
             </div>
           </div>
+
+          {/* Column 4: Contact Info */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold mb-8">Get In Touch</h3>
+            <p>Dubai Healthcare City, Building 47, Unit 301 & 302</p>
+            <p>+971-508857146</p>
+            <p>info@thespeechclinic.ae</p>
+
+            {/* Uncomment to enable social icons */}
+            
+            <div className="flex mt-4 space-x-4 text-xl">
+              <a href="#" className="hover:text-gray-400"><FaLinkedinIn /></a>
+              <a href="#" className="hover:text-gray-400"><FaYoutube /></a>
+              <a href="#" className="hover:text-gray-400"><FaInstagram /></a>
+              <a href="#" className="hover:text-gray-400"><FaFacebook /></a>
+            </div> 
+           
+          </div>
         </div>
-  
-        {/* Copyright */}
-        <div className="relative z-10 text-center text-sm mt-10 opacity-70">
-          © Copyright 2025 The Speech Clinic. All Rights Reserved. Powered by Erratum Solutions
-        </div>
-      </footer>
-    );
-  }
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
   

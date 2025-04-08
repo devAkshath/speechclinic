@@ -14,7 +14,7 @@ import Blogs from "./components/Blogs/BlogSection";
 export default function Home() {
   
   return (
-    <div className="relative min-h-screen bg-white flex flex-col w-full">
+    <div className="relative min-h-screen bg-white flex flex-col w-full ">
 
 <header className="absolute top-0 w-full z-50 px-0 lg:px-40"> 
               <Navbar />
@@ -28,9 +28,7 @@ export default function Home() {
              <Testimonial/>
              <Blogs/>
       {/* Footer */}
-      <footer className="w-full mt-auto">
         <Footer />
-      </footer>
     </div>
   );
 }

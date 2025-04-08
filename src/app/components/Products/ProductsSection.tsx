@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Products() {
   return (
-    <section className="w-full px-6 py-12 ">
+    <section className="w-full px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Column: Image */}
         <div className="flex justify-center">
@@ -50,32 +50,45 @@ export default function Products() {
           </button>
         </div>
       </div>
-      <div className="mt-6 w-full flex justify-center px-55">
-        <div className="w-full  h-[190px] rounded-[40px] overflow-hidden relative flex">
-          {/* Left Section */}
-          <div className="w-1/3 bg-[#4A3B51] flex items-center justify-center text-white text-2xl font-medium text-center p-4 z-10">
-            <div>
-              Future
-              <br />
-              Events
-              <br />
-              Ahead
-            </div>
-          </div>
 
-          {/* Right Section with Gradient and Slant */}
-          <div className="w-2/3 relative flex items-center justify-center px-6">
-            {/* Background Gradient with Slant */}
-            <div className="absolute top-0 left-[-100px] w-[200%] h-full bg-gradient-to-tr from-[#512C96] to-[#EC008C] transform -skew-x-12 z-0 opacity-100%"></div>
+      {/* Centered Highlight Section */}
+      <div className="relative w-full max-w-7xl h-[160px] mt-10 mx-auto px-10">
+        {/* Background Gradient - Full Width */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#512C96] to-[#EC008C] rounded-[30px] z-0"></div>
 
-            {/* Text Content */}
-            <div className="relative z-10 text-white text-left pl-6">
-              <p className="text-4xl font-light">Be Part of Our Upcoming</p>
-              <p className="text-4xl font-bold mt-1">
-                Events and Make an Impact
-              </p>
-            </div>
+        {/* Top Left Foreground Container */}
+        <div
+          className="absolute top-0 left-0 w-2/6 h-full bg-[#4A3B51] z-10 flex items-center justify-center text-white"
+          style={{
+            borderBottomLeftRadius: "30px",
+            borderTopLeftRadius: "30px",
+            borderTopRightRadius: "100px",
+            borderBottomRightRadius: "0px",
+          }}
+        >
+          <div className="text-base sm:text-lg md:text-3xl font-semibold leading-tight text-center px-4">
+            Future
+            <br />
+            Events
+            <br />
+            Ahead
           </div>
+        </div>
+
+        {/* Right-Side Text on Gradient */}
+        <div
+          className={`
+    absolute text-white z-20 text-left
+    top-1/2 transform -translate-y-1/2
+    right-2 sm:right-4 md:right-90
+  `}
+        >
+          <p className="text-sm md:text-3xl font-light">
+            Be Part of Our Upcoming
+          </p>
+          <p className="text-sm md:text-3xl font-bold mt-1">
+            Events and Make an Impact
+          </p>
         </div>
       </div>
     </section>

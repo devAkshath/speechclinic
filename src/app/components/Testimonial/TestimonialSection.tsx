@@ -62,7 +62,7 @@ const Testimonial = () => {
 
       {/* === Bottom Slider Section === */}
       <div className="mt-16 w-full max-w-6xl">
-  <div className="relative">
+    <div className="relative">
     <div className="flex flex-col md:flex-row gap-4 w-full px-4">
       {testimonials.slice(0, 2).map((testimonial, idx) => (
         <div
@@ -71,17 +71,23 @@ const Testimonial = () => {
           style={{ borderColor: '#DA159B' }}
         >
           {/* Header */}
-          <div className="absolute top-0 left-0 h-[80px] w-full bg-gradient-to-r from-[#54169C] to-[#DA159B] flex items-center px-4 text-white text-lg font-semibold rounded-t-2xl">
-            <div>
-              {testimonial.name}
-              <div className="text-sm font-normal">{testimonial.designation}</div>
-            </div>
-            <div className="ml-auto flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-xl">★</span>
-              ))}
-            </div>
-          </div>
+          <div className="absolute top-0 left-0 h-[80px] w-full flex items-center justify-between px-0 text-white text-lg font-semibold">
+  {/* Gradient Header on Left */}
+  <div className="h-full w-3/4 bg-gradient-to-r from-[#54169C] to-[#DA159B] flex items-center px-4 rounded-br-[270px] rounded-tr-xl rounded-tl-4xl">
+    <div>
+      {testimonial.name}
+      <div className="text-sm font-light">{testimonial.designation}</div>
+    </div>
+  </div>
+
+  {/* Stars Outside on Right */}
+  <div className="text-yellow-400 text-xl flex items-center gap-1 px-5">
+    {[...Array(5)].map((_, i) => (
+      <span key={i}>★</span>
+    ))}
+  </div>
+</div>
+
           {/* Body */}
           <div className="mt-24 text-gray-600 text-sm">{testimonial.text}</div>
         </div>

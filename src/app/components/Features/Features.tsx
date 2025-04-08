@@ -2,7 +2,7 @@ import MasonryGrid from "../Features/mansoryimages";
 
 export default function TherapyPromo() {
   return (
-    <div className="bg-white text-gray-800 p-8 md:p-60">
+    <div className="bg-white text-gray-800 p-8 md:px-60">
       <div className="grid md:grid-cols-2 gap-10 items-start">
         {/* Left Column */}
         <div className="space-y-12">

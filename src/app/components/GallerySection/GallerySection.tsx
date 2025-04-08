@@ -113,14 +113,14 @@ export default function Gallery() {
           </div>
 
           {/* Row 2: Heading */}
-          <h2 className="text-3xl font-semibold text-gray-700">
+          <h2 className="text-4xl font-semibold text-gray-700 py-4">
             Fostering Communication
             <br />
             Through Meaningful Language
           </h2>
 
           {/* Row 3: Description */}
-          <p className="text-sm text-gray-400">
+          <p className="text-md text-gray-400 py-2">
             Our Gestalt Language Therapy focuses on supporting children who
             learn language in chunks, helping them progress toward meaningful,
             independent communication.
@@ -186,25 +186,30 @@ export default function Gallery() {
         </div>
 
         {/* Message Box */}
-        <div className="border-2 border-pink-400 rounded-3xl px-6 py-10 mx-auto space-y-4">
-          <h3 className="text-xl text-gray-700 font-medium">
+        <div className="relative border-2 border-pink-400 rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4">
+          {/* Top Overlay Text */}
+          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20 bg-white px-4 py-1 text-2xl sm:text-3xl md:text-4xl text-gray-700 font-medium whitespace-nowrap">
             Your Voice Matters
           </h3>
-          <h2 className="text-3xl md:text-4xl font-bold text-pink-600">
+
+          {/* Center Text */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 text-center">
             Let&apos;s Strengthen It Together!
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto text-center">
             Every voice deserves to be heard. Whether for therapy, guidance, or
             support, our specialists are here to help. Start the journey to
             confident communication today!
           </p>
 
-          {/* Button */}
-          <div className="flex justify-center gap-2 items-center mt-4">
-            <img src="/icons/whatsapp.png" alt="WhatsApp" className="w-6 h-6" />
-            <button className="bg-white border border-pink-400 text-pink-600 px-4 py-2 rounded-full shadow hover:bg-pink-50 transition font-medium">
-              Reach Out Now
-            </button>
+          {/* Bottom Overlay Button */}
+          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-10 bg-white px-4 py-1 rounded-full">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
+              <img src="/verified.png" alt="WhatsApp" className="w-8 h-8" />
+              <button className="bg-white border border-pink-400 text-pink-600 px-6 py-2 rounded-2xl shadow hover:bg-pink-50 transition font-medium whitespace-nowrap">
+                Reach Out Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
