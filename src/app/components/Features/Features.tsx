@@ -24,7 +24,7 @@ export default function TherapyPromo() {
                 className="flex flex-col md:flex-row items-start gap-4 text-left    border-2  border-pink-400 rounded-[20px] md:border-0  md:rounded-[30%]  p-4 md:p-0"
               >
                 {/* Icon Section */}
-                <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center   w-18 h-18 md:w-30 md:h-23">
+                <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center   w-22 h-22 md:w-33 md:h-26">
                   <img
                     src={feature.iconPath}
                     alt={feature.title}

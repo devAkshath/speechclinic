@@ -186,25 +186,25 @@ export default function Gallery() {
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">
           {/* Clients */}
           <div className="flex flex-1 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
-            <div className="bg-white p-2 rounded-2xl shadow mb-3 ">
-              <img src="/peopleicon.png" alt="Clients" className="w-15 h-15 " />
+            <div className="bg-white p-2 rounded-2xl  mb-0 ">
+              <img src="/peopleicon.svg" alt="Clients" className="w-15 h-15 " />
             </div>
-            <div className="text-3xl font-bold text-pink-600 flex items-center gap-1">
+            <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
               7320{" "}
-              <span className="text-3xl text-gray-600 font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
                 + Clients
               </span>
             </div>
           </div>
 
           {/* Staffs */}
-          <div className="flex flex-1 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
-            <div className="bg-white p-2 rounded-2xl shadow mb-3">
-              <img src="/groupicon.png" alt="Staffs" className="w-15   h-15" />
+          <div className="flex flex-1 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center gap-2">
+            <div className="bg-white p-2 rounded-2xl  mb-0 px">
+              <img src="/groupicon.svg" alt="Staffs" className="w-15   h-15" />
             </div>
-            <div className="inline-flex items-center gap-1 text-3xl font-bold text-pink-600 whitespace-nowrap">
+            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600 whitespace-nowrap ">
               1500{" "}
-              <span className="text-3xl text-gray-600 font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
                 + Staffs
               </span>
             </div>
@@ -212,12 +212,12 @@ export default function Gallery() {
 
           {/* Projects */}
           <div className="flex flex-1 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
-            <div className="bg-white p-2 rounded-2xl shadow mb-3">
-              <img src="/builbicon.png" alt="Projects" className="w-15 h-15" />
+            <div className="bg-white p-2 rounded-2xl  mb-0">
+              <img src="/builbicon.svg" alt="Projects" className="w-15 h-15" />
             </div>
-            <div className="text-3xl font-bold text-pink-600 flex items-center gap-1">
+            <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
               50{" "}
-              <span className="text-3xl text-gray-600 font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
                 + Projects
               </span>
             </div>
