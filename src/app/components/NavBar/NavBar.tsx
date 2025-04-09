@@ -175,7 +175,7 @@ export default function Navbar() {
                 <button onClick={toggleWideMenu} aria-label="Close Menu" className=" text-xl absolute top-4 my-4 right-4"><FaTimes /></button>
                 <Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={130} height={200} priority />
                 <h1 className="font-bold my-6 py-3 h-6 font-black font-extrabold text-lg">About Us</h1>
-                <p className="">There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don't look even slightly believable.</p>
+                <p className="">There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don&apos;t look even slightly believable.</p>
                 <div className="space-y-2 mt-8">
                     {/* <span className="flex items-center gap-3 text-gray-800"><FaEnvelope /> info@thespeechclinic.ae</span> */}
                     <span className="flex items-center gap-3 text-gray-800">
