@@ -9,11 +9,19 @@ export default function Hero() {
         <WaveBackground />
         <CurveLine />
       </div>
+      <div className="absolute top-10 left-0 w-full h-4/4 hidden sm:block">
+        <WaveBackground />
+        {/* <CurveLine /> */}
+      </div>
+      <div className="absolute top-10 left-0 w-full h-4/4 block sm:hidden z-10">
+        <WaveBackground />
+        <CurveLine />
+      </div>
 
       <div className="relative z-10 flex flex-col-reverse sm:flex-row items-center w-full max-w-7xl px-6 py-16">
         {/* Left Column */}
         <div className="flex-1 text-center sm:text-left text-gray-900 pt-8 sm:pt-12">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mt-16 text-gray-900 sm:text-white">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mt-16 text-gray-900 sm:text-white">
             Innovative Leaders In <br /> Paediatric Therapy
           </h1>
 
@@ -26,15 +34,15 @@ export default function Hero() {
             />
           </div>
 
-         
-<p className="text-base sm:text-lg font-light mb-6 sm:mb-7 font-sans text-justify sm:text-left text-gray-800 sm:text-white">
-            At The Speech Clinic, we provide specialized therapy 
+          <p className="text-base sm:text-lg font-light mb-6 sm:mb-7 font-sans text-justify sm:text-left text-gray-800 sm:text-white">
+            At The Speech Clinic, we provide specialized therapy
             <span className="hidden sm:inline">
               <br /> designed to improve speech and communication skills,
               <br /> tailored to children with autism.
             </span>
             <span className="sm:hidden">
-              designed to improve speech and communication skills, tailored to children with autism.
+              designed to improve speech and communication skills, tailored to
+              children with autism.
             </span>
           </p>
 
