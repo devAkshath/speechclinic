@@ -19,10 +19,11 @@ export default function Products() {
         <div className="space-y-4">
           {/* Row 1: Badge */}
           <div className="inline-flex items-center justify-start mb-3">
-            <img
+            <Image
               src="/verified.png"
               alt="Verified Icon"
               className="w-8 h-8 mr-2"
+              width={800} height={500}
             />
             <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
               Our Products
@@ -80,7 +81,7 @@ export default function Products() {
           className={`
     absolute text-white z-20 text-left
     top-1/2 transform -translate-y-1/2
-    right-2 sm:right-4 md:right-90
+    right-2 sm:right-4 md:right-20
   `}
         >
           <p className="text-sm md:text-3xl font-light">

@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
   const Year = new Date().getFullYear();
@@ -13,11 +14,8 @@ const Footer = () => {
           preserveAspectRatio="none"
         >
           <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,
-              82.39-16.72,168.19-17.73,250.45-.39C823.78,31,
-              906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,
-              214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="relative block h-[100px] fill-[#3F3243]"
+            d="M 745.24 709.57 c 739.03 107.57 1261.73 584.67 1167.49 1065.64 l -1472.73 -438.21 l -1160 -382 C -669.28 904.69 6.21 602 745.24 709.57"
+            className="relative block h-[100px] fill-white"
           ></path>
         </svg> */}
 
@@ -25,7 +23,7 @@ const Footer = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm">
           {/* Column 1: Logo + Description + Copyright */}
           <div className="space-y-12">
-            <img src="/speechclininclogoW.svg" alt="Speech Clinic Logo" className="w-60" />
+            <Image src="/speechclininclogoW.svg" alt="Speech Clinic Logo" className="w-60"   width={800} height={500} />
             <p>
               Speech Clinic offers specialized therapy services to enhance communication,
               learning, and daily life skills for children, fostering growth through expert care.

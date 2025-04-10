@@ -36,11 +36,12 @@ const MasonryGrid = () => {
         </div>
         
         {/* Experience Box */}
-        <div className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] text-white px-4 py-3 rounded-[20px] shadow-lg flex items-center justify-center">
-          <span className="text-3xl md:text-4xl font-bold">3+</span>
-          <span className="ml-2 text-base md:text-lg">Years of Experience</span>
-        </div>
-      </div>
+      {/* Experience Box */}
+<div className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] text-white px-4 py-3 rounded-[30px] shadow-lg flex items-center justify-center w-full sm:w-4/4 md:w-full lg:w-3/4 mx-auto">
+  <span className="text-3xl md:text-4xl font-bold">3+ </span>
+  <span className="ml-2 text-base md:text-lg">Years  of  Experience</span>
+</div>
+</div>
 
       {/* Second Column */}
       <div className="rounded-[30px] overflow-hidden">

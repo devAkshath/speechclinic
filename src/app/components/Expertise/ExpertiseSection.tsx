@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from "next/image";
+
 
 const progressItems = [
   { label: 'Speech Therapy Proficiency', value: 95 },
@@ -15,10 +17,11 @@ const Expertise = () => {
         <div className="space-y-6">
           {/* Row 1: Label */}
           <div className="inline-flex items-center justify-start mb-3">
-            <img
+            <Image
               src="/verified.png"
               alt="Verified Icon"
               className="w-8 h-8 mr-2"
+              width={800} height={500}
             />
             <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
               Our Expertise
@@ -64,9 +67,10 @@ const Expertise = () => {
 
         {/* Right Column */}
         <div className="flex justify-center md:justify-end">
-          <img
+          <Image
             src="/expertise.jpg"
             alt="Expertise"
+            width={800} height={500}
             className="w-full max-w-md h-[490px] rounded-[30px] object-cover"
           />
         </div>

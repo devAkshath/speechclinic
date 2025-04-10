@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useEffect, useState, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -53,12 +54,13 @@ export default function ServiceSection() {
     <div
       key={index}
       className="relative bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-[40px] shadow-lg flex flex-col items-center justify-center 
-      w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[260px] h-[320px] sm:h-[760px] lg:h-[280px] mx-auto p-6"
+      w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[260px] h-[320px] sm:h-[460px] lg:h-[280px] md:h-[200px] mx-auto p-6"
     >
-      <img
+      <Image
         src="/therapy-icon.svg"
         alt="Therapy"
         className="w-16 sm:w-20 h-16 sm:h-20 object-contain"
+        width={800} height={500}
       />
       <p className="text-white text-lg sm:text-xl font-light mt-2 text-center">
         Speech and Language Therapy
@@ -81,9 +83,9 @@ export default function ServiceSection() {
 
       <div className="mt-8 w-full flex justify-center">
         {isSmallScreen ? (
-          <div className="w-full max-w-[320px]">
+          <div className="w-full ">
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex">
+              <div className="flex gap-6  px-6">
                 {services.map((service, index) => (
                   <div
                     className="flex-[0_0_100%] flex justify-center"
@@ -108,7 +110,7 @@ export default function ServiceSection() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 md:grid-cols-4 gap-8">
             {services}
           </div>
         )}

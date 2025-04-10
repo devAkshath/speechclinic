@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useEffect, useState, useCallback } from "react";
 
 export default function Gallery() {
   const images = [
@@ -36,10 +35,43 @@ export default function Gallery() {
     },
   ];
 
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "center" },
+    [Autoplay({ delay: 2500 })]
+  );
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    setScrollSnaps(emblaApi.scrollSnapList());
+    emblaApi.on("select", onSelect);
+    onSelect();
+  }, [emblaApi, onSelect]);
+
   return (
     <div className="px-4 py-10 text-center font-sans">
       <div className="inline-flex items-center justify-center mb-3">
-        <img src="/verified.png" alt="Verified Icon" className="w-8 h-8 mr-1" />
+        <Image
+          src="/verified.png"
+          alt="Verified Icon"
+          className="w-8 h-8 mr-1"
+          width={800}
+          height={500}
+        />
         <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
           Our Gallery
         </div>
@@ -51,54 +83,59 @@ export default function Gallery() {
         Gallery
       </h1>
 
-      {/* Row of 3 Images */}
-      <>
-  {/* Desktop View (3 static images) */}
-  <div className="hidden md:flex flex-wrap justify-center gap-6 mb-10">
-    {images.map((src, index) => (
-      <div
-        key={index}
-        className="rounded-[30px] overflow-hidden shadow-md w-101 h-70 relative"
-      >
-        <Image
-          src={src}
-          alt={`gallery-${index}`}
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-    ))}
-  </div>
-
-  {/* Mobile View (Swiper Slider with Autoplay) */}
-  <div className="md:hidden w-full mb-10 px-4">
-    <Swiper
-      modules={[Pagination, Autoplay]}
-      spaceBetween={20}
-      slidesPerView={1.1}
-      centeredSlides={true}
-      pagination={{ clickable: true }}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      loop={true}
+      {/* Desktop View */}
+<div className="hidden md:grid md:grid-cols-3 gap-6 mb-10">
+  {images.map((src, index) => (
+    <div
+      key={index}
+      className="relative w-full h-0 pb-[75%] rounded-[20px] overflow-hidden shadow-md"
     >
-      {images.map((src, index) => (
-        <SwiperSlide key={index}>
-          <div className="rounded-[30px] overflow-hidden shadow-md h-70 relative w-full">
-            <Image
-              src={src}
-              alt={`gallery-slide-${index}`}
-              layout="fill"
-              objectFit="cover"
-            />
+      <Image
+        src={src}
+        alt={`gallery-${index}`}
+        fill
+        className="object-cover"
+        sizes="(min-width: 1024px) 33vw, 100vw"
+      />
+    </div>
+  ))}
+</div>
+
+
+      {/* Mobile View - Embla Carousel */}
+      <div className="md:hidden w-full mb-10 ">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-4  px-2">
+            {images.map((src, index) => (
+              <div
+                className="flex-[0_0_100%] relative h-72 rounded-[30px] overflow-hidden shadow-md"
+                key={index}
+              >
+                <Image
+                  src={src}
+                  alt={`gallery-slide-${index}`}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            ))}
           </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</>
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center gap-2 mt-4">
+          {scrollSnaps.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                index === selectedIndex ? "bg-[#DA159B]" : "bg-gray-300"
+              }`}
+              onClick={() => scrollTo(index)}
+            />
+          ))}
+        </div>
+      </div>
+  
       {/* Features Row */}
       <div className="flex flex-wrap justify-center  gap-6">
         {features.map((feature, index) => (
@@ -134,17 +171,18 @@ export default function Gallery() {
         ))}
       </div>
       {/* New Section - Two Column Row */}
-      <div className="flex flex-col lg:flex-row justify-center items-start mt-16 gap-6 lg:gap-100 px-4">
-
-
+      <div className="flex flex-col lg:flex-row justify-center items-start md:items-center mt-16 gap-6 lg:gap-100 px-4 text-left md:text-center">
         {/* Left Column */}
-        <div className="max-w-md space-y-4 text-left">
+        <div className="max-w-md space-y-4 lg:text-left">
+
           {/* Row 1: Label */}
-          <div className="inline-flex items-center mb-2">
-            <img
+          <div className="inline-flex items-center justify-center md:justify-center mb-2">
+            <Image
               src="/verified.png"
               alt="Verified Icon"
               className="w-8 h-8 mr-2"
+              width={800}
+              height={500}
             />
             <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
               Gestalt Language Therapy
@@ -181,13 +219,20 @@ export default function Gallery() {
           />
         </div>
       </div>
-      <div className="bg-white py-12 px-4 md:px-60 text-center space-y-10">
+
+      <div className="bg-white py-12 px-4 md:px-0 text-center space-y-10 lg:px-75">
         {/* Stats Row */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">
           {/* Clients */}
-          <div className="flex flex-1 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
-            <div className="bg-white p-2 rounded-2xl  mb-0 ">
-              <img src="/peopleicon.svg" alt="Clients" className="w-15 h-15 " />
+          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
+            <div className="bg-white p-2 rounded-2xl mb-0">
+              <Image
+                src="/peopleicon.svg"
+                alt="Clients"
+                className="w-15 h-15"
+                width={800}
+                height={500}
+              />
             </div>
             <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
               7320{" "}
@@ -198,11 +243,17 @@ export default function Gallery() {
           </div>
 
           {/* Staffs */}
-          <div className="flex flex-1 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center gap-2">
-            <div className="bg-white p-2 rounded-2xl  mb-0 px">
-              <img src="/groupicon.svg" alt="Staffs" className="w-15   h-15" />
+          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center gap-2">
+            <div className="bg-white p-2 rounded-2xl mb-0">
+              <Image
+                src="/groupicon.svg"
+                alt="Staffs"
+                className="w-15 h-15"
+                width={800}
+                height={500}
+              />
             </div>
-            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600 whitespace-nowrap ">
+            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600 whitespace-nowrap">
               1500{" "}
               <span className="text-2xl md:text-3xl text-gray-600 font-normal">
                 + Staffs
@@ -211,9 +262,15 @@ export default function Gallery() {
           </div>
 
           {/* Projects */}
-          <div className="flex flex-1 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
-            <div className="bg-white p-2 rounded-2xl  mb-0">
-              <img src="/builbicon.svg" alt="Projects" className="w-15 h-15" />
+          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
+            <div className="bg-white p-2 rounded-2xl mb-0">
+              <Image
+                src="/builbicon.svg"
+                alt="Projects"
+                className="w-15 h-15"
+                width={800}
+                height={500}
+              />
             </div>
             <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
               50{" "}
@@ -244,7 +301,13 @@ export default function Gallery() {
           {/* Bottom Overlay Button */}
           <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-10 bg-white px-4 py-1 rounded-full">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
-              <img src="/verified.png" alt="WhatsApp" className="w-8 h-8" />
+              <Image
+                src="/verified.png"
+                alt="WhatsApp"
+                className="w-8 h-8"
+                width={800}
+                height={500}
+              />
               <button className="bg-white border border-pink-400 text-pink-600 px-6 py-2 rounded-2xl shadow hover:bg-pink-50 transition font-medium whitespace-nowrap">
                 Reach Out Now
               </button>

@@ -1,5 +1,6 @@
 import WaveBackground from "../herocurve/wave";
 import CurveLine from "../herocurve/curveline";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -14,20 +15,22 @@ export default function Hero() {
         {/* <CurveLine /> */}
       </div>
       <div className="absolute top-10 left-0 w-full h-4/4 block sm:hidden z-10">
-        <WaveBackground />
+        {/* <WaveBackground />   */}
         <CurveLine />
       </div>
 
       <div className="relative z-10 flex flex-col-reverse sm:flex-row items-center w-full max-w-7xl px-6 py-16">
         {/* Left Column */}
-        <div className="flex-1 text-center sm:text-left text-gray-900 pt-8 sm:pt-12">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mt-16 text-gray-900 sm:text-white">
+        <div className="flex-1 text-center sm:text-left text-gray-900 pt-8 mr-2 sm:pt-12">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4  sm:mt-16 text-gray-900 sm:text-white">
             Innovative Leaders In <br /> Paediatric Therapy
           </h1>
 
           {/* Image for Small Screens */}
           <div className="w-full sm:hidden mb-6">
-            <img
+            <Image
+              width={800}
+              height={500}
               src="/image.jpg"
               alt="Therapy Image"
               className="w-full h-auto object-cover rounded-[30px] shadow-md"
@@ -58,7 +61,9 @@ export default function Hero() {
 
         {/* Image for Large Screens */}
         <div className="flex-1 hidden sm:block px-0 mb-8 sm:mb-0">
-          <img
+          <Image
+            width={800}
+            height={500}
             src="/image.jpg"
             alt="Therapy Image"
             className="w-full h-auto object-cover rounded-[50px] shadow-md"
