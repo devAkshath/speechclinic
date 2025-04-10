@@ -21,7 +21,16 @@ export default function ServiceSection() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  const therapyImages = [
+    "/aba-therapy.svg",
+    "/feeding-therapy.svg",
+    "/group-therapy.svg",
+    "/neuro-integrative-therapy.svg",
+    "/occupational-therapy.svg",
+    "/physical-therapy.svg",
+    "/school-readiness-program.svg",
+    "/speech-and-language-therapy.svg",
+  ];
   useEffect(() => {
     if (!emblaApi || !isSmallScreen) return;
 
@@ -50,23 +59,19 @@ export default function ServiceSection() {
     setScrollSnaps(emblaApi.scrollSnapList());
     onSelect();
   }, [emblaApi]);
-  const services = Array.from({ length: 8 }).map((_, index) => (
+  const services = therapyImages.map((src, index) => (
     <div
       key={index}
-      className="relative bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-[40px] shadow-lg flex flex-col items-center justify-center 
-      w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[260px] h-[320px] sm:h-[460px] lg:h-[280px] md:h-[200px] mx-auto p-6"
+      className="relative overflow-hidden bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-[40px] shadow-lg 
+      w-full max-w-[290px] h-[280px] mx-auto"
     >
       <Image
-        src="/therapy-icon.svg"
-        alt="Therapy"
-        className="w-16 sm:w-20 h-16 sm:h-20 object-contain"
-        width={800} height={500}
+        src={src}
+        alt={`Therapy ${index}`}
+        width={260}
+        height={280}
+        className="object-cover w-full h-full"
       />
-      <p className="text-white text-lg sm:text-xl font-light mt-2 text-center">
-        Speech and Language Therapy
-      </p>
-
-      {/* Hover overlay removed */}
     </div>
   ));
 
@@ -110,7 +115,7 @@ export default function ServiceSection() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-4 gap-6 mt-8 hidden md:grid">
             {services}
           </div>
         )}
