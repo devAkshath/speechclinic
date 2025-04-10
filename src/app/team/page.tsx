@@ -1,6 +1,5 @@
 import TeamCard from "../components/Teams/page";
 import Navbar from "../components/NavBar/NavBar";
-import WaveBackground from "../components/herocurve/wave";
 // import CurveLine from "./herocurve/curveline";
 import TeamWaveBackground from "../components/herocurve/TeamwaveBackground";
 import Footer from "../components/footer";
@@ -53,7 +52,7 @@ export default function TeamPage() {
           <div className="relative z-10 my-6 py-3">
             <h1 className="text-4xl md:text-5xl font-bold">Meet Our Experts</h1>
             <p className="mt-4 text-lg max-w-2xl mx-auto text-white/90">
-              Our dedicated team of certified professionals is here to support and guide your child's development journey.
+              Our dedicated team of certified professionals is here to support and guide your child&apos;s development journey.
             </p>
           </div>
           <h1 className="relative text-xl md:text-5xl font-bold py-6 my-5 inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[6px] after:w-1/2 after:-translate-x-1/2 after:rounded-full after:bg-pink-500 after:opacity-80" >
