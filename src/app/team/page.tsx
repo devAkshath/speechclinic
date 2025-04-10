@@ -1,73 +1,98 @@
-import TeamCard from "../components/Teams/page";
-import Navbar from "../components/NavBar/NavBar";
-import WaveBackground from "../components/herocurve/wave";
-// import CurveLine from "./herocurve/curveline";
-import TeamWaveBackground from "../components/herocurve/TeamwaveBackground";
-import Footer from "../components/footer";
+"use client";
+import { useState } from "react";
 
-const team = [
-  {
-    name: "Sana Shareef",
-    role: "Founder and CEO",
-    image: "/sana-shareef.jpg",
-    bio: `Masters in Pediatric Speech & Language Therapy
-Experience: 10 Years
-Certified in: PROMPT, OPT LEVEL 3, DIR FLOOR TIME, Feeding Therapy, etc.`,
+import Image from "next/image";
+interface TeamMember {
+    name: string;
+    role: string;
+    image: string;
+    bio: string;
+}
 
-  },
-  {
-    name: "Soumya Zachariah",
-    role: "Speech & Language Therapist",
-    image: "/sana-shareef.jpg",
-    bio: "Certified therapist with 5+ years experience in sensory speech therapy.",
-  },
-  {
-    name: "Soumya Zachariah",
-    role: "Speech & Language Therapist",
-    image: "/sana-shareef.jpg",
-    bio: "Certified therapist with 5+ years experience in sensory speech therapy.",
-  },
-  {
-    name: "Soumya Zachariah",
-    role: "Speech & Language Therapist",
-    image: "/sana-shareef.jpg",
-    bio: "Certified therapist with 5+ years experience in sensory speech therapy.",
-  },
+export default function TeamCard({ member }: { member: TeamMember }) {
+    const [open, setOpen] = useState(false);
 
-  
-  // Add more...
-];
+    return (
+        <>
+            <div
+                className="group relative bg-white text-center rounded-2xl p-4 space-y-2 shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer max-w-xs "
+                onClick={() => setOpen(true)}
+            >
+                <div className="rounded-xl overflow-hidden">
+                    <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={320}
+                        height={200}
+                        className="rounded-xl w-full h-auto object-cover"
+                    />
+                </div>
 
-export default function TeamPage() {
-  return (
-    <div className="bg-white min-h-screen">
-      <header className="absolute top-0 w-full z-50">
-        <Navbar />
-      </header>
-      <TeamWaveBackground />
+                <div className="p-2">
+                    <h2 className="text-base font-semibold">{member.name}</h2>
+                    <p className="text-purple-600 text-xs">{member.role}</p>
+                </div>
 
-      <main className="pt-10"> {/* Push content below fixed navbar */}
-        <div className="relative overflow-hidden py-32 my-6 px-6 text-center text-white">
-          {/* <TeamWaveBackground /> */}
+                {/* Bottom line on hover */}
+                <div className="absolute bottom-0 left-0 h-1 w-0 transition-all duration-300 group-hover:w-full bg-gradient-to-r from-[#DA159B] to-[#54169C]" />
+            </div>
+            {open && (
+            <div className="fixed inset-0 backdrop-blur-sm z-50 flex justify-center items-center px-4">
+  <div className="bg-white w-full max-w-4xl p-6 rounded-2xl relative overflow-y-auto max-h-[90vh] shadow-xl">
+    
+    {/* Close Button */}
+    <button
+      className="absolute top-4 right-4 text-3xl font-bold text-purple-600 hover:text-purple-800"
+      onClick={() => setOpen(false)}
+    >
+      ×
+    </button>
 
-          <div className="relative z-10 my-6 py-3">
-            <h1 className="text-4xl md:text-5xl font-bold">Meet Our Experts</h1>
-            <p className="mt-4 text-lg max-w-2xl mx-auto text-white/90">
-              Our dedicated team of certified professionals is here to support and guide your child's development journey.
-            </p>
-          </div>
-          <h1 className="relative text-xl md:text-5xl font-bold py-6 my-5 inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[6px] after:w-1/2 after:-translate-x-1/2 after:rounded-full after:bg-pink-500 after:opacity-80" >
-            Speech & Language Therapist
-          </h1>
+    <div className="flex flex-col md:flex-row gap-8 items-start">
+      
+      {/* Image */}
+      <div className="flex-shrink-0 mx-auto md:mx-0">
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={300}
+          height={400}
+          className="rounded-2xl shadow-md object-cover"
+        />
+      </div>
+
+      {/* Info */}
+      <div className="flex-1 text-gray-700 space-y-4">
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{member.name}</h2>
+          <p className="text-lg text-gray-600">{member.role}</p>
         </div>
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 md:px-40 relative -top-[150px] justify-items-center">
-  {team.map((member, index) => (
-    <TeamCard key={index} member={member} />
-  ))}
-</div>
-         {/* Footer */}
-         <Footer />
-      </main>
+
+        <div className="text-sm md:text-base space-y-1">
+          <p><span className="font-semibold text-purple-700">Masters in Pediatric Speech & Language Therapy</span></p>
+          <p><span className="font-semibold text-gray-800">Experience:</span> 10 Years</p>
+          <p className="font-semibold text-gray-800">Certified in:</p>
+          <ul className="list-disc list-inside pl-2 space-y-1 text-gray-700">
+            <li><span className="text-green-600 font-bold">✓</span> PROMPT</li>
+            <li><span className="text-green-600 font-bold">✓</span> OPT LEVEL 3</li>
+            <li><span className="text-green-600 font-bold">✓</span> Sensory Motor Apraxia of Speech</li>
+            <li><span className="text-green-600 font-bold">✓</span> DIR FLOOR TIME</li>
+            <li><span className="text-green-600 font-bold">✓</span> Feeding Therapy</li>
+            <li><span className="text-green-600 font-bold">✓</span> Assessor - ADOS 2</li>
+            <li><span className="text-green-600 font-bold">✓</span> Nuffield Dyspraxia Program</li>
+            <li><span className="text-green-600 font-bold">✓</span> Sensory Integration Level 2</li>
+            <li><span className="text-green-600 font-bold">✓</span> Certified Sensory Speech Therapist from Inside Out</li>
+            <li><span className="text-green-600 font-bold">✓</span> Trained in Gestalt Processing and Hanen Approach</li>
+            <li><span className="text-green-600 font-bold">✓</span> Therapeutic Listening & Movement Program</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  );
+  </div>
+</div>
+
+                
+            )}
+        </>
+    );
 }
