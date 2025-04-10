@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-white flex flex-col w-full ">
 
-<header className="absolute top-0 w-full z-50 px-0 "> 
+<header className="absolute top-0 w-full z-50 px-0 pl"> 
               <Navbar />
             </header>
              <Hero />

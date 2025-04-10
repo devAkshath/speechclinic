@@ -196,12 +196,12 @@ export default function Navbar() {
                     <li className="text-lg font-bold"><Link href="#">Contact</Link></li>
                 </ul>
 
-
+{/* 
                 <div
                     ref={mobileMenuRef}
                     className={` ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} 
         transition-transform duration-300 ease-in-out z-100`}
-                ></div>
+                ></div> */}
 
             </div>
             {/* Wide Menu Sidebar */}
@@ -241,15 +241,14 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div
-                ref={wideMenuRef}
-                className={` ${
-                    isWideMenuOpen ? "translate-x-0" : "translate-x-full"
-                } transition-transform duration-300 ease-in-out z-100`}
-            >
-                {/* wide menu content */}
-            </div>
+                    ref={wideMenuRef}
+                    className={` ${isWideMenuOpen ? "translate-x-0" : "translate-x-full"
+                        } transition-transform duration-300 ease-in-out z-100`}
+                >
+                    {/* wide menu content */}
+                </div>
 
-           
+
             </div>
 
             {/* Sticky Navbar for Desktop */}
