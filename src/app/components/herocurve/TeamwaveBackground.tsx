@@ -1,29 +1,7 @@
 export default function TeamWaveBackground() {
   return (
     <>
-      {/* SVG for small screens */}
-      {/* <div className="block md:hidden w-full">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 390 844"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-0 left-0 w-full h-full"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <linearGradient id="mobileGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="20%" stopColor="#54169C" />
-              <stop offset="80%" stopColor="#DA159B" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0,100 C100,300 300,100 390,300 L390,844 L0,844 Z"
-            fill="url(#mobileGradient)"
-            opacity="1"
-          />
-        </svg>
-      </div> */}
+   
 
 <div className="block md:hidden w-full">
 <svg
