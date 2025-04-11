@@ -5,8 +5,10 @@ const Footer = () => {
   const Year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-black text-white ">
+    <footer className="relative bg-white   text-white ">
+    
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] bg-[#3F3243]">
+    
         {/* <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

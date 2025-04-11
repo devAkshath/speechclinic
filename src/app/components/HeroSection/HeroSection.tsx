@@ -21,8 +21,8 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col-reverse sm:flex-row items-center w-full max-w-7xl px-6 py-16">
         {/* Left Column */}
-        <div className="flex-1 text-center sm:text-left text-gray-900 pt-8 mr-2 sm:pt-12">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-4  sm:mt-16 text-gray-900 sm:text-white">
+        <div className="flex-1 text-center sm:text-left text-gray-900 pt-8 mb-2 sm:pt-12">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4  sm:mt-16 text-gray-700 sm:text-white">
             Innovative Leaders In <br /> Paediatric Therapy
           </h1>
 

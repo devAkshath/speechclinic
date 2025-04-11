@@ -9,6 +9,7 @@ import ProductsSection from "./components/Products/ProductsSection";
 import Expertise from "./components/Expertise/ExpertiseSection";
 import Testimonial from "./components/Testimonial/TestimonialSection";
 import Blogs from "./components/Blogs/BlogSection";
+import Waves from "./components/herocurve/wavemotion";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
               <Navbar />
             </header>
              <Hero />
+             {/* <Waves/> */}
              <ServiceSection/>
              <TherapyPromo/>
              <Gallery/>
@@ -28,6 +30,7 @@ export default function Home() {
              <Testimonial/>
              <Blogs/>
       {/* Footer */}
+      <Waves/>
         <Footer />
     </div>
   );

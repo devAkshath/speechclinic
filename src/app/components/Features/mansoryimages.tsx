@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 const images = [
-  { src: '/3.jpg', alt: 'Kids Playing in Ball Pit' }, 
-  { src: '/Untitled desig2n.jpg', alt: 'Happy Child' }, 
-  { src: '/Untitled design3.png', alt: 'Physical Therapy Session' }, 
+  { src: "/3.jpg", alt: "Kids Playing in Ball Pit" },
+  { src: "/Untitled desig2n.jpg", alt: "Happy Child" },
+  { src: "/Untitled design3.png", alt: "Physical Therapy Session" },
 ];
 
 const MasonryGrid = () => {
@@ -13,6 +13,7 @@ const MasonryGrid = () => {
     <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-2 md:gap-6 md:p-6">
       {/* Full-width Ball Pit Image */}
       <div className="col-span-2 rounded-[40px] overflow-hidden">
+        
         <Image
           src={images[0].src}
           alt={images[0].alt}
@@ -31,17 +32,11 @@ const MasonryGrid = () => {
             alt={images[2].alt}
             width={700}
             height={500}
-            className="object-cover w-full h-[150px] sm:h-[200px] md:h-[300px] lg:h-[300px] rounded-[40px]"
+            className="object-cover w-full h-[150px] sm:h-[200px] md:h-[300px] lg:h-[400px] rounded-[40px]"
           />
         </div>
-        
-        {/* Experience Box */}
-      {/* Experience Box */}
-<div className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] text-white px-4 py-3 rounded-[30px] shadow-lg flex items-center justify-center w-full sm:w-4/4 md:w-full lg:w-3/4 mx-auto">
-  <span className="text-3xl md:text-4xl font-bold">3+ </span>
-  <span className="ml-2 text-base md:text-lg">Years  of  Experience</span>
-</div>
-</div>
+
+      </div>
 
       {/* Second Column */}
       <div className="rounded-[30px] overflow-hidden">
@@ -53,6 +48,16 @@ const MasonryGrid = () => {
           className="object-cover w-full h-[150px] sm:h-[200px] md:h-[300px] lg:h-[400px] rounded-[30px]"
         />
       </div>
+      <div className="col-span-2 rounded-[40px] overflow-hidden">
+              {/* Experience Box */}
+<div className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] text-white px-4 py-3 rounded-[30px] shadow-lg flex items-center justify-center m-auto ">
+          <span className="text-3xl md:text-4xl font-bold">3+ </span>
+          <span className="ml-2 text-base md:text-lg">Years of Experience</span>
+        </div>
+
+      </div>
+
+      
     </div>
   );
 };
