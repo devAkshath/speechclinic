@@ -21,7 +21,7 @@ export default function Hero() {
       {/* === MOBILE & TABLET LAYOUT (sm and below) === */}
       <div className="relative z-0 block sm:hidden w-full max-w-3xl px-4 py-10 text-center">
         {/* Heading */}
-        <h1 className="text-5xl sm:text-6xl md:text-6xl font-semibold leading-tight mt-10">
+        <h1 className="relative inline-block text-transparent text-5xl sm:text-6xl md:text-6xl font-medium leading-tight mt-30 stroke-text">
           Innovative Leaders In <br />
           Paediatric Therapy
         </h1>
@@ -41,6 +41,15 @@ export default function Hero() {
           </button>
         </div>
         
+ <Image
+
+width={800}
+height={500}
+src="/image.jpg"
+alt="Therapy Image"
+className="w-full h-auto object-cover rounded-[30px] shadow-md mb-6 mt-15"
+/>
+
       </div>
 
       {/* === DESKTOP LAYOUT (sm and above) === */}
@@ -81,13 +90,3 @@ export default function Hero() {
     </main>
   );
 }
-
-
-
-// <Image
-// width={800}
-// height={500}
-// src="/image.jpg"
-// alt="Therapy Image"
-// className="w-full h-auto object-cover rounded-[30px] shadow-md mb-6"
-// />

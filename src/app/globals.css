@@ -84,9 +84,9 @@ body {
   --color2: 221, 74, 255;
   --color3: 100, 220, 255;
   --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
-  --circle-size: 50%;
+  --color5: 180, 200, 50;
+  --color-interactive: 140, 120, 255;
+  --circle-size: 40%;
   --blending: hard-light;
 }
 
@@ -111,7 +111,7 @@ body, html {
 }
 
 .gradients-container {
-  filter: url(#goo) blur(15px);
+  filter: url(#goo) blur(23px);
   width: 100%;
   height: 100%;
 }
@@ -222,4 +222,15 @@ body, html {
   100% {
     transform: translateX(-50%) translateY(-10%);
   }
+}
+
+/* hero text */
+.stroke-text {
+  -webkit-text-stroke: 2px transparent;
+  background: linear-gradient(to bottom, #DA159B, #6B3FB0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke-color: currentColor;
 }
