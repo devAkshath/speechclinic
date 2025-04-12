@@ -104,7 +104,7 @@ export default function Navbar() {
                         <div className="flex justify-between items-center py-4">
                             <ul className="flex gap-8 text-white text-base">
                                 <li><Link href="./">Home</Link></li>
-                                <li><Link href="#">About</Link></li>
+                                <li><Link href="/about">About</Link></li>
 
                                 <li className="relative group">
                                     <button className="hover:text-purple-300">Our Products</button>
