@@ -72,7 +72,7 @@ export default function Blogs() {
   }, [emblaApi]);
 
   return (
-    <div className="py-14 px-0 md:px-0 bg-white text-center">
+    <div className="py-6 px-0 md:px-0 bg-white text-center">
       {/* Verified Label */}
       <div className="inline-flex items-center justify-center mb-3">
         <Image src="/verified.png" alt="Verified Icon" className="w-8 h-8 mr-1" width={100} height={100} />
@@ -83,7 +83,7 @@ export default function Blogs() {
 
       {/* Heading */}
       <h2 className="text-3xl font-semibold text-gray-700 leading-snug py-5">
-        Our Latest News & Blog
+        Our Latest News <br/> & Blog
       </h2>
 
       {/* Desktop Cards */}

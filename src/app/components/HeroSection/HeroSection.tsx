@@ -12,6 +12,12 @@ export default function Hero() {
         <WaveBackground />
         <CurveLine />
       </div>
+      <div className="absolute bottom-10 left-0 w-full h-full hidden sm:block">
+        <WaveBackground />
+      </div>
+      <div className="absolute top-0 left-0 w-full h-full  sm:block">
+        <WaveBackground />
+      </div>
 
       {/* Mobile Background */}
       <div className="absolute top-0 left-0 w-full h-full sm:hidden z-0">
@@ -19,7 +25,7 @@ export default function Hero() {
       </div>
 
       {/* === MOBILE & TABLET LAYOUT (sm and below) === */}
-      <div className="relative z-0 block sm:hidden w-full max-w-3xl px-4 py-10 text-center">
+      <div className="relative z-0 block sm:hidden w-full max-w-3xl px-2 py-10 text-center">
         {/* Heading */}
         <h1 className="relative inline-block text-transparent text-5xl sm:text-6xl md:text-6xl font-medium leading-tight mt-30 stroke-text">
           Innovative Leaders In <br />
@@ -40,16 +46,14 @@ export default function Hero() {
             Get In Touch
           </button>
         </div>
-        
- <Image
 
-width={800}
-height={500}
-src="/image.jpg"
-alt="Therapy Image"
-className="w-full h-auto object-cover rounded-[30px] shadow-md mb-6 mt-15"
-/>
-
+        <Image
+          width={800}
+          height={500}
+          src="/image.jpg"
+          alt="Therapy Image"
+          className="w-full h-auto object-cover rounded-[30px] shadow-md mb-6 mt-15"
+        />
       </div>
 
       {/* === DESKTOP LAYOUT (sm and above) === */}

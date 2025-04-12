@@ -84,28 +84,27 @@ export default function Gallery() {
       </h1>
 
       {/* Desktop View */}
-<div className="hidden md:grid md:grid-cols-3 gap-6 mb-10">
-  {images.map((src, index) => (
-    <div
-      key={index}
-      className="relative w-full h-0 pb-[75%] rounded-[20px] overflow-hidden shadow-md"
-    >
-      <Image
-        src={src}
-        alt={`gallery-${index}`}
-        fill
-        className="object-cover"
-        sizes="(min-width: 1024px) 33vw, 100vw"
-      />
-    </div>
-  ))}
-</div>
-
+      <div className="hidden md:grid md:grid-cols-3 gap-6 mb-10">
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className="relative w-full h-0 pb-[75%] rounded-[20px] overflow-hidden shadow-md"
+          >
+            <Image
+              src={src}
+              alt={`gallery-${index}`}
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 33vw, 100vw"
+            />
+          </div>
+        ))}
+      </div>
 
       {/* Mobile View - Embla Carousel */}
       <div className="md:hidden w-full mb-10 ">
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-4  px-2">
+          <div className="flex gap-6  px-4">
             {images.map((src, index) => (
               <div
                 className="flex-[0_0_100%] relative h-72 rounded-[30px] overflow-hidden shadow-md"
@@ -135,9 +134,9 @@ export default function Gallery() {
           ))}
         </div>
       </div>
-  
+
       {/* Features Row */}
-      <div className="flex flex-wrap justify-center  gap-6">
+      <div className="flex flex-wrap justify-center  gap-6 ">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -174,7 +173,6 @@ export default function Gallery() {
       <div className="flex flex-col lg:flex-row justify-center items-start md:items-center mt-16 gap-6 lg:gap-100 px-4 text-left md:text-center">
         {/* Left Column */}
         <div className="max-w-md space-y-4 lg:text-left">
-
           {/* Row 1: Label */}
           <div className="inline-flex items-center justify-center md:justify-center mb-2">
             <Image

@@ -19,7 +19,7 @@ export default function TherapyPromo() {
             </div>
 
             {/* Features Section */}
-            <div className="grid gap-8">
+            <div className="grid gap-8 sm:px-4 md:px-0 lg:px-0 px-4 ">
               {features.map((feature, index) => (
                 <div
                   key={index}

@@ -62,15 +62,15 @@ export default function ServiceSection() {
   const services = therapyImages.map((src, index) => (
     <div
       key={index}
-      className="relative overflow-hidden bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-[40px] shadow-lg 
-      w-full max-w-[290px] h-[280px] mx-auto"
+      className="relative overflow-hidden bg-white rounded-[40px] shadow-lg 
+      w-full max-w-[290px] h-[255px] mx-auto"
     >
       <Image
         src={src}
         alt={`Therapy ${index}`}
         width={260}
         height={280}
-        className="object-cover w-full h-full"
+        className="object-center w-full h-full"
       />
     </div>
   ));
@@ -90,7 +90,7 @@ export default function ServiceSection() {
         {isSmallScreen ? (
           <div className="w-full ">
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6  px-6">
+              <div className="flex gap-6  px-6 py-4">
                 {services.map((service, index) => (
                   <div
                     className="flex-[0_0_100%] flex justify-center"
