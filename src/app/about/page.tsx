@@ -1,6 +1,5 @@
 import Navbar from "../components/NavBar/NavBar";
 import TeamWaveBackground from "../components/herocurve/TeamwaveBackground";
-import Footer from "../components/footer";
 import TherapyPromo from "../components/Features/Features";
 
 export default function TeamPage() {
