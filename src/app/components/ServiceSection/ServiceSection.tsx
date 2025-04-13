@@ -1,8 +1,9 @@
 "use client";
-import Image from "next/image";
 
 import { useEffect, useState, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import ServiceCard from "./ServiceCards";
+import Image from "next/image";
 
 export default function ServiceSection() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -22,15 +23,19 @@ export default function ServiceSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   const therapyImages = [
-    "/aba-therapy.svg",
-    "/feeding-therapy.svg",
-    "/group-therapy.svg",
-    "/neuro-integrative-therapy.svg",
-    "/occupational-therapy.svg",
-    "/physical-therapy.svg",
-    "/school-readiness-program.svg",
-    "/speech-and-language-therapy.svg",
+    { src: "/aba-therapy.svg", title: "ABA Therapy" },
+    { src: "/feeding-therapy.svg", title: "Feeding Therapy" },
+    { src: "/group-therapy.svg", title: "Group Therapy" },
+    {
+      src: "/neuro-integrative-therapy.svg",
+      title: "Neuro Integrative\nTherapy",
+    },
+    { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" },
+    { src: "/physical-therapy.svg", title: "Physical Therapy" },
+    { src: "/school-readiness-program.svg", title: "School Readiness" },
+    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage" },
   ];
+
   useEffect(() => {
     if (!emblaApi || !isSmallScreen) return;
 
@@ -59,24 +64,30 @@ export default function ServiceSection() {
     setScrollSnaps(emblaApi.scrollSnapList());
     onSelect();
   }, [emblaApi]);
-  const services = therapyImages.map((src, index) => (
+  const services = therapyImages.map(({ src, title }, index) => (
     <div
       key={index}
-      className="relative overflow-hidden bg-white rounded-[40px] shadow-lg 
-      w-full max-w-[290px] h-[255px] mx-auto"
+      className="relative overflow-hidden bg-transparent rounded-[40px] shadow-white
+      w-full max-w-[254px] h-[285px]  mx-auto"
     >
-      <Image
-        src={src}
-        alt={`Therapy ${index}`}
-        width={260}
-        height={280}
-        className="object-center w-full h-full"
-      />
+      <ServiceCard imageSrc={src} title={title} />
     </div>
   ));
 
   return (
     <div className=" bg-white flex flex-col items-center justify-center p-6 sm:p-8">
+      <div className="inline-flex items-center justify-center mb-3">
+              <Image
+                src="/verified.png"
+                alt="Verified Icon"
+                className="w-8 h-8 mr-1"
+                width={800}
+                height={500}
+              />
+              <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+                Our Services
+              </div>
+            </div>
       <h2 className="text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2">
         We Believe Everyone Deserves
       </h2>
@@ -101,7 +112,6 @@ export default function ServiceSection() {
                 ))}
               </div>
             </div>
-
             <div className="flex justify-center mt-4 gap-2">
               {scrollSnaps.map((_, index) => (
                 <button
@@ -115,9 +125,7 @@ export default function ServiceSection() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-4 gap-6 mt-8 md:grid">
-            {services}
-          </div>
+          <div className="grid grid-cols-4 gap-6 mt-8 md:grid">{services}</div>
         )}
       </div>
     </div>
