@@ -9,7 +9,6 @@ import Expertise from "./components/Expertise/ExpertiseSection";
 import Testimonial from "./components/Testimonial/TestimonialSection";
 import Blogs from "./components/Blogs/BlogSection";
 import Waves from "./components/herocurve/wavemotion";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
@@ -18,7 +17,7 @@ export default function Home() {
         <Navbar />
       </header>
       <Hero />
-      <SpeedInsights />
+   
       {/* <Waves/> */}
       <ServiceSection />
       <TherapyPromo />
