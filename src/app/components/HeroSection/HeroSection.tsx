@@ -86,15 +86,38 @@ export default function Hero() {
             </button>
           </div>
 
-          <Image
-            width={800}
-            height={500}
-            src="/image.jpg"
-            alt="Therapy Image"
-            className="w-full h-auto object-cover rounded-[30px] shadow-md mb-6 mt-15"
-          />
+          <video
+  width={800}
+  height={500}
+  className="w-full h-auto object-cover rounded-[40px] shadow-md mb-6 mt-15"
+  controls
+  autoPlay
+  muted
+  loop
+>
+  <source src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
         </div>
       )}
+
+{/* 
+video
+            width={800}
+            height={500}
+            className="w-full h-auto object-cover rounded-[30px] shadow-md mb-6 mt-15"
+            controls
+            autoPlay
+            muted
+            loop
+          >
+            <source
+              src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video> */}
     </main>
   );
 }
