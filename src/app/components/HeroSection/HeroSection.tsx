@@ -7,7 +7,7 @@ import Image from "next/image";
 import GradientBackground from "../herocurve/blurgradient";
 
 export default function Hero() {
-  const isDesktop = useMediaQuery({ minWidth: 1024 }); 
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
     <main className="relative w-full min-h-screen flex items-center justify-center px-4">
@@ -87,22 +87,24 @@ export default function Hero() {
           </div>
 
           <video
-  width={800}
-  height={500}
-  className="w-full h-auto object-cover rounded-[40px] shadow-md mb-6 mt-15"
-  controls
-  autoPlay
-  muted
-  loop
->
-  <source src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+            width={800}
+            height={500}
+            className="w-full h-auto object-cover rounded-[40px] shadow-md mb-6 mt-15"
+            controls
+            autoPlay
+            muted
+            loop
+          >
+            <source
+              src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
       )}
 
-{/* 
+      {/* 
 video
             width={800}
             height={500}
