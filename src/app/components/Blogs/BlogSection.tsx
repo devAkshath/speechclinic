@@ -9,19 +9,19 @@ const blogCards = [
     title: "Significance of Early Intervention",
     content:
       "Early intervention is a concept that has transformed the lives of countless individuals and their families, especially when it comes to addressing developmental delays and disorders like Autism Spectrum Disorder (ASD). At The Speech Clinic Dubai, we emphasize identifying concerns at the earliest stage possible.",
-    image: "/galleryimage.jpg",
+    image: "/blogimage.jpg",
   },
   {
     title: "Understanding Speech Development",
     content:
       "Speech development milestones are important indicators of a child’s growth and communication skills. Delays can be an early sign of issues that need addressing, and recognizing them early helps in effective therapy and support.",
-    image: "/galleryimage.jpg",
+    image: "/blogimage2.jpg",
   },
   {
     title: "Role of Parents in Therapy",
     content:
       "Parental involvement plays a crucial role in the success of therapy and the child’s overall progress. The commitment, encouragement, and interaction of parents enhance the outcomes of therapeutic sessions.",
-    image: "/galleryimage.jpg",
+    image: "/blogimage3.png",
   },
 ];
 

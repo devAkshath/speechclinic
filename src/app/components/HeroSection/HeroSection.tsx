@@ -71,7 +71,7 @@ export default function Hero() {
             Paediatric Therapy
           </h1>
 
-          <p className="text-base font-medium md:text-lg  text-gray-800 mb-6 mt-10 justify-evenly">
+          <p className="text-base font-light md:text-lg  text-gray-800 mb-6 mt-10 justify-evenly">
             At The Speech Clinic, we provide specialized therapy designed to
             improve speech and communication skills, tailored to children with
             autism.
@@ -89,7 +89,7 @@ export default function Hero() {
           <video
             width={800}
             height={500}
-            className="w-full h-auto object-cover rounded-[20px] shadow-md mb-6 mt-15"
+            className="w-full h-auto object-cover rounded-[35px] shadow-md mb-6 mt-15"
             controls
             autoPlay
             muted

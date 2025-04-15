@@ -6,10 +6,11 @@ import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState, useCallback } from "react";
 
 export default function Gallery() {
-  const images = [
-    "/galleryimage.jpg",
-    "/galleryimage.jpg",
-    "/galleryimage.jpg",
+  const   images = [
+    "/galleryimage1.jpeg",
+    "/galleryimage3.jpg",
+    "/galleryimage2.jpeg",
+
   ];
 
   const features = [
