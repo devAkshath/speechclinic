@@ -1,6 +1,4 @@
 import TeamCard from "../components/Teams/TeamCard";
-import Navbar from "../components/NavBar/NavBar";
-import TeamWaveBackground from "../components/svgs/halfcarve";
 import Footer from "../components/footer";
 import NavBarSecond from "../components/NavBar/NavBarSecond";
 import HalfWaveBackground from "../components/svgs/halfcarve";
