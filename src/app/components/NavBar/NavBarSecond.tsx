@@ -13,14 +13,13 @@ import {
   FaComments,
   FaBars,
   FaTimes,
-  FaChevronDown,
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isWideMenuOpen, setIsWideMenuOpen] = useState(false);
-  const [showStickyNav, setShowStickyNav] = useState(false);
+  const [, setShowStickyNav] = useState(false);
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const wideMenuRef = useRef<HTMLDivElement>(null);

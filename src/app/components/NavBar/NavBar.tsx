@@ -13,7 +13,6 @@ import {
   FaComments,
   FaBars,
   FaTimes,
-  FaChevronDown,
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 
