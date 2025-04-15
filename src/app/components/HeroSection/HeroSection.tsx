@@ -44,10 +44,10 @@ export default function Hero() {
             </p>
 
             <div className="flex space-x-4">
-              <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-lg font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
+              <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
                 About Us
               </button>
-              <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-lg font-medium hover:from-pink-600 hover:to-red-600 transition duration-300">
+              <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-pink-600 hover:to-red-600 transition duration-300">
                 Get In Touch
               </button>
             </div>
@@ -71,17 +71,17 @@ export default function Hero() {
             Paediatric Therapy
           </h1>
 
-          <p className="text-base font-light md:text-lg  text-gray-800 mb-6 mt-10 justify-evenly">
+          <p className="text-base font-medium md:text-lg  text-gray-800 mb-6 mt-10 justify-evenly">
             At The Speech Clinic, we provide specialized therapy designed to
             improve speech and communication skills, tailored to children with
             autism.
           </p>
 
           <div className="flex flex-wrap justify-center space-x-4">
-            <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-lg font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
+            <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
               About Us
             </button>
-            <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-lg font-medium hover:from-pink-600 hover:to-red-600 transition duration-300">
+            <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-pink-600 hover:to-red-600 transition duration-300">
               Get In Touch
             </button>
           </div>
@@ -89,7 +89,7 @@ export default function Hero() {
           <video
             width={800}
             height={500}
-            className="w-full h-auto object-cover rounded-[40px] shadow-md mb-6 mt-15"
+            className="w-full h-auto object-cover rounded-[20px] shadow-md mb-6 mt-15"
             controls
             autoPlay
             muted

@@ -68,7 +68,7 @@ export default function ServiceSection() {
     <div
       key={index}
       className="relative overflow-hidden bg-transparent rounded-[40px] shadow-white
-      w-full max-w-[254px] h-[285px]  mx-auto"
+      w-full max-w-[254px] h-[265px]  mx-auto"
     >
       <ServiceCard imageSrc={src} title={title} />
     </div>
@@ -101,7 +101,7 @@ export default function ServiceSection() {
         {isSmallScreen ? (
           <div className="w-full ">
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6  px-6 py-4">
+              <div className="flex gap-6  px-0 py-0">
                 {services.map((service, index) => (
                   <div
                     className="flex-[0_0_100%] flex justify-center"

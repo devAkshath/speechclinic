@@ -23,7 +23,7 @@ export default function TherapyPromo() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex flex-col md:flex-row items-start gap-4 text-left border-2 border-pink-400 rounded-[20px] md:border-0 md:rounded-[30%] p-4 md:p-0"
+                  className="flex flex-col md:flex-row items-start gap-4 text-left sm:shadow-lg md:shadow-none lg:shadow-none shadow-lg border-2 border-pink-400 rounded-[20px] md:border-0 md:rounded-[30%] p-4 md:p-0"
                 >
                   {/* Icon Section */}
                   <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[130px] md:h-[75px]">

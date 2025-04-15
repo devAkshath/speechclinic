@@ -1,7 +1,9 @@
 import TeamCard from "../components/Teams/TeamCard";
 import Navbar from "../components/NavBar/NavBar";
-import TeamWaveBackground from "../components/herocurve/TeamwaveBackground";
+import TeamWaveBackground from "../components/svgs/halfcarve";
 import Footer from "../components/footer";
+import NavBarSecond from "../components/NavBar/NavBarSecond";
+import HalfWaveBackground from "../components/svgs/halfcarve";
 
 const team = [
   {
@@ -36,17 +38,18 @@ export default function TeamPage() {
   return (
     <div className="bg-white min-h-screen">
       <header className="absolute top-0 w-full z-50">
-        <Navbar />
+      <NavBarSecond/>
       </header>
 
-      <TeamWaveBackground />
+         <HalfWaveBackground />
 
       <main className="pt-10">
-        <div className="relative overflow-hidden py-32 my-6 px-6 text-center text-white">
-          <div className="relative z-10 my-6 py-3">
+        <div className="relative overflow-hidden py-32 my-6 text-center text-white">
+          <div className="relative z-10 my-5">
             <h1 className="text-4xl md:text-5xl font-bold">Meet Our Experts</h1>
             <p className="mt-4 text-lg max-w-2xl mx-auto text-white/90">
-              Our dedicated team of certified professionals is here to support and guide your child&apos;s development journey.
+              Our dedicated team of certified professionals is here to support
+              and guide your child&apos;s development journey.
             </p>
           </div>
 

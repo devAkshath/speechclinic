@@ -71,111 +71,7 @@ export default function Navbar() {
 
   return (
     <nav className="max-w-screen-xl mx-auto p-8 bg-transparent w-full relative">
-      {/* Main Navbar */}
-      <div className="flex justify-between items-center py-3">
-
-        <Link href="/">
-          <Image
-            src="/speechcliniclogo.svg"
-            alt="Speech Clinic Logo"
-            width={200}
-            height={200}
-            priority
-            className="cursor-pointer lg:-mt-6 -mt-0"
-          />
-        </Link>
-
-        {/* Desktop Menu + Contact Info */}
-        <div className="hidden lg:flex flex-col">
-          <div className="container mx-auto px-6">
-            {/* Top Bar */}
-            <div className="flex justify-between items-center gap-6 py-2">
-              <div className="flex gap-10 text-white text-sm">
-                <span className="flex items-center gap-2">
-                  <FaEnvelope /> info@thespeechclinic.ae
-                </span>
-                <span className="flex items-center gap-2">
-                  <FaPhone /> +971-5088571468
-                </span>
-                <span className="flex items-center gap-2">
-                  <FaClock /> Mon - Sat (09AM - 7PM)
-                </span>
-              </div>
-              <div className="flex gap-4 text-white text-lg">
-                <Link href="#">
-                  <FaLinkedin />
-                </Link>
-                <Link href="#">
-                  <FaYoutube />
-                </Link>
-                <Link href="#">
-                  <FaInstagram />
-                </Link>
-                <Link href="#">
-                  <FaFacebook />
-                </Link>
-              </div>
-            </div>
-
-            {/* Navigation */}
-            <div className="flex justify-between items-center py-4">
-              <ul className="flex gap-8 text-white text-base">
-                <li>
-                  <Link href="./">Home</Link>
-                </li>
-                <li>
-                  <Link href="/about">About</Link>
-                </li>
-                <li>
-                  <Link href="">Our Products</Link>
-                </li>
-                <li>
-                  <Link href="">Services</Link>
-                </li>
-
-
-
-
-                <li>
-                  <Link href="/team">Teams</Link>
-                </li>
-                <li>
-                  <Link href="#">Contact</Link>
-                </li>
-              </ul>
-
-              <div className="flex items-center gap-4">
-                <Link
-                  href="#"
-                  className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
-                >
-                  Let&apos;s Talk <FaComments />
-                </Link>
-
-                <button
-                  onClick={toggleWideMenu}
-                  aria-label="Close Menu"
-                  className="text-white text-xl"
-                >
-                  <FaBars />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden">
-          <button
-            onClick={toggleMobileMenu}
-            aria-label="Toggle Menu"
-            className="text-white text-xl p-2 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md"
-          >
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </div>
-
+    
       {/* ✅ CHANGED: Add ref to this Mobile Sidebar */}
       <div
         ref={mobileMenuRef}
@@ -284,28 +180,12 @@ export default function Navbar() {
       {/* ✅ CHANGED: Add ref to this Wide Menu Sidebar */}
       <div
         ref={wideMenuRef} // ✅ CHANGED
-        className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white p-6 transform ${isWideMenuOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out z-100`}
+        className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white p-6 transform ${isWideMenuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-100`}
       >
-        <button
-          onClick={toggleWideMenu}
-          aria-label="Close Menu"
-          className=" text-xl absolute top-4 my-4 right-4"
-        >
-          <FaTimes />
-        </button>
-        <Link href="/"> <Image
-          src="/speechcliniclogo.svg"
-          alt="Speech Clinic Logo"
-          width={130}
-          height={200}
-          priority
-        /></Link>
+        <button onClick={toggleWideMenu} aria-label="Close Menu" className=" text-xl absolute top-4 my-4 right-4"><FaTimes /></button>
+        <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={130} height={200} priority /></Link>
         <h1 className=" my-6 py-3 h-6  font-extrabold text-lg">About Us</h1>
-        <p>
-          There are many variations of passages available sure there majority
-          have suffered alteration in some form...
-        </p>
+        <p>There are many variations of passages available sure there majority have suffered alteration in some form...</p>
         <div className="space-y-2 mt-8">
           <span className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
@@ -314,40 +194,17 @@ export default function Navbar() {
             info@thespeechclinic.ae
           </span>
           <span className="flex items-center gap-3 text-gray-800">
-            <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
-              <FaPhone />
-            </span>{" "}
-            +971-5088571468
-          </span>
+            <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white"><FaPhone /></span> +971-5088571468</span>
           <span className="flex items-center gap-3 text-gray-800">
-            <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
-              <FaClock />
-            </span>{" "}
-            Mon - Sat (09AM - 7PM)
+            <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white"><FaClock /></span> Mon - Sat (09AM - 7PM)
           </span>
         </div>
         <h1 className=" my-3 py-3 h-6  font-extrabold text-lg">Follow Us</h1>
         <div className="flex gap-3 text-lg py-3 ">
-          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
-            <Link href="#">
-              <FaLinkedin />
-            </Link>
-          </span>
-          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
-            <Link href="#">
-              <FaYoutube />
-            </Link>
-          </span>
-          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
-            <Link href="#">
-              <FaInstagram />
-            </Link>
-          </span>
-          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
-            <Link href="#">
-              <FaFacebook />
-            </Link>
-          </span>
+          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white"><Link href="#"><FaLinkedin /></Link></span>
+          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white"><Link href="#"><FaYoutube /></Link></span>
+          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white"><Link href="#"><FaInstagram /></Link></span>
+          <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white"><Link href="#"><FaFacebook /></Link></span>
         </div>
         <div className="mt-6">
           <Link
@@ -359,36 +216,47 @@ export default function Navbar() {
         </div>
       </div>
 
+
+
       {/* Sticky Navbars... (no changes here) */}
-      {showStickyNav && (
-        <div className="hidden lg:block fixed top-0 left-0 w-full bg-white shadow-md z-[60] transition duration-300">
+      
+   
+        <div className="hidden lg:block fixed top-0 left-0  w-full bg-white shadow-md z-[60] transition duration-300">
+          {/* top bar */}
+        <div className="hidden lg:block bg-gradient-to-r from-[#54169C] to-[#DA159B] text-white text-sm py-2 px-4">
+          <div className="max-w-screen-xl mx-auto flex justify-between items-center">
+            <div className="flex gap-4">
+              <span className="flex items-center gap-2">
+                <FaEnvelope /> info@thespeechclinic.ae
+              </span>
+              <span className="flex items-center gap-2">
+                <FaPhone /> +971-5088571468
+              </span>
+            </div>
+            <div className="flex gap-4 items-center">
+              <span className="flex items-center gap-2">
+                <FaClock /> Mon - Sat (09AM - 7PM)
+              </span>
+              <div className="flex gap-3">
+                <Link href="#"><FaLinkedin /></Link>
+                <Link href="#"><FaYoutube /></Link>
+                <Link href="#"><FaInstagram /></Link>
+                <Link href="#"><FaFacebook /></Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        
           <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"> <Image
-              src="/speechcliniclogo.svg"
-              alt="Speech Clinic Logo"
-              width={120}
-              height={60}
-              priority
-            /></Link>
+           
+        <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link> 
             <ul className="flex gap-6 text-gray-800 text-sm font-medium">
-              <li>
-                <Link href="./">Home</Link>
-              </li>
-              <li>
-                <Link href="#">About</Link>
-              </li>
-              <li>
-                <Link href="#">Services</Link>
-              </li>
-              <li>
-                <Link href="">Products</Link>
-              </li>
-              <li>
-                <Link href="/team">Teams</Link>
-              </li>
-              <li>
-                <Link href="#">Contact</Link>
-              </li>
+              <li><Link href="./">Home</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="#">Services</Link></li>
+              <li><Link href="">Products</Link></li>
+              <li><Link href="/team">Teams</Link></li>
+              <li><Link href="#">Contact</Link></li>
             </ul>
             <div className="flex items-center gap-4">
               <Link
@@ -407,17 +275,11 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      )}
-      {showStickyNav && (
+    
+ 
         <div className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-[60] transition duration-300">
           <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"> <Image
-              src="/speechcliniclogo.svg"
-              alt="Speech Clinic Logo"
-              width={120}
-              height={60}
-              priority
-            /></Link>
+          <Link href="/"> <Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link>
             <button
               onClick={toggleMobileMenu}
               aria-label="Toggle Menu"
@@ -427,7 +289,10 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      )}
+        
+
     </nav>
+    
   );
+  
 }

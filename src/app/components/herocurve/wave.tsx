@@ -16,6 +16,7 @@ export default function WaveBackground() {
           <stop offset="20%" stopColor="#54169C" />
           <stop offset="80%" stopColor="#DA159B" />
         </linearGradient>
+        
       </defs>
 
       <rect

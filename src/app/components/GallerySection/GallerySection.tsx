@@ -63,7 +63,7 @@ export default function Gallery() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="px-4 py-10 text-center font-sans">
+    <div className="px-4 py-10 text-center font-sans ">
       <div className="inline-flex items-center justify-center mb-3">
         <Image
           src="/verified.png"
@@ -140,7 +140,7 @@ export default function Gallery() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-[#4F4052] text-white p-6 rounded-[30px]   shadow-md relative overflow-hidden text-left w-[300px] "
+            className="bg-[#4F4052] text-white p-6 rounded-[30px]   shadow-2xl relative overflow-hidden text-left w-[327px] "
           >
             <div className="absolute top-0 left-0 w-full h-full"></div>
 
@@ -202,7 +202,7 @@ export default function Gallery() {
           </p>
 
           {/* Row 4: Button */}
-          <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-lg font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
+          <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
             Get Started
           </button>
         </div>
