@@ -251,7 +251,7 @@ export default function Navbar() {
         <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link> 
             <ul className="flex gap-6 text-gray-800 text-sm font-medium">
               <li><Link href="./">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
+              <li><Link href="">About</Link></li>
               <li><Link href="#">Services</Link></li>
               <li><Link href="">Products</Link></li>
               <li><Link href="/team">Teams</Link></li>
