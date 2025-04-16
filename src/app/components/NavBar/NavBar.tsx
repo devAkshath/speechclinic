@@ -129,7 +129,7 @@ export default function Navbar() {
                   <Link href="">Our Products</Link>
                 </li>
                 <li>
-                  <Link href="">Services</Link>
+                  <Link href="/AllServicesPage">Services</Link>
                 </li>
 
 
@@ -210,8 +210,9 @@ export default function Navbar() {
           </li>
 
           <li className="text-lg font-bold">
-          <Link href =''>Services</Link>
-          </li>
+  <Link href="/AllServicesPage">Services</Link>
+</li>
+
 
           <li className="text-lg font-bold">
           <Link href="/team" onClick={handleMobileLinkClick}>
@@ -377,7 +378,7 @@ export default function Navbar() {
                 <Link href="#">About</Link>
               </li>
               <li>
-                <Link href="#">Services</Link>
+                <Link href="/AllServicesPage">Services</Link>
               </li>
               <li>
                 <Link href="">Products</Link>

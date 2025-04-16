@@ -6,11 +6,10 @@ import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState, useCallback } from "react";
 
 export default function Gallery() {
-  const   images = [
+  const images = [
     "/galleryimage1.jpeg",
     "/galleryimage3.jpg",
     "/galleryimage2.jpeg",
-
   ];
 
   const features = [
@@ -85,7 +84,19 @@ export default function Gallery() {
       </h1>
 
       {/* Desktop View */}
-      <div className="hidden md:grid md:grid-cols-3 gap-6 mb-10">
+      <div
+        className="
+    hidden 
+    md:grid 
+    md:grid-cols-3 
+    gap-6 
+    mb-10 
+    md:px-6 
+    lg:px-[15.5rem] 
+    md:pl-6 md:pr-6 
+    lg:pl-[15.5rem] lg:pr-[15.5rem]
+  "
+      >
         {images.map((src, index) => (
           <div
             key={index}

@@ -7,30 +7,73 @@ const team = [
   {
     name: "Sana Shareef",
     role: "Founder and CEO",
-    image: "/sana-shareef.jpg",
-    bio: `Masters in Pediatric Speech & Language Therapy
-Experience: 10 Years
-Certified in: PROMPT, OPT LEVEL 3, DIR FLOOR TIME, Feeding Therapy, etc.`,
+    image: "/teams/sana-shareef.jpg",
+    qualification: "Masters in Pediatric Speech & Language Therapy",
+    experience: "10 Years",
+    certifications: [
+      "PROMPT",
+      "OPT LEVEL 3",
+      "Sensory Motor Apraxia of Speech",
+      "DIR FLOOR TIME",
+      "Feeding Therapy",
+      "Assessor - ADOS 2",
+      "Nuffield Dyspraxia Program",
+      "Sensory Integration Level 2",
+      "Certified Sensory Speech Therapist from Inside Out",
+      "Trained in Gestalt Processing and Hanen Approach",
+      "Therapeutic Listening & Movement Program"
+    ],
   },
   {
     name: "Soumya Zachariah",
     role: "Speech & Language Therapist",
-    image: "/sana-shareef.jpg",
-    bio: "Certified therapist with 5+ years experience in sensory speech therapy.",
+    image: "/teams/soumya-ann.jpg",
+    qualification: "Master of Audiology & Speech-Language Pathology",
+    experience: "10 Years",
+    certifications: [
+      "PROMPT",
+      "OPT LEVEL 1 AND LEVEL 2",
+      "DIR FLOORTIME",
+      "GESTALT TRAINED",
+      "THE LISTENING PROGRAM",
+      "MAKATON LEVEL 1 AND 2",
+      "KAUFMAN SPEECH TO LANGUAGE PRACTITIONERS",
+      "DIPLOMA IN DYSLEXIA",
+      "Feeding Therapy",
+      "Sensory Motor Apraxia of Speech"
+    ],
   },
   {
-    name: "Soumya Zachariah",
+    name: "Riya Muhammed",
     role: "Speech & Language Therapist",
-    image: "/sana-shareef.jpg",
-    bio: "Certified therapist with 5+ years experience in sensory speech therapy.",
+    image: "/teams/riya.jpg",
+    qualification: "Master of Audiology & Speech-Language",
+    experience: "Pathology Experience: 5 Years",
+    certifications: ["Beckman oral motor intervention",
+      'OPT LEVEL 2',
+      'Trained in Gestalt processing'
+    ],
   },
   {
-    name: "Soumya Zachariah",
+    name: "Afshida C P",
     role: "Speech & Language Therapist",
-    image: "/sana-shareef.jpg",
-    bio: "Certified therapist with 5+ years experience in sensory speech therapy.",
+    image: "/teams/afshida.jpg",
+    qualification: "Bachelor in Pediatric Speech & Language Therapy",
+    experience: "5+ Years",
+    certifications: ["OPT LEVEL 2,",
+      'NLA Level 1 Certification',
+    'Trained In Gestalt Processing',
+    'Oral placement therapy Level 2',
+    'Treatment of childhood apraxia of speech',
+    'Certification in sensory integration',
+    'Natural Language Acquisition in Autism : Echolalia to self generated language Level 1',
+    'Certified NLA trained clinician', 
+    'Certification in gestalt language processing', 
+    'Understanding sensory processing and integration in children'
+    ],
   },
 ];
+
 
 export default function TeamPage() {
   return (
