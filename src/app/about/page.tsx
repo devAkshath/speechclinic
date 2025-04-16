@@ -91,7 +91,7 @@ export default function TeamPage() {
         <div className="flex-1">
           <h2 className="font-bold text-pink-600">Client-Focused Care</h2>
           <p className="text-black">
-            We tailor our treatment approaches to meet each individual's unique needs.
+            We tailor our treatment approaches to meet each individual&lsquo;s unique needs.
           </p>
         </div>
       </div>
