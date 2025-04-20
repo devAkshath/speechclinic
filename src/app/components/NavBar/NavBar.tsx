@@ -123,10 +123,10 @@ export default function Navbar() {
                   <Link href="./">Home</Link>
                 </li>
                 <li>
-                  <Link href="/">About</Link>
+                  <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <Link href="">Our Products</Link>
+                  <Link href="/speechsync">Our Products</Link>
                 </li>
                 <li>
                   <Link href="/AllServicesPage">Services</Link>
@@ -139,7 +139,7 @@ export default function Navbar() {
                   <Link href="/team">Teams</Link>
                 </li>
                 <li>
-                  <Link href="#">Contact</Link>
+                  <Link href="/Contact">Contact</Link>
                 </li>
               </ul>
 
@@ -204,7 +204,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="text-lg font-bold">
-            <Link href="#" onClick={handleMobileLinkClick}>
+            <Link href="/about" onClick={handleMobileLinkClick}>
               About
             </Link>
           </li>
@@ -375,19 +375,19 @@ export default function Navbar() {
                 <Link href="./">Home</Link>
               </li>
               <li>
-                <Link href="#">About</Link>
+                <Link href="/about">About</Link>
               </li>
               <li>
                 <Link href="/AllServicesPage">Services</Link>
               </li>
               <li>
-                <Link href="">Products</Link>
+                <Link href="/speechsync">Products</Link>
               </li>
               <li>
                 <Link href="/team">Teams</Link>
               </li>
               <li>
-                <Link href="#">Contact</Link>
+                <Link href="/Contact">Contact</Link>
               </li>
             </ul>
             <div className="flex items-center gap-4">

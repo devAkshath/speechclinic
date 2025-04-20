@@ -1,6 +1,5 @@
 import Hero from "./components/HeroSection/HeroSection";
 import Navbar from "./components/NavBar/NavBar";
-import Footer from "./components/footer";
 import ServiceSection from "./components/ServiceSection/ServiceSection";
 import TherapyPromo from "./components/Features/Features";
 import Gallery from "./components/GallerySection/GallerySection";
@@ -8,7 +7,6 @@ import ProductsSection from "./components/Products/ProductsSection";
 import Expertise from "./components/Expertise/ExpertiseSection";
 import Testimonial from "./components/Testimonial/TestimonialSection";
 import Blogs from "./components/Blogs/BlogSection";
-import Waves from "./components/herocurve/wavemotion";
 
 export default function Home() {
   return (
@@ -26,9 +24,6 @@ export default function Home() {
       <Expertise />
       <Testimonial />
       <Blogs />
-      {/* Footer */}
-      <Waves />
-      <Footer />
     </div>
   );
 }

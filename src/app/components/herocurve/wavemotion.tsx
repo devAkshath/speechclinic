@@ -15,9 +15,9 @@ const Waves = () => {
           />
         </defs>
         <g className="svg-waves__parallax">
-          <use xlinkHref="#gentle-wave" x="48" y="0" />
-          <use xlinkHref="#gentle-wave" x="48" y="3" />
+          <use xlinkHref="#gentle-wave" x="48" y="2" />
           <use xlinkHref="#gentle-wave" x="48" y="5" />
+          <use xlinkHref="#gentle-wave" x="48" y="7" />
           <use xlinkHref="#gentle-wave" x="48" y="7" />
         </g>
       </svg>

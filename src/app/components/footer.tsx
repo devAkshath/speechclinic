@@ -1,11 +1,14 @@
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
+import Waves from "./herocurve/wavemotion";
 
 const Footer = () => {
   const Year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-white   text-white ">
+    <div>
+      <Waves/>
+    <footer className="relative bg-[#3F3243]   text-white ">
     
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] bg-[#3F3243]">
     
@@ -79,6 +82,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 

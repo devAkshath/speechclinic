@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 
-export default function Navbar() {
+export default function NavBarSecond() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isWideMenuOpen, setIsWideMenuOpen] = useState(false);
   const [, setShowStickyNav] = useState(false);
@@ -100,7 +100,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="text-lg font-bold">
-            <Link href="#" onClick={handleMobileLinkClick}>
+            <Link href="/about" onClick={handleMobileLinkClick}>
               About
             </Link>
           </li>
@@ -110,7 +110,7 @@ export default function Navbar() {
           </li>
 
           <li className="text-lg font-bold">
-          <Link href="/team" onClick={handleMobileLinkClick}>
+          <Link href="/speechsync" onClick={handleMobileLinkClick}>
               Our Products
             </Link>
           </li>
@@ -251,11 +251,11 @@ export default function Navbar() {
         <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link> 
             <ul className="flex gap-6 text-gray-800 text-sm font-medium">
               <li><Link href="./">Home</Link></li>
-              <li><Link href="/">About</Link></li>
+              <li><Link href="/about">About</Link></li>
               <li><Link href="#">Services</Link></li>
-              <li><Link href="">Products</Link></li>
+              <li><Link href="/speechsync">Products</Link></li>
               <li><Link href="/team">Teams</Link></li>
-              <li><Link href="#">Contact</Link></li>
+              <li><Link href="/Contact">Contact</Link></li>
             </ul>
             <div className="flex items-center gap-4">
               <Link

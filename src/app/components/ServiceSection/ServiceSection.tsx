@@ -23,7 +23,7 @@ export default function ServiceSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   const therapyImages = [
-    { src: "/aba-therapy.svg", title: "ABA Therapy" },
+    { src: "/aba-therapy.svg", title: "ABA Therapy" , href:"/ServicePage"},
     { src: "/feeding-therapy.svg", title: "Feeding Therapy" },
     { src: "/group-therapy.svg", title: "Group Therapy" },
     {
@@ -64,30 +64,30 @@ export default function ServiceSection() {
     setScrollSnaps(emblaApi.scrollSnapList());
     onSelect();
   }, [emblaApi]);
-  const services = therapyImages.map(({ src, title }, index) => (
+  const services = therapyImages.map(({ src, title , href }, index) => (
     <div
       key={index}
       className="relative overflow-hidden bg-transparent rounded-[40px] shadow-white
       w-full max-w-[254px] h-[265px]  mx-auto"
     >
-      <ServiceCard imageSrc={src} title={title} />
+      <ServiceCard imageSrc={src} title={title} href={href || '#'} />
     </div>
   ));
 
   return (
     <div className=" bg-white flex flex-col items-center justify-center p-6 sm:p-8">
       <div className="inline-flex items-center justify-center mb-3">
-              <Image
-                src="/verified.png"
-                alt="Verified Icon"
-                className="w-8 h-8 mr-1"
-                width={800}
-                height={500}
-              />
-              <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-                Our Services
-              </div>
-            </div>
+        <Image
+          src="/verified.png"
+          alt="Verified Icon"
+          className="w-8 h-8 mr-1"
+          width={800}
+          height={500}
+        />
+        <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+          Our Services
+        </div>
+      </div>
       <h2 className="text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2">
         We Believe Everyone Deserves
       </h2>

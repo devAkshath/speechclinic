@@ -1,18 +1,16 @@
-import Footer from "../components/footer";
-import Navbar from "../components/NavBar/NavBar";
+import NavBarSecond from "../components/NavBar/NavBarSecond";
 import ServiceSection from "../components/ServiceSection/ServiceSection";
-
 
 export default function AllServicesPage() {
   return (
     <div>
       <header>
-        <Navbar />
+        <NavBarSecond />
       </header>
-      <main className="p-4">
-         <ServiceSection />
+      <main className="p-20">
+        <ServiceSection />
       </main>
-      <Footer />
+
     </div>
   );
 }

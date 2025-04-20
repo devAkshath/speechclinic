@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from 'next/link';
 
 import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -50,14 +51,13 @@ export default function Blogs() {
 
     const autoplay = () => {
       if (!emblaApi) return;
-    
+
       if (emblaApi.canScrollNext()) {
         emblaApi.scrollNext();
       } else {
         emblaApi.scrollTo(0);
       }
     };
-    
 
     autoplayRef.current = setInterval(autoplay, 3000);
     return () => clearInterval(autoplayRef.current as NodeJS.Timeout);
@@ -75,7 +75,13 @@ export default function Blogs() {
     <div className="py-6 px-0 md:px-0 bg-white text-center">
       {/* Verified Label */}
       <div className="inline-flex items-center justify-center mb-3">
-        <Image src="/verified.png" alt="Verified Icon" className="w-8 h-8 mr-1" width={100} height={100} />
+        <Image
+          src="/verified.png"
+          alt="Verified Icon"
+          className="w-8 h-8 mr-1"
+          width={100}
+          height={100}
+        />
         <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
           Our Blogs
         </div>
@@ -83,7 +89,7 @@ export default function Blogs() {
 
       {/* Heading */}
       <h2 className="text-3xl font-semibold text-gray-700 leading-snug py-5">
-        Our Latest News <br/> & Blog
+        Our Latest News <br /> & Blog
       </h2>
 
       {/* Desktop Cards */}
@@ -96,7 +102,8 @@ export default function Blogs() {
             <Image
               src={card.image}
               alt={card.title}
-              width={800} height={500}
+              width={800}
+              height={500}
               className="rounded-[20px] mt-4 mb-4 w-80 h-auto object-cover mx-auto block"
             />
             <h3 className="text-2xl font-semibold text-gray-800 text-left mb-auto mt-auto">
@@ -105,9 +112,11 @@ export default function Blogs() {
             <p className="text-md text-gray-600 font-light text-left mb-auto mt-5 line-clamp-8">
               {card.content}
             </p>
-            <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-6/6 h-1/9 md:h-1/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10  rounded-full font-medium shadow-lg text-2xl">
-              Read More
-            </button>
+            <Link href="/BlogPage">
+  <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-6/6 h-1/9 md:h-1/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10 rounded-full font-medium shadow-lg text-2xl">
+    Read More
+  </button>
+</Link>
           </div>
         ))}
       </div>
@@ -118,15 +127,13 @@ export default function Blogs() {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {blogCards.map((card, index) => (
-                <div
-                  key={index}
-                  className="flex-[0_0_100%] px-7 py-6"
-                >
+                <div key={index} className="flex-[0_0_100%] px-7 py-6">
                   <div className="relative h-full flex flex-col justify-between border-2 border-gray-500 rounded-[40px] p-4 pt-4 pb-20 min-h-[400px] ">
                     <Image
                       src={card.image}
                       alt={card.title}
-                      width={800} height={500}
+                      width={800}
+                      height={500}
                       className="rounded-[20px] mt-4 mb-4 w-full h-60 object-cover"
                     />
                     <h3 className="text-2xl font-semibold text-gray-800 text-left mb-2">
@@ -135,9 +142,9 @@ export default function Blogs() {
                     <p className="text-md text-gray-600 font-light text-left mb-4 line-clamp-3">
                       {card.content}
                     </p>
-                    <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-5/6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-medium shadow-lg text-xl">
+              <Link href="/BlogPage">      <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-5/6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-medium shadow-lg text-xl">
                       Read More
-                    </button>
+                    </button></Link>
                   </div>
                 </div>
               ))}
@@ -147,17 +154,14 @@ export default function Blogs() {
           {/* Pagination Dots */}
           <div className="flex justify-center mt-4 gap-2">
             {scrollSnaps.map((_, index) => (
-        <button
-        key={index}
-        onClick={() => emblaApi?.scrollTo(index)}
-        className={`w-2 h-2 rounded-full transition-all ${
-          selectedIndex === index
-            ? "bg-pink-500"
-            : "bg-gray-300"
-        } focus:outline-none`}
-        aria-label={`Go to slide ${index + 1}`}
-      />
-      
+              <button
+                key={index}
+                onClick={() => emblaApi?.scrollTo(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  selectedIndex === index ? "bg-pink-500" : "bg-gray-300"
+                } focus:outline-none`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
         </div>

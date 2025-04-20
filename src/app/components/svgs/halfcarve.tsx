@@ -1,89 +1,49 @@
-
-  export default function HalfWaveBackground() {
-    return (
-      <>
-        <div className="block md:hidden w-full">
-          <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 390 899"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 left-0 w-full h-full"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <linearGradient id="mobileGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="20%" stopColor="#54169C" />
-                <stop offset="80%" stopColor="#DA159B" />
-              </linearGradient>
-            </defs>
-            <path
-              d="
-            M0,100
-            C100,300 300,100 390,300
-            L390,790
-            C390,820 300,844 195,944
-            C90,844 0,820 0,790
-            Z
-          "
-              fill="url(#mobileGradient)"
-              opacity="1"
-            />
-          </svg>
-        </div>
-
-
-        {/* SVG for medium and up screens */}
-        <div className="hidden md:block w-full  mt-[-2px]">
-          {/* <svg
-            width="100%"
-            height="100%"
-            viewBox="8 7 1999 0999"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 left-0 w-full h-full"
-            preserveAspectRatio="none"
-          > */}
-            <svg
-              className="absolute top-0 left-0 w-full h-full -translate-y-[200px]"
-              viewBox="8 7 1999 999"
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-            <defs>
-              <filter id="blurEffect" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-              </filter>
-              <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="15%" stopColor="#54169C" />
-                <stop offset="50%" stopColor="#DA159B" />
-              </linearGradient>
-            </defs>
-
-            <rect
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-              fill="rgba(255, 255, 255, 0.1)"
-              filter="url(#blurEffect)"
-              style={{ backdropFilter: "blur(10px)" }}
-            />
-
-            <path
-              d="M -196 281 C -100 300 596 533 820 -8507 H 1700 C 1900 200 2100 200 2100 200 C 2100 100 2100 400 2097 533 C 1390 1217 128 973 -183 381"
-              fill="url(#gradient)"
-              opacity="1"
-            />
-
-
-            <path
-              d="M0,200 C400,500 800,100 1200,300 C1600,500 1920,250 1920,600 L1920,1080 L0,1080 Z"
-              fill="url(#gradient)"
-              className="sm:hidden"
-            />
-          </svg>
-
-        </div>
-      </>
-    );
-  }
+export default function  HalfWaveBackground() {
+  return (
+    <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180 translate-y-[1px]">
+      <svg
+        className="relative block w-[191%] h-[150px] rotate-y-180 antialiased
+                   md:w-[120%] md:h-[131px]
+                   sm:w-[138%] sm:h-[82px]"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28
+          c70.36-5.37,136.33-33.31,206.8-37.5
+          C438.64,32.43,512.34,53.67,583,72.05
+          c69.27,18,138.3,24.88,209.4,13.08
+          c36.15-6,69.85-17.84,104.45-29.34
+          C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25"
+          fill="#FFFFFF"
+        />
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05
+          c51.72,39.22,117.31,38.95,176.89,19.53
+          c31.15-10.15,60.09-26.07,89.67-39.8
+          c40.92-19,84.73-46,130.83-49.67
+          c36.26-2.85,70.9,9.42,98.6,31.56
+          c31.77,25.39,62.32,62,103.63,73
+          c40.44,10.79,81.35-6.69,119.13-24.28
+          s75.16-39,116.92-43.05
+          c59.73-5.85,113.28,22.88,168.9,38.84
+          c30.2,8.66,59,6.17,87.09-7.5
+          c22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5"
+          fill="#FFFFFF"
+        />
+        <path
+          d="M0,0V5.63
+          C149.93,59,314.09,71.32,475.83,42.57
+          c43-7.64,84.23-20.12,127.61-26.46
+          c59-8.63,112.48,12.24,165.56,35.4
+          C827.93,77.22,886,95.24,951.2,90
+          c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          fill="#FFFFFF"
+        />
+      </svg>
+    </div>
+  );
+}
