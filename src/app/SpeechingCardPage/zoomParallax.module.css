@@ -1,50 +1,55 @@
-.gallery{
-    height: 170vh;
-    background: white;
-    position: relative;
-    display: flex;
-    gap: 0vw;
-    padding: 0vw;
-    box-sizing: border-box;
-    overflow: hidden;
-    .column{
-        position: relative;
-        height: 100%;
-        width: 25%;
-        min-width: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 1vw;
-        .imageContainer{
-            height: 100%;
-            width: 100%;
-            position: relative;
-            border-radius: 1vw;
-            overflow: hidden;
-            img{
-                object-fit: cover;
-            }
-        }
-        &:nth-of-type(1){
-            top: -45%;
-        }
-        &:nth-of-type(2){
-            top: -75%;
-        }
-        &:nth-of-type(3){
-            top: -80%;
-        }
-        &:nth-of-type(4){
-            top: -45%;
-        }
-        &:nth-of-type(5){
-            top: -65%;
-        }
-        &:nth-of-type(6){
-            top: -60%;
-        }
-    }
+.gallery {
+  height: 170vh;
+  background: white;
+  position: relative;
+  display: flex;
+  gap: 0vw;
+  padding: 0vw;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.spacer{
-    height: 4vh;
+
+.gallery .column {
+  position: relative;
+  height: 100%;
+  width: 25%;
+  min-width: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.gallery .column .imageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+.gallery .column .imageContainer :global(img) {
+  object-fit: cover;
+}
+
+.gallery .column:nth-of-type(1) {
+  top: -45%;
+}
+.gallery .column:nth-of-type(2) {
+  top: -75%;
+}
+.gallery .column:nth-of-type(3) {
+  top: -80%;
+}
+.gallery .column:nth-of-type(4) {
+  top: -45%;
+}
+.gallery .column:nth-of-type(5) {
+  top: -65%;
+}
+.gallery .column:nth-of-type(6) {
+  top: -60%;
+}
+
+.spacer {
+  height: 4vh;
 }
