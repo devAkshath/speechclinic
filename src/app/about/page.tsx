@@ -151,7 +151,7 @@ export default function About() {
                   height={500}
                 />
                 <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-                  Why Choice
+                  Why Choose Us
                 </div>
               </div>
 

@@ -8,7 +8,7 @@ export default function EnterpriseFeatures() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Card 1 */}
-        <div className="bg-lime-300 p-8 rounded-2xl ">
+        <div className="bg-lime-200 p-8 rounded-2xl ">
           <h3 className="text-3xl font-light mb-0">
             Engaging Visual
             <br />
@@ -45,7 +45,7 @@ export default function EnterpriseFeatures() {
          
         </div>
         {/* Card 5 */}
-        <div className="bg-gray-100 p-8 rounded-2xl">
+        <div className="bg-purple-100 p-8 rounded-2xl">
           <h3 className="text-3xl font-light mb-4">
           Multisensory Speech
             <br /> Training

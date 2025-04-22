@@ -47,7 +47,7 @@ export default function Home() {
         <p className="mb-2 text-center text-bold md:mb-4 md:text-4xl bg-white px-4 py-2 rounded-[40px]">
           {subheading}
         </p>
-        <p className="text-center text-5xl font-bold md:text-8xl text-pink-400 bg-white/95 px-6 py-4 rounded-[20px]">
+        <p className="text-center text-5xl font-bold md:text-8xl text-pink-400 bg-white px-6 py-4 rounded-[20px]">
           <span className="text-[#54169C]">Speeching </span>
           <span className="text-[#DA159B]">Cards</span>
         </p>
@@ -140,6 +140,24 @@ export default function Home() {
       </section>
       <EnterpriseFeatures />
       <TypesCard />
+      <section className="bg-gradient-to-tr from-white to-pink-50 py-16 px-4 md:px-10 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+          Enhance Speech & Communication
+          </h2>
+          <p className="text-gray-600 text-lg mb-6">
+          Speeching Cards is designed to make language learning interactive and enjoyable, improving communication skills through engaging activities.
+          </p>
+          <a
+            href="https://www.yourwebsite.com" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white rounded-full shadow-lg hover:scale-105 transition font-medium text-lg"
+          >
+           Contact Now
+          </a>
+        </div>
+      </section>
     </main>
   );
 }
