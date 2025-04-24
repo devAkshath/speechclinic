@@ -1,4 +1,3 @@
-import Navbar from "../components/NavBar/NavBar";
 import NavBarSecond from "../components/NavBar/NavBarSecond";
 
 

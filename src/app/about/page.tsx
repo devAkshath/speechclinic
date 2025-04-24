@@ -4,7 +4,6 @@ import HalfWaveBackground from "../components/svgs/halfcarve";
 import Image from "next/image";
 import Testimonial from "../components/Testimonial/TestimonialSection";
 import Expertise from "../components/Expertise/ExpertiseSection";
-import { FaCheckCircle } from "react-icons/fa";
 
 export default function About() {
   return (
