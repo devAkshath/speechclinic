@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Products() {
   return (
-    <section className="w-full px-6 py-12">
+    <section className="w-full px-6 py-12 lg:py-3 bg-transparent">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Column: Image */}
         <div className="flex justify-center">
@@ -11,7 +11,7 @@ export default function Products() {
             alt="Speech Sync iPad"
             width={400}
             height={300}
-            className="rounded-lg"
+            className="rounded-lg "
           />
         </div>
 
@@ -23,7 +23,8 @@ export default function Products() {
               src="/verified.png"
               alt="Verified Icon"
               className="w-8 h-8 mr-2"
-              width={800} height={500}
+              width={800}
+              height={500}
             />
             <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
               Our Products
@@ -31,14 +32,14 @@ export default function Products() {
           </div>
 
           {/* Row 2: Heading */}
-          <h2 className="text-3xl font-semibold text-gray-700 leading-snug">
+          <h2 className="text-3xl font-semibold text-gray-700  lg:text-white leading-snug">
             Breaking Barriers in
             <br />
             Communication
           </h2>
 
           {/* Row 3: Description */}
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 lg:text-white">
             Empowering communication with advanced speech therapy tools. Our
             products are designed to support children with autism and speech
             impairments, providing engaging and effective solutions for language

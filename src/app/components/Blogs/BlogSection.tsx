@@ -72,7 +72,7 @@ export default function Blogs() {
   }, [emblaApi]);
 
   return (
-    <div className="py-6 px-0 md:px-0 bg-white text-center">
+    <div className="py-6 px-0 md:px-0 bg-transparent text-center">
       {/* Verified Label */}
       <div className="inline-flex items-center justify-center mb-3">
         <Image
@@ -93,11 +93,11 @@ export default function Blogs() {
       </h2>
 
       {/* Desktop Cards */}
-      <div className="max-w-7xl mx-auto hidden md:grid md:grid-cols-3 gap-8 md:px-4">
+      <div className="max-w-7xl mx-auto hidden md:grid md:grid-cols-3 gap-8 md:px-4 bg-transparent">
         {blogCards.map((card, index) => (
           <div
             key={index}
-            className="relative border-2 border-gray-500 rounded-[40px] p-4 pt-4 pb-20 flex flex-col justify-between md:h-[600px]"
+            className="relative border-2 border-gray-500 rounded-[40px] p-4 pt-4 pb-20 flex flex-col justify-between md:h-[600px] bg-transparent"
           >
             <Image
               src={card.image}

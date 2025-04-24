@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function TherapyPromo() {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-transparent text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:py-18">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Left Column */}

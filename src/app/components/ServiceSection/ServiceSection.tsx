@@ -75,7 +75,7 @@ export default function ServiceSection() {
   ));
 
   return (
-    <div className=" bg-white flex flex-col items-center justify-center p-6 sm:p-8">
+    <div className=" bg-transparent flex flex-col items-center justify-center p-6 sm:p-8">
       <div className="inline-flex items-center justify-center mb-3">
         <Image
           src="/verified.png"

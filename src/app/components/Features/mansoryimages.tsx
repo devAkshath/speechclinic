@@ -10,7 +10,7 @@ const images = [
 
 const MasonryGrid = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-2 md:gap-6 md:p-6">
+    <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-2 md:gap-6 md:p-6 bg-transparent">
       {/* Full-width Ball Pit Image */}
       <div className="col-span-2 rounded-[40px] overflow-hidden">
         <Image

@@ -1,20 +1,22 @@
-body {
-  height: 100%;
-  margin: 0; 
-  
+.line-container body {
+  height: 270% ;
+  margin: 0;
 }
 
 .line-container {
-  position: fixed;
-  top: 0;
-  left: 0;
+  top: 50; 
+  left: 0; 
+  right:0;
   width: 100%;
   height: 100%;
   text-align: center;
   overflow: hidden;
+  
 }
 
-svg {
+.ine-container svg {
+  width:2000;
   display: inline-block;
-  height: 100%;
+  height: 250%; 
+  transform: translateY(0);
 }

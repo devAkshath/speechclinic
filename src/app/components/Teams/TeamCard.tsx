@@ -18,133 +18,144 @@ interface TeamCardProps {
 
 export default function TeamCard({ member }: TeamCardProps) {
   const [open, setOpen] = useState(false);
-
   return (
     <>
-      <div
-        className="group relative bg-white text-center rounded-2xl p-4 space-y-2 shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer max-w-xs"
-        onClick={() => setOpen(true)}
-      >
-
-        <div className="relative rounded-xl overflow-hidden">
-   
-          <div className="w-24 h-24 rounded-full absolute -right-5 -top-7">
-            <FaEye className="text-black text-xl" />
-          </div>
-
+      <div    className="group relative bg-white text-center rounded-2xl p-4 space-y-2 shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer max-w-xs"
+        onClick={() => setOpen(true)}>
+        {/* Image Section */}
+        <div className="relative">
           <Image
             src={member.image}
             alt={member.name}
             width={320}
             height={200}
-            className="rounded-xl w-full h-auto object-cover"
-
+            className="w-full h-auto object-cover"
           />
 
-          {/* Eye Icon - bottom right corner, styled like a carved detail popup button */}
-          <div
-            className="w-20 h-20 bg-gradient-to-r from-[#DA159B]/98 to-[#54169C]/90 rounded-full absolute -bottom-8 -right-7 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300"
-       
-          >
-            <FaEye className="text-white text-3xl  absolute bottom-10 left-4" />
-          </div>
-
-
-        </div>
-
-        <div className="p-2">
-          <h2 className="text-base font-semibold">{member.name}</h2>
-          <p className="text-purple-600 text-xs">{member.role}</p>
-        </div>
-
-        <div className="absolute bottom-0 left-0 h-1 w-0 transition-all duration-300 group-hover:w-full bg-gradient-to-r from-[#DA159B] to-[#54169C]" />
-      </div>
-
-
-      {open && (
-        <div className="fixed inset-0 backdrop-blur-sm z-50 flex justify-center items-center px-4">
-          <div className="bg-white w-full max-w-4xl p-6 rounded-2xl relative overflow-y-auto max-h-[90vh] shadow-xl">
-            {/* Close Button */}
-            <button
-              className="absolute top-4 right-4 text-3xl font-bold text-purple-600 hover:text-purple-800"
-              onClick={() => setOpen(false)}
+          {/* Bottom Curve - SVG Carve */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg
+              viewBox="0 0 500 50"
+              preserveAspectRatio="none"
+              className="w-full h-[60px]"
             >
-              ×
-            </button>
-
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              {/* Image */}
-              <div className="flex-shrink-0 mx-auto md:mx-0">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={300}
-                  height={400}
-                  className="rounded-2xl shadow-md object-cover"
-                />
-              </div>
-
-              {/* Info */}
-              <div className="flex-1 text-gray-700 space-y-4">
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                    {member.name}
-                  </h2>
-                  <p className="text-lg text-gray-600">{member.role}</p>
-                </div>
-
-                <div className="text-sm md:text-base space-y-1">
-                  {member.qualification && (
-                    <p>
-                      <span className="font-semibold text-purple-700">
-                        {member.qualification}
-                      </span>
-                    </p>
-                  )}
-                  {member.experience && (
-                    <p>
-                      <span className="font-semibold text-gray-800">
-                        Experience:
-                      </span>{" "}
-                      {member.experience}
-                    </p>
-                  )}
-                  {member.certifications?.length > 0 && (
-                    <>
-                      <p className="font-semibold text-gray-800">
-                        Certified in:
-                      </p>
-                      <ul className="pl-2 space-y-2 text-gray-700">
-                        {member.certifications.map((cert, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="min-w-[32px] mt-1">
-                              <div className="bg-pink-300 rounded-full w-6 h-6 flex items-center justify-center">
-                                <svg
-                                  className="w-4 h-4 text-pink-950"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="6"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M5 13l4 4L19 7"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <span className="pt-0.5">{cert}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
+              <path
+                d="M0,0 C150,60 350,60 500,0 L500,50 L0,50 Z"
+                className="fill-white "
+              />
+            </svg>
           </div>
         </div>
+        {/* Info & Eye Icon - overlapping with curve */}
+        <div className="relative -mt-3 px-5 pb-5 pt-8 z-30 bg-white ">
+          <div className="flex items-center justify-between">
+            {/* Text Info */}
+            <div className="text-left ">
+              <h1 className="text-[1.3rem] font-semibold text-gray-800 leading-snug">
+                {member.name}
+              </h1>
+              <p className="text-sm text-purple-600">{member.role}</p>
+            </div>
+            {/* Floating Glass Eye Icon */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setOpen(true);
+              }}
+              className="absolute -top-13 right-4 w-11 h-11 rounded-full  bg-[#6E1FB8] text-white shadow-lg backdrop-blur-md flex items-center justify-center  hover:bg-pink-600 hover:scale-105 transition z-10"
+              aria-label="View Details"
+            >
+              <FaEye className="text-xl" />
+            </button>
+          </div>
+        </div>
+        {/* Gradient underline on hover */}
+        <div className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#DA159B] to-[#54169C]" />
+      </div>
+      {open && (
+       <div className="fixed inset-0 backdrop-blur-sm z-50 flex justify-center items-center px-4">
+       <div className="bg-white yw-full max-w-4xl p-1 rounded-3xl relative overflow-hidden max-h-[90vh] shadow-xl transition-all duration-500 transform hover:scale-105">
+     
+         {/* Stylish Header with Close Button on the Right */}
+         <div className="w-full bg-fuchsia-900  p-4 rounded-t-3xl flex justify-between items-center shadow-lg">
+           {/* Empty space to push the button to the right */}
+           <p className="text-lg text-white font-semibold">{member.name}</p>
+           <div className="flex-grow"></div>
+     
+           <button
+             className="text-3xl font-bold text-white hover:text-gray-300 transition-all duration-200 ease-in-out transform hover:scale-125"
+             onClick={() => setOpen(false)}
+           >
+             ×
+           </button>
+         </div>
+     
+         {/* Modal Content */}
+         <div className="flex flex-col md:flex-row gap-8 p-8 items-start mt-6 overflow-y-auto max-h-[75vh]">
+           {/* Image */}
+           <div className="flex-shrink-0 mx-auto md:mx-0">
+             <Image
+               src={member.image}
+               alt={member.name}
+               width={300}
+               height={400}
+               className="rounded-2xl shadow-lg transition-transform transform hover:scale-105"
+             />
+           </div>
+     
+           {/* Info Section */}
+           <div className="flex-1 text-gray-700 space-y-6">
+             <div>
+               <p className="text-lg text-gray-600 font-semibold">{member.role}</p>
+             </div>
+     
+             <div className="text-sm md:text-base space-y-2 my-4">
+               {member.qualification && (
+                 <p>
+                   <span className="font-semibold text-purple-700">{member.qualification}</span>
+                 </p>
+               )}
+               {member.experience && (
+                 <p>
+                   <span className="font-semibold text-gray-800">Experience:</span> {member.experience}
+                 </p>
+               )}
+               {member.certifications?.length > 0 && (
+                 <>
+                   <p className="font-semibold text-gray-800">Certified in:</p>
+                   <ul className="pl-4 space-y-3 text-gray-700">
+                     {member.certifications.map((cert, idx) => (
+                       <li key={idx} className="flex items-start gap-3">
+                         <div className="min-w-[32px] mt-1">
+                           <div className="bg-purple-300 rounded-full w-6 h-6 flex items-center justify-center">
+                             <svg
+                               className="w-4 h-4 text-purple-800"
+                               fill="none"
+                               stroke="currentColor"
+                               strokeWidth="6"
+                               viewBox="0 0 24 24"
+                             >
+                               <path
+                                 strokeLinecap="round"
+                                 strokeLinejoin="round"
+                                 d="M5 13l4 4L19 7"
+                               />
+                             </svg>
+                           </div>
+                         </div>
+                         <span className="pt-0.5">{cert}</span>
+                       </li>
+                     ))}
+                     <hr />
+                   </ul>
+                 </>
+               )}
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     
       )}
     </>
   );

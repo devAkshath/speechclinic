@@ -14,7 +14,7 @@ export default function About() {
       </header>
 
       {/* Hero Section with SVG */}
-      <section className="relative  bg-gradient-to-b from-[#54169C] to-pink-500 text-white pb-32 my-7 py-6 ">
+      <section className="relative  bg-gradient-to-b from-[#54169C] to-pink-500 text-white pb-32 my-7 py-9 ">
         <div className="px-6 md:px-40 py-20 text-center">
           <h2 className="text-4xl font-bold mb-4">About Us</h2>
           <p className="text-lg">
@@ -24,8 +24,18 @@ export default function About() {
         <HalfWaveBackground />
       </section>
 
+
+      
+
+
+
+
+
+
+
+
       {/* Masonry & Mission Section */}
-      <section className="text-blackpy-20 md:py- px-4 md:px-10 overflow-hidden relative top-[-200px]">
+      <section className="text-blackpy-20 md:py- px-4 md:px-10 overflow-hidden relative ">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 text-black rounded-xl">
           <div className="max-w-xl">
             <MasonryGrid />
@@ -90,11 +100,71 @@ export default function About() {
         </div>
       </section>
 
+      <section className="relative py-32 px-6 md:px-10 bg-gradient-to-tr from-[#54169C]/80 to-[#DA159B]/95 text-white overflow-hidden">
+        {/* Glowing Background Blur */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-white opacity-10 rounded-full blur-[120px] -z-10"></div>
 
-      {/* Founder Section */}
-      <section className="text-black   px-4 md:px-10 overflow-hidden relative  ] md:top-[0]">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-18 text-black rounded-xl">
-          <div className="max-w-xl text-center lg:text-left">
+        {/* Container with Border */}
+        <div className="max-w-6xl mx-auto px-6 md:px-16 py-16 border border-white/20 rounded-3xl backdrop-blur-sm bg-white/5 shadow-xl">
+
+        
+
+          <div className="text-center max-w-3xl mx-auto">
+
+          <div className="inline-flex items-center justify-center mb-4">
+              <Image
+                src="/verified.png"
+                alt="Verified Icon"
+                className="w-8 h-8 mr-1"
+                width={800}
+                height={500}
+              />
+              <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+              Meet Our Founder
+              </div>
+              </div>
+            <h2 className="text-6xl font-extrabold leading-tight mb-6">Sana Shareef</h2>
+            <p className="text-xl font-light mb-6">
+              Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
+            </p>
+
+            <div className="inline-flex gap-4 flex-wrap justify-center mb-12">
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
+                Master’s from Isabel, Spain
+              </span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
+                Oral Placement Therapist
+              </span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
+                Feeding Therapy
+              </span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
+                Sensory Integration
+              </span>
+            </div>
+
+            <Image
+              src="/teams/sana-shareef.jpg"
+              alt="Sana Shareef"
+              className="rounded-full mx-auto shadow-2xl w-64 h-64 object-cover border-4 border-white"
+              width={300}
+              height={300}
+            />
+
+            <p className="my-6 text-white/90">
+              With a Master’s in Speech & Language Therapy and over 8 years of clinical experience, Sana’s vision has transformed countless lives. She’s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region’s first advanced AAC app.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="bg-white py-20 px-6 md:px-12 lg:px-24 text-gray-800">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
+
+          {/* Content Section */}
+          <div className="space-y-6">
+            {/* Badge */}
             <div className="inline-flex items-center justify-center mb-4">
               <Image
                 src="/verified.png"
@@ -104,114 +174,66 @@ export default function About() {
                 height={500}
               />
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-                Meet Our Founder
+              Why Choose Us
               </div>
             </div>
 
-            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
-              Sana Shareef
+            {/* Heading */}
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              Why We’re the Right Choice for You
             </h2>
+
+            {/* Description */}
             <p className="text-lg text-gray-600">
-              Founder & CEO | Consultant Speech & Language Therapist | Feeding & Apraxia Specialist
+              At The Speech Clinic, we are committed to providing expert care and tailored therapy solutions to support speech and language development.
             </p>
-            <p className="text-lg my-2 text-gray-600">
-              With over eight years of clinical experience, Sana Shareef is a leading expert in speech and language therapy. She specializes in Apraxia, Feeding Therapy, and is recognized as one of Dubai’s first Oral Placement Therapists.
-            </p>
-            <p className="text-lg my-2 text-gray-600">
-              Sana holds a Master’s Degree from University Isabel, Spain, and certifications in Sensory Integration, Rhythmic Movement, and Reflex Integration. She is also the visionary behind SpeechSync, the region’s first advanced AAC app.
-            </p>
+
+            {/* Feature List */}
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              {[
+                "Tailored, Interactive Therapy Plans",
+                "Comprehensive Multidisciplinary Care",
+                "Innovative & Interactive Methods",
+                "Supportive, Family-Centered Care",
+              ].map((feature, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <span className="text-[#DA159B] text-xl">✔️</span>
+                  <span className="text-md">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Stats */}
+            <div className="flex flex-col sm:flex-row gap-6 mt-10">
+              <div className="flex-1 bg-[#F8F5FF] rounded-xl p-6 shadow-sm text-center hover:shadow-md transition">
+                <div className="text-3xl font-extrabold text-[#54169C]">100%</div>
+                <p className="text-sm mt-2 text-gray-600">Quality Service</p>
+              </div>
+              <div className="flex-1 bg-[#F8F5FF] rounded-xl p-6 shadow-sm text-center hover:shadow-md transition">
+                <div className="text-3xl font-extrabold text-[#54169C]">95%</div>
+                <p className="text-sm mt-2 text-gray-600">Skilled Employee</p>
+              </div>
+            </div>
           </div>
 
-          <div className="relative max-w-xl w-full flex justify-center items-center">
-            <div className="absolute -z-10 w-72 h-72 lg:w-[400px] lg:h-[400px] rounded-full bg-gradient-to-tr from-[#DA159B] to-[#54169C] blur-3xl opacity-50" />
+          {/* Image Section */}
+          <div className="relative">
             <Image
-              src="/teams/sana-shareef.jpg"
-              alt="Sana Shareef"
-              className="rounded-2xl shadow-2xl object-cover w-80 h-90 lg:w-[550px] lg:h-[550px]"
-              width={400}
-              height={400}
+              src="/teams/parent-meeting.webp"
+              alt="Speech session"
+              width={600}
+              height={500}
+              className="rounded-2xl shadow-xl w-full object-cover"
             />
+            <div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow text-center">
+              <div className="text-xl font-bold text-[#DA159B]">100%</div>
+              <p className="text-sm text-gray-700">Family Satisfaction</p>
+            </div>
           </div>
         </div>
       </section>
-
 
       {/* Why Choose Us Section */}
-      <section className="pt-32 pb-20 md:pb-24 px-4 sm:px-6 md:px-10  xl:px-32 overflow-hidden relative bg-white  ">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col xl:flex-row items-center gap-16">
-            {/* Left Text */}
-            <div className="flex-1 text-center xl:text-left">
-              <div className="inline-flex items-center justify-center mb-4">
-                <Image
-                  src="/verified.png"
-                  alt="Verified Icon"
-                  className="w-8 h-8 mr-1"
-                  width={800}
-                  height={500}
-                />
-                <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-                  Why Choose Us
-                </div>
-              </div>
-
-              <h2 className="text-5xl font-bold mb-4 my-5 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
-                Why We&lsquo;re the Right Choice for You
-              </h2>
-              <p className="text-gray-600 mb-6">
-                At The Speech Clinic, we are committed to providing expert care and tailored therapy solutions to support speech and language development.
-              </p>
-              <button className="bg-gradient-to-br my-5 from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
-                Discover More
-              </button>
-            </div>
-
-            {/* Center Image */}
-            <div className="flex-1 relative">
-              <div className="absolute -top-6 -left-6 w-72 h-72 xl:w-[400px] xl:h-[400px] rounded-full bg-teal-100 blur-2xl opacity-40 -z-10" />
-              <Image
-                src="/teams/parent-meeting.webp"
-                alt="Therapist"
-                width={500}
-                height={500}
-                className="rounded-xl shadow-lg object-cover w-full max-w-sm mx-auto"
-              />
-            </div>
-
-            {/* Right Feature List */}
-            <div className="flex-1 space-y-6">
-              {[
-                "Tailored, Interactive Therapy Plans.",
-                "Comprehensive Multidisciplinary Care.",
-                "Innovative & Interactive Methods.",
-                "Supportive, Family-Centered Care."
-              ].map((title, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-[1px] rounded-xl">
-                  <div className="flex items-start gap-4 bg-white rounded-xl p-2">
-                    <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-full">
-                      <FaCheckCircle className="text-white w-5 h-5" />
-                    </div>
-                    <div>
-                      <h5 className="text-gray-800 text-lg ">{title}</h5>
-                      <p className="text-gray-600 text-sm">
-                        {[
-                          "We create personalized plans that engage each child through fun, hands-on activities designed for better learning and growth.",
-                          "Our expert team works together across fields to support your child’s development with a well-rounded, unified care approach.",
-                          "We use playful, creative tools and modern strategies that make therapy enjoyable while encouraging active participation.",
-                          "We guide and involve families throughout the process, offering support and tools to help children thrive at every stage."
-                        ][idx]}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
 
       <div className="">
         <Testimonial />

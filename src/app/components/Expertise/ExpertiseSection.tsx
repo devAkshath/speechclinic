@@ -10,7 +10,7 @@ const progressItems = [
 
 const Expertise = () => {
   return (
-    <div className="flex items-center justify-center bg-white px-4">
+    <div className="flex items-center justify-center bg-transparent px-4 lg:py-22">
      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-7xl w-full px-6 py-12">
 
         {/* Left Column */}

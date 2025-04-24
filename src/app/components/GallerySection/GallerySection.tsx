@@ -4,6 +4,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState, useCallback } from "react";
+import CurveSvg from "./curvesvg";
 
 export default function Gallery() {
   const images = [
@@ -64,6 +65,10 @@ export default function Gallery() {
 
   return (
     <div className="px-4 py-10 text-center font-sans ">
+      <div className="w-full -z-500 absolute  pointer-events-none hidden lg:block pt-144">
+      <CurveSvg />
+      </div>
+   
       <div className="inline-flex items-center justify-center mb-3">
         <Image
           src="/verified.png"
@@ -86,6 +91,7 @@ export default function Gallery() {
       {/* Desktop View */}
       <div
         className="
+        bg-transparent
     hidden 
     md:grid 
     md:grid-cols-3 
@@ -186,7 +192,7 @@ export default function Gallery() {
         {/* Left Column */}
         <div className="max-w-md space-y-4 lg:text-left">
           {/* Row 1: Label */}
-          <div className="inline-flex items-center justify-center md:justify-center mb-2">
+          <div className="inline-flex items-center justify-center md:justify-center  mb-2">
             <Image
               src="/verified.png"
               alt="Verified Icon"
@@ -194,20 +200,21 @@ export default function Gallery() {
               width={800}
               height={500}
             />
-            <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+            <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] lg:bg-white  px-6 py-1 rounded-2xl">
               Gestalt Language Therapy
             </div>
           </div>
 
           {/* Row 2: Heading */}
-          <h2 className="text-4xl font-semibold text-gray-700 py-4">
-            Fostering Communication
-            <br />
-            Through Meaningful Language
-          </h2>
+          <h2 className="text-4xl font-semibold text-gray-700 lg:text-white py-4">
+  Fostering Communication
+  <br />
+  Through Meaningful Language
+</h2>
+
 
           {/* Row 3: Description */}
-          <p className="text-md text-gray-400 py-2">
+          <p className="text-md text-gray-400 lg:text-white  py-2">
             Our Gestalt Language Therapy focuses on supporting children who
             learn language in chunks, helping them progress toward meaningful,
             independent communication.
@@ -230,12 +237,12 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="bg-white py-12 px-4 md:px-0 text-center space-y-10 lg:px-75">
+      <div className="bg-transparent py-12 px-4 md:px-0 text-center space-y-10 lg:px-75">
         {/* Stats Row */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">
           {/* Clients */}
-          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
-            <div className="bg-white p-2 rounded-2xl mb-0">
+          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center">
+            <div className="bg-white p-2 rounded-2xl mb-0 ">
               <Image
                 src="/peopleicon.svg"
                 alt="Clients"
@@ -244,16 +251,16 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
+            <div className="text-2xl md:text-3xl font-bold text-pink-600 lg:text-white flex items-center gap-1 lg:pl-4">
               7320{" "}
-              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600 lg:text-white font-normal">
                 + Clients
               </span>
             </div>
           </div>
 
           {/* Staffs */}
-          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center gap-2">
+          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 lg:border-white text-center gap-2">
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
                 src="/groupicon.svg"
@@ -263,16 +270,16 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600 whitespace-nowrap">
+            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600  lg:text-white whitespace-nowrap">
               1500{" "}
-              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600 lg:text-white font-normal">
                 + Staffs
               </span>
             </div>
           </div>
 
           {/* Projects */}
-          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center">
+          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center gap-2">
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
                 src="/builbicon.svg"
@@ -282,9 +289,9 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
+            <div className="text-2xl md:text-3xl font-bold text-pink-600 lg:text-white flex items-center gap-1">
               50{" "}
-              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600  lg:text-white font-normal">
                 + Projects
               </span>
             </div>
@@ -292,17 +299,17 @@ export default function Gallery() {
         </div>
 
         {/* Message Box */}
-        <div className="relative border-2 border-pink-400 rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4">
+        <div className="relative border-2 border-pink-400 lg:border-white rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4">
           {/* Top Overlay Text */}
-          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20 bg-white px-4 py-1 text-2xl sm:text-3xl md:text-4xl text-gray-700 font-medium whitespace-nowrap">
+          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20 bg-white border lg:border-white border-pink  rounded-4xl px-4 py-1 text-2xl sm:text-3xl md:text-4xl text-gray-700  font-medium whitespace-nowrap">
             Your Voice Matters
           </h3>
 
           {/* Center Text */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 lg:text-white text-center">
             Let&apos;s Strengthen It Together!
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto text-center">
+          <p className="text-sm sm:text-base text-gray-600 lg:text-white max-w-xl mx-auto text-center">
             Every voice deserves to be heard. Whether for therapy, guidance, or
             support, our specialists are here to help. Start the journey to
             confident communication today!
@@ -318,7 +325,7 @@ export default function Gallery() {
                 width={800}
                 height={500}
               />
-              <button className="bg-white border border-pink-400 text-pink-600 px-6 py-2 rounded-2xl shadow hover:bg-pink-50 transition font-medium whitespace-nowrap">
+              <button className="bg-white border border-pink-400 lg:border-white text-pink-600  px-6 py-2 rounded-2xl shadow hover:bg-pink-50 transition font-medium whitespace-nowrap">
                 Reach Out Now
               </button>
             </div>

@@ -126,7 +126,42 @@ export default function Navbar() {
                   <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <Link href="/speechsync">Our Products</Link>
+
+                  <details className="relative group list-none [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:text-[#DA159B]">
+                      Products
+                      <svg
+                        className="w-4 h-4 mt-0.5 transform transition-transform duration-300 group-open:rotate-180"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+
+                    <ul className="absolute mt-3 p-3 bg-white border border-gray-100 shadow-xl rounded-xl w-52 z-50 flex flex-col gap-1">
+                      <li>
+                        <Link
+                          href="/speechsync"
+                          className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                        >
+                          SpeechSync
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/products"
+                          className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                        >
+                          Other Product
+                        </Link>
+                      </li>
+                    </ul>
+                  </details>
+
+
                 </li>
                 <li>
                   <Link href="/AllServicesPage">Services</Link>
@@ -210,22 +245,53 @@ export default function Navbar() {
           </li>
 
           <li className="text-lg font-bold">
-  <Link href="/AllServicesPage">Services</Link>
-</li>
-
-
-          <li className="text-lg font-bold">
-          <Link href="/team" onClick={handleMobileLinkClick}>
-              Our Products
-            </Link>
+            <Link href="/AllServicesPage">Services</Link>
           </li>
+
+
+
+          <details className="relative group list-none [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:text-[#DA159B] text-lg font-bold">
+              Products
+              <svg
+                className="w-4 h-4 mt-0.5 transform transition-transform duration-300 group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <ul className="absolute mt-3 p-3 bg-white border border-gray-100 shadow-xl rounded-xl w-52 z-50 flex flex-col gap-1">
+              <li>
+                <Link
+                  href="/speechsync"
+                  className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                >
+                  SpeechSync
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products"
+                  className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                >
+                  Other Product
+                </Link>
+              </li>
+            </ul>
+          </details>
+
+
 
           <li className="text-lg font-bold">
             <Link href="/team" onClick={handleMobileLinkClick}>
               Teams
             </Link>
           </li>
-    
+
         </ul>
         <hr />
         <div className="space-y-2 mt-8">
@@ -363,7 +429,7 @@ export default function Navbar() {
       {showStickyNav && (
         <div className="hidden lg:block fixed top-0 left-0 w-full bg-white shadow-md z-[60] transition duration-300">
           <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"> <Image
+            <Link href="/"> <Image
               src="/speechcliniclogo.svg"
               alt="Speech Clinic Logo"
               width={120}
@@ -380,9 +446,41 @@ export default function Navbar() {
               <li>
                 <Link href="/AllServicesPage">Services</Link>
               </li>
-              <li>
-                <Link href="/speechsync">Products</Link>
-              </li>
+
+              <details className="relative group list-none [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:text-[#DA159B]">
+                  Products
+                  <svg
+                    className="w-4 h-4 mt-0.5 transform transition-transform duration-300 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+
+                <ul className="absolute mt-3 p-3 bg-white border border-gray-100 shadow-xl rounded-xl w-52 z-50 flex flex-col gap-1">
+                  <li>
+                    <Link
+                      href="/speechsync"
+                      className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                    >
+                      SpeechSync
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products"
+                      className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                    >
+                      Other Product
+                    </Link>
+                  </li>
+                </ul>
+              </details>
+
               <li>
                 <Link href="/team">Teams</Link>
               </li>
@@ -411,7 +509,7 @@ export default function Navbar() {
       {showStickyNav && (
         <div className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-[60] transition duration-300">
           <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"> <Image
+            <Link href="/"> <Image
               src="/speechcliniclogo.svg"
               alt="Speech Clinic Logo"
               width={120}

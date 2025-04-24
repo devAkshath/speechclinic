@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import Footer from "./components/footer";
 import FloatingWidget from "./components/FloatingWidget/FloatingButton";
+// import AnimatedCurveLine from "./components/herocurve/animatedline";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +31,10 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        
+      > 
         {children}
+        
+        {/* <AnimatedCurveLine/> */}
         <FloatingWidget/>
         <Footer />
         <SpeedInsights />

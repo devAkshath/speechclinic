@@ -70,7 +70,7 @@ export default function NavBarSecond() {
 
   return (
     <nav className="max-w-screen-xl mx-auto p-8 bg-transparent w-full relative">
-    
+
       {/* ✅ CHANGED: Add ref to this Mobile Sidebar */}
       <div
         ref={mobileMenuRef}
@@ -106,21 +106,50 @@ export default function NavBarSecond() {
           </li>
 
           <li className="text-lg font-bold">
-          <Link href =''>Services</Link>
+            <Link href=''>Services</Link>
           </li>
 
-          <li className="text-lg font-bold">
-          <Link href="/speechsync" onClick={handleMobileLinkClick}>
-              Our Products
-            </Link>
-          </li>
+
+          <details className="relative group list-none [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:text-[#DA159B] text-lg font-bold">
+              Products
+              <svg
+                className="w-4 h-4 mt-0.5 transform transition-transform duration-300 group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <ul className="absolute mt-3 p-3 bg-white border border-gray-100 shadow-xl rounded-xl w-52 z-50 flex flex-col gap-1">
+              <li>
+                <Link
+                  href="/speechsync"
+                  className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                >
+                  SpeechSync
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products"
+                  className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                >
+                  Other Product
+                </Link>
+              </li>
+            </ul>
+          </details>
 
           <li className="text-lg font-bold">
             <Link href="/team" onClick={handleMobileLinkClick}>
               Teams
             </Link>
           </li>
-    
+
         </ul>
         <hr />
         <div className="space-y-2 mt-8">
@@ -218,10 +247,10 @@ export default function NavBarSecond() {
 
 
       {/* Sticky Navbars... (no changes here) */}
-      
-   
-        <div className="hidden lg:block fixed top-0 left-0  w-full bg-white shadow-md z-[60] transition duration-300">
-          {/* top bar */}
+
+
+      <div className="hidden lg:block fixed top-0 left-0  w-full bg-white shadow-md z-[60] transition duration-300">
+        {/* top bar */}
         <div className="hidden lg:block bg-gradient-to-r from-[#54169C] to-[#DA159B] text-white text-sm py-2 px-4">
           <div className="max-w-screen-xl mx-auto flex justify-between items-center">
             <div className="flex gap-4">
@@ -245,53 +274,87 @@ export default function NavBarSecond() {
             </div>
           </div>
         </div>
-        
-          <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-           
-        <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link> 
-            <ul className="flex gap-6 text-gray-800 text-sm font-medium">
-              <li><Link href="./">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="#">Services</Link></li>
-              <li><Link href="/speechsync">Products</Link></li>
-              <li><Link href="/team">Teams</Link></li>
-              <li><Link href="/Contact">Contact</Link></li>
-            </ul>
-            <div className="flex items-center gap-4">
-              <Link
-                href="#"
-                className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
-              >
-                Let&apos;s Talk <FaComments />
-              </Link>
-              <button
-                onClick={toggleWideMenu}
-                aria-label="Toggle Menu"
-                className="text-dark text-xl p-2 rounded-full"
-              >
-                <FaBars />
-              </button>
-            </div>
-          </div>
-        </div>
-    
- 
-        <div className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-[60] transition duration-300">
-          <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"> <Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link>
-            <button
-              onClick={toggleMobileMenu}
-              aria-label="Toggle Menu"
-              className="text-white text-xl p-2 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md"
+
+        <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
+
+          <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link>
+          <ul className="flex gap-6 text-gray-800 text-sm font-medium">
+            <li><Link href="./">Home</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="#">Services</Link></li>
+
+            <details className="relative group list-none [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex items-center gap-1 cursor-pointer transition-colors duration-200 hover:text-[#DA159B]">
+                Products
+                <svg
+                  className="w-4 h-4 mt-0.5 transform transition-transform duration-300 group-open:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+
+              <ul className="absolute mt-3 p-3 bg-white border border-gray-100 shadow-xl rounded-xl w-52 z-50 flex flex-col gap-1">
+                <li>
+                  <Link
+                    href="/speechsync"
+                    className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                  >
+                    SpeechSync
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products"
+                    className="block px-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-200"
+                  >
+                    Other Product
+                  </Link>
+                </li>
+              </ul>
+            </details>
+
+            <li><Link href="/team">Teams</Link></li>
+            <li><Link href="/Contact">Contact</Link></li>
+          </ul>
+          <div className="flex items-center gap-4">
+            <Link
+              href="#"
+              className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
             >
-              {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+              Let&apos;s Talk <FaComments />
+            </Link>
+            <button
+              onClick={toggleWideMenu}
+              aria-label="Toggle Menu"
+              className="text-dark text-xl p-2 rounded-full"
+            >
+              <FaBars />
             </button>
           </div>
         </div>
-        
+      </div>
+
+
+      <div className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-[60] transition duration-300">
+        <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
+          <Link href="/"> <Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link>
+          <button
+            onClick={toggleMobileMenu}
+            aria-label="Toggle Menu"
+            className="text-white text-xl p-2 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md"
+          >
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+      </div>
+
 
     </nav>
-    
+
   );
-  
+
 }
