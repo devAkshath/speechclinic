@@ -53,7 +53,7 @@ export default function Productfeatures() {
  
 
   return (
-    <section className="text-black bg-gradient-to-br from-[#DA159B]/75 to-[#54169C]/90 py-20 md:py-24 px-4 md:px-10 overflow-hidden relative">
+    <section className="text-black bg-gradient-to-br from-[#DA159B]/75 to-[#54169C]/90 py-20 md:py-24 px-4 md:px-10 overflow-hidden relative"  id="">
     {/* Background Bubbles */}
     <div className="absolute -top-16 -left-16 w-60 h-60 bg-[#45465B] rounded-full opacity-30 blur-3xl" />
     <div className="absolute -bottom-20 -right-16 w-72 h-72 bg-pink-300 rounded-full opacity-20 blur-3xl" />

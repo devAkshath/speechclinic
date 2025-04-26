@@ -3,14 +3,14 @@
 import Image from "next/image";
 
 const cards = [
-  { label: "What questions", image: "/cardtest1.png" },
-  { label: "Where questions", image: "/cardtest1.png" },
-  { label: "When questions", image: "/cardtest1.png" },
-  { label: "Who questions", image: "/cardtest1.png" },
-  { label: "Yes/No concepts", image: "/cardtest1.png" },
+  { label: "What questions", image: "/speechcard1.svg", },
+  { label: "Where questions", image:  "/speechcard2.svg",},
+  { label: "When questions", image:  "/speechcard3.svg",},
+  { label: "Who questions", image:  "/speechcard4.svg", },
+  { label: "Yes/No concepts", image: "/speechcard5.svg",},
   {
     label: "Three Step- Four Step and Five Step Sequencing Concept",
-    image: "/cardtest1.png",
+    image:  "/speechcard10.svg",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function TypesCard() {
           </div>
         </div>
       </section>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:max-w-[1750px] mx-auto  ">
         {cards.map((card, index) => (
           <div
             key={index}

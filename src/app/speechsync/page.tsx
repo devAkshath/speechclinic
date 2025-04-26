@@ -156,11 +156,13 @@ export default function Hero() {
 
         {/* Content... (rest remains same) */}
       </section>
-      <Productfeatures />
 
+<div id="knowmore">
+<Productfeatures />
+</div>
       <section
         className="text-black bg-gradient-to-tr from-white to-pink-50 py-20 md:py-24 px-5 md:px-10 overflow-hidden relative"
-        id="knowmore"
+       
       >
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* Left Content */}
@@ -182,18 +184,7 @@ export default function Hero() {
           ))}
 
           <div className="md:w-1/2 text-center md:text-left">
-            {/* <div className="inline-flex items-center justify-center mb-3">
-                                  <Image
-                                    src="/verified.png"
-                                    alt="Verified Icon"
-                                    className="w-8 h-8 mr-1"
-                                    width={800}
-                                    height={500}
-                                  />
-                                  <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl my-2">
-                                   About SpeechSync
-                                  </div>
-                                </div> */}
+     
             <h2 className="text-5xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
               Empower Every Voice
             </h2>
@@ -243,7 +234,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-tr from-white to-pink-50 py-20 md:py-24 px-4 md:px-10 text-center">
+      <section className="bg-gradient-to-tr from-white to-pink-50 py-25 md:py-24 px-4 md:px-10 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
             Why Choose SpeechSync?
@@ -261,7 +252,7 @@ export default function Hero() {
       </section>
       <FAQSection />
 
-      <section className="bg-gradient-to-tr from-white to-pink-50 py-16 px-4 md:px-10 text-center">
+      <section className="bg-gradient-to-tr from-white py-25 px-4 md:px-10 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
             Discover More

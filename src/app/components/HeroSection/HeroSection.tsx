@@ -3,7 +3,6 @@
 import { useMediaQuery } from "react-responsive";
 import WaveBackground from "../herocurve/wave";
 import CurveLine from "../herocurve/curveline";
-import Image from "next/image";
 import GradientBackground from "../herocurve/blurgradient";
 
 export default function Hero() {
@@ -31,38 +30,62 @@ export default function Hero() {
       {/* === LAYOUT === */}
       {isDesktop ? (
         // === DESKTOP LAYOUT ===
-        <div className="relative z-10 flex flex-row items-center w-full max-w-7xl px-6 py-16">
-          <div className="flex-1 text-left text-white pt-12">
-            <h1 className="text-5xl font-bold mb-4 mt-16">
-              Innovative Leaders In <br /> Paediatric Therapy
-            </h1>
-
-            <p className="text-lg font-light mb-7 font-sans">
-              At The Speech Clinic, we provide specialized therapy
-              <br /> designed to improve speech and communication skills,
-              <br /> tailored to children with autism.
-            </p>
-
-            <div className="flex space-x-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="pt-20 pb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left content */}
+            <div className="text-white space-y-6 flex-1 ">
+              <h1 className="text-5xl font-bold leading-tight">
+                Innovative Leaders In
+                <br />
+                Paediatric Therapy
+              </h1>
+              <p className="text-lg md:text-xl opacity-90">
+                At The Speech Clinic, we provide specialized therapy
+                designed to improve speech and communication skills,
+                tailored to children with autism.
+              </p>
+              <div className="flex flex-wrap gap-4">
               <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
                 About Us
               </button>
               <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-pink-600 hover:to-red-600 transition duration-300">
                 Get In Touch
               </button>
+              </div>
+            </div>
+
+            {/* Right content - Image */}
+            <div className="relative">
+              <div className="rounded-3xl overflow-hidden ">
+                <video
+            width={800}
+            height={500}
+            className="w-full h-auto object-cover rounded-[35px] shadow-md mb-6 mt-15"
+            controls
+            autoPlay
+            muted
+            loop
+          >
+            <source
+              src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+                  {/* <div className="absolute inset-0 flex items-center justify-center">
+                    <button 
+                      className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all"
+                      aria-label="Play video"
+                    >
+                      <div className="w-0 h-0 border-t-8 border-b-8 border-l-12 border-transparent border-l-purple-700 ml-1"></div>
+                    </button>
+                  </div> */}
+              </div>
             </div>
           </div>
-
-          <div className="flex-1 px-0">
-            <Image
-              width={800}
-              height={500}
-              src="/image.jpg"
-              alt="Therapy Image"
-              className="w-full h-auto object-cover rounded-[50px] shadow-md"
-            />
-          </div>
         </div>
+      </div>
       ) : (
         // === MOBILE & TABLET LAYOUT ===
         <div className="relative z-0 w-full max-w-3xl px-2 py-10 text-center">

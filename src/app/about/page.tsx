@@ -24,7 +24,7 @@ export default function About() {
       </section>
 
 
-      
+
 
 
 
@@ -66,11 +66,11 @@ export default function About() {
               <div className="flex flex-1 flex-row min-w-[250px] max-w-sm border-2 border-pink-400 rounded-3xl py-1 px-4">
                 <div className="bg-[#da159b] w-14 h-14 rounded-full flex items-center justify-center mr-4">
                   <Image
-                    src="/team.svg"
+                    src="/promo4.svg"
                     alt="Clients"
-                    className="w-8 h-8 text-white"
-                    width={32}
-                    height={32}
+                    className=" text-white"
+                    width={102}
+                    height={102}
                   />
                 </div>
                 <div className="flex-1">
@@ -82,11 +82,11 @@ export default function About() {
               <div className="flex flex-1 flex-row min-w-[250px] max-w-sm border-2 border-pink-400 rounded-3xl py-1 px-4">
                 <div className="bg-[#da159b] w-14 h-14 rounded-full flex items-center justify-center mr-4">
                   <Image
-                    src="/peopleicon.svg"
+                    src="/promo3.svg"
                     alt="Clients"
-                    className="w-8 h-8"
-                    width={32}
-                    height={32}
+                    className=""
+                    width={102}
+                    height={102}
                   />
                 </div>
                 <div className="flex-1">
@@ -99,18 +99,18 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative py-32 px-6 md:px-10 bg-gradient-to-tr from-[#54169C]/80 to-[#DA159B]/95 text-white overflow-hidden">
+      <section className="relative py-32 px-6 md:px-10  text-white overflow-hidden">
         {/* Glowing Background Blur */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-white opacity-10 rounded-full blur-[120px] -z-10"></div>
 
         {/* Container with Border */}
-        <div className="max-w-6xl mx-auto px-6 md:px-16 py-16 border border-white/20 rounded-3xl backdrop-blur-sm bg-white/5 shadow-xl">
+        <div className="max-w-6xl mx-auto px-6 md:px-16 py-16 border border-white/20 rounded-3xl backdrop-blur-sm bg-white/5 shadow-xl bg-gradient-to-tr from-[#54169C]/80 to-[#DA159B]/95">
 
-        
+
 
           <div className="text-center max-w-3xl mx-auto">
 
-          <div className="inline-flex items-center justify-center mb-4">
+            <div className="inline-flex items-center justify-center mb-4">
               <Image
                 src="/verified.png"
                 alt="Verified Icon"
@@ -119,9 +119,9 @@ export default function About() {
                 height={500}
               />
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-              Meet Our Founder
+                Meet Our Founder
               </div>
-              </div>
+            </div>
             <h2 className="text-6xl font-extrabold leading-tight mb-6">Sana Shareef</h2>
             <p className="text-xl font-light mb-6">
               Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
@@ -158,8 +158,16 @@ export default function About() {
       </section>
 
 
-      <section className="bg-white py-20 px-6 md:px-12 lg:px-24 text-gray-800">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
+
+
+      {/* Why Choose Us Section */}
+
+      <section className="relative bg-white py-20 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
+
+
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
 
           {/* Content Section */}
           <div className="space-y-6">
@@ -173,7 +181,7 @@ export default function About() {
                 height={500}
               />
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-              Why Choose Us
+                Why Choose Us
               </div>
             </div>
 
@@ -188,19 +196,26 @@ export default function About() {
             </p>
 
             {/* Feature List */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-              {[
-                "Tailored, Interactive Therapy Plans",
-                "Comprehensive Multidisciplinary Care",
-                "Innovative & Interactive Methods",
-                "Supportive, Family-Centered Care",
-              ].map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="text-[#DA159B] text-xl">✔️</span>
-                  <span className="text-md">{feature}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="backdrop-blur-xl bg-white/60 rounded-2xl p-6 shadow-xl">
+
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                {[
+                  "Tailored, Interactive Therapy Plans",
+                  "Comprehensive Multidisciplinary Care",
+                  "Innovative & Interactive Methods",
+                  "Supportive, Family-Centered Care",
+                ].map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-[#DA159B] text-xl">✔️</span>
+                    <span className="text-md">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+
+
 
             {/* Stats */}
             <div className="flex flex-col sm:flex-row gap-6 mt-10">
@@ -232,7 +247,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+
 
       <div className="">
         <Testimonial />

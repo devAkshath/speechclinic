@@ -1,6 +1,6 @@
 export default function EnterpriseFeatures() {
   return (
-    <section className="py-16 px-6 md:px-20 bg-gray-100">
+    <section className="mx-auto max-w-[1750px] px-4 sm:px-4 py-16 lg:px-12 md:px-12 bg-gray-100">
       <h2 className="text-6xl md:text-6xl font-light mb-12 leading-tight">
         Speech Therapy Cards<br />
         Features

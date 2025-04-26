@@ -1,9 +1,9 @@
 .gallery {
-  height: 170vh;
+  height: 160vh;
   background: white;
   position: relative;
   display: flex;
-  gap: 0vw;
+  gap: 2vw;
   padding: 0vw;
   box-sizing: border-box;
   overflow: hidden;
@@ -12,11 +12,13 @@
 .gallery .column {
   position: relative;
   height: 100%;
-  width: 25%;
-  min-width: 20px;
+  width: 20%;
+  min-width: 10px;
   display: flex;
   flex-direction: column;
   gap: 1vw;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .gallery .column .imageContainer {
@@ -25,6 +27,9 @@
   position: relative;
   border-radius: 1vw;
   overflow: hidden;
+  border: 4px solid #ccc;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .gallery .column .imageContainer :global(img) {
@@ -38,16 +43,16 @@
   top: -75%;
 }
 .gallery .column:nth-of-type(3) {
-  top: -80%;
+  top: -90%;
 }
 .gallery .column:nth-of-type(4) {
   top: -45%;
 }
 .gallery .column:nth-of-type(5) {
-  top: -65%;
+  top: -85%;
 }
 .gallery .column:nth-of-type(6) {
-  top: -60%;
+  top: -45%;
 }
 
 .spacer {

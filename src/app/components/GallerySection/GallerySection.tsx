@@ -64,7 +64,7 @@ export default function Gallery() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="px-4 py-10 text-center font-sans ">
+    <div className=" py-10 text-center font-sans ">
       <div className="w-full -z-500 absolute  pointer-events-none hidden lg:block pt-144">
       <CurveSvg />
       </div>
