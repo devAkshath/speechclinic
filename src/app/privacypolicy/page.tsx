@@ -97,7 +97,7 @@ export default function privacy() {
           We strive to use commercially acceptable means to protect Your Personal Data, though no method is 100% secure.
         </p>
 
-        <h3 className="text-xl font-medium mb-2">Children's Privacy</h3>
+        <h3 className="text-xl font-medium mb-2">Children&apos;s Privacy</h3>
         <p className="mb-4">
           Our Service does not knowingly collect data from children under 13. If you believe your child has provided us with Personal Data,
           please contact us.

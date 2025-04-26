@@ -45,8 +45,8 @@ export default function terms() {
           <h2 className="text-2xl font-semibold mt-8 mb-4">Limitation of Liability</h2>
           <p className="mb-4">Notwithstanding any damages that You might incur, the entire liability of the Company...</p>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-4">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
-          <p className="mb-4">The Service is provided to You "AS IS" and "AS AVAILABLE"...</p>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">&quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer</h2>
+          <p className="mb-4">The Service is provided to You &quot;AS IS&quot; and &quot;AS AVAILABLE&quot;...</p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Governing Law</h2>
           <p className="mb-4">The laws of the Country, excluding its conflicts of law rules, shall govern this Terms...</p>
