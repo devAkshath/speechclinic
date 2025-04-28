@@ -38,9 +38,9 @@ export default function TypesCard() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl  overflow-hidden flex flex-col items-center p-4 text-center transition-transform hover:scale-90"
+            className="bg-white rounded-2xl  overflow-hidden flex flex-col items-center p-4 text-center transition-transform hover:scale-95"
           >
-            <div className="w-full h-130 relative mb-4   rounded-[30px] overflow-hidden">
+            <div className="w-full h-120 relative mb-4   rounded-[30px] overflow-hidden">
               <Image
                 src={card.image}
                 alt={card.label}
