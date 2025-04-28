@@ -1,7 +1,84 @@
+'use client';
+
+import { useEffect, useRef } from "react";
 import MasonryGrid from "../Features/mansoryimages";
 import Image from "next/image";
 
 export default function TherapyPromo() {
+  const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
+  
+    useEffect(() => {
+      const boxes = boxesRef.current;
+  
+      function checkBoxes() {
+        const isMobile = window.innerWidth <= 768;
+        const triggerBottom = (window.innerHeight / 4) * 4;
+  
+        boxes.forEach((box, index) => {
+          if (!box) return;
+          const boxTop = box.getBoundingClientRect().top;
+  
+          if (isMobile) {
+            if (boxTop < triggerBottom) {
+              box.classList.add("show");
+            } else {
+              box.classList.remove("show");
+            }
+          } else {
+            setTimeout(() => {
+              box.classList.add("show");
+            }, index * 150);
+          }
+        });
+      }
+  
+      window.addEventListener("scroll", checkBoxes);
+      window.addEventListener("resize", checkBoxes);
+      window.addEventListener("load", checkBoxes);
+  
+      checkBoxes();
+  
+      return () => {
+        window.removeEventListener("scroll", checkBoxes);
+        window.removeEventListener("resize", checkBoxes);
+        window.removeEventListener("load", checkBoxes);
+      };
+    }, []);
+
+  useEffect(() => {
+    const boxes = featureRefs.current;
+    if (typeof window === 'undefined') return;
+
+    function checkBoxes() {
+      const isMobile = window.innerWidth <= 768;
+      const triggerBottom = window.innerHeight / 4 * 4;
+    
+      boxes.forEach((box, index) => {
+        if (!box) return;
+        const boxTop = box.getBoundingClientRect().top;
+    
+        if (isMobile) {
+          if (boxTop < triggerBottom) {
+            box.classList.add('show');
+          } else {
+            box.classList.remove('show');
+          }
+        } else {
+          setTimeout(() => {
+            box.classList.add('show');
+          }, index * 150); 
+        }
+      });
+    }
+    
+
+    window.addEventListener('scroll', checkBoxes);
+    checkBoxes(); 
+
+    return () => window.removeEventListener('scroll', checkBoxes);
+  }, []);
+
   return (
     <div className="bg-transparent text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:py-18">
@@ -9,9 +86,11 @@ export default function TherapyPromo() {
           {/* Left Column */}
           <div className="space-y-12">
             {/* Heading Section */}
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-normal text-gray-700 mb-2">
-                Nurturing Communication,
+            <div  ref={(el) => {
+          if (el) boxesRef.current[1] = el;
+        }} className=" box text-center md:text-left">
+              <h2  className="  text-3xl md:text-5xl font-normal text-gray-700 mb-2">
+                Nurturing Communication
               </h2>
               <h2 className="text-3xl md:text-5xl font-semibold bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
                 Confidence & Growth
@@ -19,11 +98,13 @@ export default function TherapyPromo() {
             </div>
 
             {/* Features Section */}
-            <div className="grid gap-8 sm:px-4 md:px-0 lg:px-0 px-4 ">
+            <div className="grid gap-8 sm:px-4 md:px-0 lg:px-0 px-4">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex flex-col md:flex-row items-start gap-4 text-left sm:shadow-lg md:shadow-none lg:shadow-none shadow-lg border-2 border-pink-400 rounded-[20px] md:border-0 md:rounded-[30%] p-4 md:p-0"
+                  ref={(el) => { featureRefs.current[index] = el; }}
+
+                  className="box flex flex-col md:flex-row items-start gap-4 text-left sm:shadow-lg md:shadow-none lg:shadow-none shadow-lg border-2 border-pink-400 rounded-[20px] md:border-0 md:rounded-[30%] p-4 md:p-0"
                 >
                   {/* Icon Section */}
                   <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[130px] md:h-[75px]">
@@ -50,8 +131,7 @@ export default function TherapyPromo() {
             </div>
           </div>
 
-          {/* Right Column - Masonry Grid */}
-          <div>
+          <div >
             <MasonryGrid />
           </div>
         </div>

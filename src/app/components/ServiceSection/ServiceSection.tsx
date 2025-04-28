@@ -6,24 +6,57 @@ import ServiceCard from "./ServiceCards";
 import Image from "next/image";
 
 export default function ServiceSection() {
+
+  const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
+  
+    useEffect(() => {
+      const boxes = boxesRef.current;
+  
+      function checkBoxes() {
+        const isMobile = window.innerWidth <= 768;
+        const triggerBottom = (window.innerHeight / 4) * 4;
+  
+        boxes.forEach((box, index) => {
+          if (!box) return;
+          const boxTop = box.getBoundingClientRect().top;
+  
+          if (isMobile) {
+            if (boxTop < triggerBottom) {
+              box.classList.add("show");
+            } else {
+              box.classList.remove("show");
+            }
+          } else {
+            setTimeout(() => {
+              box.classList.add("show");
+            }, index * 150);
+          }
+        });
+      }
+  
+      window.addEventListener("scroll", checkBoxes);
+      window.addEventListener("resize", checkBoxes);
+      window.addEventListener("load", checkBoxes);
+  
+      checkBoxes();
+  
+      return () => {
+        window.removeEventListener("scroll", checkBoxes);
+        window.removeEventListener("resize", checkBoxes);
+        window.removeEventListener("load", checkBoxes);
+      };
+    }, []);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "center",
   });
-
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const autoplayInterval = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   const therapyImages = [
-    { src: "/aba-therapy.svg", title: "ABA Therapy" , href:"/ServicePage"},
+    { src: "/aba-therapy.svg", title: "ABA Therapy", href: "/ServicePage" },
     { src: "/feeding-therapy.svg", title: "Feeding Therapy" },
     { src: "/group-therapy.svg", title: "Group Therapy" },
     {
@@ -35,6 +68,13 @@ export default function ServiceSection() {
     { src: "/school-readiness-program.svg", title: "School Readiness" },
     { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage" },
   ];
+
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!emblaApi || !isSmallScreen) return;
@@ -64,19 +104,18 @@ export default function ServiceSection() {
     setScrollSnaps(emblaApi.scrollSnapList());
     onSelect();
   }, [emblaApi]);
-  const services = therapyImages.map(({ src, title , href }, index) => (
-    <div
-      key={index}
-      className="relative overflow-hidden bg-transparent rounded-[40px] shadow-white
-      w-full max-w-[254px] h-[265px]  mx-auto"
-    >
-      <ServiceCard imageSrc={src} title={title} href={href || '#'} />
+
+  const services = therapyImages.map(({ src, title, href }, index) => (
+    <div key={index} className="">
+      <ServiceCard imageSrc={src} title={title} href={href || "#"} />
     </div>
   ));
 
   return (
-    <div className=" bg-transparent flex flex-col items-center justify-center p-6 sm:p-8">
-      <div className="inline-flex items-center justify-center mb-3">
+    <div className="bg-transparent flex flex-col items-center justify-center p-6 sm:p-8">
+      <div  ref={(el) => {
+          if (el) boxesRef.current[0] = el;
+        }} className="box inline-flex items-center justify-center mb-3">
         <Image
           src="/verified.png"
           alt="Verified Icon"
@@ -88,20 +127,26 @@ export default function ServiceSection() {
           Our Services
         </div>
       </div>
-      <h2 className="text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2">
+      <h2  ref={(el) => {
+          if (el) boxesRef.current[1] = el;
+        }} className=" box text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2">
         We Believe Everyone Deserves
       </h2>
-      <div className="relative inline-block">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+      <div  className="relative inline-block">
+        <h1  ref={(el) => {
+          if (el) boxesRef.current[2] = el;
+        }}className="box text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
           Our Quality Care
         </h1>
       </div>
 
       <div className="mt-8 w-full flex justify-center">
         {isSmallScreen ? (
-          <div className="w-full ">
+          <div  ref={(el) => {
+            if (el) boxesRef.current[3] = el;
+          }}className="box w-full">
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6  px-0 py-0">
+              <div className="flex gap-6 px-0 py-0">
                 {services.map((service, index) => (
                   <div
                     className="flex-[0_0_100%] flex justify-center"

@@ -3,10 +3,82 @@
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import CurveSvg from "./curvesvg";
 
 export default function Gallery() {
+  const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
+
+  useEffect(() => {
+    const boxes = boxesRef.current;
+
+    function checkBoxes() {
+      const isMobile = window.innerWidth <= 768;
+      const triggerBottom = (window.innerHeight / 5) * 4;
+
+      boxes.forEach((box, index) => {
+        if (!box) return;
+        const boxTop = box.getBoundingClientRect().top;
+
+        if (isMobile) {
+          if (boxTop < triggerBottom) {
+            box.classList.add("show");
+          } else {
+            box.classList.remove("show");
+          }
+        } else {
+          setTimeout(() => {
+            box.classList.add("show");
+          }, index * 150);
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkBoxes);
+    window.addEventListener("resize", checkBoxes);
+    window.addEventListener("load", checkBoxes);
+
+    checkBoxes();
+
+    return () => {
+      window.removeEventListener("scroll", checkBoxes);
+      window.removeEventListener("resize", checkBoxes);
+      window.removeEventListener("load", checkBoxes);
+    };
+  }, []);
+
+  const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
+  useEffect(() => {
+    const boxes = featureRefs.current;
+    if (typeof window === "undefined") return;
+
+    function checkBoxes() {
+      const isMobile = window.innerWidth <= 768;
+      const triggerBottom = (window.innerHeight / 5) * 4;
+
+      boxes.forEach((box, index) => {
+        if (!box) return;
+        const boxTop = box.getBoundingClientRect().top;
+
+        if (isMobile) {
+          if (boxTop < triggerBottom) {
+            box.classList.add("show");
+          } else {
+            box.classList.remove("show");
+          }
+        } else {
+          setTimeout(() => {
+            box.classList.add("show");
+          }, index * 150);
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkBoxes);
+    checkBoxes();
+
+    return () => window.removeEventListener("scroll", checkBoxes);
+  }, []);
   const images = [
     "/galleryimage1.jpeg",
     "/galleryimage3.jpg",
@@ -66,10 +138,15 @@ export default function Gallery() {
   return (
     <div className=" py-10 text-center font-sans ">
       <div className="w-full -z-500 absolute  pointer-events-none hidden lg:block pt-144">
-      <CurveSvg />
+        <CurveSvg />
       </div>
-   
-      <div className="inline-flex items-center justify-center mb-3">
+
+      <div
+        ref={(el) => {
+          if (el) boxesRef.current[0] = el;
+        }}
+        className="box inline-flex items-center justify-center mb-3"
+      >
         <Image
           src="/verified.png"
           alt="Verified Icon"
@@ -81,10 +158,20 @@ export default function Gallery() {
           Our Gallery
         </div>
       </div>
-      <h2 className="text-2xl md:text-3xl font-light text-gray-700">
+      <h2
+        ref={(el) => {
+          if (el) boxesRef.current[1] = el;
+        }}
+        className="box text-2xl md:text-3xl font-light text-gray-700"
+      >
         Let&apos;s Check Our Photo
       </h2>
-      <h1 className="text-3xl md:text-4xl font-semibold bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent mb-6">
+      <h1
+        ref={(el) => {
+          if (el) boxesRef.current[2] = el;
+        }}
+        className=" box text-3xl md:text-4xl font-semibold bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent mb-6"
+      >
         Gallery
       </h1>
 
@@ -120,7 +207,12 @@ export default function Gallery() {
       </div>
 
       {/* Mobile View - Embla Carousel */}
-      <div className="md:hidden w-full mb-10 ">
+      <div
+        ref={(el) => {
+          if (el) boxesRef.current[3] = el;
+        }}
+        className="box md:hidden w-full mb-10 "
+      >
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-6  px-4">
             {images.map((src, index) => (
@@ -158,7 +250,10 @@ export default function Gallery() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-[#4F4052] text-white p-6 rounded-[30px]   shadow-2xl relative overflow-hidden text-left w-[327px] "
+            ref={(el) => {
+              featureRefs.current[index] = el;
+            }}
+            className=" box  bg-[#4F4052] text-white p-6 rounded-[30px]   shadow-2xl relative overflow-hidden text-left w-[327px] "
           >
             <div className="absolute top-0 left-0 w-full h-full"></div>
 
@@ -192,7 +287,12 @@ export default function Gallery() {
         {/* Left Column */}
         <div className="max-w-md space-y-4 lg:text-left">
           {/* Row 1: Label */}
-          <div className="inline-flex items-center justify-center md:justify-center  mb-2">
+          <div
+            ref={(el) => {
+              if (el) boxesRef.current[4] = el;
+            }}
+            className="box inline-flex items-center justify-center md:justify-center  mb-2"
+          >
             <Image
               src="/verified.png"
               alt="Verified Icon"
@@ -206,28 +306,47 @@ export default function Gallery() {
           </div>
 
           {/* Row 2: Heading */}
-          <h2 className="text-4xl font-semibold text-gray-700 lg:text-white py-4">
-  Fostering Communication
-  <br />
-  Through Meaningful Language
-</h2>
-
+          <h2
+            ref={(el) => {
+              if (el) boxesRef.current[5] = el;
+            }}
+            className="box text-4xl font-semibold text-gray-700 lg:text-white py-4"
+          >
+            Fostering Communication
+            <br />
+            Through Meaningful Language
+          </h2>
 
           {/* Row 3: Description */}
-          <p className="text-md text-gray-400 lg:text-white  py-2">
+          <p
+            ref={(el) => {
+              if (el) boxesRef.current[6] = el;
+            }}
+            className=" box text-md text-gray-400 lg:text-white  py-2"
+          >
             Our Gestalt Language Therapy focuses on supporting children who
             learn language in chunks, helping them progress toward meaningful,
             independent communication.
           </p>
 
           {/* Row 4: Button */}
-          <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
+          <button
+            ref={(el) => {
+              if (el) boxesRef.current[7] = el;
+            }}
+            className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
+          >
             Get Started
           </button>
         </div>
 
         {/* Right Column: Image */}
-        <div className="w-full max-w-md relative h-100 rounded-[30px] overflow-hidden shadow-md">
+        <div
+          ref={(el) => {
+            if (el) boxesRef.current[8] = el;
+          }}
+          className="box w-full max-w-md relative h-100 rounded-[30px] overflow-hidden shadow-md"
+        >
           <Image
             src="/galleryimage.jpg"
             alt="Gestalt Therapy"
@@ -239,9 +358,12 @@ export default function Gallery() {
 
       <div className="bg-transparent py-12 px-4 md:px-0 text-center space-y-10 lg:px-75">
         {/* Stats Row */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+        <div className=" flex flex-wrap justify-center gap-6 md:gap-10">
           {/* Clients */}
-          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center">
+
+          <div ref={(el) => {
+            if (el) boxesRef.current[9] = el;
+          }}className=" box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center">
             <div className="bg-white p-2 rounded-2xl mb-0 ">
               <Image
                 src="/peopleicon.svg"
@@ -260,7 +382,9 @@ export default function Gallery() {
           </div>
 
           {/* Staffs */}
-          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 lg:border-white text-center gap-2">
+          <div  ref={(el) => {
+            if (el) boxesRef.current[10] = el;
+          }} className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 lg:border-white text-center gap-2">
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
                 src="/groupicon.svg"
@@ -279,7 +403,9 @@ export default function Gallery() {
           </div>
 
           {/* Projects */}
-          <div className="flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center gap-2">
+          <div  ref={(el) => {
+            if (el) boxesRef.current[11] = el;
+          }} className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center gap-2">
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
                 src="/builbicon.svg"
@@ -299,9 +425,11 @@ export default function Gallery() {
         </div>
 
         {/* Message Box */}
-        <div className="relative border-2 border-pink-400 lg:border-white rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4">
+        <div  ref={(el) => {
+            if (el) boxesRef.current[12] = el;
+          }}className="box relative border-2 border-pink-400 lg:border-white rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4">
           {/* Top Overlay Text */}
-          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20 bg-white border lg:border-white border-pink  rounded-4xl px-4 py-1 text-2xl sm:text-3xl md:text-4xl text-gray-700  font-medium whitespace-nowrap">
+          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20 bg-white border lg:border-white border-pink-400  rounded-2xl px-4 py-1 text-2xl sm:text-3xl md:text-4xl text-gray-700  font-medium whitespace-nowrap">
             Your Voice Matters
           </h3>
 

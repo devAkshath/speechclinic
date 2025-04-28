@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 // import { useEffect, useState } from 'react';
 
@@ -14,33 +15,59 @@ const testimonials = [
     designation: "Father",
     text: "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s...",
   },
-  // Add more if needed
 ];
 
 const Testimonial = () => {
-  //   const [current, setCurrent] = useState(0);
-
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setCurrent((prev) => (prev + 1) % testimonials.length);
-  //     }, 4000);
-  //     return () => clearInterval(interval);
-  //   }, []);
-
-  //   const prevSlide = () => {
-  //     setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  //   };
-
-  //   const nextSlide = () => {
-  //     setCurrent((prev) => (prev + 1) % testimonials.length);
-  //   };
+   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
+    
+      useEffect(() => {
+        const boxes = boxesRef.current;
+      
+        function checkBoxes() {
+          const isMobile = window.innerWidth <= 768;
+          const triggerBottom = (window.innerHeight / 4) * 4;
+      
+          boxes.forEach((box, index) => {
+            if (!box) return;
+            const boxTop = box.getBoundingClientRect().top;
+      
+            if (isMobile) {
+              if (boxTop < triggerBottom) {
+                box.classList.add("show");
+              } else {
+                box.classList.remove("show");
+              }
+            } else {
+              setTimeout(() => {
+                box.classList.add("show");
+              }, index * 150);
+            }
+          });
+        }
+      
+        window.addEventListener("scroll", checkBoxes);
+        window.addEventListener("resize", checkBoxes);
+        window.addEventListener("load", checkBoxes);
+      
+        checkBoxes(); 
+      
+        return () => {
+          window.removeEventListener("scroll", checkBoxes);
+          window.removeEventListener("resize", checkBoxes);
+          window.removeEventListener("load", checkBoxes);
+        };
+      }, []);
+ 
 
   return (
     <div className="flex flex-col items-center justify-center bg-white px-4 py-12">
       {/* === Top Info Section === */}
-      <div className="text-center max-w-2xl w-full space-y-4">
+      <div  ref={(el) => {
+            if (el) boxesRef.current[0] = el;
+          }}
+       className="box text-center max-w-2xl w-full space-y-4">
         {/* Row 1: Label */}
-        <div className="inline-flex items-center justify-center mb-2">
+        <div className=" inline-flex items-center justify-center mb-2">
           <Image
             src="/verified.png"
             alt="Verified Icon"
@@ -54,12 +81,18 @@ const Testimonial = () => {
         </div>
 
         {/* Row 2: Heading */}
-        <h2 className="text-3xl font-semibold text-gray-700 leading-snug">
+        <h2 ref={(el) => {
+            if (el) boxesRef.current[1] = el;
+          }}
+         className="box text-3xl font-semibold text-gray-700 leading-snug">
           What Parents Say
         </h2>
 
         {/* Row 3: Description */}
-        <p className="text-md text-gray-500">
+        <p  ref={(el) => {
+            if (el) boxesRef.current[2] = el;
+          }}
+        className="box text-md text-gray-500">
           Hear from families about how our Speech Clinic has helped improve
           their <br />
           children&lsquo;s communication and confidence.
@@ -67,7 +100,10 @@ const Testimonial = () => {
       </div>
 
       {/* === Bottom Slider Section === */}
-      <div className="mt-16 w-full lg:max-w-7xl md:max-w-6xl sm:max-w-6xl">
+      <div
+       ref={(el) => {
+        if (el) boxesRef.current[3] = el;
+      }} className="box mt-16 w-full lg:max-w-7xl md:max-w-6xl sm:max-w-6xl">
         <div className="relative">
           <div className="flex flex-col md:flex-row gap-4 w-full px-4">
             {testimonials.slice(0, 2).map((testimonial, idx) => (
@@ -104,7 +140,10 @@ const Testimonial = () => {
             ))}
           </div>
 
-          <div className="text-center mt-14 ">
+          <div
+           ref={(el) => {
+            if (el) boxesRef.current[4] = el;
+          }}className="box text-center mt-14 ">
             <button className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm">
               Get in Touch
             </button>

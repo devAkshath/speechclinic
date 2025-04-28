@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import './servicecard.module.css';
 
 export default function ServiceCard({
   imageSrc,
@@ -13,21 +14,28 @@ export default function ServiceCard({
   href: string;
 }) {
   return (
-    <Link href={href}>
-      <div className="relative group cursor-pointer overflow-hidden text-gray-50 h-64 md:h-66 lg:h-64 w-74 sm:w-64 rounded-[40px] duration-700 hover:duration-700 bg-transparent">
-        {/* Background Image */}
-        <Image src={imageSrc} alt="Card Image" fill className="object-fill" />
+    <Link href={href} className="cursor-pointer">
+      <div className="relative w-[290px] h-[340px] bg-white rounded-[20px] overflow-hidden group border border-transparent hover:border-pink-300 hover:shadow-md transition-all duration-300">
+        {/* Top Section */}
+        <div className="relative h-[75%] bg-white rounded-t-[20px] overflow-hidden transition-all duration-300 group-hover:h-[35%] p-0">
+          <Image src={imageSrc} alt={title} fill className="object-cover rounded-t-[20px]" />
+        </div>
+        <div className="p-0.5"></div>
 
-        {/* Hover Info Section */}
-        <div className="absolute bg-white-50 bottom-0.5 sm:bottom-1.0  w-64 sm:w-64 p-3.5 h-18 flex flex-col gap-1 group-hover:bottom-0 group-hover:duration-600 duration-500 shadow-white backdrop-blur-xl  rounded-[20px]">
-          <span className="text-gray-800 font-semibold text-md mb-8 whitespace-pre-line">
-            {title}
-          </span>
-          <p className="text-neutral-800 text-sm "></p>
+        {/* Bottom Section */}
+        <div className="relative bg-gradient-to-br from-[#54169C] to-[#DA159B] h-[55%] rounded-t-[20px] transition-all duration-300 group-hover:h-[65%] p-0 backdrop-blur-3xl">
+
+          {/* Card Content */}
+          <div className="relative z-10 flex flex-col items-center justify-center text-white pb-[10%] h-full">
+            <span className="font-extralight text-white text-[18px] text-center">{title}</span>
+            {/* <p className="text-[14px] mt-2 text-center">Your subtitle</p> */}
+
+            <button className="mt-[15%] text-white border-2 border-white rounded-[15px] px-4 py-1 text-[13px] bg-transparent hover:bg-white hover:text-black transition-all duration-400">
+              Learn More
+            </button>
+          </div>
         </div>
       </div>
     </Link>
   );
 }
-
-

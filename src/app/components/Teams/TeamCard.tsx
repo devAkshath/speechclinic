@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { FaEye } from "react-icons/fa";
 
@@ -18,6 +18,27 @@ interface TeamCardProps {
 
 export default function TeamCard({ member }: TeamCardProps) {
   const [open, setOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+  
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open]);
+
+  
+
   return (
     <>
       <div    className="group relative bg-white text-center rounded-2xl p-4 space-y-2 shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer max-w-xs"
@@ -74,7 +95,7 @@ export default function TeamCard({ member }: TeamCardProps) {
       </div>
       {open && (
        <div className="fixed inset-0 backdrop-blur-sm z-50 flex justify-center items-center px-4">
-       <div className="bg-white yw-full max-w-4xl p-1 rounded-3xl relative overflow-hidden max-h-[90vh] shadow-xl transition-all duration-500 transform hover:scale-105">
+       <div ref={modalRef} className="bg-white w-full max-w-4xl p-1 rounded-3xl relative overflow-hidden max-h-[90vh] shadow-xl transition-all duration-500 ">
      
          {/* Stylish Header with Close Button on the Right */}
          <div className="w-full bg-fuchsia-900  p-4 rounded-t-3xl flex justify-between items-center shadow-lg">

@@ -22,17 +22,6 @@ export default function About() {
         </div>
         <HalfWaveBackground />
       </section>
-
-
-
-
-
-
-
-
-
-
-
       {/* Masonry & Mission Section */}
       <section className="text-blackpy-20 md:py- px-4 md:px-10 overflow-hidden relative ">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 text-black rounded-xl">
@@ -99,149 +88,221 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative py-32 px-6 md:px-10  text-white overflow-hidden">
-        {/* Glowing Background Blur */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-white opacity-10 rounded-full blur-[120px] -z-10"></div>
+      {/* founder */}
 
-        {/* Container with Border */}
-        <div className="max-w-6xl mx-auto px-6 md:px-16 py-16 border border-white/20 rounded-3xl backdrop-blur-sm bg-white/5 shadow-xl bg-gradient-to-tr from-[#54169C]/80 to-[#DA159B]/95">
+      <section className="relative py-32 px-6 md:px-10 text-white overflow-hidden">
+        {/* Enhanced Background with multiple layers */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#54169C] to-[#DA159B] animate-gradient-shift">
+          {/* Animated floating elements */}
+          <div className="absolute top-0 left-0 w-64 h-64 bg-[#DA159B]/20 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#54169C]/20 rounded-full blur-3xl animate-float-slow-delayed"></div>
+          {/* Additional floating elements */}
+          <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-[#DA159B]/15 rounded-full blur-2xl animate-float-medium"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-32 h-32 bg-[#54169C]/15 rounded-full blur-2xl animate-float-medium-delayed"></div>
+        </div>
 
+        {/* Main Container with parallax effect */}
+        <div className="relative max-w-6xl mx-auto transform hover:scale-[1.02] transition-transform duration-700">
+          {/* Enhanced Border Section */}
+          <div className="p-1 bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-3xl hover:shadow-lg hover:shadow-[#DA159B]/30 
+                        transition-all duration-500 group hover:scale-[1.01]">
+            {/* Inner Content with enhanced effects */}
+            <div className="bg-white rounded-2xl p-8 md:p-16 transform transition-all duration-500 ">
 
+              <div className="text-center max-w-3xl mx-auto relative">
+                {/* Enhanced animated badge with icon rotation */}
+                <div className="inline-flex items-center justify-center mb-4 animate-fade-in group">
+                  <Image
+                    src="/verified.png"
+                    alt="Verified Icon"
+                    className="w-8 h-8 mr-1 animate-bounce-slow hover:rotate-12 group-hover:rotate-[-12deg] 
+                              transition-transform duration-300"
+                    width={800}
+                    height={500}
+                  />
+                  <div className="text-md font-light text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-6 py-1 rounded-2xl 
+                                hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 
+                                animate-pulse-slow group-hover:bg-gradient-to-l">
+                    Meet Our Founder
+                  </div>
+                </div>
 
-          <div className="text-center max-w-3xl mx-auto">
+                {/* Enhanced animated heading with gradient mask */}
+                <h2 className="text-6xl font-extrabold leading-tight mb-6 text-gray-800 animate-slide-up 
+                              hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] 
+                              transition-all duration-500 group-hover:scale-105">
+                  Sana Shareef
+                </h2>
 
-            <div className="inline-flex items-center justify-center mb-4">
-              <Image
-                src="/verified.png"
-                alt="Verified Icon"
-                className="w-8 h-8 mr-1"
-                width={800}
-                height={500}
-              />
-              <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-                Meet Our Founder
+                {/* Enhanced animated subtitle with underline effect */}
+                <p className="text-xl font-light mb-6 text-gray-600 animate-slide-up delay-100 
+                            hover:text-gray-800 transition-colors duration-300 relative inline-block
+                            after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C]
+                            hover:after:w-full after:transition-all after:duration-300">
+                  Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
+                </p>
+
+                {/* Enhanced animated badges with staggered effects */}
+                <div className="inline-flex gap-4 flex-wrap justify-center mb-12">
+                  {[
+                    "Master's from Isabel, Spain",
+                    "Oral Placement Therapist",
+                    "Feeding Therapy",
+                    "Sensory Integration"
+                  ].map((badge, index) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 
+                               hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] hover:text-white hover:border-transparent 
+                               transform hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/20 
+                               transition-all duration-300 animate-fade-in hover:rotate-1 group-hover:translate-y-[-2px]"
+                      style={{
+                        animationDelay: `${index * 100}ms`,
+                        transitionDelay: `${index * 50}ms`
+                      }}
+                    >
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Enhanced animated image container with multiple effects */}
+                <div className="relative w-64 h-64 mx-auto mb-8 animate-fade-in delay-300 group">
+                  {/* Enhanced Gradient Glow Effects */}
+                  {/* Enhanced Image Container with multiple hover effects */}
+                  <div className="relative rounded-full shadow-2xl w-64 h-64 overflow-hidden border-4 border-white/50 backdrop-blur-sm 
+                                hover:border-[#DA159B] hover:shadow-[#DA159B]/30 transition-all duration-500 
+                                group-hover:scale-105 group-hover:rotate-2">
+                    <Image
+                      src="/teams/sana-shareef.jpg"
+                      alt="Sana Shareef"
+                      className="w-full h-full object-cover transform transition-transform duration-500 
+                                group-hover:scale-110 group-hover:rotate-[-2deg]"
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                </div>
+                {/* Enhanced animated description with gradient underline */}
+                <p className="my-6 text-gray-600 leading-relaxed animate-fade-in delay-500 
+                            hover:text-gray-800 transition-colors duration-300 relative
+                            after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C]
+                            hover:after:w-full after:transition-all after:duration-300">
+                  With a Master's in Speech & Language Therapy and over 8 years of clinical experience, Sana's vision has transformed countless lives. She's a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region's first advanced AAC app.
+                </p>
               </div>
             </div>
-            <h2 className="text-6xl font-extrabold leading-tight mb-6">Sana Shareef</h2>
-            <p className="text-xl font-light mb-6">
-              Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
-            </p>
-
-            <div className="inline-flex gap-4 flex-wrap justify-center mb-12">
-              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
-                Master’s from Isabel, Spain
-              </span>
-              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
-                Oral Placement Therapist
-              </span>
-              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
-                Feeding Therapy
-              </span>
-              <span className="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-md">
-                Sensory Integration
-              </span>
-            </div>
-
-            <Image
-              src="/teams/sana-shareef.jpg"
-              alt="Sana Shareef"
-              className="rounded-full mx-auto shadow-2xl w-64 h-64 object-cover border-4 border-white"
-              width={300}
-              height={300}
-            />
-
-            <p className="my-6 text-white/90">
-              With a Master’s in Speech & Language Therapy and over 8 years of clinical experience, Sana’s vision has transformed countless lives. She’s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region’s first advanced AAC app.
-            </p>
           </div>
         </div>
       </section>
-
+      {/* end founder */}
 
 
 
       {/* Why Choose Us Section */}
 
-      <section className="relative bg-white py-20 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#F8F5FF] to-[#FFF5F9] py-20 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
+        {/* Fixed background with reduced animation intensity */}
+ 
 
-
-
-        {/* Content */}
+        {/* Content with fixed z-index */}
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
-
           {/* Content Section */}
-          <div className="space-y-6">
-            {/* Badge */}
-            <div className="inline-flex items-center justify-center mb-4">
+          <div className="">
+            {/* Enhanced Badge with animation */}
+            <div className="inline-flex items-center justify-center mb-4 animate-fade-in group">
               <Image
                 src="/verified.png"
                 alt="Verified Icon"
-                className="w-8 h-8 mr-1"
+                className="w-8 h-8 mr-2  group-hover:rotate-12 transition-transform duration-300"
                 width={800}
                 height={500}
               />
-              <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+              <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
+                            hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 
+                            group-hover:bg-gradient-to-l">
                 Why Choose Us
               </div>
             </div>
 
-            {/* Heading */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Why We’re the Right Choice for You
+            {/* Enhanced Heading with gradient effect */}
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent
+                          hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
+              Why We're the Right Choice for You
             </h2>
 
-            {/* Description */}
-            <p className="text-lg text-gray-600">
+            {/* Enhanced Description */}
+            <p className="text-lg text-gray-600 animate-fade-in delay-100 relative inline-block
+                        after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C]
+                        hover:after:w-full after:transition-all after:duration-300">
               At The Speech Clinic, we are committed to providing expert care and tailored therapy solutions to support speech and language development.
             </p>
 
-            {/* Feature List */}
-            <div className="backdrop-blur-xl bg-white/60 rounded-2xl p-6 shadow-xl">
-
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
+            {/* Enhanced Feature List */}
+            <div className="backdrop-blur-xl bg-white/80 rounded-2xl p-8 shadow-xl transform hover:scale-[1.02] transition-all duration-300
+                          border border-[#54169C]/10 hover:border-[#DA159B]/20 relative overflow-hidden">
+              {/* Fixed background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#F8F5FF]/20 to-[#FFF5F9]/20 pointer-events-none"></div>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
                 {[
                   "Tailored, Interactive Therapy Plans",
                   "Comprehensive Multidisciplinary Care",
                   "Innovative & Interactive Methods",
                   "Supportive, Family-Centered Care",
                 ].map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-[#DA159B] text-xl">✔️</span>
-                    <span className="text-md">{feature}</span>
+                  <li key={idx} className="flex items-start gap-3 group">
+                    <span className="text-[#DA159B] text-xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">✔️</span>
+                    <span className="text-md group-hover:text-[#54169C] transition-colors duration-300 relative
+                                  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#DA159B]
+                                  group-hover:after:w-full after:transition-all after:duration-300">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
 
-
-
-
-            {/* Stats */}
+            {/* Enhanced Stats */}
             <div className="flex flex-col sm:flex-row gap-6 mt-10">
-              <div className="flex-1 bg-[#F8F5FF] rounded-xl p-6 shadow-sm text-center hover:shadow-md transition">
-                <div className="text-3xl font-extrabold text-[#54169C]">100%</div>
-                <p className="text-sm mt-2 text-gray-600">Quality Service</p>
+              <div className="flex-1 bg-white/80 rounded-xl p-6 shadow-sm text-center hover:shadow-xl hover:scale-105 transition-all duration-300 
+                            border border-[#54169C]/10 hover:border-[#DA159B]/20 group relative overflow-hidden">
+                {/* Fixed background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#F8F5FF]/20 to-[#FFF5F9]/20 pointer-events-none"></div>
+                <div className="relative z-10">
+                  <div className="text-4xl font-extrabold bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent
+                                group-hover:from-[#DA159B] group-hover:to-[#54169C] transition-all duration-500">100%</div>
+                  <p className="text-sm mt-2 text-gray-600 group-hover:text-[#54169C] transition-colors duration-300">Quality Service</p>
+                </div>
               </div>
-              <div className="flex-1 bg-[#F8F5FF] rounded-xl p-6 shadow-sm text-center hover:shadow-md transition">
-                <div className="text-3xl font-extrabold text-[#54169C]">95%</div>
-                <p className="text-sm mt-2 text-gray-600">Skilled Employee</p>
+              <div className="flex-1 bg-white/80 rounded-xl p-6 shadow-sm text-center hover:shadow-xl hover:scale-105 transition-all duration-300 
+                            border border-[#54169C]/10 hover:border-[#DA159B]/20 group relative overflow-hidden">
+                {/* Fixed background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#F8F5FF]/20 to-[#FFF5F9]/20 pointer-events-none"></div>
+                <div className="relative z-10">
+                  <div className="text-4xl font-extrabold bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent
+                                group-hover:from-[#DA159B] group-hover:to-[#54169C] transition-all duration-500">95%</div>
+                  <p className="text-sm mt-2 text-gray-600 group-hover:text-[#54169C] transition-colors duration-300">Skilled Employee</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Image Section */}
-          <div className="relative">
+          {/* Enhanced Image Section */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#DA159B]/20 to-[#54169C]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#DA159B]/10 to-[#54169C]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <Image
               src="/teams/parent-meeting.webp"
               alt="Speech session"
               width={600}
               height={500}
-              className="rounded-2xl shadow-xl w-full object-cover"
+              className="rounded-2xl shadow-xl w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow text-center">
-              <div className="text-xl font-bold text-[#DA159B]">100%</div>
-              <p className="text-sm text-gray-700">Family Satisfaction</p>
+            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg transform group-hover:scale-110 transition-all duration-300
+                          border border-[#54169C]/10 hover:border-[#DA159B]/20">
+              <div className="text-2xl font-bold bg-gradient-to-r from-[#DA159B] to-[#54169C] bg-clip-text text-transparent
+                            group-hover:from-[#54169C] group-hover:to-[#DA159B] transition-all duration-500">100%</div>
+              <p className="text-sm text-gray-700 group-hover:text-[#54169C] transition-colors duration-300">Family Satisfaction</p>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -27,6 +27,46 @@ const blogCards = [
 ];
 
 export default function Blogs() {
+  const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
+    
+  useEffect(() => {
+    const boxes = boxesRef.current;
+  
+    function checkBoxes() {
+      const isMobile = window.innerWidth <= 768;
+      const triggerBottom = (window.innerHeight / 5) * 4;
+  
+      boxes.forEach((box, index) => {
+        if (!box) return;
+        const boxTop = box.getBoundingClientRect().top;
+  
+        if (isMobile) {
+          if (boxTop < triggerBottom) {
+            box.classList.add("show");
+          } else {
+            box.classList.remove("show");
+          }
+        } else {
+          setTimeout(() => {
+            box.classList.add("show");
+          }, index * 150);
+        }
+      });
+    }
+  
+    window.addEventListener("scroll", checkBoxes);
+    window.addEventListener("resize", checkBoxes);
+    window.addEventListener("load", checkBoxes);
+  
+    checkBoxes(); 
+  
+    return () => {
+      window.removeEventListener("scroll", checkBoxes);
+      window.removeEventListener("resize", checkBoxes);
+      window.removeEventListener("load", checkBoxes);
+    };
+  }, []);
+
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
@@ -74,7 +114,9 @@ export default function Blogs() {
   return (
     <div className="py-6 px-0 md:px-0 bg-transparent text-center">
       {/* Verified Label */}
-      <div className="inline-flex items-center justify-center mb-3">
+      <div  ref={(el) => {
+            if (el) boxesRef.current[0] = el;
+          }} className="box inline-flex items-center justify-center mb-3">
         <Image
           src="/verified.png"
           alt="Verified Icon"
@@ -88,12 +130,16 @@ export default function Blogs() {
       </div>
 
       {/* Heading */}
-      <h2 className="text-3xl font-semibold text-gray-700 leading-snug py-5">
+      <h2  ref={(el) => {
+            if (el) boxesRef.current[1] = el;
+          }} className="box text-3xl font-semibold text-gray-700 leading-snug py-5">
         Our Latest News <br /> & Blog
       </h2>
 
       {/* Desktop Cards */}
-      <div className="max-w-7xl mx-auto hidden md:grid md:grid-cols-3 gap-8 md:px-4 bg-transparent">
+      <div  ref={(el) => {
+            if (el) boxesRef.current[2] = el;
+          }} className="box max-w-7xl mx-auto hidden md:grid md:grid-cols-3 gap-8 md:px-4 bg-transparent">
         {blogCards.map((card, index) => (
           <div
             key={index}
@@ -113,17 +159,19 @@ export default function Blogs() {
               {card.content}
             </p>
             <Link href="/BlogPage">
-  <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-6/6 h-1/9 md:h-1/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10 rounded-full font-medium shadow-lg text-2xl">
-    Read More
-  </button>
-</Link>
+              <button className=" absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-6/6 h-1/9 md:h-1/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10 rounded-full font-medium shadow-lg text-2xl">
+                Read More
+              </button>
+            </Link>
           </div>
         ))}
       </div>
 
       {/* Mobile Embla Carousel */}
       {isSmallScreen && (
-        <div className="md:hidden w-full  mx-auto">
+        <div  ref={(el) => {
+          if (el) boxesRef.current[3] = el;
+        }} className="box md:hidden w-full  mx-auto">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {blogCards.map((card, index) => (
@@ -142,9 +190,12 @@ export default function Blogs() {
                     <p className="text-md text-gray-600 font-light text-left mb-4 line-clamp-3">
                       {card.content}
                     </p>
-              <Link href="/BlogPage">      <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-5/6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-medium shadow-lg text-xl">
-                      Read More
-                    </button></Link>
+                    <Link href="/BlogPage">
+                      {" "}
+                      <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-5/6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-medium shadow-lg text-xl">
+                        Read More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               ))}

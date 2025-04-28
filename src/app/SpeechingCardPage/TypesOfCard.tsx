@@ -28,9 +28,7 @@ export default function TypesCard() {
           {/* Right Column: Description + Button */}
           <div className="md:max-w-[50%]">
             <p className="text-lg   text-black/80 mb-6">
-            <p className="text-lg   text-black/80 mb-6">
             To help your child think and talk about the world, we exclusively provide our Speeching Card Series on the concepts:
-            </p>
             </p>
           
           </div>

@@ -23,6 +23,7 @@ export default function NavBarSecond() {
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const wideMenuRef = useRef<HTMLDivElement>(null);
+  const productDropdownRef = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -42,13 +43,20 @@ export default function NavBarSecond() {
       ) {
         setIsWideMenuOpen(false);
       }
+      if (
+        productDropdownRef.current &&
+        !productDropdownRef.current.contains(event.target as Node) &&
+        isOpen
+      ) {
+        setIsOpen(false);
+      }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMobileMenuOpen, isWideMenuOpen]);
+  }, [isMobileMenuOpen, isWideMenuOpen, isOpen]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -112,7 +120,7 @@ export default function NavBarSecond() {
           </li>
 
 
-          <div className="relative inline-block text-left">
+          <div className="relative inline-block text-left" ref={productDropdownRef}>
             {/* Trigger Button */}
             <button
               onClick={() => setIsOpen((prev) => !prev)}
@@ -344,7 +352,7 @@ export default function NavBarSecond() {
             <li><Link href="/about">About</Link></li>
             <li><Link href="#">Services</Link></li>
 
-            <div className="relative inline-block text-left">
+            <div className="relative inline-block text-left" ref={productDropdownRef}>
               {/* Trigger Button */}
               <button
                 onClick={() => setIsOpen((prev) => !prev)}

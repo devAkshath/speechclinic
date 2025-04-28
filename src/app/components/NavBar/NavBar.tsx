@@ -23,24 +23,28 @@ export default function Navbar() {
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const wideMenuRef = useRef<HTMLDivElement>(null);
+  const productDropdownRef = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target as Node) &&
-        isMobileMenuOpen
+        (mobileMenuRef.current && mobileMenuRef.current.contains(event.target as Node)) ||
+        (wideMenuRef.current && wideMenuRef.current.contains(event.target as Node)) ||
+        (productDropdownRef.current && productDropdownRef.current.contains(event.target as Node))
       ) {
+        return;
+      }
+
+      if (isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
       }
-      if (
-        wideMenuRef.current &&
-        !wideMenuRef.current.contains(event.target as Node) &&
-        isWideMenuOpen
-      ) {
+      if (isWideMenuOpen) {
         setIsWideMenuOpen(false);
+      }
+      if (isOpen) {
+        setIsOpen(false);
       }
     };
 
@@ -48,7 +52,7 @@ export default function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMobileMenuOpen, isWideMenuOpen]);
+  }, [isMobileMenuOpen, isWideMenuOpen, isOpen]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -138,8 +142,11 @@ export default function Navbar() {
                   <div className="relative inline-block text-left">
                     {/* Trigger Button */}
                     <button
-                      onClick={() => setIsOpen((prev) => !prev)}
-                      className="flex items-center  gap-1 cursor-pointer transition-colors duration-300 "
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpen((prev) => !prev);
+                      }}
+                      className="flex items-center gap-1 cursor-pointer transition-colors duration-300"
                     >
                       Products
                       <svg
@@ -156,6 +163,7 @@ export default function Navbar() {
 
                     {/* Dropdown */}
                     <div
+                      ref={productDropdownRef}
                       className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isOpen
                         ? "opacity-100 scale-100 translate-y-0"
                         : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"

@@ -50,18 +50,18 @@ export default function Home() {
       style={{ y: smoothY }}
       className="absolute left-0 top-0 z-[9] flex h-screen w-full items-center justify-center pointer-events-none"
     >
-      <div className="bg-transparent px- py-0 rounded-[70px] backdrop-blur-xs">
+      <div className="bg-white w-[650px] h-[200px] rounded-[40px] backdrop-blur-lg flex items-center justify-center overflow-hidden">
         <Image
           src={svgPath}
           alt="Speeching Cards Logo"
-          
-                    className="w-200 h-200  "
-          width={100} // Adjust width as needed
-          height={100} // Adjust height as needed
-          priority 
+          className="w-[650px] h-[650px] object-fill"
+          width={650}
+          height={650}
+          priority
         />
       </div>
     </motion.div>
+    
     );
   };
 
@@ -112,7 +112,7 @@ export default function Home() {
       </header>
       <div className={styles.spacer}></div>
       <div ref={gallery} className={styles.gallery}>
-      <OverlayCopy svgPath="/speechcardlogo.svg" />
+        <OverlayCopy svgPath="/speechcardlogo.svg" />
         <Column images={[images[0], images[1], images[2]]} y={y} />
         <Column images={[images[3], images[4], images[5]]} y={y2} />
         <Column images={[images[6], images[7], images[8]]} y={y3} />
