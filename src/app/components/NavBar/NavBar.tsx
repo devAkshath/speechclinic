@@ -89,7 +89,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="max-w-screen-xl mx-auto p-8 bg-transparent w-full relative">
+    <nav className="max-w-[1340px]  mx-auto pt-8 pb-8 pr-2 pl-4 bg-transparent w-full relative">
       {/* Main Navbar */}
       <div className="flex justify-between items-center py-3">
 
@@ -106,7 +106,7 @@ export default function Navbar() {
 
         {/* Desktop Menu + Contact Info */}
         <div className="hidden lg:flex flex-col">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-0">
             {/* Top Bar */}
             <div className="flex justify-between items-center gap-6 py-2">
               <div className="flex gap-10 text-white text-sm">

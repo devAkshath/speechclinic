@@ -70,7 +70,7 @@ export default function Hero() {
       {/* === LAYOUT === */}
       {isDesktop ? (
         // === DESKTOP LAYOUT ===
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="relative max-w-[1340px]  mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="pt-20 pb-32">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left content */}
@@ -80,7 +80,7 @@ export default function Hero() {
                   <br />
                   Paediatric Therapy
                 </h1>
-                <p className="text-lg md:text-xl opacity-90">
+                <p className="text-lg md:text-lg opacity-90">
                   At The Speech Clinic, we provide specialized therapy designed
                   to improve speech and communication skills, tailored to
                   children with autism.
