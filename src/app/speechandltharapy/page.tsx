@@ -4,8 +4,6 @@ import Image from "next/image";
 import NavBarSecond from "../components/NavBar/NavBarSecond";
 import { useState } from 'react';
 import HalfWaveBackground from "../components/svgs/halfcarve";
-import { FaRegLightbulb } from "react-icons/fa";
-import { FaCog } from "react-icons/fa";
 
 const services = [
   'Speech and Language Therapy',
@@ -18,7 +16,7 @@ const services = [
   'Group Therapy',
 ];
 export default function ServicePage() {
-  const [activeService, setActiveService] = useState(services[0]);
+  const [] = useState(services[0]);
 
 
   return (
