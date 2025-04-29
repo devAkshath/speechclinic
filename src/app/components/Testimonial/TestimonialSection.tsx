@@ -60,7 +60,7 @@ const Testimonial = () => {
  
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white px-4 py-12">
+    <div className="flex flex-col items-center justify-center bg-white px-4 py-1">
       {/* === Top Info Section === */}
       <div  ref={(el) => {
             if (el) boxesRef.current[0] = el;

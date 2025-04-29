@@ -39,8 +39,8 @@ export default function Home() {
 
     const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
     const smoothY = useSpring(y, {
-      damping: 20,
-      stiffness: 100,
+      damping: 50,
+      stiffness: 200,
       mass: 0.5,
     });
 
@@ -112,28 +112,28 @@ export default function Home() {
       </header>
       <div className={styles.spacer}></div>
       <div ref={gallery} className={styles.gallery}>
-  {dimension.width > 768 ? (
-    <>
-      <OverlayCopy svgPath="/speechcardlogo.svg" />
-      <Column images={[images[0], images[1], images[2]]} y={y} />
-      <Column images={[images[3], images[4], images[5]]} y={y2} />
-      <Column images={[images[6], images[7], images[8]]} y={y3} />
-      <Column images={[images[9], images[10], images[11]]} y={y4} />
-      <Column images={[images[7], images[5], images[1]]} y={y3} />
-    </>
-  ) : (
-    <div className="flex items-center justify-center w-full h-[30vh]">
-      <Image
-        src="/speechcardlogo.svg"
-        alt="Speeching Cards Logo"
-        width={400}
-        height={400}
-        className="object-contain"
-        priority
-      />
-    </div>
-  )}
-</div>
+        {dimension.width > 768 ? (
+          <>
+            <OverlayCopy svgPath="/speechcardlogo.svg" />
+            <Column images={[images[0], images[1], images[2]]} y={y} />
+            <Column images={[images[3], images[4], images[5]]} y={y2} />
+            <Column images={[images[6], images[7], images[8]]} y={y3} />
+            <Column images={[images[9], images[10], images[11]]} y={y4} />
+            <Column images={[images[7], images[5], images[1]]} y={y3} />
+          </>
+        ) : (
+          <div className="flex items-center justify-center w-full h-[30vh]">
+            <Image
+              src="/speechcardlogo.svg"
+              alt="Speeching Cards Logo"
+              width={400}
+              height={400}
+              className="object-contain"
+              priority
+            />
+          </div>
+        )}
+      </div>
 
       <div className={styles.spacer}></div>
 

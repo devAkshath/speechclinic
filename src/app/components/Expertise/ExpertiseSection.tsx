@@ -71,8 +71,8 @@ const Expertise = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center bg-transparent px-4 lg:py-22">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-7xl w-full px-6 py-12">
+    <div className="flex items-center mx-auto max-w-[1265px] justify-center bg-transparent  lg:py-28 px-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start  w-full px-0 py-12">
 
         {/* Left Column */}
         <div className="space-y-6 ">

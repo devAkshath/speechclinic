@@ -29,6 +29,12 @@ export default function NavBarSecond() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // Check if the click was on a link
+      const target = event.target as HTMLElement;
+      if (target.closest('a')) {
+        return; // Don't close dropdown if clicking a link
+      }
+
       if (
         mobileMenuRef.current &&
         !mobileMenuRef.current.contains(event.target as Node) &&
@@ -124,12 +130,11 @@ export default function NavBarSecond() {
             {/* Trigger Button */}
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="flex items-center text-lg font-bold gap-1 cursor-pointer transition-colors duration-300 "
+              className="flex items-center text-lg font-bold gap-1 cursor-pointer transition-colors duration-300"
             >
               Products
               <svg
-                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                  }`}
+                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -155,6 +160,7 @@ export default function NavBarSecond() {
                   <Link
                     href="/speechsync"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
+                    onClick={handleMobileLinkClick}
                   >
                     SpeechSync
                   </Link>
@@ -166,6 +172,7 @@ export default function NavBarSecond() {
                   <Link
                     href="/SpeechingCardPage"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
+                    onClick={handleMobileLinkClick}
                   >
                     SpeechCard
                   </Link>
@@ -356,12 +363,11 @@ export default function NavBarSecond() {
               {/* Trigger Button */}
               <button
                 onClick={() => setIsOpen((prev) => !prev)}
-                className="flex items-center text-sm gap-1 cursor-pointer transition-colors duration-300 "
+                className="flex items-center text-sm gap-1 cursor-pointer transition-colors duration-300"
               >
                 Products
                 <svg
-                  className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                    }`}
+                  className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"

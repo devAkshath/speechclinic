@@ -41,7 +41,7 @@ export default function TeamCard({ member }: TeamCardProps) {
 
   return (
     <>
-      <div    className="group relative bg-white text-center rounded-2xl p-4 space-y-2 shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer max-w-xs"
+      <div className="group relative bg-white text-center rounded-2xl p-4 space-y-2 shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer max-w-xs"
         onClick={() => setOpen(true)}>
         {/* Image Section */}
         <div className="relative">

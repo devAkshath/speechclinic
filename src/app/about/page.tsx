@@ -23,7 +23,7 @@ export default function About() {
         <HalfWaveBackground />
       </section>
       {/* Masonry & Mission Section */}
-      <section className="text-blackpy-20 md:py- px-4 md:px-10 overflow-hidden relative ">
+      <section className="text-blackpy-20 md:py-20 px-4 md:px-10 overflow-hidden relative ">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 text-black rounded-xl">
           <div className="max-w-xl">
             <MasonryGrid />

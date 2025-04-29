@@ -20,30 +20,43 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isWideMenuOpen, setIsWideMenuOpen] = useState(false);
   const [showStickyNav, setShowStickyNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const wideMenuRef = useRef<HTMLDivElement>(null);
   const productDropdownRef = useRef<HTMLDivElement>(null);
 
-  const [isOpen, setIsOpen] = useState(false);
+  const productButtonRef = useRef<HTMLButtonElement>(null); // <== Add this
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        (mobileMenuRef.current && mobileMenuRef.current.contains(event.target as Node)) ||
-        (wideMenuRef.current && wideMenuRef.current.contains(event.target as Node)) ||
-        (productDropdownRef.current && productDropdownRef.current.contains(event.target as Node))
-      ) {
-        return;
+      const target = event.target as HTMLElement;
+
+      if (target.closest('a')) {
+        return; // Don't close when clicking a link
       }
 
-      if (isMobileMenuOpen) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        isMobileMenuOpen
+      ) {
         setIsMobileMenuOpen(false);
       }
-      if (isWideMenuOpen) {
+      if (
+        wideMenuRef.current &&
+        !wideMenuRef.current.contains(event.target as Node) &&
+        isWideMenuOpen
+      ) {
         setIsWideMenuOpen(false);
       }
-      if (isOpen) {
+      if (
+        productDropdownRef.current &&
+        !productDropdownRef.current.contains(event.target as Node) &&
+        productButtonRef.current &&
+        !productButtonRef.current.contains(event.target as Node) &&
+        isOpen
+      ) {
         setIsOpen(false);
       }
     };
@@ -53,6 +66,7 @@ export default function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMobileMenuOpen, isWideMenuOpen, isOpen]);
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -138,65 +152,59 @@ export default function Navbar() {
                 <li>
                   <Link href="/about">About</Link>
                 </li>
-                <li>
-                  <div className="relative inline-block text-left">
-                    {/* Trigger Button */}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setIsOpen((prev) => !prev);
-                      }}
-                      className="flex items-center gap-1 cursor-pointer transition-colors duration-300"
+                <div className="relative inline-block text-left" ref={productDropdownRef}>
+                  {/* Trigger Button */}
+                  <button
+                    ref={productButtonRef} // <== Add the ref here
+                    onClick={() => setIsOpen((prev) => !prev)}
+                    className="flex items-center  gap-1 cursor-pointer transition-colors duration-300"
+                  >
+                    Products
+                    <svg
+                      className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
                     >
-                      Products
-                      <svg
-                        className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                          }`}
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
 
-                    {/* Dropdown */}
-                    <div
-                      ref={productDropdownRef}
-                      className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isOpen
-                        ? "opacity-100 scale-100 translate-y-0"
-                        : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
-                        }`}
-                    >
-                      {/* Dropdown Items */}
-                      <ul className="flex flex-col gap-2 p-3">
-                        <li
-                          className={`transition-all duration-300 ease-out ${isOpen ? "opacity-100 translate-y-0 delay-100" : "opacity-0 -translate-y-2 delay-0"
-                            }`}
+                  {/* Dropdown */}
+                  <div
+                    className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isOpen
+                      ? "opacity-100 scale-100 translate-y-0"
+                      : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
+                      }`}
+                  >
+                    {/* Dropdown Items */}
+                    <ul className="flex flex-col gap-2 p-3">
+                      <li
+                        className={`transition-all duration-300 ease-out ${isOpen ? "opacity-100 translate-y-0 delay-100" : "opacity-0 -translate-y-2 delay-0"
+                          }`}
+                      >
+                        <Link
+                          href="/speechsync"
+                          className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                         >
-                          <Link
-                            href="/speechsync"
-                            className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
-                          >
-                            SpeechSync
-                          </Link>
-                        </li>
-                        <li
-                          className={`transition-all duration-300 ease-out ${isOpen ? "opacity-100 translate-y-0 delay-200" : "opacity-0 -translate-y-2 delay-0"
-                            }`}
+                          SpeechSync
+                        </Link>
+                      </li>
+                      <li
+                        className={`transition-all duration-300 ease-out ${isOpen ? "opacity-100 translate-y-0 delay-200" : "opacity-0 -translate-y-2 delay-0"
+                          }`}
+                      >
+                        <Link
+                          href="/SpeechingCardPage"
+                          className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                         >
-                          <Link
-                            href="/SpeechingCardPage"
-                            className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
-                          >
-                            SpeechCard
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
+                          SpeechCard
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
-                </li>
+                </div>
                 <li>
                   <Link href="/AllServicesPage">Services</Link>
                 </li>
@@ -284,16 +292,15 @@ export default function Navbar() {
 
 
 
-          <div className="relative inline-block text-left">
+          <div className="relative inline-block text-left" ref={productDropdownRef}>
             {/* Trigger Button */}
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="flex items-center  gap-1 cursor-pointer transition-colors duration-300 text-lg font-bold "
+              className="flex items-center gap-1 cursor-pointer text-lg font-bold transition-colors duration-300"
             >
               Products
               <svg
-                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                  }`}
+                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -506,16 +513,15 @@ export default function Navbar() {
                 <Link href="/AllServicesPage">Services</Link>
               </li>
 
-              <div className="relative inline-block text-left">
+              <div className="relative inline-block text-left" ref={productDropdownRef}>
                 {/* Trigger Button */}
                 <button
                   onClick={() => setIsOpen((prev) => !prev)}
-                  className="flex items-center text-sm gap-1 cursor-pointer transition-colors duration-300 "
+                  className="flex items-center text-sm gap-1 cursor-pointer transition-colors duration-300"
                 >
                   Products
                   <svg
-                    className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                      }`}
+                    className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -527,7 +533,6 @@ export default function Navbar() {
 
                 {/* Dropdown */}
                 <div
-                
                   className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isOpen
                     ? "opacity-100 scale-100 translate-y-0"
                     : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"

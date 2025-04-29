@@ -117,7 +117,7 @@ export default function Products() {
 
       {/* Centered Highlight Section */}
       <div
-        className="relative w-full max-w-7xl h-[160px] mt-10 mx-auto px-10 box"
+        className="relative w-full max-w-[1260px]  h-[160px] mt-10 mx-auto px-10 box"
         ref={(el) => {
           if (el) boxesRef.current[5] = el;
         }}

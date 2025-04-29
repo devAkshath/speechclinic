@@ -81,7 +81,7 @@ export default function TherapyPromo() {
 
   return (
     <div className="bg-transparent text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:py-18">
+      <div className=" mx-auto  max-w-[1280px]  px-0 lg:px-0    sm:px-6 md:px-8 lg:py-18 py-10">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Left Column */}
           <div className="space-y-12">
@@ -107,7 +107,7 @@ export default function TherapyPromo() {
                   className="box flex flex-col md:flex-row items-start gap-4 text-left sm:shadow-lg md:shadow-none lg:shadow-none shadow-lg border-2 border-pink-400 rounded-[20px] md:border-0 md:rounded-[30%] p-4 md:p-0"
                 >
                   {/* Icon Section */}
-                  <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center w-[80px] h-[80px] sm:w-[80px] sm:h-[80px] md:w-[110px] md:h-[75px]">
+                  <div className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] p-4 rounded-[30%] flex items-center justify-center w-[80px] h-[80px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[75px]">
                     <Image
                       width={800}
                       height={500}

@@ -137,7 +137,7 @@ export default function Gallery() {
 
   return (
     <div className=" py-10 text-center font-sans ">
-      <div className="w-full -z-500 absolute  pointer-events-none hidden lg:block pt-144">
+      <div className="w-full -z-500 absolute mx-auto   pointer-events-none hidden lg:block pt-144">
         <CurveSvg />
       </div>
 
@@ -184,10 +184,11 @@ export default function Gallery() {
     md:grid-cols-3 
     gap-6 
     mb-10 
+    max-w-[1320px] 
     md:px-6 
-    lg:px-[15.5rem] 
     md:pl-6 md:pr-6 
-    lg:pl-[15.5rem] lg:pr-[15.5rem]
+    mx-auto
+    
   "
       >
         {images.map((src, index) => (
@@ -283,7 +284,7 @@ export default function Gallery() {
         ))}
       </div>
       {/* New Section - Two Column Row */}
-      <div className="flex flex-col lg:flex-row justify-center items-start md:items-center mt-16 gap-6 lg:gap-100 px-4 text-left md:text-center">
+      <div className="flex flex-col lg:flex-row justify-center mx-auto   max-w-[1300px] items-start md:items-center mt-16 gap-6 lg:gap-100 px-4 text-left md:text-center">
         {/* Left Column */}
         <div className="max-w-md space-y-4 lg:text-left">
           {/* Row 1: Label */}
@@ -313,7 +314,6 @@ export default function Gallery() {
             className="box text-4xl font-semibold text-gray-700 lg:text-white py-4"
           >
             Fostering Communication
-            <br />
             Through Meaningful Language
           </h2>
 
@@ -356,14 +356,17 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="bg-transparent py-12 px-4 md:px-0 text-center space-y-10 lg:px-75">
+      <div className="bg-transparent py-12 px-4 md:px-5 text-center mx-auto  max-w-[1250px] space-y-10 ">
         {/* Stats Row */}
         <div className=" flex flex-wrap justify-center gap-6 md:gap-10">
           {/* Clients */}
 
-          <div ref={(el) => {
-            if (el) boxesRef.current[9] = el;
-          }}className=" box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center">
+          <div
+            ref={(el) => {
+              if (el) boxesRef.current[9] = el;
+            }}
+            className=" box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center"
+          >
             <div className="bg-white p-2 rounded-2xl mb-0 ">
               <Image
                 src="/peopleicon.svg"
@@ -382,9 +385,12 @@ export default function Gallery() {
           </div>
 
           {/* Staffs */}
-          <div  ref={(el) => {
-            if (el) boxesRef.current[10] = el;
-          }} className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 lg:border-white text-center gap-2">
+          <div
+            ref={(el) => {
+              if (el) boxesRef.current[10] = el;
+            }}
+            className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 lg:border-white text-center gap-2"
+          >
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
                 src="/groupicon.svg"
@@ -403,9 +409,12 @@ export default function Gallery() {
           </div>
 
           {/* Projects */}
-          <div  ref={(el) => {
-            if (el) boxesRef.current[11] = el;
-          }} className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center gap-2">
+          <div
+            ref={(el) => {
+              if (el) boxesRef.current[11] = el;
+            }}
+            className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center gap-2"
+          >
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
                 src="/builbicon.svg"
@@ -425,11 +434,14 @@ export default function Gallery() {
         </div>
 
         {/* Message Box */}
-        <div  ref={(el) => {
+        <div
+          ref={(el) => {
             if (el) boxesRef.current[12] = el;
-          }}className="box relative border-2 border-pink-400 lg:border-white rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4">
+          }}
+          className="box relative border-2 border-pink-400 lg:border-white rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4"
+        >
           {/* Top Overlay Text */}
-          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20 bg-white border lg:border-white border-pink-400  rounded-2xl px-4 py-1 text-2xl sm:text-3xl md:text-4xl text-gray-700  font-medium whitespace-nowrap">
+          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20  bg-white border lg:border-white border-pink-400  rounded-3xl px-4 py-1 text-2xl sm:text-3xl md:text-3xl text-pink-600  font-medium whitespace-nowrap">
             Your Voice Matters
           </h3>
 
@@ -453,7 +465,7 @@ export default function Gallery() {
                 width={800}
                 height={500}
               />
-              <button className="bg-white border border-pink-400 lg:border-white text-pink-600  px-6 py-2 rounded-2xl shadow hover:bg-pink-50 transition font-medium whitespace-nowrap">
+              <button className="bg-white border border-pink-400 lg:border-white text-pink-600  px-6 py-2 rounded-2xl  hover:bg-white-50 transition font-medium whitespace-nowrap">
                 Reach Out Now
               </button>
             </div>

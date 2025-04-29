@@ -112,7 +112,7 @@ export default function Blogs() {
   }, [emblaApi]);
 
   return (
-    <div className="py-6 px-0 md:px-0 bg-transparent text-center">
+    <div className="py-15 px-0 md:px-0 bg-transparent text-center">
       {/* Verified Label */}
       <div  ref={(el) => {
             if (el) boxesRef.current[0] = el;
