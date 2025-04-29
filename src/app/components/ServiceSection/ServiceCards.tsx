@@ -17,7 +17,7 @@ export default function ServiceCard({
     <Link href={href} className="cursor-pointer">
       <div className="relative w-[290px] lg:w-[290px] sm:w-[290px]  md:w-[180px] md:h-[220px] lg:h-[340px] sm:h-[340px] h-[340px] bg-white rounded-[20px] overflow-hidden group border border-transparent hover:border-pink-300 hover:shadow-md transition-all duration-300">
         {/* Top Section */}
-        <div className="relative h-[75%] bg-white rounded-t-[20px] overflow-hidden transition-all duration-300 group-hover:h-[35%] p-0">
+        <div className="relative h-[75%] bg-white rounded-t-[20px] overflow-hidden transition-all duration-300 group-hover:h-[65%] p-0">
           <Image src={imageSrc} alt={title} fill className="object-cover rounded-t-[20px]" />
         </div>
         <div className="p-0.5"></div>
