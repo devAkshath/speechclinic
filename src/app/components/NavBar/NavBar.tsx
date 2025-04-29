@@ -228,12 +228,20 @@ export default function Navbar() {
                   Let&apos;s Talk <FaComments />
                 </Link>
 
-                <button
+                {/* <button
                   onClick={toggleWideMenu}
                   aria-label="Close Menu"
                   className="text-white text-xl"
                 >
                   <FaBars />
+                </button> */}
+
+                <button
+                  onClick={toggleMobileMenu}
+                  aria-label="Toggle Menu"
+                  className="text-white text-xl "
+                >
+                  {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
                 </button>
               </div>
             </div>

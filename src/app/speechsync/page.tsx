@@ -104,16 +104,16 @@ export default function Hero() {
                 <Image
                   src="/products/button-google-play.svg"
                   alt="Google Play"
-                  width={160}
-                  height={50}
+                  width={190}
+                  height={90}
                 />
               </div>
               <div className="overflow-hidden rounded-xl">
                 <Image
                   src="/products/button-appstore.svg"
                   alt="App Store"
-                  width={160}
-                  height={50}
+                  width={170}
+                  height={200}
                 />
               </div>
             </div>

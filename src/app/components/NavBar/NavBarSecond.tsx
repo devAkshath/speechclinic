@@ -422,13 +422,20 @@ export default function NavBarSecond() {
             >
               Let&apos;s Talk <FaComments />
             </Link>
-            <button
+            {/* <button
               onClick={toggleWideMenu}
               aria-label="Toggle Menu"
               className="text-dark text-xl p-2 rounded-full"
             >
               <FaBars />
-            </button>
+            </button> */}
+            <button
+                  onClick={toggleMobileMenu}
+                  aria-label="Toggle Menu"
+                  className="text-black text-xl p-2 rounded-full "
+                >
+                  {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                </button>
           </div>
         </div>
       </div>

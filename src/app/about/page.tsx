@@ -91,74 +91,53 @@ export default function About() {
       {/* founder */}
 
       <section className="relative py-32 px-6 md:px-10 text-white overflow-hidden">
-        {/* Enhanced Background with multiple layers */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#54169C] to-[#DA159B] animate-gradient-shift">
-          {/* Animated floating elements */}
-          <div className="absolute top-0 left-0 w-64 h-64 bg-[#DA159B]/20 rounded-full blur-3xl animate-float-slow"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#54169C]/20 rounded-full blur-3xl animate-float-slow-delayed"></div>
-          {/* Additional floating elements */}
-          <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-[#DA159B]/15 rounded-full blur-2xl animate-float-medium"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-32 h-32 bg-[#54169C]/15 rounded-full blur-2xl animate-float-medium-delayed"></div>
+        {/* Background with gradient and light floating blobs */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#54169C] to-[#DA159B]">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-[#DA159B]/20 rounded-full blur-3xl animate-float-slow will-change-transform"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#54169C]/20 rounded-full blur-3xl animate-float-slow-delayed will-change-transform"></div>
         </div>
 
-        {/* Main Container with parallax effect */}
-        <div className="relative max-w-6xl mx-auto transform hover:scale-[1.02] transition-transform duration-700">
-          {/* Enhanced Border Section */}
-          <div className="p-1 bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-3xl hover:shadow-lg hover:shadow-[#DA159B]/30 
-                        transition-all duration-500 group hover:scale-[1.01]">
-            {/* Inner Content with enhanced effects */}
-            <div className="bg-white rounded-2xl p-8 md:p-16 transform transition-all duration-500 ">
-
+        <div className="relative max-w-6xl mx-auto transition-transform duration-700">
+          <div className="p-1 bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-3xl hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-500">
+            <div className="bg-white rounded-2xl p-8 md:p-16 transition-all duration-500">
               <div className="text-center max-w-3xl mx-auto relative">
-                {/* Enhanced animated badge with icon rotation */}
-                <div className="inline-flex items-center justify-center mb-4 animate-fade-in group">
+                {/* Badge */}
+                <div className="inline-flex items-center justify-center mb-4">
                   <Image
                     src="/verified.png"
                     alt="Verified Icon"
-                    className="w-8 h-8 mr-1 animate-bounce-slow hover:rotate-12 group-hover:rotate-[-12deg] 
-                              transition-transform duration-300"
+                    className="w-8 h-8 mr-1 animate-bounce-slow transition-transform duration-300"
                     width={800}
                     height={500}
                   />
-                  <div className="text-md font-light text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-6 py-1 rounded-2xl 
-                                hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 
-                                animate-pulse-slow group-hover:bg-gradient-to-l">
+                  <div className="text-md font-light text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-6 py-1 rounded-2xl animate-pulse-slow">
                     Meet Our Founder
                   </div>
                 </div>
 
-                {/* Enhanced animated heading with gradient mask */}
-                <h2 className="text-6xl font-extrabold leading-tight mb-6 text-gray-800 animate-slide-up 
-                              hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] 
-                              transition-all duration-500 group-hover:scale-105">
+                {/* Heading */}
+                <h2 className="text-6xl font-extrabold leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
                   Sana Shareef
                 </h2>
 
-                {/* Enhanced animated subtitle with underline effect */}
-                <p className="text-xl font-light mb-6 text-gray-600 animate-slide-up delay-100 
-                            hover:text-gray-800 transition-colors duration-300 relative inline-block
-                            after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C]
-                            hover:after:w-full after:transition-all after:duration-300">
+                {/* Subtitle */}
+                <p className="text-xl font-light mb-6 text-gray-600 transition-colors duration-300 relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
                   Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
                 </p>
 
-                {/* Enhanced animated badges with staggered effects */}
+                {/* Badges */}
                 <div className="inline-flex gap-4 flex-wrap justify-center mb-12">
                   {[
                     "Master's from Isabel, Spain",
                     "Oral Placement Therapist",
                     "Feeding Therapy",
-                    "Sensory Integration"
+                    "Sensory Integration",
                   ].map((badge, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 
-                               hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] hover:text-white hover:border-transparent 
-                               transform hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/20 
-                               transition-all duration-300 animate-fade-in hover:rotate-1 group-hover:translate-y-[-2px]"
+                      className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] hover:text-white hover:border-transparent transform hover:scale-105 transition-all duration-300"
                       style={{
                         animationDelay: `${index * 100}ms`,
-                        transitionDelay: `${index * 50}ms`
                       }}
                     >
                       {badge}
@@ -166,35 +145,29 @@ export default function About() {
                   ))}
                 </div>
 
-                {/* Enhanced animated image container with multiple effects */}
-                <div className="relative w-64 h-64 mx-auto mb-8 animate-fade-in delay-300 group">
-                  {/* Enhanced Gradient Glow Effects */}
-                  {/* Enhanced Image Container with multiple hover effects */}
-                  <div className="relative rounded-full shadow-2xl w-64 h-64 overflow-hidden border-4 border-white/50 backdrop-blur-sm 
-                                hover:border-[#DA159B] hover:shadow-[#DA159B]/30 transition-all duration-500 
-                                group-hover:scale-105 group-hover:rotate-2">
+                {/* Founder Image */}
+                <div className="relative w-64 h-64 mx-auto mb-8">
+                  <div className="relative rounded-full shadow-2xl w-64 h-64 overflow-hidden border-4 border-white/50 hover:border-[#DA159B] hover:shadow-[#DA159B]/30 transition-all duration-500">
                     <Image
                       src="/teams/sana-shareef.jpg"
                       alt="Sana Shareef"
-                      className="w-full h-full object-cover transform transition-transform duration-500 
-                                group-hover:scale-110 group-hover:rotate-[-2deg]"
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       width={300}
                       height={300}
                     />
                   </div>
                 </div>
-                {/* Enhanced animated description with gradient underline */}
-                <p className="my-6 text-gray-600 leading-relaxed animate-fade-in delay-500 
-                            hover:text-gray-800 transition-colors duration-300 relative
-                            after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C]
-                            hover:after:w-full after:transition-all after:duration-300">
-                  With a Master&apos;s in Speech & Language Therapy and over 8 years of clinical experience, Sana&lsquo;s vision has transformed countless lives. She&apos;s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region&lsquo;s first advanced AAC app.
+
+                {/* Description */}
+                <p className="my-6 text-gray-600 leading-relaxed transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
+                  With a Master's in Speech & Language Therapy and over 8 years of clinical experience, Sana‘s vision has transformed countless lives. She's a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region‘s first advanced AAC app.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* end founder */}
 
 
@@ -203,7 +176,7 @@ export default function About() {
 
       <section className="relative bg-gradient-to-br from-[#F8F5FF] to-[#FFF5F9] py-20 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
         {/* Fixed background with reduced animation intensity */}
- 
+
 
         {/* Content with fixed z-index */}
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
