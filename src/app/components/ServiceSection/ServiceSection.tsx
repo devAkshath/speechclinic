@@ -170,7 +170,7 @@ export default function ServiceSection() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-4 gap-6 mt-8 md:grid">{services}</div>
+          <div className="grid grid-cols-4 lg:gap-10 gap-10 md:gap-3  mt-8 md:grid">{services}</div>
         )}
       </div>
     </div>
