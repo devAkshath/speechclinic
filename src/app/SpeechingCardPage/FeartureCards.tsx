@@ -1,5 +1,6 @@
 export default function EnterpriseFeatures() {
   return (
+    <div className="bg-gray-100">
     <section className="mx-auto max-w-[1750px] px-4 sm:px-4 py-16 lg:px-3 md:px-3 bg-gray-100">
       <h2 className="text-4xl md:text-6xl sm:4xl font-extralight mb-12 leading-tight text-black">
         Speech Therapy Cards<br />
@@ -58,5 +59,6 @@ export default function EnterpriseFeatures() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
