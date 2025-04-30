@@ -239,7 +239,7 @@ export default function grouptherapy() {
                                         />
                                     </div>
                                 </div>
-                                <p>At The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-semibold"> Speech Clinic</span>, we have two groups called Little Learner's Occupational Therapy Group (age 3-5 years) and Fun and Focus OT Play Group (age 5-7 years )</p>
+                                <p>At The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-semibold"> Speech Clinic</span>, we have two groups called Little Learner&apos;s Occupational Therapy Group (age 3-5 years) and Fun and Focus OT Play Group (age 5-7 years )</p>
                             </div>
                         </div>
                         <p>Our goal is to empower children to achieve their fullest potential, whether at home, school, or in social settings. We use a variety of therapeutic techniques and approaches to ensure that children not only meet developmental milestones but also thrive in their daily routines.</p>
