@@ -10,7 +10,7 @@ export default function grouptherapy() {
             </header>
 
             <div className="text-gray-700">
-                <section className="relative w-full h-[400px] md:h-[500px] lg:h-[800px] overflow-hidden my-15 ">
+                <section className="relative w-full h-[400px] md:h-[500px] lg:h-[650px] overflow-hidden my-15 ">
                     <div className="absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-1000" id="titleOverlay">
                         <div className="bg-gradient-to-b from-[#54169C]/90 to-pink-500/90 w-full h-full absolute"></div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white relative">Group Therapy</h2>
@@ -61,7 +61,7 @@ export default function grouptherapy() {
                             <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
                                 <Link
                                     href="/services/vocabulary-support"
-                                    className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
+                                    className="flex items-center justify-between p-4  hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                                 >
                                     <span className="text-lg font-semibold">Speech and Language Therapyt</span>
                                     <div className="w-8 h-8 rounded-full flex items-center justify-center border border-current group-hover:bg-[#54169C] group-hover:border-[#54169C]">
