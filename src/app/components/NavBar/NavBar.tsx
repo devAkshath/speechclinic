@@ -236,13 +236,23 @@ export default function Navbar() {
                   <FaBars />
                 </button> */}
 
-                <button
-                  onClick={toggleMobileMenu}
-                  aria-label="Toggle Menu"
-                  className="text-white text-xl "
+                {/* <button
+                  onClick={toggleWideMenu}
+                  aria-label="Toggle Wide Menu"
+                  className="text-white text-xl"
                 >
-                  {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                  {isWideMenuOpen ? <FaTimes /> : <FaBars />}
+                </button> */}
+                <button
+                  onClick={toggleWideMenu}
+                  aria-label="Toggle Wide Menu"
+                  className="text-white text-xl"
+                >
+                  {isWideMenuOpen ? <FaTimes /> : <FaBars />} {/* Show close icon when open */}
                 </button>
+
+
+
               </div>
             </div>
           </div>
@@ -588,13 +598,20 @@ export default function Navbar() {
               >
                 Let&apos;s Talk <FaComments />
               </Link>
-              <button
+              {/* <button
                 onClick={toggleWideMenu}
                 aria-label="Toggle Menu"
                 className="text-dark text-xl p-2 rounded-full"
               >
                 <FaBars />
-              </button>
+              </button> */}
+               <button
+                  onClick={toggleWideMenu}
+                  aria-label="Toggle Wide Menu"
+                  className="text-dark text-xl"
+                >
+                  {isWideMenuOpen ? <FaTimes /> : <FaBars />} {/* Show close icon when open */}
+                </button>
             </div>
           </div>
         </div>
@@ -622,3 +639,8 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
+
+

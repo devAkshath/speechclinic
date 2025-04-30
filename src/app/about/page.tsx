@@ -283,7 +283,7 @@ export default function About() {
 
 
 
-      <div className="">
+      <div className="my-6">
         <Testimonial />
       </div>
       <div className="my-0">

@@ -429,12 +429,12 @@ export default function NavBarSecond() {
             >
               <FaBars />
             </button> */}
-            <button
-                  onClick={toggleMobileMenu}
-                  aria-label="Toggle Menu"
-                  className="text-black text-xl p-2 rounded-full "
+              <button
+                  onClick={toggleWideMenu}
+                  aria-label="Toggle Wide Menu"
+                  className="text-dark text-xl"
                 >
-                  {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                  {isWideMenuOpen ? <FaTimes /> : <FaBars />} {/* Show close icon when open */}
                 </button>
           </div>
         </div>
