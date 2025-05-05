@@ -52,7 +52,7 @@ export default function Hero() {
       {/* === Backgrounds === */}
       {isDesktop ? (
         <>
-          <div className="absolute top-25 left-12 max-w-[1840px] h-full z-10">
+          <div className="absolute top-38 left-28 max-w-[1840px] h-full z-10">
             <HeroSvg />
           </div>
         </>
@@ -66,7 +66,7 @@ export default function Hero() {
       {isDesktop ? (
         // === DESKTOP LAYOUT ===
         <div className="relative max-w-[1500px]  mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="pt-40 pl-20 ">
+          <div className="pt-40 pl-35 ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
               {/* Left content */}
               <div className="text-white  space-y-6 flex-1 ">
@@ -94,11 +94,11 @@ export default function Hero() {
 
               {/* Right content - Image */}
               <div className="w-full flex justify-center items-center">
-                <div className="relative w-[clamp(280px,60vw,900px)]">
+                <div className="relative w-[clamp(280px,37vw,900px)]">
                   <img
                     src="/galleryimage.jpg"
                     alt="Therapy Session"
-                    className="rounded-[2rem] w-full h-auto aspect-[6/3] object-cover"
+                    className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
                   />
                   <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
                     <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
