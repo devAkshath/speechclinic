@@ -52,7 +52,7 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap gap-4 my-5 justify-center lg:justify-start">
-              <div className="flex flex-1 flex-row min-w-[250px] max-w-sm border-2 border-pink-400 rounded-3xl py-1 px-4">
+              <div className="flex flex-1 flex-row min-w-[250px] max-w-sm border-2 border-pink-400 rounded-3xl py-4 px-4">
                 <div className="bg-[#da159b] w-14 h-14 rounded-full flex items-center justify-center mr-4">
                   <Image
                     src="/promo4.svg"
@@ -68,7 +68,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-row min-w-[250px] max-w-sm border-2 border-pink-400 rounded-3xl py-1 px-4">
+              <div className="flex flex-1 flex-row min-w-[250px] max-w-sm border-2 border-pink-400 rounded-3xl py-4 px-4">
                 <div className="bg-[#da159b] w-14 h-14 rounded-full flex items-center justify-center mr-4">
                   <Image
                     src="/promo3.svg"
@@ -100,33 +100,33 @@ export default function About() {
         <div className="relative max-w-6xl mx-auto transition-transform duration-700">
           <div className="p-1 bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-3xl hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-500">
             <div className="bg-white rounded-2xl p-8 md:p-16 transition-all duration-500">
-              <div className="text-center max-w-3xl mx-auto relative">
+            <div className="text-center max-w-3xl mx-auto relative">
                 {/* Badge */}
-                <div className="inline-flex items-center justify-center mb-4">
+                <div className="inline-flex items-center justify-center mb-3">
                   <Image
                     src="/verified.png"
                     alt="Verified Icon"
-                    className="w-8 h-8 mr-1 animate-bounce-slow transition-transform duration-300"
+                    className="w-6 h-6 mr-1 animate-bounce-slow transition-transform duration-300"
                     width={800}
                     height={500}
                   />
-                  <div className="text-md font-light text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-6 py-1 rounded-2xl animate-pulse-slow">
+                  <div className="text-sm font-light text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-4 py-1 rounded-2xl animate-pulse-slow">
                     Meet Our Founder
                   </div>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-6xl font-extrabold leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
+                <h2 className="text-4xl font-extrabold leading-tight mb-4 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
                   Sana Shareef
                 </h2>
 
                 {/* Subtitle */}
-                <p className="text-xl font-light mb-6 text-gray-600 transition-colors duration-300 relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
+                <p className="text-lg font-light mb-4 text-gray-600 transition-colors duration-300 relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
                   Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
                 </p>
 
                 {/* Badges */}
-                <div className="inline-flex gap-4 flex-wrap justify-center mb-12">
+                <div className="inline-flex gap-3 flex-wrap justify-center mb-8">
                   {[
                     "Master's from Isabel, Spain",
                     "Oral Placement Therapist",
@@ -135,7 +135,7 @@ export default function About() {
                   ].map((badge, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] hover:text-white hover:border-transparent transform hover:scale-105 transition-all duration-300"
+                      className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] hover:text-white hover:border-transparent transform hover:scale-105 transition-all duration-300"
                       style={{
                         animationDelay: `${index * 100}ms`,
                       }}
@@ -146,21 +146,22 @@ export default function About() {
                 </div>
 
                 {/* Founder Image */}
-                <div className="relative w-64 h-64 mx-auto mb-8">
-                  <div className="relative rounded-full shadow-2xl w-64 h-64 overflow-hidden border-4 border-white/50 hover:border-[#DA159B] hover:shadow-[#DA159B]/30 transition-all duration-500">
+                <div className="relative w-48 h-48 mx-auto mb-6">
+                  <div className="relative rounded-full shadow-2xl w-48 h-48 overflow-hidden border-4 border-white/50 hover:border-[#DA159B] hover:shadow-[#DA159B]/30 transition-all duration-500">
                     <Image
                       src="/teams/sana-shareef.jpg"
                       alt="Sana Shareef"
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                      width={300}
-                      height={300}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority
                     />
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="my-6 text-gray-600 leading-relaxed transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
-                  With a Master&apos;s in Speech & Language Therapy and over 8 years of clinical experience, Sana‘s vision has transformed countless lives. She&lsquo;s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region‘s first advanced AAC app.
+                <p className="text-gray-600 leading-relaxed transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
+                  With a Master&apos;s in Speech & Language Therapy and over 8 years of clinical experience, Sana's vision has transformed countless lives. She&lsquo;s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region's first advanced AAC app.
                 </p>
               </div>
             </div>
@@ -175,10 +176,7 @@ export default function About() {
       {/* Why Choose Us Section */}
 
       <section className="relative bg-gradient-to-br from-[#F8F5FF] to-[#FFF5F9] py-20 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
-        {/* Fixed background with reduced animation intensity */}
-
-
-        {/* Content with fixed z-index */}
+  
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
           {/* Content Section */}
           <div className="">
@@ -200,19 +198,19 @@ export default function About() {
 
             {/* Enhanced Heading with gradient effect */}
             <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent
-                          hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
+                          hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500 mt-2">
               Why We&apos;re the Right Choice for You
             </h2>
 
             {/* Enhanced Description */}
             <p className="text-lg text-gray-600 animate-fade-in delay-100 relative inline-block
                         after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C]
-                        hover:after:w-full after:transition-all after:duration-300">
+                        hover:after:w-full after:transition-all after:duration-300 mt-10">
               At The Speech Clinic, we are committed to providing expert care and tailored therapy solutions to support speech and language development.
             </p>
 
             {/* Enhanced Feature List */}
-            <div className="backdrop-blur-xl bg-white/80 rounded-2xl p-8 shadow-xl transform hover:scale-[1.02] transition-all duration-300
+            <div className="backdrop-blur-xl bg-white/80 mt-10 rounded-2xl p-8 shadow-xl transform hover:scale-[1.02] transition-all duration-300
                           border border-[#54169C]/10 hover:border-[#DA159B]/20 relative overflow-hidden">
               {/* Fixed background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#F8F5FF]/20 to-[#FFF5F9]/20 pointer-events-none"></div>
@@ -225,9 +223,7 @@ export default function About() {
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3 group">
                     <span className="text-[#DA159B] text-xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">✔️</span>
-                    <span className="text-md group-hover:text-[#54169C] transition-colors duration-300 relative
-                                  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#DA159B]
-                                  group-hover:after:w-full after:transition-all after:duration-300">
+                    <span className="text-md ">
                       {feature}
                     </span>
                   </li>

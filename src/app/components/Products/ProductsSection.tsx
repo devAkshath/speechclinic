@@ -80,7 +80,7 @@ export default function Products() {
 
           {/* Row 2: Heading */}
           <h2
-            className="text-3xl font-semibold text-gray-700 lg:text-white leading-snug box"
+            className="text-3xl font-semibold text-gray-700  leading-snug box"
             ref={(el) => {
               if (el) boxesRef.current[2] = el;
             }}
@@ -116,44 +116,26 @@ export default function Products() {
       </div>
 
       {/* Centered Highlight Section */}
-      <div
-        className="relative w-full max-w-[1260px]  h-[160px] mt-10 mx-auto px-10 box"
-        ref={(el) => {
-          if (el) boxesRef.current[5] = el;
-        }}
-      >
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#512C96] to-[#EC008C] rounded-[30px] z-0"></div>
-
-        {/* Top Left Foreground Container */}
-        <div
-          className="absolute top-0 left-0 w-2/6 h-full bg-[#4A3B51] z-10 flex items-center justify-center text-white"
-          style={{
-            borderBottomLeftRadius: "30px",
-            borderTopLeftRadius: "30px",
-            borderTopRightRadius: "100px",
-            borderBottomRightRadius: "0px",
-          }}
-        >
-          <div className="text-base sm:text-lg md:text-3xl font-semibold leading-tight text-center px-4">
-            Future
-            <br />
-            Events
-            <br />
-            Ahead
-          </div>
+      <div className="w-full max-w-[1310px] h-[160px] mx-auto mt-10 px-4 sm:px-10">
+      <div className="w-full h-full flex items-center rounded-[30px] border-2 border-[#4A3B51] overflow-hidden">
+        
+        {/* Left Gradient Button */}
+        <div className="flex items-center justify-center bg-gradient-to-tr from-[#54169C] to-[#DA159B] ml-7 h-[110px] w-[350px] sm:w-[300px] md:w-[510px] text-white text-lg sm:text-xl md:text-3xl font-stretch-extra-expanded rounded-[20px] ">
+          Future Events Ahead
         </div>
 
-        {/* Right-Side Text on Gradient */}
-        <div className="absolute text-white z-20 text-left top-1/2 transform -translate-y-1/2 right-2 sm:right-4 md:right-20">
-          <p className="text-sm md:text-3xl font-light">
+        {/* Right Text Content */}
+        <div className="pl-6 sm:pl-10 md:pl-14 text-[#4A3B51]">
+          <p className="text-sm sm:text-base md:text-2xl font-light">
             Be Part of Our Upcoming
           </p>
-          <p className="text-sm md:text-3xl font-bold mt-1">
+          <p className="text-base sm:text-lg md:text-3xl font-semibold">
             Events and Make an Impact
           </p>
         </div>
+
       </div>
+    </div>
     </section>
   );
 }

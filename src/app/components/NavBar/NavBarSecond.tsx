@@ -29,29 +29,36 @@ export default function NavBarSecond() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Check if the click was on a link
       const target = event.target as HTMLElement;
-      if (target.closest('a')) {
-        return; // Don't close dropdown if clicking a link
+      
+      // Don't close if clicking on a link or button
+      if (target.closest('a') || target.closest('button')) {
+        return;
       }
 
+      // Handle mobile menu
       if (
         mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target as Node) &&
+        !mobileMenuRef.current.contains(target) &&
         isMobileMenuOpen
       ) {
         setIsMobileMenuOpen(false);
+        setIsOpen(false); // Also close product dropdown when mobile menu closes
       }
+
+      // Handle wide menu
       if (
         wideMenuRef.current &&
-        !wideMenuRef.current.contains(event.target as Node) &&
+        !wideMenuRef.current.contains(target) &&
         isWideMenuOpen
       ) {
         setIsWideMenuOpen(false);
       }
+
+      // Handle product dropdown
       if (
         productDropdownRef.current &&
-        !productDropdownRef.current.contains(event.target as Node) &&
+        !productDropdownRef.current.contains(target) &&
         isOpen
       ) {
         setIsOpen(false);
@@ -66,10 +73,29 @@ export default function NavBarSecond() {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (!isMobileMenuOpen) {
+      setIsOpen(false); // Close product dropdown when opening mobile menu
+    }
   };
 
   const toggleWideMenu = () => {
     setIsWideMenuOpen(!isWideMenuOpen);
+  };
+
+  const toggleProductDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Function to close mobile menu when a link is clicked
+  const handleMobileLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    setIsOpen(false); // Also close product dropdown
+  };
+
+  // Function to handle product dropdown link clicks
+  const handleProductLinkClick = () => {
+    setIsOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   useEffect(() => {
@@ -79,10 +105,6 @@ export default function NavBarSecond() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  //  Function to close mobile menu when a link is clicked
-  const handleMobileLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
 
   return (
     <nav className="max-w-screen-xl mx-auto p-8 bg-transparent w-full relative">
@@ -129,7 +151,7 @@ export default function NavBarSecond() {
           <div className="relative inline-block text-left" ref={productDropdownRef}>
             {/* Trigger Button */}
             <button
-              onClick={() => setIsOpen((prev) => !prev)}
+              onClick={toggleProductDropdown}
               className="flex items-center text-lg font-bold gap-1 cursor-pointer transition-colors duration-300"
             >
               Products
@@ -160,7 +182,7 @@ export default function NavBarSecond() {
                   <Link
                     href="/speechsync"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
-                    onClick={handleMobileLinkClick}
+                    onClick={handleProductLinkClick}
                   >
                     SpeechSync
                   </Link>
@@ -172,7 +194,7 @@ export default function NavBarSecond() {
                   <Link
                     href="/SpeechingCardPage"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
-                    onClick={handleMobileLinkClick}
+                    onClick={handleProductLinkClick}
                   >
                     SpeechCard
                   </Link>

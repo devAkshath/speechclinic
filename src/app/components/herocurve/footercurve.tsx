@@ -1,15 +1,21 @@
 export default function FooterCurve() {
-    return (
-      <svg 
-        width="100%"
-        height="100%" 
-        viewBox="0 -500 1920 500" 
-        fill="none" 
-        className="absolute bottom-0 left-0 w-full h-full z-0" 
+  return (
+    <div style={{ width: "100%", overflow: "hidden" }}>
+      <svg
+        // width="1788"
+        // height="2381"
+        viewBox="0 0 2888 3881"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
+        style={{ width: "100%", height: "auto" }}
       >
-        <path d="M0 0v4s250 96 500 96 500-96 500-96V0H0Z" fill="#4E4052" />
+        <path
+          d="M 2155 -309 C 3207 581 2818 1987 1991 2710 C 1010 3927 -314 3458 -378 3367"
+          stroke="#FF1FB8"
+          stroke-width="6"
+        />
       </svg>
-    );
+    </div>
+  );
 }

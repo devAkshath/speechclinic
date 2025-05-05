@@ -7,7 +7,7 @@ export default function BlogPage() {
       <Head>
         <title>Blogs on Product Management & User Feedback</title>
       </Head>
-      <div className="bg-gradient-to-r from-[#e6e6ff] via-[#f0e5ff] to-[#ffe5f0] min-h-screen pb-20">
+      <div className="bg-white min-h-screen pb-20">
         <section className="text-center py-24 px-4">
           <h4 className="text-red-600 font-semibold tracking-wide mb-2">BLOGS</h4>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">

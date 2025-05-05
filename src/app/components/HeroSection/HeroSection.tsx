@@ -1,8 +1,7 @@
 "use client";
 
 import { useMediaQuery } from "react-responsive";
-import WaveBackground from "../herocurve/wave";
-import CurveLine from "../herocurve/curveline";
+import HeroSvg from "../herocurve/wave";
 import GradientBackground from "../herocurve/blurgradient";
 import { useEffect, useRef } from "react";
 
@@ -53,12 +52,8 @@ export default function Hero() {
       {/* === Backgrounds === */}
       {isDesktop ? (
         <>
-          <div className="absolute top-0 left-0 w-full h-full z-10">
-            <WaveBackground />
-            <CurveLine />
-          </div>
-          <div className="absolute bottom-10 left-0 w-full h-full z-0">
-            <WaveBackground />
+          <div className="absolute top-25 left-12 max-w-[1840px] h-full z-10">
+            <HeroSvg />
           </div>
         </>
       ) : (
@@ -70,57 +65,50 @@ export default function Hero() {
       {/* === LAYOUT === */}
       {isDesktop ? (
         // === DESKTOP LAYOUT ===
-        <div className="relative max-w-[1340px]  mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="pt-20 pb-32">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-[1500px]  mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="pt-40 pl-20 ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
               {/* Left content */}
-              <div className="text-white space-y-6 flex-1 ">
-                <h1 className="text-5xl font-bold leading-tight">
+              <div className="text-white  space-y-6 flex-1 ">
+                <h1 className="text-[clamp(1rem,3.5vw,3.5rem)] bg-gradient-to-br from-[#54169C] to-[#DA159B] bg-clip-text text-transparent font-semibold leading-tight">
                   Innovative Leaders In
                   <br />
                   Paediatric Therapy
                 </h1>
-                <p className="text-lg md:text-lg opacity-90">
+
+                <p className="text-[clamp(1rem,1.2vw,1.25rem)] text-gray-600">
                   At The Speech Clinic, we provide specialized therapy designed
                   to improve speech and communication skills, tailored to
                   children with autism.
                 </p>
+
                 <div className="flex flex-wrap gap-4">
-                  <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
+                  <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300">
                     About Us
                   </button>
-                  <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-pink-600 hover:to-red-600 transition duration-300">
+                  <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300">
                     Get In Touch
                   </button>
                 </div>
               </div>
 
               {/* Right content - Image */}
-              <div className="relative">
-                <div className="rounded-3xl overflow-hidden ">
-                  <video
-                    width={800}
-                    height={500}
-                    className="w-full h-auto object-cover rounded-[35px] shadow-md mb-6 mt-15"
-                    controls
-                    autoPlay
-                    muted
-                    loop
-                  >
-                    <source
-                      src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                  {/* <div className="absolute inset-0 flex items-center justify-center">
-                    <button 
-                      className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all"
-                      aria-label="Play video"
-                    >
-                      <div className="w-0 h-0 border-t-8 border-b-8 border-l-12 border-transparent border-l-purple-700 ml-1"></div>
-                    </button>
-                  </div> */}
+              <div className="w-full flex justify-center items-center">
+                <div className="relative w-[clamp(280px,60vw,900px)]">
+                  <img
+                    src="/galleryimage.jpg"
+                    alt="Therapy Session"
+                    className="rounded-[2rem] w-full h-auto aspect-[6/3] object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
+                    <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
+                      <div
+                        className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
+                     border-l-[clamp(12px,1.8vw,23px)] border-l-white 
+                     border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
+                      ></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

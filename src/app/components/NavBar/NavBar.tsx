@@ -13,6 +13,7 @@ import {
   FaComments,
   FaBars,
   FaTimes,
+  FaMobile
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 
@@ -21,12 +22,23 @@ export default function Navbar() {
   const [isWideMenuOpen, setIsWideMenuOpen] = useState(false);
   const [showStickyNav, setShowStickyNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileProductOpen, setIsMobileProductOpen] = useState(false);
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const wideMenuRef = useRef<HTMLDivElement>(null);
   const productDropdownRef = useRef<HTMLDivElement>(null);
+  const mobileProductDropdownRef = useRef<HTMLDivElement>(null);
 
-  const productButtonRef = useRef<HTMLButtonElement>(null); // <== Add this
+  const productButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileProductButtonRef = useRef<HTMLButtonElement>(null);
+
+  const CustomMenuIcon = () => (
+    <div className="space-y-1.5">
+      <div className="w-6 h-1 bg-black rounded"></div>
+      <div className="w-5 h-1 bg-black rounded"></div>
+      <div className="w-4 h-1 bg-black rounded"></div>
+    </div>
+  );
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -42,6 +54,7 @@ export default function Navbar() {
         isMobileMenuOpen
       ) {
         setIsMobileMenuOpen(false);
+        setIsMobileProductOpen(false);
       }
       if (
         wideMenuRef.current &&
@@ -59,13 +72,22 @@ export default function Navbar() {
       ) {
         setIsOpen(false);
       }
+      if (
+        mobileProductDropdownRef.current &&
+        !mobileProductDropdownRef.current.contains(event.target as Node) &&
+        mobileProductButtonRef.current &&
+        !mobileProductButtonRef.current.contains(event.target as Node) &&
+        isMobileProductOpen
+      ) {
+        setIsMobileProductOpen(false);
+      }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMobileMenuOpen, isWideMenuOpen, isOpen]);
+  }, [isMobileMenuOpen, isWideMenuOpen, isOpen, isMobileProductOpen]);
 
 
   const toggleMobileMenu = () => {
@@ -108,44 +130,45 @@ export default function Navbar() {
         <div className="hidden lg:flex flex-col">
           <div className="container mx-auto px-0">
             {/* Top Bar */}
-            <div className="flex justify-between items-center gap-6 py-2">
-              <div className="flex gap-10 text-white text-sm">
+            <div className="flex justify-between items-center gap-3 py-2">
+              <div className="flex gap-5 text-gray-900 text-sm">
                 <span className="flex items-center gap-2">
                   <Link href="mailto:info@thespeechclinic.ae" className="flex items-center gap-2">
-                    <FaEnvelope /> info@thespeechclinic.ae
+                  <span className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white"> <FaEnvelope /></span> info@thespeechclinic.ae
                   </Link>
                 </span>
                 <span className="flex items-center gap-2">
                   <Link href="tel:+9715088571468" className="flex items-center gap-2">
-                    <FaPhone /> +971-5088571468
+                  <span className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white"> <FaMobile /></span> +971-5088571468
                   </Link>
                 </span>
                 <span className="flex items-center gap-2">
                   <Link href="#" className="flex items-center gap-2">
-                    <FaClock /> Mon - Sat (09AM - 7PM)
+                  <span className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white"><FaClock /> </span>
+                   Mon - Sat (09AM - 7PM)
                   </Link>
                 </span>
               </div>
 
-              <div className="flex gap-4 text-white text-lg">
+              <div className="flex gap-2 text-white text-2xl">
                 <Link href="https://www.linkedin.com/company/the-speech-clinic-dubai/" target="blank">
-                  <FaLinkedin />
+                  <FaLinkedin  className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white" />
                 </Link>
                 <Link href="https://www.youtube.com/watch?v=yOn2uiDbp08" target="blank">
-                  <FaYoutube />
+                  <FaYoutube  className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white" />
                 </Link>
                 <Link href="https://www.instagram.com/thespeechclinic_dubai/" target="blank">
-                  <FaInstagram />
+                  <FaInstagram  className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white" />
                 </Link>
                 <Link href="https://www.facebook.com/people/The-Speech-Clinic-Dubai/100088752805760/" target="blank">
-                  <FaFacebook />
+                  <FaFacebook  className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-xl p-1 text-white"/>
                 </Link>
               </div>
             </div>
 
             {/* Navigation */}
             <div className="flex justify-between items-center py-4">
-              <ul className="flex gap-8 text-white text-base">
+              <ul className="flex gap-8 text-gray-900 text-base">
                 <li>
                   <Link href="./">Home</Link>
                 </li>
@@ -155,7 +178,7 @@ export default function Navbar() {
                 <div className="relative inline-block text-left" ref={productDropdownRef}>
                   {/* Trigger Button */}
                   <button
-                    ref={productButtonRef} // <== Add the ref here
+                    ref={productButtonRef}
                     onClick={() => setIsOpen((prev) => !prev)}
                     className="flex items-center  gap-1 cursor-pointer transition-colors duration-300"
                   >
@@ -248,7 +271,9 @@ export default function Navbar() {
                   aria-label="Toggle Wide Menu"
                   className="text-white text-xl"
                 >
-                  {isWideMenuOpen ? <FaTimes /> : <FaBars />} {/* Show close icon when open */}
+                  {isWideMenuOpen ? <FaTimes /> : <CustomMenuIcon />}
+                  {/* {isWideMenuOpen ? <FaTimes /> : <FaBars />} */}
+                   {/* Show close icon when open */}
                 </button>
 
 
@@ -310,15 +335,16 @@ export default function Navbar() {
 
 
 
-          <div className="relative inline-block text-left" ref={productDropdownRef}>
+          <div className="relative inline-block text-left" ref={mobileProductDropdownRef}>
             {/* Trigger Button */}
             <button
-              onClick={() => setIsOpen((prev) => !prev)}
+              ref={mobileProductButtonRef}
+              onClick={() => setIsMobileProductOpen((prev) => !prev)}
               className="flex items-center gap-1 cursor-pointer text-lg font-bold transition-colors duration-300"
             >
               Products
               <svg
-                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isMobileProductOpen ? "rotate-180" : ""}`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -330,7 +356,7 @@ export default function Navbar() {
 
             {/* Dropdown */}
             <div
-              className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isOpen
+              className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isMobileProductOpen
                 ? "opacity-100 scale-100 translate-y-0"
                 : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
                 }`}
@@ -338,23 +364,31 @@ export default function Navbar() {
               {/* Dropdown Items */}
               <ul className="flex flex-col gap-2 p-3">
                 <li
-                  className={`transition-all duration-300 ease-out ${isOpen ? "opacity-100 translate-y-0 delay-100" : "opacity-0 -translate-y-2 delay-0"
+                  className={`transition-all duration-300 ease-out ${isMobileProductOpen ? "opacity-100 translate-y-0 delay-100" : "opacity-0 -translate-y-2 delay-0"
                     }`}
                 >
                   <Link
                     href="/speechsync"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
+                    onClick={() => {
+                      setIsMobileProductOpen(false);
+                      setIsMobileMenuOpen(false);
+                    }}
                   >
                     SpeechSync
                   </Link>
                 </li>
                 <li
-                  className={`transition-all duration-300 ease-out ${isOpen ? "opacity-100 translate-y-0 delay-200" : "opacity-0 -translate-y-2 delay-0"
+                  className={`transition-all duration-300 ease-out ${isMobileProductOpen ? "opacity-100 translate-y-0 delay-200" : "opacity-0 -translate-y-2 delay-0"
                     }`}
                 >
                   <Link
                     href="/SpeechingCardPage"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
+                    onClick={() => {
+                      setIsMobileProductOpen(false);
+                      setIsMobileMenuOpen(false);
+                    }}
                   >
                     SpeechCard
                   </Link>
@@ -605,13 +639,13 @@ export default function Navbar() {
               >
                 <FaBars />
               </button> */}
-               <button
-                  onClick={toggleWideMenu}
-                  aria-label="Toggle Wide Menu"
-                  className="text-dark text-xl"
-                >
-                  {isWideMenuOpen ? <FaTimes /> : <FaBars />} {/* Show close icon when open */}
-                </button>
+              <button
+                onClick={toggleWideMenu}
+                aria-label="Toggle Wide Menu"
+                className="text-dark text-xl"
+              >
+                {isWideMenuOpen ? <FaTimes /> : <FaBars />} {/* Show close icon when open */}
+              </button>
             </div>
           </div>
         </div>
@@ -639,8 +673,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-
-
-

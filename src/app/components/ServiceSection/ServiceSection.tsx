@@ -112,7 +112,7 @@ export default function ServiceSection() {
   ));
 
   return (
-    <div className="bg-transparent flex flex-col items-center justify-center p-6 sm:p-8">
+    <div className="bg-transparent flex flex-col items-center justify-center p-6 lg:pt-50 sm:p-8">
       <div  ref={(el) => {
           if (el) boxesRef.current[0] = el;
         }} className="box inline-flex items-center justify-center mb-3">
@@ -170,7 +170,7 @@ export default function ServiceSection() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-4 lg:gap-10 gap-10 md:gap-3  mt-8 md:grid">{services}</div>
+          <div className="grid grid-cols-4 lg:gap-10 gap-0 md:gap-3  mt-8 md:grid">{services}</div>
         )}
       </div>
     </div>

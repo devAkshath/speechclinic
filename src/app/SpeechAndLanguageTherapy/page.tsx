@@ -2,22 +2,21 @@
 import Image from "next/image";
 // import { Play } from "next/font/google";
 import NavBarSecond from "../components/NavBar/NavBarSecond";
-import { useState } from 'react';
+import { useState } from "react";
 import HalfWaveBackground from "../components/svgs/halfcarve";
 
 const services = [
-  'Speech and Language Therapy',
-  'Occupational Therapy',
-  'Physical Therapy',
-  'ABA Therapy',
-  'School Readiness program',
-  'Neuro Integrative Therapy',
-  'Feeding Therapy',
-  'Group Therapy',
+  "Speech and Language Therapy",
+  "Occupational Therapy",
+  "Physical Therapy",
+  "ABA Therapy",
+  "School Readiness program",
+  "Neuro Integrative Therapy",
+  "Feeding Therapy",
+  "Group Therapy",
 ];
 export default function ServicePage() {
   const [] = useState(services[0]);
-
 
   return (
     <div className="bg-white min-h-screen">
@@ -26,17 +25,15 @@ export default function ServicePage() {
       </header>
 
       <main>
-
         <section className="relative  bg-gradient-to-b from-[#54169C] to-pink-500 text-white pb-32 my-7 py-9 ">
           <div className="px-6 md:px-40 py-20 text-center">
-            <h2 className="text-4xl font-bold mb-5 my-5">Speech And Language Therapy</h2>
-
+            <h2 className="text-4xl font-bold mb-5 my-5">
+              Speech And Language Therapy
+            </h2>
           </div>
           <HalfWaveBackground />
         </section>
         {/* Title Section */}
-
-
 
         <section className="flex flex-col md:flex-row items-start justify-between gap-12 p-8 max-w-screen-xl my-5 mx-auto">
           <div className="w-full md:w-2/3">
@@ -52,11 +49,12 @@ export default function ServicePage() {
                 </div>
               </div>
             </div>
-
           </div>
           {/* Left Side - Menu */}
           <div className="w-full md:w-1/3">
-            <h2 className="text-2xl font-bold mb-3 text-gray-800 ">All Services</h2>
+            <h2 className="text-2xl font-bold mb-3 text-gray-800 ">
+              All Services
+            </h2>
             <div className="flex flex-col gap-1">
               <button className="text-gray-700 border-2 border-[#DA159B] py-2 px-4 rounded-full text-left font-medium hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white hover:border-transparent transition-all">
                 Speech and Language Therapy
@@ -86,10 +84,7 @@ export default function ServicePage() {
           </div>
 
           {/* Right Side - Image and Content */}
-
         </section>
-
-
 
         <section className="p-8 max-w-screen-xl my-5 mx-auto">
           <div className="border-3 border-[#5e12f5] rounded-4xl p-8">
@@ -100,7 +95,8 @@ export default function ServicePage() {
                   Speech And Language Therapy
                 </h2>
                 <p className="text-gray-600">
-                  Welcome to the Speech and Language Department at The Speech Clinic Dubai
+                  Welcome to the Speech and Language Department at The Speech
+                  Clinic Dubai
                 </p>
               </div>
 
@@ -129,22 +125,29 @@ export default function ServicePage() {
           <div className="border-2  bg-[#2C1B3A] rounded-[2rem] p-8 lg:p-12">
             <div className="flex flex-col gap-6 text-white text-base leading-relaxed">
               <p>
-                At The Speech Clinic Dubai, we are committed to empowering children through communication,
-                providing expert care in speech, language, and communication development. Our team of certified
-                speech-language pathologists is skilled in assessing and treating a wide range of speech and
-                language disorders, using the latest evidence-based techniques. At our clinic, we are dedicated
-                to enhancing communication skills and fostering language development in children of all ages.
+                At The Speech Clinic Dubai, we are committed to empowering
+                children through communication, providing expert care in speech,
+                language, and communication development. Our team of certified
+                speech-language pathologists is skilled in assessing and
+                treating a wide range of speech and language disorders, using
+                the latest evidence-based techniques. At our clinic, we are
+                dedicated to enhancing communication skills and fostering
+                language development in children of all ages.
               </p>
               <p>
-                We specialize in Augmentative and Alternative Communication (AAC) for children with complex
-                communication needs, offering personalized AAC solutions to help them express themselves
-                effectively. From our own innovative AAC apps like Speech Sync to advanced tools for language
-                processing, we integrate the latest innovations into our practice to ensure that every child
+                We specialize in Augmentative and Alternative Communication
+                (AAC) for children with complex communication needs, offering
+                personalized AAC solutions to help them express themselves
+                effectively. From our own innovative AAC apps like Speech Sync
+                to advanced tools for language processing, we integrate the
+                latest innovations into our practice to ensure that every child
                 receives the most effective and personalized care.
               </p>
               <p>
-                Our goal is to foster a supportive and inclusive environment, enabling children to communicate
-                confidently, interact meaningfully, and reach their full potential in all aspects of life.
+                Our goal is to foster a supportive and inclusive environment,
+                enabling children to communicate confidently, interact
+                meaningfully, and reach their full potential in all aspects of
+                life.
               </p>
             </div>
           </div>
@@ -170,69 +173,119 @@ export default function ServicePage() {
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4 my-2">
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-              <span className="text-sm text-center mt-2">Oral Placement Therapy</span>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img src="/brain-icon.svg" alt="Speech Therapy" className="w-12 h-12" />
+                <img
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
               </div>
-
             </div>
           </div>
         </section>
-
       </main>
     </div>
   );

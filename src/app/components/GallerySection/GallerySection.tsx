@@ -4,7 +4,8 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState, useCallback, useRef } from "react";
-import CurveSvg from "./curvesvg";
+// import CurveSvg from "./curvesvg";
+// import GalleryCurveLine from "./GalleryCurveline";
 
 export default function Gallery() {
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
@@ -137,9 +138,13 @@ export default function Gallery() {
 
   return (
     <div className=" py-10 text-center font-sans ">
-      <div className="w-full -z-500 absolute mx-auto   pointer-events-none hidden lg:block pt-144">
+      {/* <div className="w-full -z-500 absolute mx-auto   pointer-events-none hidden lg:block pt-40"> 
+      <GalleryCurveLine/>
+      </div> */}
+     
+      {/* <div className="w-full -z-500 absolute mx-auto   pointer-events-none hidden lg:block pt-144">
         <CurveSvg />
-      </div>
+      </div> */}
 
       <div
         ref={(el) => {
@@ -311,7 +316,7 @@ export default function Gallery() {
             ref={(el) => {
               if (el) boxesRef.current[5] = el;
             }}
-            className="box text-4xl font-semibold text-gray-700 lg:text-white py-4"
+            className="box text-4xl font-semibold text-gray-700 py-4"
           >
             Fostering Communication
             Through Meaningful Language
@@ -322,7 +327,7 @@ export default function Gallery() {
             ref={(el) => {
               if (el) boxesRef.current[6] = el;
             }}
-            className=" box text-md text-gray-400 lg:text-white  py-2"
+            className=" box text-md text-gray-400   py-2"
           >
             Our Gestalt Language Therapy focuses on supporting children who
             learn language in chunks, helping them progress toward meaningful,
@@ -365,7 +370,7 @@ export default function Gallery() {
             ref={(el) => {
               if (el) boxesRef.current[9] = el;
             }}
-            className=" box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center"
+            className=" box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center"
           >
             <div className="bg-white p-2 rounded-2xl mb-0 ">
               <Image
@@ -376,9 +381,9 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-pink-600 lg:text-white flex items-center gap-1 lg:pl-4">
+            <div className="text-2xl md:text-3xl font-bold text-pink-600  flex items-center gap-1 lg:pl-4">
               7320{" "}
-              <span className="text-2xl md:text-3xl text-gray-600 lg:text-white font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
                 + Clients
               </span>
             </div>
@@ -389,7 +394,7 @@ export default function Gallery() {
             ref={(el) => {
               if (el) boxesRef.current[10] = el;
             }}
-            className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 lg:border-white text-center gap-2"
+            className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center gap-2"
           >
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
@@ -400,9 +405,9 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600  lg:text-white whitespace-nowrap">
+            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600  whitespace-nowrap">
               1500{" "}
-              <span className="text-2xl md:text-3xl text-gray-600 lg:text-white font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
                 + Staffs
               </span>
             </div>
@@ -413,7 +418,7 @@ export default function Gallery() {
             ref={(el) => {
               if (el) boxesRef.current[11] = el;
             }}
-            className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 lg:border-white rounded-3xl px-6 py-6 text-center gap-2"
+            className="box flex flex-1 md:w-1/3 flex-row items-center justify-center min-w-[250px] max-w-sm md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center gap-2"
           >
             <div className="bg-white p-2 rounded-2xl mb-0">
               <Image
@@ -424,9 +429,9 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-pink-600 lg:text-white flex items-center gap-1">
+            <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
               50{" "}
-              <span className="text-2xl md:text-3xl text-gray-600  lg:text-white font-normal">
+              <span className="text-2xl md:text-3xl text-gray-600  font-normal">
                 + Projects
               </span>
             </div>
@@ -438,18 +443,18 @@ export default function Gallery() {
           ref={(el) => {
             if (el) boxesRef.current[12] = el;
           }}
-          className="box relative border-2 border-pink-400 lg:border-white rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-8xl mx-auto space-y-4"
+          className="box relative border-2 border-pink-400 rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-[1610px] mx-auto space-y-4"
         >
           {/* Top Overlay Text */}
-          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20  bg-white border lg:border-white border-pink-400  rounded-3xl px-4 py-1 text-2xl sm:text-3xl md:text-3xl text-pink-600  font-medium whitespace-nowrap">
+          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20  bg-white border border-pink-400  rounded-3xl px-4 py-1 text-2xl sm:text-3xl md:text-3xl text-pink-600  font-medium whitespace-nowrap">
             Your Voice Matters
           </h3>
 
           {/* Center Text */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 lg:text-white text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 text-center">
             Let&apos;s Strengthen It Together!
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 lg:text-white max-w-xl mx-auto text-center">
+          <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto text-center">
             Every voice deserves to be heard. Whether for therapy, guidance, or
             support, our specialists are here to help. Start the journey to
             confident communication today!
@@ -465,7 +470,7 @@ export default function Gallery() {
                 width={800}
                 height={500}
               />
-              <button className="bg-white border border-pink-400 lg:border-white text-pink-600  px-6 py-2 rounded-2xl  hover:bg-white-50 transition font-medium whitespace-nowrap">
+              <button className="bg-white border border-pink-400 text-pink-600  px-6 py-2 rounded-2xl  hover:bg-white-50 transition font-medium whitespace-nowrap">
                 Reach Out Now
               </button>
             </div>
