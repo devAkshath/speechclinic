@@ -161,7 +161,7 @@ export default function About() {
 
                 {/* Description */}
                 <p className="text-gray-600 leading-relaxed transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
-                  With a Master&apos;s in Speech & Language Therapy and over 8 years of clinical experience, Sana's vision has transformed countless lives. She&lsquo;s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region's first advanced AAC app.
+                  With a Master&apos;s in Speech & Language Therapy and over 8 years of clinical experience, Sana&lsquo;s vision has transformed countless lives. She&lsquo;s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region&lsquo;s first advanced AAC app.
                 </p>
               </div>
             </div>
