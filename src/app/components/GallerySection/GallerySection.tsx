@@ -150,7 +150,7 @@ export default function Gallery() {
         ref={(el) => {
           if (el) boxesRef.current[0] = el;
         }}
-        className="box inline-flex items-center justify-center mb-3"
+        className="box inline-flex items-center justify-center mb-3 "
       >
         <Image
           src="/verified.png"
@@ -213,9 +213,9 @@ export default function Gallery() {
         ))}
       </div> <div
         ref={(el) => {
-          if (el) boxesRef.current[0] = el;
+          if (el) boxesRef.current[5] = el;
         }}
-        className="box inline-flex items-center justify-center mb-1"
+        className="box inline-flex items-center justify-center mb-10"
       >
      
         <div  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
@@ -270,7 +270,7 @@ export default function Gallery() {
             ref={(el) => {
               featureRefs.current[index] = el;
             }}
-            className=" box  bg-[#4F4052] text-white p-6 rounded-[30px]   shadow-2xl relative overflow-hidden text-left w-[327px] "
+            className=" box  bg-[#4F4052] text-white p-6 rounded-[30px]   shadow-2xl relative overflow-hidden text-left w-[340px] lg:w-[300px] sm:w-[328px] "
           >
             <div className="absolute top-0 left-0 w-full h-full"></div>
 
