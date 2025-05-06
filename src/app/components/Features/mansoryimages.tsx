@@ -10,7 +10,7 @@ const images = [
 
 const MasonryGrid = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-2 md:gap-6 md:p-0  sm:px-6 px-6 md:px-0 lg:px-0 bg-transparent">
+    <div  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="grid grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-2 md:gap-6 md:p-0  sm:px-6 px-6 md:px-0 lg:px-0 bg-transparent">
       {/* Full-width Ball Pit Image */}
       <div className="col-span-2 rounded-[40px] overflow-hidden">
         <Image
@@ -51,7 +51,7 @@ const MasonryGrid = () => {
       <div className="col-span-2 rounded-[40px] overflow-hidden">
         {/* Experience Box */}
         <div className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] text-white px-4 py-3 rounded-[30px] shadow-lg flex items-center justify-center m-auto ">
-          <span className="text-3xl md:text-4xl font-bold">3+ </span>
+          <span className="text-3xl md:text-4xl ">3+ </span>
           <span className="ml-2 text-base md:text-lg">Years of Experience</span>
         </div>
       </div>

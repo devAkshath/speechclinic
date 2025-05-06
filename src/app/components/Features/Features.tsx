@@ -89,10 +89,10 @@ export default function TherapyPromo() {
             <div  ref={(el) => {
           if (el) boxesRef.current[1] = el;
         }} className=" box text-center md:text-left">
-              <h2  className="  text-3xl md:text-5xl font-normal text-gray-700 mb-2">
+              <h2  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="  text-3xl md:text-5xl font-normal text-gray-700 mb-2">
                 Nurturing Communication
               </h2>
-              <h2 className="text-3xl md:text-5xl font-semibold bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+              <h2  style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="text-3xl md:text-5xl font-semibold bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
                 Confidence & Growth
               </h2>
             </div>
@@ -119,10 +119,10 @@ export default function TherapyPromo() {
 
                   {/* Text Section */}
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-xl font-medium text-gray-700 mb-1.5">
+                    <h3  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className=" text-xl font-medium text-gray-700 mb-1.0">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 font-light">
+                    <p  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-gray-600 ">
                       {feature.description}
                     </p>
                   </div>

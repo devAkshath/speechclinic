@@ -73,14 +73,14 @@ export default function Products() {
               width={800}
               height={500}
             />
-            <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+            <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
               Our Products
             </div>
           </div>
 
           {/* Row 2: Heading */}
-          <h2
-            className="text-3xl font-semibold text-gray-700  leading-snug box"
+          <h2 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} 
+            className="text-3xl  text-gray-700  leading-snug box"
             ref={(el) => {
               if (el) boxesRef.current[2] = el;
             }}
@@ -91,8 +91,8 @@ export default function Products() {
           </h2>
 
           {/* Row 3: Description */}
-          <p
-            className="text-sm text-gray-500 lg:text-white box"
+          <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
+            className="text-md text-gray-700 lg:text-gray-700 box"
             ref={(el) => {
               if (el) boxesRef.current[3] = el;
             }}
@@ -104,7 +104,7 @@ export default function Products() {
           </p>
 
           {/* Row 4: Button */}
-          <button
+          <button style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
             className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300 box"
             ref={(el) => {
               if (el) boxesRef.current[4] = el;
@@ -120,16 +120,16 @@ export default function Products() {
       <div className="w-full h-full flex items-center rounded-[30px] border-2 border-[#4A3B51] overflow-hidden">
         
         {/* Left Gradient Button */}
-        <div className="flex items-center justify-center bg-gradient-to-tr from-[#54169C] to-[#DA159B] ml-7 h-[110px] w-[350px] sm:w-[300px] md:w-[510px] text-white text-lg sm:text-xl md:text-3xl font-stretch-extra-expanded rounded-[20px] ">
+        <div style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="flex items-center justify-center bg-gradient-to-tr from-[#54169C] to-[#DA159B] ml-7 h-[110px] w-[350px] sm:w-[300px] md:w-[510px] text-white text-lg sm:text-xl md:text-3xl font-stretch-extra-expanded rounded-[20px] ">
           Future Events Ahead
         </div>
 
         {/* Right Text Content */}
-        <div className="pl-6 sm:pl-10 md:pl-14 text-[#4A3B51]">
-          <p className="text-sm sm:text-base md:text-2xl font-light">
+        <div  className="pl-6 sm:pl-10 md:pl-14 text-[#4A3B51]">
+          <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-sm sm:text-base md:text-2xl ">
             Be Part of Our Upcoming
           </p>
-          <p className="text-base sm:text-lg md:text-3xl font-semibold">
+          <p  style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="text-base sm:text-lg md:text-3xl ">
             Events and Make an Impact
           </p>
         </div>

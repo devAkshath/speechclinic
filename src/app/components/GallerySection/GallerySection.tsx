@@ -159,7 +159,7 @@ export default function Gallery() {
           width={800}
           height={500}
         />
-        <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+        <div  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
           Our Gallery
         </div>
       </div>
@@ -167,15 +167,16 @@ export default function Gallery() {
         ref={(el) => {
           if (el) boxesRef.current[1] = el;
         }}
-        className="box text-2xl md:text-3xl font-light text-gray-700"
+        style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
+        className="box text-2xl md:text-3xl  text-gray-700"
       >
         Let&apos;s Check Our Photo
       </h2>
       <h1
         ref={(el) => {
           if (el) boxesRef.current[2] = el;
-        }}
-        className=" box text-3xl md:text-4xl font-semibold bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent mb-6"
+        }} style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} 
+        className=" box text-3xl md:text-4xl  bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent mb-6"
       >
         Gallery
       </h1>
@@ -210,6 +211,16 @@ export default function Gallery() {
             />
           </div>
         ))}
+      </div> <div
+        ref={(el) => {
+          if (el) boxesRef.current[0] = el;
+        }}
+        className="box inline-flex items-center justify-center mb-1"
+      >
+     
+        <div  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+       View All
+        </div>
       </div>
 
       {/* Mobile View - Embla Carousel */}
@@ -275,16 +286,16 @@ export default function Gallery() {
                 />
               </div>
 
-              <div className="bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent text-8xl font-light">
+              <div  style={{ fontFamily: 'HuluStyle', fontWeight: 300 }} className="bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent text-8xl font-light">
                 {String(index + 1).padStart(2, "0")}
               </div>
             </div>
 
             {/* Row 2: Title */}
-            <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+            <h3  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-2xl font-semibold mb-2">{feature.title}</h3>
 
             {/* Row 3: Description */}
-            <p className="text-sm text-gray-300">{feature.desc}</p>
+            <p  style={{ fontFamily: 'HuluStyle', fontWeight: 300 }} className="text-md text-gray-200">{feature.desc}</p>
           </div>
         ))}
       </div>
@@ -306,7 +317,7 @@ export default function Gallery() {
               width={800}
               height={500}
             />
-            <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] lg:bg-white  px-6 py-1 rounded-2xl">
+            <div  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] lg:bg-white  px-6 py-1 rounded-2xl">
               Gestalt Language Therapy
             </div>
           </div>
@@ -316,7 +327,7 @@ export default function Gallery() {
             ref={(el) => {
               if (el) boxesRef.current[5] = el;
             }}
-            className="box text-4xl font-semibold text-gray-700 py-4"
+            style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-4xl  text-gray-700 py-4"
           >
             Fostering Communication
             Through Meaningful Language
@@ -327,7 +338,8 @@ export default function Gallery() {
             ref={(el) => {
               if (el) boxesRef.current[6] = el;
             }}
-            className=" box text-md text-gray-400   py-2"
+            style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
+            className=" box text-lg text-gray-700   py-2"
           >
             Our Gestalt Language Therapy focuses on supporting children who
             learn language in chunks, helping them progress toward meaningful,
@@ -338,7 +350,7 @@ export default function Gallery() {
           <button
             ref={(el) => {
               if (el) boxesRef.current[7] = el;
-            }}
+            }} style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
             className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
           >
             Get Started
@@ -381,9 +393,9 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-pink-600  flex items-center gap-1 lg:pl-4">
+            <div  style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="text-2xl md:text-3xl  text-gray-600  flex items-center gap-1 lg:pl-4">
               7320{" "}
-              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
+              <span  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-xl md:text-2xl text-gray-600 font-normal">
                 + Clients
               </span>
             </div>
@@ -405,9 +417,9 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="inline-flex items-center gap-1 text-2xl md:text-3xl font-bold text-pink-600  whitespace-nowrap">
+            <div style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="inline-flex items-center gap-1 text-2xl md:text-3xl  text-gray-600  whitespace-nowrap">
               1500{" "}
-              <span className="text-2xl md:text-3xl text-gray-600 font-normal">
+              <span style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-2xl md:text-2xl text-gray-600 ">
                 + Staffs
               </span>
             </div>
@@ -429,9 +441,9 @@ export default function Gallery() {
                 height={500}
               />
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-1">
+            <div style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="text-2xl md:text-3xl  text-gray-600 flex items-center gap-1">
               50{" "}
-              <span className="text-2xl md:text-3xl text-gray-600  font-normal">
+              <span style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-2xl md:text-2xl text-gray-600  ">
                 + Projects
               </span>
             </div>
@@ -446,15 +458,15 @@ export default function Gallery() {
           className="box relative border-2 border-pink-400 rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-[1610px] mx-auto space-y-4"
         >
           {/* Top Overlay Text */}
-          <h3 className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20  bg-white border border-pink-400  rounded-3xl px-4 py-1 text-2xl sm:text-3xl md:text-3xl text-pink-600  font-medium whitespace-nowrap">
+          <h3 style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20  bg-white border border-pink-400  rounded-3xl px-4 py-1 text-2xl sm:text-3xl md:text-3xl text-pink-600   whitespace-nowrap">
             Your Voice Matters
           </h3>
 
           {/* Center Text */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 text-center">
+          <h2 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 text-center">
             Let&apos;s Strengthen It Together!
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto text-center">
+          <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md sm:text-base text-gray-600 max-w-xl mx-auto text-center">
             Every voice deserves to be heard. Whether for therapy, guidance, or
             support, our specialists are here to help. Start the journey to
             confident communication today!
@@ -470,7 +482,7 @@ export default function Gallery() {
                 width={800}
                 height={500}
               />
-              <button className="bg-white border border-pink-400 text-pink-600  px-6 py-2 rounded-2xl  hover:bg-white-50 transition font-medium whitespace-nowrap">
+              <button style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="bg-white border border-pink-400 text-pink-600  px-6 py-2 rounded-2xl  hover:bg-white-50 transition font-medium whitespace-nowrap">
                 Reach Out Now
               </button>
             </div>

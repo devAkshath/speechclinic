@@ -66,27 +66,27 @@ export default function Hero() {
       {isDesktop ? (
         // === DESKTOP LAYOUT ===
         <div className="relative max-w-[1500px]  mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="pt-40 pl-35 ">
+          <div className="pt-40 pl-16 ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
               {/* Left content */}
               <div className="text-white  space-y-6 flex-1 ">
-                <h1 className="text-[clamp(1rem,3.5vw,3.5rem)] bg-gradient-to-br from-[#54169C] to-[#DA159B] bg-clip-text text-transparent font-semibold leading-tight">
+                <h1 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="text-[clamp(1rem,3.5vw,3.5rem)] bg-gradient-to-br from-[#54169C] to-[#DA159B] bg-clip-text text-transparent font-semibold leading-tight">
                   Innovative Leaders In
                   <br />
                   Paediatric Therapy
                 </h1>
 
-                <p className="text-[clamp(1rem,1.2vw,1.25rem)] text-gray-600">
-                  At The Speech Clinic, we provide specialized therapy designed
-                  to improve speech and communication skills, tailored to
+                <p style={{ fontFamily: 'HuluStyle', fontWeight: 300 }}  className="text-[clamp(1rem,1.2vw,1.25rem)] text-gray-900">
+                  At The Speech Clinic, we provide specialized therapy  <br /> designed
+                  to improve speech and communication skills, <br /> tailored to
                   children with autism.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300">
+                  <button style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300">
                     About Us
                   </button>
-                  <button className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300">
+                  <button style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300">
                     Get In Touch
                   </button>
                 </div>

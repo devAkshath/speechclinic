@@ -111,7 +111,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="max-w-[1340px]  mx-auto pt-8 pb-8 pr-2 pl-4 bg-transparent w-full relative">
+    <nav style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="max-w-[1340px]  mx-auto pt-8 pb-8 pr-2 pl-4 bg-transparent w-full relative">
       {/* Main Navbar */}
       <div className="flex justify-between items-center py-3">
 
@@ -131,7 +131,7 @@ export default function Navbar() {
           <div className="container mx-auto px-0">
             {/* Top Bar */}
             <div className="flex justify-between items-center gap-3 py-2">
-              <div className="flex gap-5 text-gray-900 text-sm">
+              <div className="flex gap-5 text-gray-800 text-sm">
                 <span className="flex items-center gap-2">
                   <Link href="mailto:info@thespeechclinic.ae" className="flex items-center gap-2">
                   <span className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white"> <FaEnvelope /></span> info@thespeechclinic.ae
@@ -168,7 +168,7 @@ export default function Navbar() {
 
             {/* Navigation */}
             <div className="flex justify-between items-center py-4">
-              <ul className="flex gap-8 text-gray-900 text-base">
+              <ul className="flex gap-8 text-gray-800 text-base">
                 <li>
                   <Link href="./">Home</Link>
                 </li>
@@ -660,7 +660,7 @@ export default function Navbar() {
               height={60}
               priority
             /></Link>
-            <button
+            <button 
               onClick={toggleMobileMenu}
               aria-label="Toggle Menu"
               className="text-white text-xl p-2 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md"

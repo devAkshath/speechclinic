@@ -75,7 +75,7 @@ const Testimonial = () => {
             width={800}
             height={500}
           />
-          <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+          <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
             Testimonials
           </div>
         </div>
@@ -83,16 +83,16 @@ const Testimonial = () => {
         {/* Row 2: Heading */}
         <h2 ref={(el) => {
             if (el) boxesRef.current[1] = el;
-          }}
-         className="box text-3xl font-semibold text-gray-700 leading-snug">
+          }}style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} 
+         className="box text-3xl  text-gray-700 leading-snug">
           What Parents Say
         </h2>
 
         {/* Row 3: Description */}
         <p  ref={(el) => {
             if (el) boxesRef.current[2] = el;
-          }}
-        className="box text-md text-gray-500">
+          }}style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
+        className="box text-md text-gray-700">
           Hear from families about how our Speech Clinic has helped improve
           their <br />
           children&lsquo;s communication and confidence.
@@ -103,7 +103,7 @@ const Testimonial = () => {
       <div
        ref={(el) => {
         if (el) boxesRef.current[3] = el;
-      }} className="box mt-16 w-full lg:max-w-7xl md:max-w-6xl sm:max-w-6xl">
+      }} style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="box mt-16 w-full lg:max-w-7xl md:max-w-6xl sm:max-w-6xl">
         <div className="relative">
           <div className="flex flex-col md:flex-row gap-4 w-full px-4">
             {testimonials.slice(0, 2).map((testimonial, idx) => (
@@ -113,7 +113,7 @@ const Testimonial = () => {
                 style={{ borderColor: "#DA159B" }}
               >
                 {/* Header */}
-                <div className="absolute top-0 left-0 h-[80px] w-full flex items-center justify-between px-0 text-white text-lg font-semibold">
+                <div className="absolute top-0 left-0 h-[80px] w-full flex items-center justify-between px-0 text-white text-lg font-medium">
                   {/* Gradient Header on Left */}
                   <div className="h-full w-3/4 bg-gradient-to-r from-[#54169C] to-[#DA159B] flex items-center px-4 rounded-br-[270px] rounded-tr-xl rounded-tl-4xl">
                     <div>
@@ -143,7 +143,7 @@ const Testimonial = () => {
           <div
            ref={(el) => {
             if (el) boxesRef.current[4] = el;
-          }}className="box text-center mt-14 ">
+          }}style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-center mt-14 ">
             <button className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm">
               Get in Touch
             </button>

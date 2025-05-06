@@ -124,7 +124,7 @@ export default function Blogs() {
           width={100}
           height={100}
         />
-        <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+        <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
           Our Blogs
         </div>
       </div>
@@ -132,7 +132,7 @@ export default function Blogs() {
       {/* Heading */}
       <h2  ref={(el) => {
             if (el) boxesRef.current[1] = el;
-          }} className="box text-3xl font-semibold text-gray-700 leading-snug py-5">
+          }} style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-3xl text-gray-700 leading-snug py-5">
         Our Latest News <br /> & Blog
       </h2>
 
@@ -152,14 +152,14 @@ export default function Blogs() {
               height={500}
               className="rounded-[20px] mt-4 mb-4 w-80 h-auto object-cover mx-auto block"
             />
-            <h3 className="text-2xl font-semibold text-gray-800 text-left mb-auto mt-auto">
+            <h3 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="text-2xl text-gray-800 text-left mb-auto mt-auto">
               {card.title}
             </h3>
-            <p className="text-md text-gray-600 font-light text-left mb-auto mt-5 line-clamp-8">
+            <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-md text-gray-600  text-left mb-auto mt-5 line-clamp-8">
               {card.content}
             </p>
             <Link href="/BlogPage">
-              <button className=" absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-6/6 h-1/9 md:h-1/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10 rounded-full font-medium shadow-lg text-2xl">
+              <button  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className=" absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-6/6 h-1/9 md:h-1.5/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10 rounded-full font-medium shadow-lg text-2xl">
                 Read More
               </button>
             </Link>

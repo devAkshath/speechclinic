@@ -15,7 +15,7 @@ export default function ServiceCard({
 }) {
   return (
     <Link href={href} className="cursor-pointer">
-      <div className="relative w-[290px] lg:w-[290px] sm:w-[290px]  md:w-[180px] md:h-[220px] lg:h-[340px] sm:h-[340px] h-[340px] bg-transparent rounded-[20px] overflow-hidden group border border-transparent hover:border-white transition-all duration-300">
+      <div style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="relative w-[290px] lg:w-[290px] sm:w-[290px]  md:w-[180px] md:h-[220px] lg:h-[340px] sm:h-[340px] h-[340px] bg-transparent rounded-[20px] overflow-hidden group border border-transparent hover:border-white transition-all duration-300">
         {/* Top Section */}
         <div className="relative h-[75%] bg-transparent rounded-t-[20px] overflow-hidden transition-all duration-300 group-hover:h-[75%] p-0">
           <Image src={imageSrc} alt={title} fill className="object-cover rounded-t-[20px]" />
@@ -27,7 +27,7 @@ export default function ServiceCard({
 
           {/* Card Content */}
           <div className="relative z-10 bg-transparent flex flex-col items-center justify-center text-black pb-[10%] h-full">
-            <span className="font-bold text-black lg:text-[18px] text-[18px] md:text-[13px] text-center">{title}</span>
+            <span className=" text-black lg:text-[18px] text-[18px] md:text-[13px] text-center">{title}</span>
             {/* <p className="text-[14px] mt-2 text-center">Your subtitle</p> */}
 {/* 
             <button className="mt-[15%] text-transparent border-2 border-transparent rounded-[15px] px-4 py-1 text-[13px] bg-transparent hover:bg-transparent hover:text-transparent transition-all duration-400">

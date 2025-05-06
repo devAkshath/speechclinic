@@ -112,7 +112,7 @@ export default function ServiceSection() {
   ));
 
   return (
-    <div className="bg-transparent flex flex-col items-center justify-center p-6 lg:pt-50 sm:p-8">
+    <div  className="bg-transparent flex flex-col items-center justify-center p-6 lg:pt-50 sm:p-8">
       <div  ref={(el) => {
           if (el) boxesRef.current[0] = el;
         }} className="box inline-flex items-center justify-center mb-3">
@@ -123,19 +123,19 @@ export default function ServiceSection() {
           width={800}
           height={500}
         />
-        <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+        <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
           Our Services
         </div>
       </div>
       <h2  ref={(el) => {
           if (el) boxesRef.current[1] = el;
-        }} className=" box text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2">
+        }} style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className=" box text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2">
         We Believe Everyone Deserves
       </h2>
       <div  className="relative inline-block">
         <h1  ref={(el) => {
           if (el) boxesRef.current[2] = el;
-        }}className="box text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+        }} style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
           Our Quality Care
         </h1>
       </div>

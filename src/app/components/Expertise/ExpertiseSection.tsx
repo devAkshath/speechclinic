@@ -86,14 +86,14 @@ const Expertise = () => {
               className="w-8 h-8 mr-2"
               width={800} height={500}
             />
-            <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+            <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
               Our Expertise
             </div>
           </div>
 
           <h2  ref={(el) => {
             if (el) boxesRef.current[1] = el;
-          }} className="box text-3xl font-semibold text-gray-700 leading-snug">
+          }} style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="box text-3xl font-semibold text-gray-700 leading-snug">
             Empowering Speech &<br />
             Communication for a Better Future
           </h2>
@@ -101,7 +101,7 @@ const Expertise = () => {
           <p 
            ref={(el) => {
             if (el) boxesRef.current[2] = el;
-          }}className=" box text-sm text-gray-500">
+          }}style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className=" box text-md text-gray-700">
             Our speech therapy services are designed to enhance communication skills
             with personalized strategies. We help individuals improve speech clarity,
             comprehension, and confidence through proven techniques.
@@ -110,7 +110,7 @@ const Expertise = () => {
           <div
            ref={(el) => {
             if (el) boxesRef.current[3] = el;
-          }} className=" box space-y-4">
+          }} style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className=" box space-y-4">
             {progressItems.map((item, index) => (
               <div key={index} className="progress-bar">
                 <div className="flex justify-between mb-1">
@@ -130,7 +130,7 @@ const Expertise = () => {
           <button 
            ref={(el) => {
             if (el) boxesRef.current[4] = el;
-          }}className=" box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
+          }}style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className=" box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
             Learn More
           </button>
         </div>
