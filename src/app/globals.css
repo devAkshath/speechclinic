@@ -90,7 +90,7 @@ body {
   animation-delay: -2s;
   -webkit-animation-duration: 7s;
   animation-duration: 7s;
-  fill: #EBE3F5;
+  fill: #FFF0F5;
 }
 
 .svg-waves__parallax > use:nth-child(2) {
@@ -98,7 +98,7 @@ body {
   animation-delay: -3s;
   -webkit-animation-duration: 10s;
   animation-duration: 10s;
-  fill: #D6CDDE;
+  fill: #FFE4E1;
 }
 
 .svg-waves__parallax > use:nth-child(3) {
@@ -106,7 +106,7 @@ body {
   animation-delay: -4s;
   -webkit-animation-duration: 13s;
   animation-duration: 13s;
-  fill: #807585;
+  fill: #FFE9ED;
 }
 
 .svg-waves__parallax > use:nth-child(4) {
