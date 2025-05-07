@@ -58,15 +58,15 @@ export default function ServiceSection() {
   const therapyImages = [
     { src: "/aba-therapy.svg", title: "ABA Therapy", href: "/ServicePage" },
     { src: "/feeding-therapy.svg", title: "Feeding Therapy" },
-    { src: "/group-therapy.svg", title: "Group Therapy" },
+    { src: "/group-therapy.svg", title: "Group Therapy", href: "/GroupTherapy" },
     {
       src: "/neuro-integrative-therapy.svg",
       title: "Neuro Integrative\nTherapy",
     },
-    { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" },
+    { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" ,href: "/OccupationalTherapy"  },
     { src: "/physical-therapy.svg", title: "Physical Therapy" },
     { src: "/school-readiness-program.svg", title: "School Readiness" },
-    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage" },
+    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage",href: "/SpeechAndLanguageTherapy" },
   ];
 
   useEffect(() => {

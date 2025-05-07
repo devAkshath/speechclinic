@@ -8,7 +8,7 @@ const ServicesList = () => {
     { name: 'Expressive Language', href: '/services/expressive-language' },
     { name: 'Therapeutic Listening', href: '/services/therapeutic-listening' },
     { name: 'Evaluations Speech', href: '/services/evaluations-speech' },
-    { name: 'Occupational Therapy', href: '/services/occupational-therapy' },
+    { name: 'Occupational Therapy', href: '/OccupationalTherapy' },
     { name: 'Pediatric Hand Therapy', href: '/services/pediatric-hand-therapy' },
     { name: 'First Steps Therapy', href: '/services/first-steps-therapy' },
   ];

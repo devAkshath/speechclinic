@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
+import SpeechSyncCard from "./SpeechSyncPromo";
+
+// import ProductBg from "./productBg";
 
 export default function Products() {
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
@@ -40,102 +42,113 @@ export default function Products() {
 
   return (
     <section className="w-full px-6 py-12 lg:py-3 bg-transparent">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left Column: Image */}
-        <div
-          className="flex justify-center box"
-          ref={(el) => {
-            if (el) boxesRef.current[0] = el;
-          }}
-        >
-          <Image
-            src="/speechsyncipad.png"
-            alt="Speech Sync iPad"
-            width={400}
-            height={300}
-            className="rounded-lg"
-          />
-        </div>
-
-        {/* Right Column: Content */}
-        <div className="space-y-4">
-          {/* Row 1: Badge */}
-          <div
-            className="inline-flex items-center justify-start mb-3 box"
-            ref={(el) => {
-              if (el) boxesRef.current[1] = el;
-            }}
-          >
-            <Image
-              src="/verified.png"
-              alt="Verified Icon"
-              className="w-8 h-8 mr-2"
-              width={800}
-              height={500}
-            />
-            <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
-              Our Products
-            </div>
-          </div>
-
-          {/* Row 2: Heading */}
-          <h2 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} 
-            className="text-3xl  text-gray-700  leading-snug box"
-            ref={(el) => {
-              if (el) boxesRef.current[2] = el;
-            }}
-          >
-            Breaking Barriers in
-            <br />
-            Communication
-          </h2>
-
-          {/* Row 3: Description */}
-          <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
-            className="text-md text-gray-700 lg:text-gray-700 box"
-            ref={(el) => {
-              if (el) boxesRef.current[3] = el;
-            }}
-          >
-            Empowering communication with advanced speech therapy tools. Our
-            products are designed to support children with autism and speech
-            impairments, providing engaging and effective solutions for language
-            development.
-          </p>
-
-          {/* Row 4: Button */}
-          <button style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} 
-            className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300 box"
-            ref={(el) => {
-              if (el) boxesRef.current[4] = el;
-            }}
-          >
-            Discover More
-          </button>
-        </div>
+      <div className="relative flex items-center justify-center h-screen">
+        <SpeechSyncCard />
       </div>
 
       {/* Centered Highlight Section */}
       <div className="w-full max-w-[1310px] h-[160px] mx-auto mt-10 px-4 sm:px-10">
-      <div className="w-full h-full flex items-center rounded-[30px] border-2 border-[#4A3B51] overflow-hidden">
-        
-        {/* Left Gradient Button */}
-        <div style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="flex items-center justify-center bg-gradient-to-tr from-[#54169C] to-[#DA159B] ml-7 h-[110px] w-[350px] sm:w-[300px] md:w-[510px] text-white text-lg sm:text-xl md:text-3xl font-stretch-extra-expanded rounded-[20px] ">
-          Future Events Ahead
-        </div>
+        <div className="w-full h-full flex items-center rounded-[30px] border-2 border-[#4A3B51] overflow-hidden">
+          {/* Left Gradient Button */}
+          <div
+            style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
+            className="flex items-center justify-center bg-gradient-to-tr from-[#54169C] to-[#DA159B] ml-7 h-[110px] w-[350px] sm:w-[300px] md:w-[510px] text-white text-lg sm:text-xl md:text-3xl font-stretch-extra-expanded rounded-[20px] "
+          >
+            Future Events Ahead
+          </div>
 
-        {/* Right Text Content */}
-        <div  className="pl-6 sm:pl-10 md:pl-14 text-[#4A3B51]">
-          <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-sm sm:text-base md:text-2xl ">
-            Be Part of Our Upcoming
-          </p>
-          <p  style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="text-base sm:text-lg md:text-3xl ">
-            Events and Make an Impact
-          </p>
+          {/* Right Text Content */}
+          <div className="pl-6 sm:pl-10 md:pl-14 text-[#4A3B51]">
+            <p
+              style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+              className="text-sm sm:text-base md:text-2xl "
+            >
+              Be Part of Our Upcoming
+            </p>
+            <p
+              style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
+              className="text-base sm:text-lg md:text-3xl "
+            >
+              Events and Make an Impact
+            </p>
+          </div>
         </div>
-
       </div>
-    </div>
     </section>
   );
 }
+
+// <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+// {/* Left Column: Image */}
+// <div
+//   className="flex justify-center box"
+//   ref={(el) => {
+//     if (el) boxesRef.current[0] = el;
+//   }}
+// >
+//   <Image
+//     src="/speechsyncipad.png"
+//     alt="Speech Sync iPad"
+//     width={400}
+//     height={300}
+//     className="rounded-lg"
+//   />
+// </div>
+
+// {/* Right Column: Content */}
+// <div className="space-y-4">
+//   {/* Row 1: Badge */}
+//   <div
+//     className="inline-flex items-center justify-start mb-3 box"
+//     ref={(el) => {
+//       if (el) boxesRef.current[8] = el;
+//     }}
+//   >
+//     <Image
+//       src="/verified.png"
+//       alt="Verified Icon"
+//       className="w-8 h-8 mr-2"
+//       width={800}
+//       height={500}
+//     />
+//     <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+//       Our Products
+//     </div>
+//   </div>
+
+//   {/* Row 2: Heading */}
+//   <h2 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}
+//     className="text-3xl  text-gray-700  leading-snug box"
+//     ref={(el) => {
+//       if (el) boxesRef.current[8] = el;
+//     }}
+//   >
+//     Breaking Barriers in
+//     <br />
+//     Communication
+//   </h2>
+
+//   {/* Row 3: Description */}
+//   <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
+//     className="text-md text-gray-700 lg:text-gray-700 box"
+//     ref={(el) => {
+//       if (el) boxesRef.current[8] = el;
+//     }}
+//   >
+//     Empowering communication with advanced speech therapy tools. Our
+//     products are designed to support children with autism and speech
+//     impairments, providing engaging and effective solutions for language
+//     development.
+//   </p>
+
+//   {/* Row 4: Button */}
+//   <button style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
+//     className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300 box"
+//     ref={(el) => {
+//       if (el) boxesRef.current[8] = el;
+//     }}
+//   >
+//     Discover More
+//   </button>
+// </div>
+// </div>

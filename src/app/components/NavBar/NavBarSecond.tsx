@@ -144,7 +144,7 @@ export default function NavBarSecond() {
           </li>
 
           <li className="text-lg font-bold">
-            <Link href=''>Services</Link>
+            <Link href='/AllServicesPage'>Services</Link>
           </li>
 
 
@@ -379,7 +379,7 @@ export default function NavBarSecond() {
           <ul className="flex gap-6 text-gray-800 text-sm font-medium">
             <li><Link href="./">Home</Link></li>
             <li><Link href="/about">About</Link></li>
-            <li><Link href="#">Services</Link></li>
+            <li><Link href="/AllServicesPage">Services</Link></li>
 
             <div className="relative inline-block text-left" ref={productDropdownRef}>
               {/* Trigger Button */}

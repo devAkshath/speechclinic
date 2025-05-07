@@ -437,13 +437,13 @@ export default function Gallery() {
                 ref={(el) => {
                   if (el) boxesRef.current[item.refIndex] = el;
                 }}
-                className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-2 border-pink-400 rounded-3xl px-6 py-6 text-center gap-4"
+                className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[40px] px-6 py-6 text-center gap-4"
               >
-                <div className="bg-white p-2 rounded-2xl">
+                <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
                   <Image
                     src={item.icon}
                     alt={item.label}
-                    className="w-14 h-14"
+                    className="w-15 h-15"
                     width={800}
                     height={500}
                   />
@@ -474,55 +474,43 @@ export default function Gallery() {
         </div>
       </RectangleSvg>
       {/* Message Box */}
-      <div
-        ref={(el) => {
+      <div     ref={(el) => {
           if (el) boxesRef.current[12] = el;
-        }}
-        className="box relative border-2 border-transparent rounded-3xl px-4 sm:px-6 pt-20 pb-24 max-w-[1610px] mx-auto space-y-4"
+        }} className="box relative border-2 border-transparent rounded-3xl px-0 sm:px-6 pt-0 pb-2 max-w-[1610px] mx-auto space-y-4">
+      <h3
+        style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
+        className="text-3xl sm:text-3xl md:text-5xl text-gray-600 text-center"
       >
-        {/* Top Overlay Text */}
-        <h3
-          style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20  bg-white border border-white rounded-3xl px-4 py-1 text-3xl sm:text-3xl md:text-5xl text-gray-600   whitespace-nowrap"
+        Your Voice Matters
+      </h3>
+      <h2
+        style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}
+        className="text-2xl sm:text-3xl md:text-6xl font-bold bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text pb-3 text-transparent text-center"
+      >
+        Let&apos;s Strengthen It Together!
+      </h2>
+      <p
+        style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
+        className="text-xl text-gray-600 max-w-xl mx-auto text-center pt-3"
+      >
+        Every voice deserves to be heard. Whether for therapy, guidance, or support, our specialists are here to help. Start the journey to confident communication today!
+      </p>
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 pt-6">
+        <Image
+          src="/verified.png"
+          alt="WhatsApp"
+          className="w-8 h-8"
+          width={800}
+          height={500}
+        />
+        <button
+          style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}
+          className="bg-white border border-white text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-2 rounded-2xl hover:bg-white-50 transition font-medium"
         >
-          Your Voice Matters
-        </h3>
-
-        {/* Center Text */}
-        <h2
-          style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
-          className="text-2xl sm:text-3xl md:text-6xl font-bold  bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent  text-center"
-        >
-          Let&apos;s Strengthen It Together!
-        </h2>
-        <p
-          style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className="text-xl  text-gray-600 max-w-xl mx-auto text-center pt-3"
-        >
-          Every voice deserves to be heard. Whether for therapy, guidance, or
-          support, our specialists are here to help. Start the journey to
-          confident communication today!
-        </p>
-
-        {/* Bottom Overlay Button */}
-        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-10 bg-white px-4 py-1 rounded-full">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
-            <Image
-              src="/verified.png"
-              alt="WhatsApp"
-              className="w-8 h-8"
-              width={800}
-              height={500}
-            />
-            <button
-              style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
-              className="bg-white border border-white text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-2 rounded-2xl  hover:bg-white-50 transition font-medium whitespace-nowrap"
-            >
-              Reach Out Now
-            </button>
-          </div>
-        </div>
+          Reach Out Now
+        </button>
       </div>
+    </div>
     </div>
   );
 }
