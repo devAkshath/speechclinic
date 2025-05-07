@@ -529,7 +529,7 @@ export default function OccupationalTherapy() {
                     <div className="   transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-700 hover:shadow-2xl hover:shadow-purple-200 relative overflow-hidden group">
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Fine motor skills</h1>
                       <p>Fine motor skills are the abilities required to use the small muscles in the hands, fingers, and wrists to perform precise and coordinated tasks. These skills involve hand-eye coordination and are essential for daily activities, particularly those requiring detailed movements.</p>
-                      <p className="my-2"> These skills help children do things like picking up small objects, drawing, writing, feeding themselves, and getting dressed. Developing strong fine motor skills is essential for a child's independence and confidence in everyday activities, as well as for tasks they will need for school.</p>
+                      <p className="my-2"> These skills help children do things like picking up small objects, drawing, writing, feeding themselves, and getting dressed. Developing strong fine motor skills is essential for a child&apos;s independence and confidence in everyday activities, as well as for tasks they will need for school.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <h2 className="font-semibold leading-tight ">Examples:</h2>
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
@@ -655,7 +655,7 @@ export default function OccupationalTherapy() {
                     <div className="   transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-700 hover:shadow-2xl hover:shadow-purple-200 relative overflow-hidden group">
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Virtual Reality</h1>
                       <p>Virtual reality (VR) refers to a computer-generated simulation or environment that replicates real-world or imagined settings, allowing users to interact with and experience them in an immersive way. VR typically uses specialized equipment like headsets, gloves, or motion controllers to create a sense of presence and enable interaction with the virtual environment.</p>
-                      <p className="my-2">By creating controlled, interactive environments, VR helps children practice skills like social interaction, motor coordination, and sensory integration. The use of VR in therapy promotes neuroplasticity, motivating children to complete tasks while improving both cognitive and physical development. This innovative approach provides a safe and effective way to enhance children's therapeutic experiences.</p>
+                      <p className="my-2">By creating controlled, interactive environments, VR helps children practice skills like social interaction, motor coordination, and sensory integration. The use of VR in therapy promotes neuroplasticity, motivating children to complete tasks while improving both cognitive and physical development. This innovative approach provides a safe and effective way to enhance children&lsquo;s therapeutic experiences.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <h2 className="font-semibold leading-tight ">Benefits of Virtual Reality:</h2>
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
@@ -693,7 +693,7 @@ export default function OccupationalTherapy() {
                     <div className="   transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-700 hover:shadow-2xl hover:shadow-purple-200 relative overflow-hidden group">
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Movement based learning ( Brain Gym)</h1>
                       <p>Movement-Based Learning and Brain Gym are approaches that integrate physical movement into the learning process to enhance brain function, improve focus, and boost cognitive development. These techniques are often used in educational settings, therapy, and developmental support, particularly for children, but they can benefit people of all ages.</p>
-                      <p className="my-2">At The Speech Clinic, our OT's are certified in brain gym and mastering the children to achieve higher cognitive skills </p>
+                      <p className="my-2">At The Speech Clinic, our OT&apos;s are certified in brain gym and mastering the children to achieve higher cognitive skills </p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <h2 className="font-semibold leading-tight ">Benefits of Movement-Based Learning and Brain Gym:</h2>
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
@@ -744,7 +744,7 @@ export default function OccupationalTherapy() {
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">DIR Floor Time</h1>
                       <p>(Developmental, Individual-differences, Relationship-based Floor Time) is an approach to therapy and early childhood education that focuses on supporting the social, emotional, and developmental growth of children, particularly those with autism spectrum disorder (ASD) or other developmental challenges.
 
-                        In DIR Floor Time,our therapists engage with the child on the floor in a playful, child-directed way. The goal is to encourage emotional connections, build communication skills, and foster cognitive development through interactive play. The "floor time" part refers to the physical act of getting down to the child's level to facilitate engagement in a natural and comfortable environment.</p>
+                        In DIR Floor Time,our therapists engage with the child on the floor in a playful, child-directed way. The goal is to encourage emotional connections, build communication skills, and foster cognitive development through interactive play. The &quot;floor time&quot; part refers to the physical act of getting down to the child&apos;s level to facilitate engagement in a natural and comfortable environment.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <h2 className="font-semibold leading-tight ">The key areas of focus in DIR Floor Time are:</h2>
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
@@ -788,7 +788,7 @@ export default function OccupationalTherapy() {
                     <div className="   transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-700 hover:shadow-2xl hover:shadow-purple-200 relative overflow-hidden group">
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Group Therapy</h1>
                       <p>In the Occupational Therapy group session we focus on developing and enhancing the skills that help children engage in daily activities and participate in their social, academic, and home environments.</p>
-                      <p className="my-2">At The Speech Clinic, we have two groups called Little Learner's Occupational Therapy Group (age 3-5 years) and Fun and Focus OT Play Group (age 5-7 years )</p>
+                      <p className="my-2">At The Speech Clinic, we have two groups called Little Learner&apos;s Occupational Therapy Group (age 3-5 years) and Fun and Focus OT Play Group (age 5-7 years )</p>
                       <p >Our goal is to empower children to achieve their fullest potential, whether at home, school, or in social settings. We use a variety of therapeutic techniques and approaches to ensure that children not only meet developmental milestones but also thrive in their daily routines.</p>
 
                     </div>
@@ -828,7 +828,7 @@ export default function OccupationalTherapy() {
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Visual Motor Integration</h1>
                       <p>Visual-motor integration (VMI) refers to the ability to coordinate visual input (what we see) with motor output (how we physically respond). This skill is crucial for activities that require hand-eye coordination, such as writing, drawing, catching a ball, or typing.</p>
 
-                      <p className="my-2">It's crucial for everyday activities and plays a key role in early childhood development, affecting learning and academic performance. Challenges with VMI can lead to difficulties in school and daily life. At The Speech Clinic ,our therapists use different approaches to strengthen visual-motor coordination, hand-eye coordination, cognitive abilities, and overall functioning.</p>
+                      <p className="my-2">It&apos;s crucial for everyday activities and plays a key role in early childhood development, affecting learning and academic performance. Challenges with VMI can lead to difficulties in school and daily life. At The Speech Clinic ,our therapists use different approaches to strengthen visual-motor coordination, hand-eye coordination, cognitive abilities, and overall functioning.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <h2 className="font-semibold leading-tight ">It plays a significant role in:</h2>
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
@@ -856,7 +856,7 @@ export default function OccupationalTherapy() {
                     <div className="   transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-700 hover:shadow-2xl hover:shadow-purple-200 relative overflow-hidden group">
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Hand writing</h1>
                       <p>Handwriting is a fundamental skill that plays a key role in communication, academic achievement, personal expression and cognitive development. It involves the coordinated use of fine motor skills, hand-eye coordination, and cognitive processes.</p>
-                      <p className="my-2">At The Speech Clinic, our therapists use the approaches like "Handwriting without tears", multi-sensory techniques, modeling and demonstration, use different writing tools to master the handwriting skills.</p>
+                      <p className="my-2">At The Speech Clinic, our therapists use the approaches like &quot;Handwriting without tears&quot;, multi-sensory techniques, modeling and demonstration, use different writing tools to master the handwriting skills.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
                           <span className="text-violet-500 text-2xl animate-pulse">✥</span>
