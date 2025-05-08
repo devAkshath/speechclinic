@@ -163,7 +163,7 @@ export default function OccupationalTherapy() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-xl transition-all duration-300 group">
                     <div className="bg-gray-100 p-4 rounded-lg group-hover:bg-[#54169C]/10 transition-colors duration-300">
-                      <img
+                      <Image
                         src="/school-readiness-program.svg"
                         alt="Oral Placement Therapy"
                         className="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
@@ -176,7 +176,7 @@ export default function OccupationalTherapy() {
 
                   <div className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-xl transition-all duration-300 group">
                     <div className="bg-gray-100 p-4 rounded-lg group-hover:bg-[#54169C]/10 transition-colors duration-300">
-                      <img
+                      <Image
                         src="/speech-and-language-therapy.svg"
                         alt="Sensory Integration"
                         className="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
@@ -189,7 +189,7 @@ export default function OccupationalTherapy() {
 
                   <div className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-xl transition-all duration-300 group">
                     <div className="bg-gray-100 p-4 rounded-lg group-hover:bg-[#54169C]/10 transition-colors duration-300">
-                      <img
+                      <Image
                         src="/speech-and-language-therapy.svg"
                         alt="Motor Skills"
                         className="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
@@ -202,7 +202,7 @@ export default function OccupationalTherapy() {
 
                   <div className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-xl transition-all duration-300 group">
                     <div className="bg-gray-100 p-4 rounded-lg group-hover:bg-[#54169C]/10 transition-colors duration-300">
-                      <img
+                      <Image
                         src="/speech-and-language-therapy.svg"
                         alt="Visual Motor"
                         className="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
@@ -215,7 +215,7 @@ export default function OccupationalTherapy() {
 
                   <div className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-xl transition-all duration-300 group">
                     <div className="bg-gray-100 p-4 rounded-lg group-hover:bg-[#54169C]/10 transition-colors duration-300">
-                      <img
+                      <Image
                         src="/speech-and-language-therapy.svg"
                         alt="Handwriting"
                         className="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
@@ -228,7 +228,7 @@ export default function OccupationalTherapy() {
 
                   <div className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-xl transition-all duration-300 group">
                     <div className="bg-gray-100 p-4 rounded-lg group-hover:bg-[#54169C]/10 transition-colors duration-300">
-                      <img
+                      <Image
                         src="/speech-and-language-therapy.svg"
                         alt="ADL Skills"
                         className="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
@@ -317,14 +317,14 @@ export default function OccupationalTherapy() {
                     <p className="mb-3">Our highly trained pediatric occupational therapy staff utilizes an unparalleled array of equipment within our clinics. Our therapists have the ability to address the occupational therapy (OT) needs of the child in a unique and engaging environment.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-2xl overflow-hidden">
-                        <img
+                        <Image
                           src="speech-therapy-02.jpg"
                           alt="Speech Therapy Session"
                           className="w-full h-[250px] object-cover"
                         />
                       </div>
                       <div className="rounded-2xl overflow-hidden">
-                        <img
+                        <Image
                           src="speech-therapy-01.jpg"
                           alt="Speech Therapy Session"
                           className="w-full h-[250px] object-cover"

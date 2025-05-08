@@ -72,7 +72,7 @@ export default function TeamCard({ member }: TeamCardProps) {
           <div className="flex items-center justify-between">
             {/* Text Info */}
             <div className="text-left ">
-              <h1 className="text-[1.3rem] font-semibold text-gray-800 leading-snug">
+              <h1 className="text-[1.3rem] font-normal text-gray-800 leading-snug">
                 {member.name}
               </h1>
               <p className="text-sm text-purple-600">{member.role}</p>
@@ -100,11 +100,11 @@ export default function TeamCard({ member }: TeamCardProps) {
          {/* Stylish Header with Close Button on the Right */}
          <div className="w-full bg-fuchsia-900  p-4 rounded-t-3xl flex justify-between items-center shadow-lg">
            {/* Empty space to push the button to the right */}
-           <p className="text-lg text-white font-semibold">{member.name}</p>
+           <p className="text-lg text-white font-meduim">{member.name}</p>
            <div className="flex-grow"></div>
      
            <button
-             className="text-3xl font-bold text-white hover:text-gray-300 transition-all duration-200 ease-in-out transform hover:scale-125"
+             className="text-3xl font-meduim text-white hover:text-gray-300 transition-all duration-200 ease-in-out transform hover:scale-125"
              onClick={() => setOpen(false)}
            >
              ×
@@ -127,23 +127,23 @@ export default function TeamCard({ member }: TeamCardProps) {
            {/* Info Section */}
            <div className="flex-1 text-gray-700 space-y-6">
              <div>
-               <p className="text-lg text-gray-600 font-semibold">{member.role}</p>
+               <p className="text-lg text-gray-600 font-meduim old">{member.role}</p>
              </div>
      
              <div className="text-sm md:text-base space-y-2 my-4">
                {member.qualification && (
                  <p>
-                   <span className="font-semibold text-purple-700">{member.qualification}</span>
+                   <span className="font-normal text-purple-700">{member.qualification}</span>
                  </p>
                )}
                {member.experience && (
                  <p>
-                   <span className="font-semibold text-gray-800">Experience:</span> {member.experience}
+                   <span className="font-meduim text-gray-800">Experience:</span> {member.experience}
                  </p>
                )}
                {member.certifications?.length > 0 && (
                  <>
-                   <p className="font-semibold text-gray-800">Certified in:</p>
+                   <p className="font-light text-gray-800">Certified in:</p>
                    <ul className="pl-4 space-y-3 text-gray-700">
                      {member.certifications.map((cert, idx) => (
                        <li key={idx} className="flex items-start gap-3">

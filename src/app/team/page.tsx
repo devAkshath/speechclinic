@@ -86,12 +86,12 @@ export default function TeamPage() {
       <main className="pt-10">
         <section className="relative bg-gradient-to-b from-[#54169C] to-pink-500 text-white pb-32  py-6">
           <div className="max-w-4xl mx-auto px-6 py-20 text-center">
-            <h2 className="text-4xl font-bold mb-4">Meet Our Experts</h2>
-            <p className="text-lg">
-              Our dedicated team of certified professionals is here to support
+            <h2 className="text-4xl font-meduim mb-4">Meet Our Experts</h2>
+            <p className="text-lg font-light">
+              Our dedicated team of certified professionals is here to support<br/>
               and guide your child&apos;s development journey.
             </p>
-            <h1 className="relative text-xl md:text-5xl font-bold py-5 my-3 inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[6px] after:w-1/2 after:-translate-x-1/2 after:rounded-full after:bg-pink-500 after:opacity-80">
+            <h1 className="relative text-xl md:text-5xl font-meduim py-5 my-3 inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[6px] after:w-1/2 after:-translate-x-1/2 after:rounded-full after:bg-pink-500 after:opacity-80">
               Speech & Language Therapist
             </h1>
           </div>

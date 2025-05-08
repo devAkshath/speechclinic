@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Column 2 & 3: Links */}
           <div className="col-span-1 lg:col-span-2 grid grid-cols-2 gap-0">
             <div>
-              <h3 className="text-lg font-semibold mb-8">Company</h3>
+              <h3 className="text-lg font-meduim mb-8">Company</h3>
               <ul className="space-y-4">
                 <li><a href="#" className="hover:text-gray-400 font-light">About Us</a></li>
                 <li><a href="#" className="hover:text-gray-400 font-light">Contact Us</a></li>
@@ -50,7 +50,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-8">Services</h3>
+              <h3 className="text-lg font-meduim mb-8">Services</h3>
               <ul className="space-y-4">
                 <li><a href="#" className="hover:text-gray-400 font-light">Speech Therapist</a></li>
                 <li><a href="#" className="hover:text-gray-400 font-light">Occupational Therapist</a></li>
@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* Column 4: Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-8">Get In Touch</h3>
+            <h3 className="text-lg font-meduim mb-8">Get In Touch</h3>
             <p>Dubai Healthcare City, Building 47, Unit 301 & 302</p>
             <p>+971-508857146</p>
             <p>info@thespeechclinic.ae</p>

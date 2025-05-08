@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import HeroSvg from "../herocurve/wave";
 import GradientBackground from "../herocurve/blurgradient";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
@@ -95,7 +96,9 @@ export default function Hero() {
               {/* Right content - Image */}
               <div className="w-full flex justify-center items-center">
                 <div className="relative w-[clamp(280px,37vw,900px)]">
-                  <img
+                  <Image
+                     width={800}
+                     height={500}
                     src="/galleryimage.jpg"
                     alt="Therapy Session"
                     className="rounded-[2rem] w-full  aspect-[6/4] object-cover"

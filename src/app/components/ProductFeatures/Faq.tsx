@@ -48,11 +48,11 @@ export default function FAQSection() {
             width={800}
             height={500}
           />
-          <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+          <div className="text-md font-meduim text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
             FAQ
           </div>
         </div>
-        <h3 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-800">
+        <h3 className="text-3xl sm:text-4xl font-meduim mb-8 text-gray-800">
           If you don’t see an answer to your question,<br />
           you can send us an email from our contact form.
         </h3>

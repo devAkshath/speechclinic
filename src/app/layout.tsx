@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body style={{ fontFamily: "HuluStyle" }} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <FloatingWidget />
         <Footer />

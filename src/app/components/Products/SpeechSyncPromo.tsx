@@ -26,8 +26,8 @@ const SpeechSyncCard: React.FC = () => {
             x2="4206.29"
             y2="725.169"
           >
-            <stop offset="0" style={{ stopOpacity: 1, stopColor: "#54169C" }} />
-            <stop offset="1" style={{ stopOpacity: 1, stopColor: "#DA159B" }} />
+            <stop offset="0" style={{ stopOpacity: 1, stopColor: "#DA159B" }} />
+            <stop offset="1" style={{ stopOpacity: 1, stopColor: "#54169C" }} />
           </linearGradient>
         </defs>
         <g>
@@ -36,6 +36,22 @@ const SpeechSyncCard: React.FC = () => {
             d="M7340 2l-7047 535c-240,18 -318,116 -286,337l241 1665c24,165 132,273 297,287l6475 546c210,18 368,10 402,-249l353 -2703c40,-307 -182,-437 -435,-418z"
           />
         </g>
+        <g transform="translate(7200,700) scale(5) ">
+        <path
+          d="M38 169c-27,-36 -19,-87 17,-114 36,-27 87,-19 114,17 27,36 19,87 -17,114 -36,27 -88,19 -114,-17z"
+          fill="none"
+          stroke="#FF1CB7"
+          strokeWidth="52.496"
+          strokeOpacity="0.49"
+        />
+        <path
+          d="M6 51c-10,-14 -7,-34 7,-45 14,-10 34,-7 45,7 10,14 7,34 -7,45 -14,10 -34,7 -45,-7z"
+          fill="none"
+          stroke="#BF87FF"
+          strokeWidth="6.56154"
+          strokeOpacity="0.49"
+        />
+      </g>
       </svg>
 
       {/* Content */}
@@ -65,17 +81,18 @@ const SpeechSyncCard: React.FC = () => {
         <div className=" flex-col space-y-5 text-left  w-2xl ml-30 pr-0 pt-20">
           {/* Row 1: Badge */}
           <div className="inline-flex items-center justify-start mb-3 ">
-            <Image
+            {/* <Image
               src="/verified.png"
               alt="Verified Icon"
               className="w-8 h-8 mr-2 "
               width={800}
               height={500}
-            />
+            /> */}
             <div
               style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-              className="text-md text-white bg-gradient-to-r from-[#54169C]  to-[#DA159B] px-6 py-1 rounded-2xl"
+              className="text-lg text-gray-800 bg-white px-6 py-1 rounded-2xl"
             >
+              
               Our Products
             </div>
           </div>

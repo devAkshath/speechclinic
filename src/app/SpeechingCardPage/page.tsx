@@ -139,7 +139,7 @@ export default function Home() {
 
       <section className="w-full px-0 md:px-0 py-10 bg-white">
         <div className="max-w-[1750px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 px-4">
-          <h2 className="text-4xl md:text-6xl font-light leading-tight md:max-w-[40%]">
+          <h2 className="text-4xl md:text-6xl font-normal leading-tight md:max-w-[40%]">
             Interactive
             <br />
             Learning
@@ -173,7 +173,7 @@ export default function Home() {
 
       <section className="bg-gradient-to-tr from-white to-pink-50 py-16 px-4 md:px-10 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-meduim mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
             Enhance Speech & Communication
           </h2>
           <p className="text-gray-600 text-lg mb-6">
@@ -185,7 +185,7 @@ export default function Home() {
             href="https://www.yourwebsite.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white rounded-full shadow-lg hover:scale-105 transition font-medium text-lg"
+            className="inline-block px-6 py-3 bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white rounded-full shadow-lg hover:scale-105 transition font-light text-lg"
           >
             Contact Now
           </a>

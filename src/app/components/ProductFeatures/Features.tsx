@@ -58,8 +58,8 @@ export default function Productfeatures() {
     <div className="absolute -top-16 -left-16 w-60 h-60 bg-[#45465B] rounded-full opacity-30 blur-3xl" />
     <div className="absolute -bottom-20 -right-16 w-72 h-72 bg-pink-300 rounded-full opacity-20 blur-3xl" />
     <div className="relative max-w-6xl mx-auto text-center">
-        <p className="text-sm uppercase tracking-wide text-pink-300 font-semibold">Features</p>
-        <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-white">
+        <p className="text-sm uppercase tracking-wide text-pink-300 font-meduim">Features</p>
+        <h2 className="mt-2 text-3xl sm:text-4xl font-meduim text-white">
         Explore the Unique Features of SpeechSync
         </h2>
 
@@ -71,7 +71,7 @@ export default function Productfeatures() {
                     className="bg-white  rounded-xl p-6 text-left hover:shadow-xl transition-shadow"
                 >
                     <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className=" font-semibold text-2xl sm:text-2xl  text-black">{feature.title}</h3>
+                    <h3 className=" font-meduim text-2xl sm:text-2xl  text-black">{feature.title}</h3>
                     <p className="mt-2 text-sm text-black">{feature.description}</p>
                 </div>
             ))}

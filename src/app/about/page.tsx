@@ -7,7 +7,7 @@ import Expertise from "../components/Expertise/ExpertiseSection";
 
 export default function About() {
   return (
-    <div className="bg-white min-h-screen">
+    <div style={{ fontFamily: "HuluStyle" }} className="bg-white min-h-screen">
       <header className="absolute top-0 w-full z-50">
         <NavBarSecond />
       </header>
@@ -15,9 +15,9 @@ export default function About() {
       {/* Hero Section with SVG */}
       <section className="relative  bg-gradient-to-b from-[#54169C] to-pink-500 text-white pb-32 my-7 py-9 ">
         <div className="px-6 md:px-40 py-20 text-center">
-          <h2 className="text-4xl font-bold mb-4">About Us</h2>
+          <h2 className="text-4xl font-medium mb-4">About Us</h2>
           <p className="text-lg">
-            Our speech clinic provides personalized therapy services designed to enhance communication skills and empower individuals of all ages to reach their fullest potential.
+            Our speech clinic provides personalized therapy services designed to enhance <br/>communication skills and empower individuals of all ages to reach their fullest potential.
           </p>
         </div>
         <HalfWaveBackground />
@@ -43,7 +43,7 @@ export default function About() {
               </div>
             </div>
 
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">
+            <h2 className="text-5xl font-medium text-gray-800 mb-4">
               Our Mission And <span className="bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">Vision</span>
             </h2>
 
@@ -63,7 +63,7 @@ export default function About() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h2 className="font-bold text-pink-600">Expert Therapists</h2>
+                  <h2 className="font-medium text-pink-600">Expert Therapists</h2>
                   <p className="text-black">Our team is dedicated to providing excellent care to each client we treat.</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function About() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h2 className="font-bold text-pink-600">Client-Focused Care</h2>
+                  <h2 className="font-medium text-pink-600">Client-Focused Care</h2>
                   <p className="text-black">We tailor our treatment approaches to meet each individual&rsquo;s unique needs.</p>
                 </div>
               </div>
@@ -110,13 +110,13 @@ export default function About() {
                     width={800}
                     height={500}
                   />
-                  <div className="text-sm font-light text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-4 py-1 rounded-2xl animate-pulse-slow">
+                  <div className="text-sm font-medium text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-4 py-1 rounded-2xl animate-pulse-slow">
                     Meet Our Founder
                   </div>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-4xl font-extrabold leading-tight mb-4 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
+                <h2 className="text-4xl font-medium leading-tight mb-4 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
                   Sana Shareef
                 </h2>
 
@@ -197,9 +197,9 @@ export default function About() {
             </div>
 
             {/* Enhanced Heading with gradient effect */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent
+            <h2 className="text-4xl md:text-5xl font-medium leading-tight bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent
                           hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500 mt-2">
-              Why We&apos;re the Right Choice for You
+              Why We&apos;re the <br/>Right Choice for You
             </h2>
 
             {/* Enhanced Description */}

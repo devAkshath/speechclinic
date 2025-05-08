@@ -390,7 +390,9 @@ export default function Gallery() {
           {/* Right Column: Image */}
           <div className="w-full flex justify-center items-center">
             <div className="relative w-[clamp(80px,30vw,900px)]">
-              <img
+              <Image
+              width={800}
+              height={500}
                 src="/galleryimage.jpg"
                 alt="Therapy Session"
                 className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
@@ -408,7 +410,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="bg-transparent py-12 px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
+        <div className="bg-transparent py-12   px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
           {/* Stats Row */}
           <div className="flex flex-wrap justify-center gap-6 md:gap-10">
             {/* Stat Box Component */}
@@ -476,7 +478,7 @@ export default function Gallery() {
       {/* Message Box */}
       <div     ref={(el) => {
           if (el) boxesRef.current[12] = el;
-        }} className="box relative border-2 border-transparent rounded-3xl px-0 sm:px-6 pt-0 pb-2 max-w-[1610px] mx-auto space-y-4">
+        }} className="box relative border-2 border-transparent rounded-3xl px-0 sm:px-6 pt-0 pb-2 max-w-[1610px] mx-auto  space-y-4">
       <h3
         style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
         className="text-3xl sm:text-3xl md:text-5xl text-gray-600 text-center"

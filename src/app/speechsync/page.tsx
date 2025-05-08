@@ -13,7 +13,7 @@ const aboutimages = [
 ];
 
 import { BsPlayCircleFill } from "react-icons/bs";
-import FAQSection from "../components/ProductFeatures/Faq"; // great generic "board" icon
+import FAQSection from "../components/ProductFeatures/Faq";
 
 const bubbleColors = ["#DA159B", "#54169C", "#FFA9E7", "#D8B4FE"];
 
@@ -86,10 +86,10 @@ export default function Hero() {
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* === Text Content === */}
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+            <h2 className="text-5xl font-meduim mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
               Supporting Communication
               <br />
-              <span className="text-5xl font-bold mt-2 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+              <span className="text-5xl font-meduim mt-2 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
                 for Every Child
               </span>
             </h2>
@@ -137,7 +137,7 @@ export default function Hero() {
             href="#knowmore"
             className="group inline-flex items-center bg-gradient-to-br my-5 from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
           >
-            <span className="text-lg font-medium">Know More</span>
+            <span className="text-lg font-light">Know More</span>
             <svg
               className="w-6 h-6 group-hover:translate-y-1 transition-transform duration-300"
               fill="none"
@@ -157,13 +157,10 @@ export default function Hero() {
         {/* Content... (rest remains same) */}
       </section>
 
-<div id="knowmore">
-<Productfeatures />
-</div>
-      <section
-        className="text-black bg-gradient-to-tr from-white to-pink-50 py-20 md:py-24 px-5 md:px-10 overflow-hidden relative"
-       
-      >
+      <div id="knowmore">
+        <Productfeatures />
+      </div>
+      <section className="text-black bg-gradient-to-tr from-white to-pink-50 py-20 md:py-24 px-5 md:px-10 overflow-hidden relative">
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* Left Content */}
 
@@ -184,8 +181,7 @@ export default function Hero() {
           ))}
 
           <div className="md:w-1/2 text-center md:text-left">
-     
-            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+            <h2 className="text-5xl font-meduim mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
               Empower Every Voice
             </h2>
             <p className="text-gray-600 text-lg mb-6">
@@ -236,7 +232,7 @@ export default function Hero() {
 
       <section className="bg-gradient-to-tr from-white to-pink-50 py-25 md:py-24 px-4 md:px-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-meduim mb-6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
             Why Choose SpeechSync?
           </h2>
           <p className="text-gray-600 text-lg">
@@ -254,7 +250,7 @@ export default function Hero() {
 
       <section className="bg-gradient-to-tr from-white py-25 px-4 md:px-10 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-meduim mb-4 bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
             Discover More
           </h2>
           <p className="text-gray-600 text-lg mb-6">
@@ -265,7 +261,7 @@ export default function Hero() {
             href="https://www.yourwebsite.com" // replace with your actual link
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white rounded-full shadow-lg hover:scale-105 transition font-medium text-lg"
+            className="inline-block px-6 py-3 bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white rounded-full shadow-lg hover:scale-105 transition font-light text-lg"
           >
             Visit Our Website
           </a>

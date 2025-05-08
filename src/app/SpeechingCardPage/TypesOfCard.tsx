@@ -20,7 +20,7 @@ export default function TypesCard() {
          <section className="w-full px-0 md:px-0 py-4 bg-white">
       <div className="max-w-[1750px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 ">
           {/* Left Column: Heading */}
-          <h2 className="text-4xl md:text-6xl font-light leading-tight md:max-w-[40%]">
+          <h2 className="text-4xl md:text-6xl font-normal leading-tight md:max-w-[40%]">
           Speeching Card 
           <br/>Series
           </h2>
@@ -48,7 +48,7 @@ export default function TypesCard() {
                 objectFit="cover"
               />
             </div>
-            <h3 className="text-gray-700 text-2xl font-medium">{card.label}</h3>
+            <h3 className="text-gray-700 text-2xl font-normal">{card.label}</h3>
           </div>
         ))}
       </div>

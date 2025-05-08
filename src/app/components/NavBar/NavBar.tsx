@@ -480,17 +480,16 @@ export default function Navbar() {
           height={200}
           priority
         /></Link>
-        <h1 className=" my-6 py-3 h-6  font-extrabold text-lg">About Us</h1>
-        <p>
-          There are many variations of passages available sure there majority
-          have suffered alteration in some form...
+        <h1 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className=" my-6 py-3 h-6   text-lg">About Us</h1>
+        <p style={{ fontFamily: 'HuluStyle', fontWeight: 300 }}   className=" text-md">
+        There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don&apos;t look even slightly believable.
         </p>
         <div className="space-y-2 mt-8">
           <span className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaEnvelope />
             </span>
-            <a href="mailto:info@thespeechclinic.ae" className="hover:underline">
+            <a style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} href="mailto:info@thespeechclinic.ae" className="hover:underline text-md">
               info@thespeechclinic.ae
             </a>
           </span>
@@ -498,11 +497,11 @@ export default function Navbar() {
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaPhone />
             </span>
-            <a href="tel:+9715088571468" className="hover:underline">
+            <a  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  href="tel:+9715088571468" className="hover:underline">
               +971-5088571468
             </a>
           </span>
-          <span className="flex items-center gap-3 text-gray-800">
+          <span style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaClock />
             </span>
