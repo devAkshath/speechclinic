@@ -5,10 +5,12 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState, useCallback, useRef } from "react";
 import RectangleSvg from "./Reactanglesvg";
+import { useMediaQuery } from "react-responsive";
 // import CurveSvg from "./curvesvg";
 // import GalleryCurveLine from "./GalleryCurveline";
 
 export default function Gallery() {
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
 
   useEffect(() => {
@@ -315,7 +317,9 @@ export default function Gallery() {
           </div>
         ))}
       </div>
-      <RectangleSvg>
+            {isDesktop ? (
+              <>
+                 <RectangleSvg>
         {/* New Section - Two Column Row */}
         <div className="flex flex-col lg:flex-row justify-center mx-auto   max-w-[1300px] items-start md:items-center mt-0 gap-6 lg:gap- px-4 text-left md:text-center">
           {/* Left Column */}
@@ -475,6 +479,168 @@ export default function Gallery() {
           </div>
         </div>
       </RectangleSvg>
+              </>
+            ) : (
+              <div className="flex flex-col lg:flex-row justify-center  items-start md:items-center mt-0 gap-6 lg:gap- px-4 text-left md:text-center">
+                <div className="">
+          {/* Left Column */}
+          <div className="mx-auto space-y-4 lg:text-left">
+            {/* Row 1: Label */}
+            <div
+              ref={(el) => {
+                if (el) boxesRef.current[4] = el;
+              }}
+              className="box inline-flex items-center justify-center mt-10 mb-3 "
+              >
+                <Image
+                  src="/verified.png"
+                  alt="Verified Icon"
+                  className="w-8 h-8 mr-1"
+                  width={800}
+                  height={500}
+                />
+                <div
+                  style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                  className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl"
+                >
+                 Gestalt Language Therapy
+                </div>
+            </div>
+
+            {/* Row 2: Heading */}
+            <h2
+              ref={(el) => {
+                if (el) boxesRef.current[5] = el;
+              }}
+              style={{
+                fontFamily: "HuluStyle",
+                fontWeight: 500,
+                }}
+              className="box text-4xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
+            >
+              Fostering Communication Through Meaningful Language
+            </h2>
+
+            {/* Row 3: Description */}
+            <p
+              ref={(el) => {
+                if (el) boxesRef.current[6] = el;
+              }}
+              style={{
+                fontFamily: "HuluStyle",
+                fontWeight: 400,
+              }}
+              className=" box text-lg text-gray-700   py-2"
+            >
+              Our Gestalt Language Therapy focuses on supporting children who
+              learn language in chunks, helping them progress toward meaningful,
+              independent communication.
+            </p>
+
+            {/* Row 4: Button */}
+            <button
+              ref={(el) => {
+                if (el) boxesRef.current[7] = el;
+              }}
+              style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+              className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] mb-10 font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
+            >
+              Get Started
+            </button>
+          </div>
+
+          {/* Right Column: Image */}
+          <div   ref={(el) => {
+                if (el) boxesRef.current[8] = el;
+              }} className="w-full flex justify-center items-center box">
+            <div className="relative">
+              <Image
+              width={800}
+              height={500}
+                src="/galleryimage.jpg"
+                alt="Therapy Session"
+                className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
+              />
+              <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
+                <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
+                  <div
+                    className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
+                     border-l-[clamp(12px,1.8vw,23px)] border-l-white 
+                     border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-transparent py-12   px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
+          {/* Stats Row */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+            {/* Stat Box Component */}
+            {[
+              {
+                icon: "/peopleicon.svg",
+                count: "7320",
+                label: "+ Clients",
+                refIndex: 9,
+              },
+              {
+                icon: "/groupicon.svg",
+                count: "1500",
+                label: "+ Staffs",
+                refIndex: 10,
+              },
+              {
+                icon: "/builbicon.svg",
+                count: "50",
+                label: "+ Projects",
+                refIndex: 11,
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                ref={(el) => {
+                  if (el) boxesRef.current[item.refIndex] = el;
+                }}
+                className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[40px] px-6 py-6 text-center gap-4"
+              >
+                <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
+                  <Image
+                    src={item.icon}
+                    alt={item.label}
+                    className="w-15 h-15"
+                    width={800}
+                    height={500}
+                  />
+                </div>
+                <div
+                  style={{
+                    fontFamily: "HuluStyle",
+                    fontWeight: 500,
+                    fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                  }}
+                  className="text-gray-600 flex items-center gap-1"
+                >
+                  {item.count}
+                  <span
+                    style={{
+                      fontFamily: "HuluStyle",
+                      fontWeight: 400,
+                      fontSize: "clamp(1.5rem, 1vw, 2rem)",
+                    }}
+                    className="text-xl md:text-3xl text-gray-600"
+                  >
+                    {item.label}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+              </div>
+            )}
+   
       {/* Message Box */}
       <div     ref={(el) => {
           if (el) boxesRef.current[12] = el;

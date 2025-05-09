@@ -58,15 +58,15 @@ export default function ServiceSection() {
   const therapyImages = [
     { src: "/aba-therapy.svg", title: "ABA Therapy", href: "/ServicePage" },
     { src: "/feeding-therapy.svg", title: "Feeding Therapy" },
-    { src: "/group-therapy.svg", title: "Group Therapy", href: "/GroupTherapy" },
+    { src: "/group-therapy.svg", title: "Group Therapy", href: "/services/GroupTherapy" },
     {
       src: "/neuro-integrative-therapy.svg",
       title: "Neuro Integrative\nTherapy",
     },
-    { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" ,href: "/OccupationalTherapy"  },
-    { src: "/physical-therapy.svg", title: "Physical Therapy" },
+    { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" ,href: "/services/OccupationalTherapy"  },
+    { src: "/physical-therapy.svg", title: "Physical Therapy",href: "/services/physical-therapy"  },
     { src: "/school-readiness-program.svg", title: "School Readiness" },
-    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage",href: "/SpeechAndLanguageTherapy" },
+    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage",href: "/services/SpeechAndLanguageTherapy" },
   ];
 
   useEffect(() => {
@@ -76,7 +76,7 @@ export default function ServiceSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { 
     if (!emblaApi || !isSmallScreen) return;
 
     const autoplay = () => {

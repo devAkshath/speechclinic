@@ -1,82 +1,80 @@
-'use client';
+"use client";
 
 import { useEffect, useRef } from "react";
-import MasonryGrid from "../Features/mansoryimages";
 import Image from "next/image";
 
 export default function TherapyPromo() {
   const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
-  
-    useEffect(() => {
-      const boxes = boxesRef.current;
-  
-      function checkBoxes() {
-        const isMobile = window.innerWidth <= 768;
-        const triggerBottom = (window.innerHeight / 4) * 4;
-  
-        boxes.forEach((box, index) => {
-          if (!box) return;
-          const boxTop = box.getBoundingClientRect().top;
-  
-          if (isMobile) {
-            if (boxTop < triggerBottom) {
-              box.classList.add("show");
-            } else {
-              box.classList.remove("show");
-            }
-          } else {
-            setTimeout(() => {
-              box.classList.add("show");
-            }, index * 150);
-          }
-        });
-      }
-  
-      window.addEventListener("scroll", checkBoxes);
-      window.addEventListener("resize", checkBoxes);
-      window.addEventListener("load", checkBoxes);
-  
-      checkBoxes();
-  
-      return () => {
-        window.removeEventListener("scroll", checkBoxes);
-        window.removeEventListener("resize", checkBoxes);
-        window.removeEventListener("load", checkBoxes);
-      };
-    }, []);
 
   useEffect(() => {
-    const boxes = featureRefs.current;
-    if (typeof window === 'undefined') return;
+    const boxes = boxesRef.current;
 
     function checkBoxes() {
       const isMobile = window.innerWidth <= 768;
-      const triggerBottom = window.innerHeight / 4 * 4;
-    
+      const triggerBottom = (window.innerHeight / 4) * 4;
+
       boxes.forEach((box, index) => {
         if (!box) return;
         const boxTop = box.getBoundingClientRect().top;
-    
+
         if (isMobile) {
           if (boxTop < triggerBottom) {
-            box.classList.add('show');
+            box.classList.add("show");
           } else {
-            box.classList.remove('show');
+            box.classList.remove("show");
           }
         } else {
           setTimeout(() => {
-            box.classList.add('show');
-          }, index * 150); 
+            box.classList.add("show");
+          }, index * 150);
         }
       });
     }
-    
 
-    window.addEventListener('scroll', checkBoxes);
-    checkBoxes(); 
+    window.addEventListener("scroll", checkBoxes);
+    window.addEventListener("resize", checkBoxes);
+    window.addEventListener("load", checkBoxes);
 
-    return () => window.removeEventListener('scroll', checkBoxes);
+    checkBoxes();
+
+    return () => {
+      window.removeEventListener("scroll", checkBoxes);
+      window.removeEventListener("resize", checkBoxes);
+      window.removeEventListener("load", checkBoxes);
+    };
+  }, []);
+
+  useEffect(() => {
+    const boxes = featureRefs.current;
+    if (typeof window === "undefined") return;
+
+    function checkBoxes() {
+      const isMobile = window.innerWidth <= 768;
+      const triggerBottom = (window.innerHeight / 4) * 4;
+
+      boxes.forEach((box, index) => {
+        if (!box) return;
+        const boxTop = box.getBoundingClientRect().top;
+
+        if (isMobile) {
+          if (boxTop < triggerBottom) {
+            box.classList.add("show");
+          } else {
+            box.classList.remove("show");
+          }
+        } else {
+          setTimeout(() => {
+            box.classList.add("show");
+          }, index * 150);
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkBoxes);
+    checkBoxes();
+
+    return () => window.removeEventListener("scroll", checkBoxes);
   }, []);
 
   return (
@@ -86,13 +84,22 @@ export default function TherapyPromo() {
           {/* Left Column */}
           <div className="space-y-12">
             {/* Heading Section */}
-            <div  ref={(el) => {
-          if (el) boxesRef.current[1] = el;
-        }} className=" box text-center md:text-left">
-              <h2  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="  text-3xl md:text-5xl font-normal text-gray-700 mb-2">
+            <div
+              ref={(el) => {
+                if (el) boxesRef.current[1] = el;
+              }}
+              className=" box text-center md:text-left"
+            >
+              <h2
+                style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                className="  text-3xl md:text-5xl font-normal text-gray-700 mb-2"
+              >
                 Nurturing Communication
               </h2>
-              <h2  style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}  className="text-3xl md:text-5xl font-semibold bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+              <h2
+                style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
+                className="text-3xl md:text-5xl font-semibold bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent"
+              >
                 Confidence & Growth
               </h2>
             </div>
@@ -102,8 +109,9 @@ export default function TherapyPromo() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  ref={(el) => { featureRefs.current[index] = el; }}
-
+                  ref={(el) => {
+                    featureRefs.current[index] = el;
+                  }}
                   className="box flex flex-col md:flex-row items-start gap-4 text-left sm:shadow-lg md:shadow-none lg:shadow-none shadow-lg border-2 border-pink-400 rounded-[20px] md:border-0 md:rounded-[30%] p-4 md:p-0"
                 >
                   {/* Icon Section */}
@@ -119,10 +127,16 @@ export default function TherapyPromo() {
 
                   {/* Text Section */}
                   <div className="flex flex-col gap-1">
-                    <h3  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className=" text-xl font-medium text-gray-700 mb-1.0">
+                    <h3
+                      style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                      className=" text-xl font-medium text-gray-700 mb-1.0"
+                    >
                       {feature.title}
                     </h3>
-                    <p  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-gray-600 ">
+                    <p
+                      style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                      className="text-gray-600 "
+                    >
                       {feature.description}
                     </p>
                   </div>
@@ -131,8 +145,20 @@ export default function TherapyPromo() {
             </div>
           </div>
 
-          <div >
-            <MasonryGrid />
+          <div>
+            <div
+              style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+              className="h-auto lg:ml-45 sm:ml-0"
+            >
+              {/* Full-width Ball Pit Image */}
+              <Image
+                width={900}
+                height={800}
+                src="/therapypromo.jpg"
+                alt=""
+                className="w-auto h-auto  object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

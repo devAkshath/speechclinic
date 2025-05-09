@@ -46,12 +46,12 @@ export default function Products() {
       </div>
 
       {/* Centered Highlight Section */}
-      <div className="w-full max-w-[1310px] h-[160px] mx-auto mt-10 px-4 sm:px-10">
+      <div className="w-full max-w-[1310px] h-[160px] mx-auto mt-10 px-4 sm:px-10 hidden sm:flex">
         <div className="w-full h-full flex items-center rounded-[30px] border-2 border-[#4A3B51] overflow-hidden">
           {/* Left Gradient Button */}
           <div
             style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
-            className="flex items-center justify-center bg-gradient-to-tr from-[#54169C] to-[#DA159B] ml-7 h-[110px] w-[350px] sm:w-[300px] md:w-[510px] text-white text-lg sm:text-xl md:text-3xl font-stretch-extra-expanded rounded-[20px] "
+            className="flex items-center justify-center bg-gradient-to-tr from-[#54169C] to-[#DA159B] ml-7 h-[110px] w-[350px] sm:w-[00px] md:w-[510px] text-white text-lg sm:text-xl md:text-3xl font-stretch-extra-expanded rounded-[20px] "
           >
             Future Events Ahead
           </div>

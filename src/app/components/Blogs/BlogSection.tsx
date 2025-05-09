@@ -184,7 +184,7 @@ export default function Blogs() {
                       height={500}
                       className="rounded-[20px] mt-4 mb-4 w-full h-60 object-cover"
                     />
-                    <h3 className="text-2xl font-semibold text-gray-800 text-left mb-2">
+                    <h3 className="text-2xl font-normal text-gray-800 text-left mb-2">
                       {card.title}
                     </h3>
                     <p className="text-md text-gray-600 font-light text-left mb-4 line-clamp-3">
@@ -192,7 +192,7 @@ export default function Blogs() {
                     </p>
                     <Link href="/BlogPage">
                       {" "}
-                      <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-5/6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-medium shadow-lg text-xl">
+                      <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-5/6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-normal shadow-lg text-xl">
                         Read More
                       </button>
                     </Link>

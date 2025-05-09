@@ -7,7 +7,7 @@ export default function AllServicesPage() {
       <header>
         <NavBarSecond />
       </header>
-      <main className="p-20">
+      <main className="p-0">
         <ServiceSection />
       </main>
 

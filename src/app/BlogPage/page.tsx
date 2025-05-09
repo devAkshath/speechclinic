@@ -11,7 +11,7 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto pt-40 flex flex-col lg:flex-row gap-8">
         {/* Main Blog Content */}
         <main className="flex-1 text-center lg:text-left">
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="text-5xl font-normal mb-4">
             Significance of Early Intervention
           </h1>
 
@@ -78,7 +78,7 @@ export default function BlogPage() {
               <span className="absolute top-4 right-8 text-white-200 text-9xl leading-none">
                 ”
               </span>
-              <p className="text-base p-9">
+              <p className="text-base p-9 ">
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using lorem ipsum is that it has a more-or-less the
@@ -95,7 +95,7 @@ export default function BlogPage() {
               a child&lsquo;s future growth and development.
             </p>
 
-            <h2 className="text-lg font-bold mt-6">
+            <h2 className="text-2xl font-normal mt-6">
               The Significance of Early Intervention
             </h2>
             <div className="space-y-3">
@@ -146,7 +146,7 @@ export default function BlogPage() {
               ))}
             </div>
 
-            <h2 className="text-lg font-bold mt-6">
+            <h2 className="text-2xl font-normal mt-6">
               The Role of The Speech Clinic Dubai in Early Intervention
             </h2>
             <p>
@@ -199,7 +199,7 @@ export default function BlogPage() {
               ))}
             </div>
 
-            <h2 className="text-lg font-bold mt-6">Conclusion</h2>
+            <h2 className="text-2xl font-normal mt-6">Conclusion</h2>
             <p>
               Early intervention is a powerful tool that can transform the lives
               of children with developmental challenges, especially those with
@@ -220,7 +220,7 @@ export default function BlogPage() {
         <aside className="w-full lg:w-80 space-y-6">
           {/* Replicate content from the uploaded image */}
           <div className="border-2 border-pink-100 bg-pink-50 rounded-xl p-4 ">
-            <h3 className="text-xl font-bold text-[#0a1e59] mb-2">
+            <h3 className="text-xl font-normal text-[#0a1e59] mb-2">
               Recent Posts
             </h3>
             <div className="w-6 h-[3px] bg-pink-500 rounded-full mb-4"></div>
@@ -245,7 +245,8 @@ export default function BlogPage() {
                 },
               ].map((post, index) => (
                 <div key={index} className="flex gap-4 items-start">
-                  <img
+                  <Image 
+                  fill
                     src={post.img}
                     alt={post.title}
                     className="w-14 h-14 rounded-md object-cover"
@@ -278,7 +279,7 @@ export default function BlogPage() {
           </div>
 
           <div className="border-2  border-pink-100  bg-pink-50 rounded-lg p-4 ">
-          <h3 className="text-xl font-bold text-[#0a1e59] mb-2">
+          <h3 className="text-xl font-normal text-[#0a1e59] mb-2">
               Tags
             </h3>
             <div className="w-6 h-[3px] bg-pink-500 rounded-full mb-4"></div>
@@ -302,7 +303,7 @@ export default function BlogPage() {
           </div> */}
 
           <div className="bg-pink-50 p-4 rounded-lg">
-          <h3 className="text-xl font-bold text-[#0a1e59] mb-2">
+          <h3 className="text-xl font-normal text-[#0a1e59] mb-2">
           Brochure
             </h3>
             <div className="w-6 h-[3px] bg-pink-400 rounded-full mb-4"></div>
