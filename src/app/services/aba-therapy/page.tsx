@@ -1,6 +1,5 @@
 import NavBarSecond from "../../components/NavBar/NavBarSecond";
 import Image from "next/image";
-import InlineVideoSection from "../../components/Services/InlineVideoSection";
 import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
@@ -71,7 +70,7 @@ export default function PhysicalTherapy() {
                             <div className="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                               <h3 className="text-2xl font-bold text-white mb-2">ABA Therapy Session</h3>
                               <p className="text-white/90 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                Engaging therapeutic activities designed to support children's development through structured play and learning
+                                Engaging therapeutic activities designed to support children&apos;s development through structured play and learning
                               </p>
                             </div>
                           </div>
@@ -90,7 +89,7 @@ export default function PhysicalTherapy() {
                             <div className="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                               <h3 className="text-2xl font-bold text-white mb-2">Interactive Learning</h3>
                               <p className="text-white/90 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                Customized therapy approaches that adapt to each child's unique needs and learning style
+                                Customized therapy approaches that adapt to each child&apos;s unique needs and learning style
                               </p>
                             </div>
                           </div>
@@ -112,7 +111,7 @@ export default function PhysicalTherapy() {
                         hover:after:-translate-x-2 hover:after:-translate-y-2">
                         {/* <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C]">Our Expert Team</h3> */}
                         <p className="text-gray-700 text-lg font-medium">
-                          Our collaborative team consists of IBAs, BCaBAs, IBTs, ABAT's and RBTs, working together to provide comprehensive ABA therapy services.
+                          Our collaborative team consists of IBAs, BCaBAs, IBTs, ABAT&apos;s and RBTs, working together to provide comprehensive ABA therapy services.
                         </p>
                         <p className=" my-3">
                           Our Mission: We are committed to helping your child build essential skills and overcome barriers to learning. Our personalized ABA therapy programs are designed to empower your child with the tools they need to thrive in everyday life and succeed in the future. With a focus on communication, social interaction, independence, and emotional well-being, we provide the support your child needs to reach their fullest potential.
@@ -273,12 +272,12 @@ export default function PhysicalTherapy() {
 
                     <div className="p-6 rounded-lg bg-gradient-to-br from-[#54169C]/5 to-[#DA159B]/5">
                       <h3 className="text-xl font-medium text-[#54169C] mb-2">Experienced Team:</h3>
-                      <p className="text-gray-600">Our certified IBA, BCaBA's and therapists (RBTs and IBTs) provide expert care and support every step of the way.</p>
+                      <p className="text-gray-600">Our certified IBA, BCaBA&apos;s and therapists (RBTs and IBTs) provide expert care and support every step of the way.</p>
                     </div>
                   </div>
 
                   <p className="text-gray-700  max-w-3xl mx-auto">
-                    <span className="font-medium">Take the First Step towards Positive Change</span> If you're ready to see how ABA therapy can support your child's growth, contact us today to learn more about how our programs can help them succeed. Together, we can build the skills they need to thrive in school, at home, and in the community
+                    <span className="font-medium">Take the First Step towards Positive Change</span> If you&apos;re ready to see how ABA therapy can support your child&apos;s growth, contact us today to learn more about how our programs can help them succeed. Together, we can build the skills they need to thrive in school, at home, and in the community
                   </p>
                 </div>
               </div>
