@@ -26,14 +26,6 @@
 }
 /*houdini*/
 
-/*base*/
-:root {
-  font-family: Inter, sans-serif;
-
-  --stripe-color: #fff;
-  --bg: var(--stripe-color);
-  --maincolor: var(--bg);
-}
 
 body {
   width: 100cqw;
