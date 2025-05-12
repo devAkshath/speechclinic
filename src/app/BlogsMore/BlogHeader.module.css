@@ -27,15 +27,6 @@
 /*houdini*/
 
 
-body {
-  width: 100cqw;
-  min-height: 100cqh;
-  display: flex;
-  place-content: center;
-  place-items: flex-start center;
-  background: var(--bg);
-}
-
 /*custom*/
 
 @keyframes smoothBg {
