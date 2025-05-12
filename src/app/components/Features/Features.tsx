@@ -148,7 +148,7 @@ export default function TherapyPromo() {
           <div>
             <div
               style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-              className="h-auto lg:ml-45 sm:ml-0"
+              className="flex justify-center items-center sm:px-4 lg:px-0  px-4 h-auto lg:ml-45 sm:ml-0 "
             >
               {/* Full-width Ball Pit Image */}
               <Image

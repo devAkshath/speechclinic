@@ -644,7 +644,7 @@ export default function Gallery() {
       {/* Message Box */}
       <div     ref={(el) => {
           if (el) boxesRef.current[12] = el;
-        }} className="box relative border-2 border-transparent rounded-3xl px-0 sm:px-6 pt-0 pb-2 max-w-[1610px] mx-auto  space-y-4">
+        }} className="box relative border-2 border-transparent rounded-3xl px-8 sm:px-6 pt-0 pb-2 max-w-[1610px] mx-auto  space-y-4">
       <h3
         style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
         className="text-3xl sm:text-3xl md:text-5xl text-gray-600 text-center"

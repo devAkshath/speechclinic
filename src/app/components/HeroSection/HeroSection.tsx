@@ -2,11 +2,12 @@
 
 import { useMediaQuery } from "react-responsive";
 import HeroSvg from "../herocurve/wave";
-import GradientBackground from "../herocurve/blurgradient";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import HeroRecMobile from "./HeroRecMobile";
 
 export default function Hero() {
+  
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
 
   useEffect(() => {
@@ -51,15 +52,9 @@ export default function Hero() {
   return (
     <main className="relative w-full min-h-screen flex items-center justify-center px-4">
       {/* === Backgrounds === */}
-      {isDesktop ? (
-        <>
-          <div className="absolute top-38 left-28 max-w-[1840px] h-full z-10">
-            <HeroSvg />
-          </div>
-        </>
-      ) : (
-        <div className="absolute top-0 left-0 w-full h-full z-0">
-          <GradientBackground />
+      {isDesktop && (
+        <div className="absolute top-38 left-28 max-w-[1840px] h-full z-10">
+          <HeroSvg />
         </div>
       )}
 
@@ -71,23 +66,35 @@ export default function Hero() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
               {/* Left content */}
               <div className="text-white  space-y-6 flex-1 ">
-                <h1 style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="text-[clamp(1rem,3.5vw,3.5rem)] bg-gradient-to-br from-[#54169C] to-[#DA159B] bg-clip-text text-transparent font-semibold leading-tight">
+                <h1
+                  style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
+                  className="text-[clamp(1rem,3.5vw,3.5rem)] bg-gradient-to-br from-[#54169C] to-[#DA159B] bg-clip-text text-transparent font-semibold leading-tight"
+                >
                   Innovative Leaders In
                   <br />
                   Paediatric Therapy
                 </h1>
 
-                <p style={{ fontFamily: 'HuluStyle', fontWeight: 300 }}  className="text-[clamp(1rem,1.2vw,1.25rem)] text-gray-900">
-                  At The Speech Clinic, we provide specialized therapy  <br /> designed
-                  to improve speech and communication skills, <br /> tailored to
-                  children with autism.
+                <p
+                  style={{ fontFamily: "HuluStyle", fontWeight: 300 }}
+                  className="text-[clamp(1rem,1.2vw,1.25rem)] text-gray-900"
+                >
+                  At The Speech Clinic, we provide specialized therapy <br />{" "}
+                  designed to improve speech and communication skills, <br />{" "}
+                  tailored to children with autism.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <button style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300">
+                  <button
+                    style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                    className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300"
+                  >
                     About Us
                   </button>
-                  <button style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300">
+                  <button
+                    style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                    className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300"
+                  >
                     Get In Touch
                   </button>
                 </div>
@@ -97,8 +104,8 @@ export default function Hero() {
               <div className="w-full flex justify-center items-center">
                 <div className="relative w-[clamp(280px,37vw,900px)]">
                   <Image
-                     width={800}
-                     height={500}
+                    width={800}
+                    height={500}
                     src="/galleryimage.jpg"
                     alt="Therapy Session"
                     className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
@@ -119,87 +126,63 @@ export default function Hero() {
         </div>
       ) : (
         // === MOBILE & TABLET LAYOUT ===
-        <div className="relative z-0 w-full max-w-3xl px-2 py-10 text-center">
-          <h1
-            ref={(el) => {
-              if (el) boxesRef.current[0] = el;
-            }}
-            className=" box relative inline-block text-transparent text-5xl md:text-6xl font-medium leading-tight mt-30 stroke-text"
-          >
-            Innovative Leaders In <br />
-            Paediatric Therapy
-          </h1>
 
-          <p
-            ref={(el) => {
-              if (el) boxesRef.current[1] = el;
-            }}
-            className="box text-base font-light md:text-lg  text-gray-800 mb-6 mt-10 justify-evenly"
-          >
-            At The Speech Clinic, we provide specialized therapy designed to
-            improve speech and communication skills, tailored to children with
-            autism.
-          </p>
+        <HeroRecMobile>
+          <div className="relative text-center">
+            <h1
+              ref={(el) => {
+                if (el) boxesRef.current[0] = el;
+              }}
+              className="box relative inline-block text-transparent font-medium leading-tight mt-65 stroke-text"
+              style={{ fontSize: "8vw" }}
+            >
+              Innovative <br /> Leaders In <br />
+              Paediatric Therapy
+            </h1>
 
-          <div className="flex flex-wrap justify-center space-x-4">
-            <button
+            <p
               ref={(el) => {
-                if (el) boxesRef.current[2] = el;
+                if (el) boxesRef.current[1] = el;
               }}
-              className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
+              className="box font-light text-gray-800 mb-6 mt-4 justify-evenly"
+              style={{ fontSize: "3.3vw" }}
             >
-              About Us
-            </button>
-            <button
+              At The Speech Clinic, we provide specialized <br /> therapy
+              designed to improve speech and <br /> communication skills,
+              tailored to children <br />
+              with autism.
+            </p>
+
+            <div className="flex flex-wrap justify-center space-x-4">
+              <button
+                ref={(el) => {
+                  if (el) boxesRef.current[2] = el;
+                }}
+                className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
+              >
+                About Us
+              </button>
+              <button
+                ref={(el) => {
+                  if (el) boxesRef.current[3] = el;
+                }}
+                className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-pink-600 hover:to-red-600 transition duration-300"
+              >
+                Get In Touch
+              </button>
+            </div>
+
+            <div
               ref={(el) => {
-                if (el) boxesRef.current[3] = el;
+                if (el) boxesRef.current[4] = el;
               }}
-              className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-pink-600 hover:to-red-600 transition duration-300"
-            >
-              Get In Touch
-            </button>
+              className="box"
+            ></div>
           </div>
-          <div
-            ref={(el) => {
-              if (el) boxesRef.current[4] = el;
-            }}
-            className="box"
-          >
-            <video
-              width={800}
-              height={500}
-              className="w-full h-auto object-cover rounded-[35px] shadow-md mb-6 mt-15"
-              controls
-              autoPlay
-              muted
-              loop
-            >
-              <source
-                src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
+        </HeroRecMobile>
       )}
+ 
 
-      {/* 
-video
-            width={800}
-            height={500}
-            className="w-full h-auto object-cover rounded-[30px] shadow-md mb-6 mt-15"
-            controls
-            autoPlay
-            muted
-            loop
-          >
-            <source
-              src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video> */}
     </main>
   );
 }

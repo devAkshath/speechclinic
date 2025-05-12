@@ -1,9 +1,12 @@
 "use client";
 import { useEffect, useRef } from "react";
 import SpeechSyncCard from "./SpeechSyncPromo";
+import { useMediaQuery } from "react-responsive";
+import SpeechSyncPromoMobile from "./SpeechSyncPromoMobile";
 
 
 export default function Products() {
+    const isDesktop = useMediaQuery({ minWidth: 1024 });
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
 
   useEffect(() => {
@@ -42,7 +45,15 @@ export default function Products() {
   return (
     <section className="w-full px-6 py-12 lg:py-3 bg-transparent">
       <div className="relative flex items-center justify-center h-auto">
-        <SpeechSyncCard />
+            {/* === LAYOUT === */}
+      {isDesktop ? (
+        // === DESKTOP LAYOUT ===
+          <SpeechSyncCard />
+      ) : (
+        // === MOBILE & TABLET LAYOUT ===
+<SpeechSyncPromoMobile/>
+      )}
+    
       </div>
 
       {/* Centered Highlight Section */}

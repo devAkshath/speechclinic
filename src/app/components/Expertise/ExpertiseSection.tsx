@@ -17,7 +17,7 @@ const Expertise = () => {
     
       function checkBoxes() {
         const isMobile = window.innerWidth <= 768;
-        const triggerBottom = (window.innerHeight / 5) * 4;
+        const triggerBottom = (window.innerHeight / 5) * 5;
     
         boxes.forEach((box, index) => {
           if (!box) return;
