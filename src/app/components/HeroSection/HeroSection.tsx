@@ -53,7 +53,7 @@ export default function Hero() {
     <main className="relative w-full min-h-screen flex items-center justify-center px-4">
       {/* === Backgrounds === */}
       {isDesktop && (
-        <div className="absolute top-38 left-28 max-w-[1840px] h-full z-10">
+        <div className="absolute top-40  px-20 max-w-[1840px] h-full z-10">
           <HeroSvg />
         </div>
       )}
