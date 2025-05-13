@@ -133,7 +133,7 @@ export default function Hero() {
               ref={(el) => {
                 if (el) boxesRef.current[0] = el;
               }}
-              className="box relative inline-block text-transparent font-medium leading-tight mt-65 stroke-text"
+              className="box relative inline-block text-transparent font-medium leading-tight mt-45 stroke-text"
               style={{ fontSize: "8vw" }}
             >
               Innovative <br /> Leaders In <br />

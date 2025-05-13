@@ -23,11 +23,11 @@ export default function ServiceCard({
         <div className="p-0.5"></div>
 
         {/* Bottom Section */}
-        <div className="relative bg-transparent h-[15%] rounded-t-[20px] transition-all duration-300  group-hover:h-[0%] p-0 ">
+        <div className="relative bg-transparent h-[15%] rounded-t-[20px] transition-all duration-300000  group-hover:h-[0%] p-0 ">
 
           {/* Card Content */}
           <div className="relative z-10 bg-transparent flex flex-col items-center justify-center text-black pb-[10%] h-full">
-            <span className=" text-black lg:text-[18px] text-[18px] md:text-[13px] text-center">{title}</span>
+            <span className=" text-light font-normal  lg:text-[18px] text-[18px] md:text-[13px] text-center">{title}</span>
             {/* <p className="text-[14px] mt-2 text-center">Your subtitle</p> */}
 {/* 
             <button className="mt-[15%] text-transparent border-2 border-transparent rounded-[15px] px-4 py-1 text-[13px] bg-transparent hover:bg-transparent hover:text-transparent transition-all duration-400">

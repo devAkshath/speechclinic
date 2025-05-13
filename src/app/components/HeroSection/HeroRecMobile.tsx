@@ -4,14 +4,14 @@ const HeroRecMobile = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{ width: "100%", overflow: "hidden" , paddingTop: 'clamp(5rem, 2vw, 5rem)',}}
-      className="relative w-full h-auto pt-25 pl-3 pr-3 "
+      className="relative w-full h-auto  pl-3 pr-3 "
       
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 -480 3149 5219"
+        viewBox="0 -480 3149 6019"
         preserveAspectRatio="xMidYMid meet"
-        className="w-full h-full pt-9"
+        className="w-full h-full"
              style={{
           padding: 'clamp(0.001rem, 0vw, 5rem)',
           paddingTop: 'clamp(0rem, 0vw, 0rem)',

@@ -28,7 +28,7 @@ export default function PhysicalTherapy() {
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
             <section className="relative overflow-hidden ">
-              <h2 className="text-5xl font-extrabold leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">ABA Therapy</h2>
+              <h2 className="text-5xl  leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500 font-normal ">ABA Therapy</h2>
               <div className="container mx-auto px-2">
                 <div>
                   <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-6 md:pt-8 md:pb-1 md:px-10
@@ -308,7 +308,7 @@ export default function PhysicalTherapy() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl  text-center  font-normal text-gray-900 sm:text-4xl mb-12">Frequently Asked Questions</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column */}
@@ -354,7 +354,10 @@ export default function PhysicalTherapy() {
                 <details key={i} className="group bg-white p-6 rounded-xl shadow-md">
                   <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-[#5B21B6]">
                     <div className="flex items-center">
-                      <div className="w-7 h-7 rounded-full bg-[#5B21B6] text-white flex items-center justify-center mr-3 text-sm">?</div>
+                      <div className="min-w-[28px] min-h-[28px] rounded-full bg-[#5B21B6] text-white flex items-center justify-center mr-3 text-[16px] font-bold leading-none">
+                        ?
+                      </div>
+
                       {item.q}
                     </div>
                     <svg
@@ -411,7 +414,11 @@ export default function PhysicalTherapy() {
                 <details key={i} className="group bg-white p-6 rounded-xl shadow-md">
                   <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-[#5B21B6]">
                     <div className="flex items-center">
-                      <div className="w-7 h-7 rounded-full bg-[#5B21B6] text-white flex items-center justify-center mr-3 text-sm">?</div>
+                  
+                      <div className="min-w-[28px] min-h-[28px] rounded-full bg-[#5B21B6] text-white flex items-center justify-center mr-3 text-[16px] font-bold leading-none">
+                        ?
+                      </div>
+
                       {item.q}
                     </div>
                     <svg

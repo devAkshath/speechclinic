@@ -2,6 +2,7 @@ import NavBarSecond from "../../components/NavBar/NavBarSecond";
 import Image from "next/image";
 import HeroVideo from "@/app/components/Services/ServiceHeroVideo";
 import Srvicesider from "@/app/components/Services/ServiceAside";
+import InlineVideoSection from "@/app/components/Services/InlineVideoSection";
 
 
 export default function grouptherapy() {
@@ -23,19 +24,17 @@ export default function grouptherapy() {
 
           <Srvicesider
             showRelatedServices={false}
-           
+
           />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
             <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
               Group Therapy service
             </h2>
-            <Image
-              width={800}
-              height={500}
-              src="/image.jpg"
-              alt="Therapy Image"
-              className="w-full h-auto object-cover rounded-[10px] shadow-md"
+            <InlineVideoSection
+              thumbnailSrc="/3.jpg"
+              caption="Watch Our Group Therapy Services"
+              videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
             />
             <p>
               In the Occupational Therapy group session we focus on developing
@@ -108,7 +107,7 @@ export default function grouptherapy() {
                     key={index}
                     className="flex items-center space-x-3 transform hover:translate-x-2 transition-transform duration-300"
                   >
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] flex items-center justify-center animate-pulse">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] flex items-center justify-center ">
                       <svg
                         className="w-4 h-4 text-white"
                         fill="none"

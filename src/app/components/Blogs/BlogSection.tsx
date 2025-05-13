@@ -192,7 +192,7 @@ export default function Blogs() {
                     </p>
                     <Link href="/BlogPage">
                       {" "}
-                      <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-5/6 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-normal shadow-lg text-xl">
+                      <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-9/10 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-normal shadow-lg text-xl">
                         Read More
                       </button>
                     </Link>

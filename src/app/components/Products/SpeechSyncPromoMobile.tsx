@@ -3,7 +3,7 @@ import Image from "next/image";
 const SpeechSyncPromoMobile: React.FC = () => {
   return (
     <div
-     style={{ width: "100%", height:"100%" ,overflow: "hidden" ,}}
+     style={{ width: "100%",overflow: "hidden" ,}}
      className="relative w-full h-full">
       <div className="absolute inset-0">
         <svg
@@ -38,11 +38,11 @@ const SpeechSyncPromoMobile: React.FC = () => {
           />
         </svg>
       </div>
-      <div className="relative flex flex-col items-center justify-start p-7 space-y-4">
+      <div className="relative flex flex-col items-center justify-start p-7  space-y-4">
         <div className="inline-flex items-center justify-start mb-3 mt-8">
           <div
             style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-            className="text-lg text-gray-800 bg-white px-6 py-1 rounded-2xl"
+            className="text-lg text-gray-800 bg-white px-6 py-1  rounded-2xl"
           >
             Our Products
           </div>
@@ -57,7 +57,7 @@ const SpeechSyncPromoMobile: React.FC = () => {
         </h2>
         <p
           style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className="text-sm text-white text-base"
+          className=" text-white text-base"
         >
           Empowering communication with advanced speech therapy tools. Our
           products are designed to support children with autism and speech

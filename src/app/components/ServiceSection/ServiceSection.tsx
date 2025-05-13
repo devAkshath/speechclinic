@@ -56,16 +56,16 @@ export default function ServiceSection() {
   const autoplayInterval = useRef<NodeJS.Timeout | null>(null);
 
   const therapyImages = [
-    { src: "/aba-therapy.svg", title: "ABA Therapy", href: "/ServicePage" },
+    { src: "/aba-therapy.svg", title: "ABA Therapy",  href:"/services/aba-therapy" },
     { src: "/feeding-therapy.svg", title: "Feeding Therapy" },
     { src: "/group-therapy.svg", title: "Group Therapy", href: "/services/GroupTherapy" },
     {
       src: "/neuro-integrative-therapy.svg",
       title: "Neuro Integrative\nTherapy",
-    },
+      href: "/services/neuro-integrative-therapy" },
     { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" ,href: "/services/OccupationalTherapy"  },
     { src: "/physical-therapy.svg", title: "Physical Therapy",href: "/services/physical-therapy"  },
-    { src: "/school-readiness-program.svg", title: "School Readiness" },
+    { src: "/school-readiness-program.svg", title: "School Readiness"  ,href: "/services/school-readiness-program"  },
     { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage",href: "/services/SpeechAndLanguageTherapy" },
   ];
 

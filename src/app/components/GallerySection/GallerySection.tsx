@@ -181,7 +181,7 @@ export default function Gallery() {
           if (el) boxesRef.current[2] = el;
         }}
         style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
-        className=" box text-3xl md:text-4xl  bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent mb-6"
+        className=" box text-3xl md:text-4xl  bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent mb-0 sm:mb-0 lg:mb-10"
       >
         Gallery
       </h1>
@@ -240,7 +240,7 @@ export default function Gallery() {
           <div className="flex gap-6  px-4">
             {images.map((src, index) => (
               <div
-                className="flex-[0_0_100%] relative h-72 rounded-[30px] overflow-hidden shadow-md"
+                className="flex-[0_0_100%] relative h-65 rounded-[30px] overflow-hidden shadow-md"
                 key={index}
               >
                 <Image

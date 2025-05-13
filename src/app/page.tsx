@@ -25,8 +25,8 @@ export default function Home() {
         <Navbar />
       </header>
       <Hero />
-      <div className="relative rounded-3xl overflow-hidden group cursor-pointer sm:hidden flex flex-col gap-4 pt-0 pb-10 pl-4.5 pr-4.5 items-center w-full">
-        <div className="w-full aspect-w-16 aspect-h-9 relative">
+      <div className="relative rounded-3xl overflow-hidden group cursor-pointer sm:hidden flex flex-col gap-4 pt-0 pb-5 pl-4.5 pr-4.5 items-center w-full">
+        <div className="w-full aspect-w-16 aspect-h-9 relative  rounded-3xl">
           {!isPlaying ? (
             <>
               <Image
@@ -36,7 +36,7 @@ export default function Home() {
                 alt=""
                 className="w-full h-auto object-cover rounded-3xl"
               />
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300">
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300  rounded-3xl">
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => setIsPlaying(true)}
