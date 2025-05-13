@@ -38,7 +38,9 @@ export default function ServicePage() {
         <section className="flex flex-col md:flex-row items-start justify-between gap-12 p-8 max-w-screen-xl my-5 mx-auto">
           <div className="w-full md:w-2/3">
             <div className="relative">
-              <img
+              <Image
+                     width={500}
+                                                        height={300}
                 src="/3.jpg"
                 alt="Therapy Session"
                 className="rounded-4xl w-full h-[450px] object-cover"
@@ -103,14 +105,17 @@ export default function ServicePage() {
               {/* Images */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="rounded-2xl overflow-hidden">
-                  <img
+                  <Image
+                         width={500}
+                                                        height={300}
                     src="blogimage2.jpg"
                     alt="Speech Therapy Session"
                     className="w-full h-[350px] object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden">
-                  <img
+                  <Image       width={500}
+                                                        height={300}
                     src="blogimage3.png"
                     alt="Speech Therapy Session"
                     className="w-full h-[350px] object-cover"
@@ -173,7 +178,8 @@ export default function ServicePage() {
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4 my-2">
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -186,7 +192,8 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -199,7 +206,8 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -212,7 +220,9 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image
+                       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -225,7 +235,8 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -238,7 +249,8 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -251,7 +263,8 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -264,7 +277,8 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image       width={500}
+                                                        height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -277,7 +291,7 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <img
+                <Image
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"

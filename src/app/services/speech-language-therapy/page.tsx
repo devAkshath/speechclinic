@@ -4,16 +4,68 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 
-import {
-    FaFileAlt,
-    FaUserCircle,
-    FaClipboardList,
-    FaSmileBeam,
-    FaHeartbeat,
-    FaStar,
-} from 'react-icons/fa';
-
-
+const relatedData = [
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Oral Placement Therapy',
+        link: '/services/oral-placement-therapy',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'The Kaufman Speech to Language Protocol',
+        link: '/services/kaufman-speech-protocol',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'PROMPT Therapy',
+        link: '/services/prompt-therapy',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Gestalt Language Processing',
+        link: '/services/gestalt-language-processing',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Fluency Therapy',
+        link: '/services/fluency-therapy',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Myofunctional Therapy',
+        link: '/services/myofunctional-therapy',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Articulation Therapy',
+        link: '/services/articulation-therapy',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Makaton',
+        link: '/services/makaton',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'DIR-Floor Time',
+        link: '/services/dir-floor-time',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Sensory Motor Approach to Apraxia of Speech',
+        link: '/services/sensory-motor-apraxia',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Nuffield Dyspraxia Program',
+        link: '/services/nuffield-dyspraxia',
+    },
+    {
+        icon: '/physical-therapy.svg',
+        title: 'Language Booster Club',
+        link: '/services/language-booster-club',
+    },
+];
 
 
 export default function SchoolReadinessProgram() {
@@ -25,20 +77,24 @@ export default function SchoolReadinessProgram() {
 
             <div className="font-normal">
                 <HeroVideo
-                    title="School Readiness Program"
+                    title="Speech And Language Therapy"
                     videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
                 />
 
                 {/* Content Section */}
                 <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Sidebar on the left */}
-
-                    <Srvicesider showRelatedServices={false}  />
+                    <Srvicesider showRelatedServices={true} relatedServicesData={relatedData} />
                     {/* Main Content on the right */}
                     <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
                         <section className="relative overflow-hidden ">
-                            <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">School Readiness Program</h2>
+                            <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">Speech And Language Therapy</h2>
                             <div className="container mx-auto px-2">
+                                <p className="my-4">Welcome to the Speech and Language Department   At The{" "}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
+                                        {" "}
+                                        Speech Clinic
+                                    </span>, Dubai</p>
                                 <div>
                                     <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-6 md:pt-8 md:pb-1 md:px-10
                                   shadow-[20px_20px_40px_rgba(218,21,155,0.1)]
@@ -55,12 +111,39 @@ export default function SchoolReadinessProgram() {
                                   hover:after:-translate-x-2 hover:after:-translate-y-2">
                                         <InlineVideo
                                             thumbnailSrc="/galleryimage.jpg"
-                                            caption="Watch Our School Readiness Program"
+                                            caption="Watch Our Speech And Language Therapy"
                                             videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
                                         />
                                     </div>
                                     <div className="relative z-10 my-6">
-                                        <div>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 my-3">
+                                            <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                                                <Image
+                                                    src="/speech-therapy-02.jpg"
+                                                    alt="Physical Therapy Session 1"
+                                                    width={500}
+                                                    height={300}
+                                                    className="w-full h-[300px] object-cover"
+                                                />
+                                            </div>
+                                            <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                                                <Image
+                                                    src="/speech-therapy-01.jpg"
+                                                    alt="Physical Therapy Session 2"
+                                                    width={500}
+                                                    height={300}
+                                                    className="w-full h-[300px] object-cover"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <p className="my-4">At The Speech Clinic Dubai, we are committed to empowering children through communication, providing expert care in speech, language, and communication development. Our team of certified speech-language pathologists is skilled in assessing and treating a wide range of speech and language disorders, using the latest evidence-based techniques.At our clinic, we are dedicated to enhancing communication skills and fostering language development in children of all ages.    </p>
+
+                                        <p className="my-4">We specialize in Augmentative and Alternative Communication (AAC) for children with complex communication needs, offering personalized AAC solutions to help them express themselves effectively. From our own innovative AAC apps like Speech Sync to advanced tools for language processing, we integrate the latest innovations into our practice to ensure that every child receives the most effective and personalized care.</p>
+
+                                        <p className="my-4">Our goal is to foster a supportive and inclusive environment, enabling children to communicate confidently, interact meaningfully, and reach their full potential in all aspects of life.</p>
+                                        {/* <div>
                                             <p className="mb-6">LEVEL UP refers to a structured school readiness initiative at The Speech Clinic Dubai designed to help children develop the essential skills needed for a smooth transition into a learning environment. It focuses on fostering cognitive, social, emotional, and physical growth through individualized support, empowering children to participate, learn, and thrive at their own pace.
                                             </p>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -86,7 +169,7 @@ export default function SchoolReadinessProgram() {
                                             <p className="my-3" >We begin by recognizing each childu2019s unique strengths and needs. Our program is designed to include every child in a nurturing and supportive community, ensuring they feel valued and understood. Through personalized support, we provide the tools and guidance necessary for learning and growth. Ultimately, our goal is to empower each child to achieve their full potential, setting them on a path towards academic and personal success.</p>
                                             <h1 className="text-3xl font-normal leading-tight mb-6 text-gray-800 ">    Preparing Children For a Successful Start</h1>
 
-                                            <p>The program ensures that children can participate, learn, and thrive in school at their own pace, fostering both academic and personal growth. To assess each child&apos;s readiness and developmental progress, we use specialized tools like the MDPS Tool and VB-MAPP. These assessments help evaluate each child&apos;s developmental needs, ensuring they are prepared for their educational journey.</p>
+                                            <p>The program ensures that children can participate, learn, and thrive in school at their own pace, fostering both academic and personal growth. To assess each child's readiness and developmental progress, we use specialized tools like the MDPS Tool and VB-MAPP. These assessments help evaluate each child's developmental needs, ensuring they are prepared for their educational journey.</p>
 
 
 
@@ -109,7 +192,7 @@ export default function SchoolReadinessProgram() {
                                             </div>
 
                                             <p className="my-3">
-                                                These groups are determined based on each child&apos;s functional level and the support they require. The Pre-academic Group focuses on foundational skills necessary for academic learning, while the Functional Group addresses skills for daily living, social interaction, and functional independence. This structure ensures that every child receives the appropriate support and tailored learning experience to help them succeed.</p>
+                                                These groups are determined based on each child's functional level and the support they require. The Pre-academic Group focuses on foundational skills necessary for academic learning, while the Functional Group addresses skills for daily living, social interaction, and functional independence. This structure ensures that every child receives the appropriate support and tailored learning experience to help them succeed.</p>
                                             <div>
                                                 <h1 className="text-3xl leading-tight my-4 text-gray-800 ">    Preparing Children For a Successful Start</h1>
                                                 <p>
@@ -121,7 +204,7 @@ export default function SchoolReadinessProgram() {
                                             <section className=" py-3 bg-white text-gray-800">
                                                 <div className="max-w-4xl mx-auto">
                                                     <p className="text-lg  font-normal mb-3">
-                                                        Our program offers a comprehensive approach to supporting each child&apos;s unique educational needs through the development of :
+                                                        Our program offers a comprehensive approach to supporting each child's unique educational needs through the development of :
                                                     </p>
                                                     <ul className="space-y-3 px-5">
                                                         <li className="flex items-center space-x-3">
@@ -157,7 +240,7 @@ export default function SchoolReadinessProgram() {
 
                                                 </p>
 
-                                                <p className="my-3">The Case History provides valuable background information, including the student&apos;s medical, developmental, and educational history. This helps our team understand the context of the child&apos;s learning journey and any previous interventions or strategies that may have been effective or need adjustment. The Sensory Profile assesses how a child responds to sensory stimuli, such as sounds, textures, and visual inputs. This information guides us in creating a classroom environment that is comfortable and conducive to their learning and emotional well-being. Lastly, the Behavior Profile tracks the child&lsquo;s behavioral patterns, identifying any triggers or challenges, and allows us to develop effective strategies to manage and support positive behavior development.</p>
+                                                <p className="my-3">The Case History provides valuable background information, including the student's medical, developmental, and educational history. This helps our team understand the context of the child's learning journey and any previous interventions or strategies that may have been effective or need adjustment. The Sensory Profile assesses how a child responds to sensory stimuli, such as sounds, textures, and visual inputs. This information guides us in creating a classroom environment that is comfortable and conducive to their learning and emotional well-being. Lastly, the Behavior Profile tracks the child's behavioral patterns, identifying any triggers or challenges, and allows us to develop effective strategies to manage and support positive behavior development.</p>
                                                 <p className="my-3">By integrating these comprehensive assessments, our program ensures that each child receives a holistic, personalized learning experience that fosters growth, confidence, and success in all areas of development.</p>
                                             </div>
 
@@ -184,7 +267,7 @@ export default function SchoolReadinessProgram() {
                                             <div className="max-w-3xl mx-auto">
                                                 <h2 className="text-3xl font-normal leading-tight my-4 text-gray-800 ">The Heart Of Our Program</h2>
                                                 <p className="text-lg my-4 ">
-                                                    Our program is led by a dedicated team of special educators and assistant teachers who are committed to providing personalized support and fostering the development of each child. With their expertise, they guide children through key developmental areas such as gross motor skills, fine motor skills, social interaction, and activities of daily living (ADL), ensuring that each child receives the individual attention and encouragement they need. From enhancing reading and literacy to nurturing play skills and promoting recreation & leisure activities, our team creates a supportive environment tailored to the unique needs of each child. The collaboration between special educators and assistant teachers ensures that every child can engage with the program at their own pace, developing essential skills for academic success, social participation, and independent living. Their compassionate and professional approach makes a meaningful difference in each child&apos;s educational journey, setting them up for a lifetime of growth and learning.
+                                                    Our program is led by a dedicated team of special educators and assistant teachers who are committed to providing personalized support and fostering the development of each child. With their expertise, they guide children through key developmental areas such as gross motor skills, fine motor skills, social interaction, and activities of daily living (ADL), ensuring that each child receives the individual attention and encouragement they need. From enhancing reading and literacy to nurturing play skills and promoting recreation & leisure activities, our team creates a supportive environment tailored to the unique needs of each child. The collaboration between special educators and assistant teachers ensures that every child can engage with the program at their own pace, developing essential skills for academic success, social participation, and independent living. Their compassionate and professional approach makes a meaningful difference in each child's educational journey, setting them up for a lifetime of growth and learning.
                                                 </p>
 
                                             </div>
@@ -263,7 +346,7 @@ export default function SchoolReadinessProgram() {
 
 
 
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

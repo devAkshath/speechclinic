@@ -318,18 +318,18 @@ export default function Navbar() {
 
         {/* ✅ HIGHLIGHTED: onClick added to close menu on link click */}
         <ul className="space-y-4 mt-6 py-5 text-gray-800">
-          <li className="text-lg font-bold">
+          <li className="text-lg font-medium">
             <Link href="./" onClick={handleMobileLinkClick}>
               Home
             </Link>
           </li>
-          <li className="text-lg font-bold">
+          <li className="text-lg font-medium">
             <Link href="/about" onClick={handleMobileLinkClick}>
               About
             </Link>
           </li>
 
-          <li className="text-lg font-bold">
+          <li className="text-lg font-medium">
             <Link href="/AllServicesPage">Services</Link>
           </li>
 
@@ -340,7 +340,7 @@ export default function Navbar() {
             <button
               ref={mobileProductButtonRef}
               onClick={() => setIsMobileProductOpen((prev) => !prev)}
-              className="flex items-center gap-1 cursor-pointer text-lg font-bold transition-colors duration-300"
+              className="flex items-center gap-1 cursor-pointer text-lg font-medium transition-colors duration-300"
             >
               Products
               <svg
@@ -399,7 +399,7 @@ export default function Navbar() {
 
 
 
-          <li className="text-lg font-bold">
+          <li className="text-lg font-medium">
             <Link href="/team" onClick={handleMobileLinkClick}>
               Teams
             </Link>
@@ -427,7 +427,7 @@ export default function Navbar() {
             Mon - Sat (09AM - 7PM)
           </span>
         </div>
-        <h1 className=" my-3 py-3 h-6  font-extrabold text-lg">Follow Us</h1>
+        <h1 className=" my-3 py-3 h-6  font-medium text-lg">Follow Us</h1>
         <div className="flex gap-3 text-lg py-3 ">
           <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
             <Link href="#">

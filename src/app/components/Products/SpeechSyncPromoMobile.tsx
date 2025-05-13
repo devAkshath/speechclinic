@@ -11,7 +11,7 @@ const SpeechSyncPromoMobile: React.FC = () => {
           xmlSpace="preserve"
           width="100%"
           height="100%"
-          viewBox="0 0 3180 5999"
+          viewBox="0 0 3180 6599"
         >
           <defs>
             <linearGradient
@@ -38,7 +38,7 @@ const SpeechSyncPromoMobile: React.FC = () => {
           />
         </svg>
       </div>
-      <div className="relative flex flex-col items-center justify-start p-7  space-y-4">
+      <div className="relative flex flex-col items-center justify-start p-7   space-y-4">
         <div className="inline-flex items-center justify-start mb-3 mt-8">
           <div
             style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
@@ -57,7 +57,7 @@ const SpeechSyncPromoMobile: React.FC = () => {
         </h2>
         <p
           style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className=" text-white text-base"
+          className=" text-white text-base font-light"
         >
           Empowering communication with advanced speech therapy tools. Our
           products are designed to support children with autism and speech

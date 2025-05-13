@@ -57,7 +57,7 @@ export default function ServiceSection() {
 
   const therapyImages = [
     { src: "/aba-therapy.svg", title: "ABA Therapy",  href:"/services/aba-therapy" },
-    { src: "/feeding-therapy.svg", title: "Feeding Therapy" },
+    { src: "/feeding-therapy.svg", title: "Feeding Therapy",href: "/services/feeding-therapy" },
     { src: "/group-therapy.svg", title: "Group Therapy", href: "/services/GroupTherapy" },
     {
       src: "/neuro-integrative-therapy.svg",
@@ -66,7 +66,7 @@ export default function ServiceSection() {
     { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" ,href: "/services/OccupationalTherapy"  },
     { src: "/physical-therapy.svg", title: "Physical Therapy",href: "/services/physical-therapy"  },
     { src: "/school-readiness-program.svg", title: "School Readiness"  ,href: "/services/school-readiness-program"  },
-    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage",href: "/services/SpeechAndLanguageTherapy" },
+    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage",href: "/services/speech-language-therapy" },
   ];
 
   useEffect(() => {
