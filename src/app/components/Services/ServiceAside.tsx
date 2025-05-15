@@ -2,11 +2,7 @@
 import Link from 'next/link';
 import Image from "next/image";
 
-interface RelatedService {
-    icon: string;
-    title: string;
-    link: string;
-}
+
 export default function Srvicesider({
 //     showRelatedServices = false,
 //     relatedServicesData = [],

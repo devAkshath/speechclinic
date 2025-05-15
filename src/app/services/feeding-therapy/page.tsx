@@ -4,18 +4,7 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 
-const relatedData = [
-    {
-        icon: '/physical-therapy.svg',
-        title: 'SOS Approach to Feeding',
-        link: '/services/sos-approach-feeding',
-    },
-    {
-        icon: '/physical-therapy.svg',
-        title: 'TalkTools Feeding Therapy',
-        link: '/services/talk-tools-feeding-therapy',
-    },
-]
+
 
 export default function FeedingTherapy() {
     return (

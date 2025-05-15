@@ -6,54 +6,6 @@ import InlineVideo from "../../components/Services/InlineVideoSection";
 
 
 
-const relatedData = [
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Manual Therapy',
-    link: '/services/manual-therapy',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Spider Cage Therapy',
-    link: '/services/spider-cage-therapy',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Cuevas Medek Exercises (CME)',
-    link: '/services/cuevas-medek-exercises-cme',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Strengthening and Stretching Program',
-    link: '/services/strengthening-and-stretching-program',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Plyometric and Resistance Band Exercises',
-    link: '/services/plyometric-and-resistance-band-exercises',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Therapeutic Exercises',
-    link: '/services/therapeutic-exercises',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Aquatic Therapy',
-    link: '/services/aquatic-therapy',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Neuromuscular Re-Education and Other Techniques',
-    link: '/services/neuromuscular-re-education-and-other-techniques',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Balance And Vestibular Rehabilitation',
-    link: '/services/balance-and-vestibular-rehabilitation',
-  },
-];
-
 export default function PhysicalTherapy() {
   return (
     <div className="bg-white min-h-screen">
