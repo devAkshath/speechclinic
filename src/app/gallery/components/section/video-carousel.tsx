@@ -1,10 +1,10 @@
 "use client";
+import Image from "next/image";
 import {
   Movie,
 
   randomMoviesSet1,
   randomMoviesSet2,
-  randomMoviesSet3,
 } from "../../movies";
 import { Button } from "../button";
 import {
@@ -73,7 +73,9 @@ export const VideoCarousel = () => {
               style={{ opacity: postersOpacity, x: posterTranslateXLeft }}
               className="aspect-[9/16] w-[300px] shrink-0 overflow-clip rounded-2xl md:aspect-video md:w-[60vw]"
             >
-              <img
+              <Image
+               width={1800}
+              height={1800}
                 className="h-full w-full object-cover"
                 src="/galleryimage2.jpeg"
                 alt=""
@@ -83,7 +85,9 @@ export const VideoCarousel = () => {
               style={{ scale }}
               className="relative aspect-[9/16] w-[300px] shrink-0 overflow-clip rounded-2xl md:aspect-video md:w-[60vw]"
             >
-              <img
+             <Image
+              width={1800}
+              height={1800}
                 className="h-full w-full object-cover"
                 src="/galleryimage.jpg"
                 alt=""
@@ -103,7 +107,9 @@ export const VideoCarousel = () => {
               style={{ opacity: postersOpacity, x: posterTranslateXRight }}
               className="aspect-[9/16] w-[300px] shrink-0 overflow-clip rounded-2xl md:aspect-video md:w-[60vw]"
             >
-              <img
+              <Image
+             width={1800}
+              height={1800}
                 className="h-full w-full object-cover"
                 src="/galleryimage3.jpg"
                 alt=""
@@ -125,9 +131,9 @@ export const VideoCarousel = () => {
         <div className="[--carousel-offset:-32px] [--duration:54s]">
           <SmallVideoCarousel movies={randomMoviesSet2}  direction="right" />
         </div>
-         <div className="[--carousel-offset:-22px] [--duration:64s] ">
+         {/* <div className="[--carousel-offset:-22px] [--duration:64s] ">
           <SmallVideoCarousel movies={randomMoviesSet3}  direction="left" />
-        </div>
+        </div> */}
       </motion.div>
     </motion.div>
   );
