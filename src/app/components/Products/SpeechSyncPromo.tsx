@@ -121,7 +121,7 @@ const SpeechSyncCard: React.FC = () => {
           {/* Row 4: Button */}
           <button
             style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-            className="inline-flex items-center justify-start bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-pink-600 transition duration-300 "
+            className="cursor-pointer inline-flex items-center justify-start bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-pink-600 transition duration-300 "
           >
             Discover More
           </button>

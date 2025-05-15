@@ -23,8 +23,7 @@ export default function grouptherapy() {
           {/* Sidebar on the left */}
 
           <Srvicesider
-            showRelatedServices={false}
-
+            
           />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">

@@ -66,10 +66,24 @@ export default function AllServicesPage() {
       <header>
         <NavBarSecond />
       </header>
-      <section className="w-full bg-white py-16">
-        <div className="text-center">
-          <h1 className="text-7xl font-normal text-gray-700">Services</h1>
+      <section className="w-full bg-white py-1">
+        <div className="relative flex items-center justify-center h-screen bg-gray-100">
+      <div className="absolute flex gap-8">
+        <div className="w-40 h-40 rounded-full overflow-hidden">
+          <Image src="/neuro-integrative-therapy.svg" alt="Image 1" width={160} height={160} className="object-cover" />
         </div>
+        <div className="w-60 h-60 rounded-full overflow-hidden bg-transparent">
+          <Image src="/neuro-integrative-therapy.svg" alt="Image 2" width={240} height={240} className="object-cover" />
+        </div>
+        <div className="w-40 h-40 rounded-full overflow-hidden">
+          <Image src="/neuro-integrative-therapy.svg" alt="Image 3" width={160} height={160} className="object-cover" />
+        </div>
+      </div>
+      <div className="text-center text-white">
+        <p className="text-xs tracking-widest uppercase">Christmas 2024</p>
+        <h1 className={`text-6xl font-bold text-black` }>Gift guide</h1>
+      </div>
+    </div>
       </section>
       <main className="p-4 max-w-[1300px] items-center flex ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center ">

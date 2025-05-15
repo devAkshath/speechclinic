@@ -144,7 +144,7 @@ const Testimonial = () => {
            ref={(el) => {
             if (el) boxesRef.current[4] = el;
           }}style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-center mt-14 ">
-            <button className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm">
+            <button className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm cursor-pointer">
               Get in Touch
             </button>
           </div>

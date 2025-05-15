@@ -130,7 +130,7 @@ const Expertise = () => {
           <button 
            ref={(el) => {
             if (el) boxesRef.current[4] = el;
-          }}style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className=" box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
+          }}style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="cursor-pointer box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300">
             Learn More
           </button>
         </div>

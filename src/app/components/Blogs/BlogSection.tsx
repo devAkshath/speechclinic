@@ -158,8 +158,8 @@ export default function Blogs() {
             <p style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="text-md text-gray-600  text-left mb-auto mt-5 line-clamp-8">
               {card.content}
             </p>
-            <Link href="/BlogPage">
-              <button  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className=" absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-6/6 h-1/9 md:h-1.5/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10 rounded-full font-medium shadow-lg text-2xl">
+            <Link href="/BlogPage" >
+              <button  style={{ fontFamily: 'HuluStyle', fontWeight: 400 }} className="cursor-pointer absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-4/5 h-1/10 md:h-1.5/12 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-10 rounded-full font-medium shadow-lg text-2xl">
                 Read More
               </button>
             </Link>
@@ -190,7 +190,7 @@ export default function Blogs() {
                     <p className="text-md text-gray-600 font-light text-left mb-4 line-clamp-3">
                       {card.content}
                     </p>
-                    <Link href="/BlogPage">
+                    <Link href="/BlogPage" className="cursor-pointer">
                       {" "}
                       <button className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-10 w-9/10 bg-gradient-to-tr from-[#54169C] to-[#DA159B] text-white py-2 px-8 rounded-full font-normal shadow-lg text-xl">
                         Read More
@@ -217,6 +217,13 @@ export default function Blogs() {
           </div>
         </div>
       )}
+         <Link href="/BlogsMore" >
+           <button
+                    style={{ fontFamily: "HuluStyle", fontWeight: 400 ,}}
+                    className="cursor-pointer bg-gray-800 mt-30 text-white py-1 px-6 rounded-[30px]  font-medium hover:from-gray-400 hover:to-gray-400 transition duration-300"
+                  >
+                    View All
+                  </button></Link>
     </div>
   );
 }

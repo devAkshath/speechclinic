@@ -34,7 +34,7 @@ export default function FeedingTherapy() {
                 <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Sidebar on the left */}
 
-                    <Srvicesider showRelatedServices={true}  relatedServicesData={relatedData}/>
+                    <Srvicesider />
                     {/* Main Content on the right */}
                     <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
                         <section className="relative overflow-hidden ">

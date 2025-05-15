@@ -24,7 +24,7 @@ export default function PhysicalTherapy() {
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Sidebar on the left */}
 
-          <Srvicesider showRelatedServices={false} />
+          <Srvicesider  />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
             <section className="relative overflow-hidden ">
@@ -68,7 +68,7 @@ export default function PhysicalTherapy() {
                           />
                           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
                             <div className="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                              <h3 className="text-2xl font-bold text-white mb-2">ABA Therapy Session</h3>
+                              <h3 className="text-2xl font-medium text-white mb-2">ABA Therapy Session</h3>
                               <p className="text-white/90 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 Engaging therapeutic activities designed to support children&apos;s development through structured play and learning
                               </p>
@@ -87,7 +87,7 @@ export default function PhysicalTherapy() {
                           />
                           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
                             <div className="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                              <h3 className="text-2xl font-bold text-white mb-2">Interactive Learning</h3>
+                              <h3 className="text-2xl font-medium text-white mb-2">Interactive Learning</h3>
                               <p className="text-white/90 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 Customized therapy approaches that adapt to each child&apos;s unique needs and learning style
                               </p>
@@ -122,7 +122,7 @@ export default function PhysicalTherapy() {
 
                     </div>
                   </div>
-                  <h1 className="text-3xl font-normal  leading-tight mb-6 text-gray-800 ">What is ABA Therapy?</h1>
+                  <h1 className="text-3xl font-normal   mb-6 text-gray-800 ">What is ABA Therapy?</h1>
 
                   <p>ABA therapy is a proven, data-driven method used to help individuals develop and refine essential skills across multiple domains. It focuses on identifying specific behaviors that need to be changed or improved and uses positive reinforcement strategies to promote meaningful, measurable progress. ABA therapy is based on a deep understanding of behavior, and we use it to not only reduce challenging behaviors but to also enhance social, communication, academic and self-help skills. ABA techniques breaks down goals into small, manageable steps to help children gradually achieve larger goals without making the learning process too difficult for the child.</p>
                 </div>
@@ -303,7 +303,7 @@ export default function PhysicalTherapy() {
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
                         hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 
                         group-hover:bg-gradient-to-l">
-                Why Choose Us
+             QA
               </div>
             </div>
           </div>
@@ -352,7 +352,7 @@ export default function PhysicalTherapy() {
                 },
               ].map((item, i) => (
                 <details key={i} className="group bg-white p-6 rounded-xl shadow-md">
-                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-[#5B21B6]">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-normal text-[#5B21B6]">
                     <div className="flex items-center">
                       <div className="min-w-[28px] min-h-[28px] rounded-full bg-[#5B21B6] text-white flex items-center justify-center mr-3 text-[16px] font-bold leading-none">
                         ?
@@ -412,10 +412,10 @@ export default function PhysicalTherapy() {
                 },
               ].map((item, i) => (
                 <details key={i} className="group bg-white p-6 rounded-xl shadow-md">
-                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-[#5B21B6]">
-                    <div className="flex items-center">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-normal text-[#5B21B6]">
+                    <div className="flex items-center ">
                   
-                      <div className="min-w-[28px] min-h-[28px] rounded-full bg-[#5B21B6] text-white flex items-center justify-center mr-3 text-[16px] font-bold leading-none">
+                      <div className="min-w-[28px] min-h-[28px] rounded-full bg-[#5B21B6] text-white flex items-center justify-center mr-3 text-[16px] font-medium leading-none">
                         ?
                       </div>
 
@@ -431,7 +431,7 @@ export default function PhysicalTherapy() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <p className="mt-3 text-gray-700">{item.a}</p>
+                  <p className="mt-3 text-gray-700 font-medium">{item.a}</p>
                 </details>
               ))}
             </div>

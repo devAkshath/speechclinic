@@ -6,55 +6,8 @@ import InlineVideo from "../../components/Services/InlineVideoSection";
 
 
 
-const relatedData = [
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Manual Therapy',
-    link: '/services/manual-therapy',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Spider Cage Therapy',
-    link: '/services/spider-cage-therapy',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Cuevas Medek Exercises (CME)',
-    link: '/services/cuevas-medek-exercises-cme',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Strengthening and Stretching Program',
-    link: '/services/strengthening-and-stretching-program',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Plyometric and Resistance Band Exercises',
-    link: '/services/plyometric-and-resistance-band-exercises',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Therapeutic Exercises',
-    link: '/services/therapeutic-exercises',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Aquatic Therapy',
-    link: '/services/aquatic-therapy',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Neuromuscular Re-Education and Other Techniques',
-    link: '/services/neuromuscular-re-education-and-other-techniques',
-  },
-  {
-    icon: '/physical-therapy.svg',
-    title: 'Balance And Vestibular Rehabilitation',
-    link: '/services/balance-and-vestibular-rehabilitation',
-  },
-];
 
-export default function PhysicalTherapy() {
+export default function OralPlacementTherapy() {
   return (
     <div className="bg-white min-h-screen">
       <header className="absolute top-0 w-full">
@@ -63,7 +16,7 @@ export default function PhysicalTherapy() {
 
       <div className="text-gray-700">
         <HeroVideo
-          title="Physical Therapy"
+          title="Oral Placement Therapy"
           videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
         />
 
@@ -71,11 +24,11 @@ export default function PhysicalTherapy() {
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Sidebar on the left */}
 
-          <Srvicesider  />
+          <Srvicesider   />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
             <section className="relative overflow-hidden ">
-              <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">Physical Therapy</h2>
+              <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">Oral Placement Therapy</h2>
               <div className="container mx-auto px-2">
                 <div>
                   <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-6 md:pt-8 md:pb-1 md:px-10
@@ -93,13 +46,13 @@ export default function PhysicalTherapy() {
                                   hover:after:-translate-x-2 hover:after:-translate-y-2">
                     <InlineVideo
                       thumbnailSrc="/galleryimage.jpg"
-                      caption="Watch Our Physical TherapyServices"
+                      caption="Watch Our Oral Placement Therapy"
                       videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
                     />
                   </div>
                   <div className="relative z-10 my-6">
                     <div>
-                      <p className="mb-6">Pediatric physiotherapy at The Speech Clinic Dubai, is a specialized branch of physical therapy dedicated to promoting the optimal physical development and functional independence of infants, children, and adolescents.</p>
+                      <p className="mb-6">Oral Placement Therapy (OPT) is a specialized speech therapy approach which enhances oral motor skills for speech and feeding by using tactile and proprioceptive inputs. It helps improve speech clarity and feeding in individuals with conditions like apraxia, dysarthria, and expressive language delays.</p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                         <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
                           <Image

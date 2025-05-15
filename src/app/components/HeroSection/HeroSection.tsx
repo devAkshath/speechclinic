@@ -53,7 +53,11 @@ export default function Hero() {
     <main className="relative w-full min-h-screen flex items-center justify-center px-4">
       {/* === Backgrounds === */}
       {isDesktop && (
-        <div className="absolute top-40  px-20 max-w-[1840px] h-full z-10">
+        <div className="absolute  top-[clamp(104rem, 200vw, 200rem)]  px-[clamp(1rem, 5vw, 5rem)] max-w-[1840px] h-full z-10"   style={{ 
+    paddingLeft: "clamp(1rem, 5vw, 5rem)", 
+    paddingRight: "clamp(1rem, 5vw, 5rem)", 
+    top: "clamp(2rem, 10vw, 10rem)"
+  }}>
           <HeroSvg />
         </div>
       )}
@@ -87,13 +91,13 @@ export default function Hero() {
                 <div className="flex flex-wrap gap-4">
                   <button
                     style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-                    className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300"
+                    className="cursor-pointer bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300"
                   >
                     About Us
                   </button>
                   <button
                     style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-                    className="bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300"
+                    className="cursor-pointer bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300"
                   >
                     Get In Touch
                   </button>

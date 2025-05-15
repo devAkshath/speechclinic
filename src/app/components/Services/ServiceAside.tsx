@@ -8,12 +8,13 @@ interface RelatedService {
     link: string;
 }
 export default function Srvicesider({
-    showRelatedServices = false,
-    relatedServicesData = [],
-}: {
-    showRelatedServices?: boolean;
-    relatedServicesData?: RelatedService[];
-}) {
+//     showRelatedServices = false,
+//     relatedServicesData = [],
+// }: {
+//     showRelatedServices?: boolean;
+//     relatedServicesData?: RelatedService[];
+}
+) {
     return (
 
         <aside className="space-y-8 order-2 lg:order-1">
@@ -119,7 +120,7 @@ export default function Srvicesider({
                 </div>
             </div>
 
-            {showRelatedServices && (
+            {/* {showRelatedServices && (
                 <div className="w-full">
                     <h2 className="text-xl font-normal mb-8 text-white text-center bg-gradient-to-tl from-[#DA159B] to-[#54169C] py-4 rounded-lg">
                         Related Services
@@ -148,7 +149,7 @@ export default function Srvicesider({
                         </div>
                     </div>
                 </div>
-            )}
+            )} */}
             {/* Contact Box */}
             <div className="space-y-4">
                 <Link href="/report"
