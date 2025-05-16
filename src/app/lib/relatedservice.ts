@@ -13,7 +13,7 @@ export interface TextSection {
 export type Section = TextSection | ListingSection
 
 export interface Service {
-    galleryimages: any
+    galleryimages: unknown
     slug: string
     title: string
     heroimage: string

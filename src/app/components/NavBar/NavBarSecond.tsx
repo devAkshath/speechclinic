@@ -435,7 +435,7 @@ export default function NavBarSecond() {
             </div>
 
             <li><Link href="/team">Teams</Link></li>
-            <li><Link href="/Contact">Contact</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
           </ul>
           <div className="flex items-center gap-4">
             <Link

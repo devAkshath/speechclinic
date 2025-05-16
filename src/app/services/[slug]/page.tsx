@@ -1,11 +1,10 @@
-// app/services/[slug]/page.tsx
 
-import { getrelatedservice, getServiceBySlug, type ListingSection, type TextSection } from "@/app/lib/relatedservice";
+// import { getrelatedservice, getServiceBySlug, type ListingSection, type TextSection } from "@/app/lib/relatedservice";
+import { getServiceBySlug, type ListingSection, type TextSection } from "@/app/lib/relatedservice";
 import { notFound } from "next/navigation";
 import NavBarSecond from "../../components/NavBar/NavBarSecond";
 import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
-import { Key } from "react";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 
@@ -105,31 +104,28 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                                 </div>
                             </div>
 
-                            {/* Gallery Images */}
-                            {/* {service.galleryimages?.length > 0 && (
-                                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                    {service.galleryimages.map((img: string | undefined, index: Key | null | undefined) => (
-                                        <img
-                                            key={index}
-                                            src={img}
-                                            alt=""
-                                            className="rounded-lg w-full h-40 object-cover"
-                                        />
-                                    ))}
-                                </div>
-                            )} */}
 
-                            {service.galleryimages?.length > 0 && (
+
+                            {Array.isArray(service.galleryimages) && service.galleryimages.length > 0 && (
                                 <div className="unique-image-slider overflow-hidden">
                                     <div className="unique-image-slider-track flex gap-4 animate-slide">
-                                        {service.galleryimages.map((img: string | undefined, index: Key | null | undefined) => (
+                                        {service.galleryimages.map((img, index) => (
                                             <div key={index} className="unique-image-slide flex-shrink-0 w-60 h-40 rounded-lg overflow-hidden">
-                                                <img src={img} alt="" className="w-full h-full object-cover rounded-lg" />
+                                                {/* <img src={img} alt="" className="w-full h-full object-cover rounded-lg" /> */}
+                                                <Image
+                                                    src={img}
+                                                    alt="Speech Clinic Logo"
+                                                    width={130}
+                                                    height={200}
+                                                    priority
+                                                    className="w-full h-full object-cover rounded-lg"
+                                                />
                                             </div>
                                         ))}
                                     </div>
                                 </div>
                             )}
+
 
 
                             {/* Sections */}

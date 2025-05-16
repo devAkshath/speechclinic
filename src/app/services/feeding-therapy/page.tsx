@@ -3,7 +3,6 @@ import Image from "next/image";
 import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
-import { getrelatedservice } from "@/app/lib/relatedservice"
 import Link from "next/link";
 
 const relatedData = [
@@ -20,7 +19,6 @@ const relatedData = [
 ]
 
 export default function FeedingTherapy() {
-    const blogs = getrelatedservice()
 
     return (
         <div className="bg-white min-h-screen">

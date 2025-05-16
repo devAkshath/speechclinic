@@ -239,7 +239,7 @@ export default function Navbar() {
                   <Link href="/team">Teams</Link>
                 </li>
                 <li>
-                  <Link href="/Contact">Contact</Link>
+                  <Link href="/gallery">Gallery</Link>
                 </li>
               </ul>
 
@@ -402,6 +402,11 @@ export default function Navbar() {
           <li className="text-lg font-medium">
             <Link href="/team" onClick={handleMobileLinkClick}>
               Teams
+            </Link>
+          </li>
+          <li className="text-lg font-medium">
+            <Link href="/gallery" onClick={handleMobileLinkClick}>
+              Gallery
             </Link>
           </li>
 
@@ -621,7 +626,7 @@ export default function Navbar() {
                 <Link href="/team">Teams</Link>
               </li>
               <li>
-                <Link href="/Contact">Contact</Link>
+                <Link href="/gallery">Gallery</Link>
               </li>
             </ul>
             <div className="flex items-center gap-4">
