@@ -1,0 +1,126 @@
+/* General Styles for the Image Slider */
+.unique-image-slide {
+    height: 480px;
+    width: 630px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img {
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    transition: transform 1s;
+}
+
+/* Wrapper for the specific image slider */
+.unique-image-slider {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 480px;
+    width: 100%;
+}
+
+/* Track for sliding images */
+.unique-image-slider-track {
+    display: flex;
+    width: calc(250px * 12);
+    animation: uniquePlay 40s linear infinite;
+}
+
+/* Animation for the unique image slider */
+@keyframes uniquePlay {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 6));
+    }
+}
+
+/* Fade effects on the sides */
+.unique-image-slider::before,
+.unique-image-slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    height: 100%;
+    width: 8%;
+    z-index: 1;
+    position: absolute;
+}
+
+.unique-image-slider::before {
+    left: 0;
+    top: 0;
+}
+
+.unique-image-slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+/* Hover effect for images in the specific slider */
+.unique-image-slider img:hover {
+    transform: translateZ(5px);
+}
+
+/* Responsive Styles for Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    .unique-image-slide {
+        height: 400px;
+        width: 90%;
+        padding: 10px;
+        perspective: 80px;
+    }
+
+    .unique-image-slider {
+        height: 400px;
+    }
+
+    .unique-image-slider-track {
+        width: calc(200px * 12);
+        animation-duration: 50s; /* Slower on tablets */
+    }
+
+    .unique-image-slider img:hover {
+        transform: translateZ(3px);
+    }
+}
+
+/* Responsive Styles for Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+    .unique-image-slide {
+        height: 350px;
+        width: 100%;
+        padding: 5px;
+        perspective: 60px;
+    }
+
+    .unique-image-slider {
+        height: 350px;
+    }
+
+    .unique-image-slider-track {
+        width: calc(150px * 12);
+        animation-duration: 60s; /* Slower on mobile */
+    }
+
+    .unique-image-slider img {
+        border-radius: 0.5rem;
+    }
+
+    .unique-image-slider img:hover {
+        transform: translateZ(2px);
+    }
+
+    /* Adjust fade effect width */
+    .unique-image-slider::before,
+    .unique-image-slider::after {
+        width: 0%; /* Increase fade width for smaller screens */
+    }
+}

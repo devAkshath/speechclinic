@@ -21,7 +21,7 @@ const services = [
     description: 'Neuro Integrative Therapy program is focused on enhancing br...',
     image: '/group-therapy.svg',
     color: 'text-pink-500',
-    link: "/services/GroupTherapy",
+    link: "/services/group-therapy",
   },
   {
     title: 'Neuro Integrative Therapy',
@@ -67,8 +67,8 @@ export default function AllServicesPage() {
         <NavBarSecond />
       </header>
       <section className="w-full bg-white py-1">
-        <div className="relative flex items-center justify-center h-screen bg-gray-100">
-      <div className="absolute flex gap-8">
+        <div className="relative flex items-center justify-center h-100 bg-gray-100">
+      {/* <div className="absolute flex gap-8">
         <div className="w-40 h-40 rounded-full overflow-hidden">
           <Image src="/neuro-integrative-therapy.svg" alt="Image 1" width={160} height={160} className="object-cover" />
         </div>
@@ -78,10 +78,9 @@ export default function AllServicesPage() {
         <div className="w-40 h-40 rounded-full overflow-hidden">
           <Image src="/neuro-integrative-therapy.svg" alt="Image 3" width={160} height={160} className="object-cover" />
         </div>
-      </div>
+      </div> */}
       <div className="text-center text-white">
-        <p className="text-xs tracking-widest uppercase">Christmas 2024</p>
-        <h1 className={`text-6xl font-bold text-black` }>Gift guide</h1>
+        <h1 className={`text-6xl font-medium text-black` }>Services</h1>
       </div>
     </div>
       </section>

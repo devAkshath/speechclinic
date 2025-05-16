@@ -35,8 +35,8 @@ export default function About() {
                 src="/verified.png"
                 alt="Verified Icon"
                 className="w-8 h-8 mr-1"
-                width={800}
-                height={500}
+              width={30}
+                                            height={30}
               />
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
                 About
@@ -103,12 +103,11 @@ export default function About() {
             <div className="text-center max-w-3xl mx-auto relative">
                 {/* Badge */}
                 <div className="inline-flex items-center justify-center mb-3">
-                  <Image
+                  <img
                     src="/verified.png"
                     alt="Verified Icon"
                     className="w-6 h-6 mr-1 animate-bounce-slow transition-transform duration-300"
-                    width={800}
-                    height={500}
+                    
                   />
                   <div className="text-sm font-medium text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-4 py-1 rounded-2xl animate-pulse-slow">
                     Meet Our Founder
@@ -186,8 +185,8 @@ export default function About() {
                 src="/verified.png"
                 alt="Verified Icon"
                 className="w-8 h-8 mr-2  group-hover:rotate-12 transition-transform duration-300"
-                width={800}
-                height={500}
+               width={30}
+                                            height={30}
               />
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
                             hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 

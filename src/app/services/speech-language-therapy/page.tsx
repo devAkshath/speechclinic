@@ -4,6 +4,7 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 import Link from "next/link";
+import "../imagecarousel/imagecarousel.css"
 
 const relatedData = [
     {
@@ -54,12 +55,12 @@ const relatedData = [
     {
         icon: '/physical-therapy.svg',
         title: 'Sensory Motor Approach to Apraxia of Speech',
-        link: '/services/sensory-motor-apraxia',
+        link: '/services/sensory-motor-approach-to-apraxia-of-speech-and-other-related-motor-speech-disorders',
     },
     {
         icon: '/physical-therapy.svg',
         title: 'Nuffield Dyspraxia Program',
-        link: '/services/nuffield-dyspraxia',
+        link: '/services/nuffield-dyspraxia-program',
     },
     {
         icon: '/physical-therapy.svg',
@@ -118,24 +119,22 @@ export default function SchoolReadinessProgram() {
                                     </div>
                                     <div className="relative z-10 my-6">
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 my-3">
-                                            <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                                                <Image
-                                                    src="/speech-therapy-02.jpg"
-                                                    alt="Physical Therapy Session 1"
-                                                    width={500}
-                                                    height={300}
-                                                    className="w-full h-[300px] object-cover"
-                                                />
-                                            </div>
-                                            <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                                                <Image
-                                                    src="/speech-therapy-01.jpg"
-                                                    alt="Physical Therapy Session 2"
-                                                    width={500}
-                                                    height={300}
-                                                    className="w-full h-[300px] object-cover"
-                                                />
+                                        <div className="unique-image-slider">
+                                            <div className="unique-image-slider-track">
+                                                <div className="unique-image-slide">
+                                                    <img src="/speech-therapy-02.jpg" />
+                                                </div>
+                                                <div className="unique-image-slide">
+                                                    <img src="/speech-therapy-01.jpg" />
+                                                </div>
+                                                <div className="unique-image-slide">
+                                                    <img src="/speech-therapy-02.jpg" />
+                                                </div>
+                                                <div className="unique-image-slide">
+                                                    <img src="/speech-therapy-01.jpg" />
+                                                </div>
+
+
                                             </div>
                                         </div>
 
@@ -361,8 +360,8 @@ export default function SchoolReadinessProgram() {
                                             src="/verified.png"
                                             alt="Verified Icon"
                                             className="w-8 h-8 mr-2 group-hover:rotate-12 transition-transform duration-300"
-                                            width={800}
-                                            height={500}
+                                            width={30}
+                                            height={30}
                                         />
                                         <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
                                                         hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 

@@ -6,6 +6,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState, useCallback, useRef } from "react";
 import RectangleSvg from "./Reactanglesvg";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 // import CurveSvg from "./curvesvg";
 // import GalleryCurveLine from "./GalleryCurveline";
 
@@ -218,16 +219,17 @@ export default function Gallery() {
       </div>{" "}
       <div
         ref={(el) => {
-          if (el) boxesRef.current[5] = el;
+          if (el) boxesRef.current[15] = el;
         }}
-        className="box inline-flex items-center justify-center mb-10"
-      >
+        className="cursor-pointer box inline-flex items-center justify-center mb-10 mt-10"
+      > <Link href="/gallery" >
         <div
           style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl"
+          className="text-md  text-white bg-black px-8 py-1 rounded-2xl"
         >
           View All
         </div>
+        </Link>
       </div>
       {/* Mobile View - Embla Carousel */}
       <div

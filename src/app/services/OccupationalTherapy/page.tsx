@@ -9,17 +9,17 @@ const relatedData = [
   {
     icon: '/physical-therapy.svg',
     title: 'Neuro Integrative Therapy',
-    link: '/services/manual-therapy',
+    link: '/services/neuro-integrative-therapy',
   },
   {
     icon: '/physical-therapy.svg',
     title: 'Group Therapy',
-    link: '/services/spider-cage-therapy',
+    link: '/services/group-therapy',
   },
   {
     icon: '/physical-therapy.svg',
     title: 'Reflex Integration',
-    link: '/services/cuevas-medek-exercises-cme',
+    link: '/services/reflex-lntegration',
   },
 
 ];
@@ -31,16 +31,16 @@ export default function OccupationalTherapy() {
       </header>
 
       <div className="text-gray-700">
-      <HeroVideo
-        title="Occupational Therapy"
-        videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
-      />
+        <HeroVideo
+          title="Occupational Therapy"
+          videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+        />
 
         {/* Content Section */}
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Sidebar on the left */}
 
-          <Srvicesider  />
+          <Srvicesider />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
             <section className="relative overflow-hidden ">
@@ -612,10 +612,10 @@ export default function OccupationalTherapy() {
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Hand writing</h1>
                       <p>Handwriting is a fundamental skill that plays a key role in communication, academic achievement, personal expression and cognitive development. It involves the coordinated use of fine motor skills, hand-eye coordination, and cognitive processes.</p>
                       <p className="my-2">  At The{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
-                    {" "}
-                    Speech Clinic
-                  </span>, our therapists use the approaches like &quot;Handwriting without tears&quot;, multi-sensory techniques, modeling and demonstration, use different writing tools to master the handwriting skills.</p>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
+                          {" "}
+                          Speech Clinic
+                        </span>, our therapists use the approaches like &quot;Handwriting without tears&quot;, multi-sensory techniques, modeling and demonstration, use different writing tools to master the handwriting skills.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
                           <span className="text-violet-500 text-2xl animate-pulse">✥</span>
@@ -638,10 +638,10 @@ export default function OccupationalTherapy() {
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Cognitive Skills</h1>
                       <p>Cognition refers to the mental processes involved in acquiring knowledge and understanding. It encompasses a wide range of mental activities, including thinking, learning, memory, perception, problem-solving, reasoning, decision-making, and language use. Essentially, cognition is how we process information from the world around us and use it to navigate daily life.</p>
                       <p className="my-2">Occupational therapists work with children , helping them overcome challenges related to attention, focus, and memory that may impact school performance and social skills by addressing cognitive development through therapeutic interventions.   At The{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
-                    {" "}
-                    Speech Clinic
-                  </span>, our therapists support children in reaching their full potential and achieving greater independence in everyday tasks.</p>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
+                          {" "}
+                          Speech Clinic
+                        </span>, our therapists support children in reaching their full potential and achieving greater independence in everyday tasks.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <li className="transform hover:-translate-x-2 transition-all duration-500 flex items-center gap-3 group/item">
                           <span className="text-violet-500 text-2xl animate-pulse">✥</span>
@@ -666,10 +666,10 @@ export default function OccupationalTherapy() {
                       <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">ADL skills</h1>
                       <p>ADLs (Activities of Daily Living) refer to the essential self-care tasks that children perform to maintain their well-being and independence.</p>
                       <p className="my-2">For children with developmental delays, disabilities, or injuries, therapy may focus on enhancing their ability to perform ADLs through specialized techniques, tools, and adaptive strategies, ultimately promoting greater independence and improving their overall quality of life.   At The{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
-                    {" "}
-                    Speech Clinic
-                  </span>, we are training the children to become independent in their ADL skills and will be focusing on the following areas</p>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
+                          {" "}
+                          Speech Clinic
+                        </span>, we are training the children to become independent in their ADL skills and will be focusing on the following areas</p>
                       <ul className="space-y-4 mt-6 relative p-2">
                         <h2 className="font-semibold leading-tight ">
                           Basic ADLs ( BADLs) typically include:</h2>
@@ -765,48 +765,48 @@ export default function OccupationalTherapy() {
               </div>
             </section>
 
-                 <section className=" py-14 px-4 sm:px-6">
-                                        <div className="max-w-7xl mx-auto">
-                                            <div className="flex justify-center">
-                                                <div className="inline-flex items-center justify-center mb-4 animate-fade-in group">
-                                                    <Image
-                                                        src="/verified.png"
-                                                        alt="Verified Icon"
-                                                        className="w-8 h-8 mr-2 group-hover:rotate-12 transition-transform duration-300"
-                                                        width={800}
-                                                        height={500}
-                                                    />
-                                                    <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
+            <section className=" py-14 px-4 sm:px-6">
+              <div className="max-w-7xl mx-auto">
+                <div className="flex justify-center">
+                  <div className="inline-flex items-center justify-center mb-4 animate-fade-in group">
+                    <Image
+                      src="/verified.png"
+                      alt="Verified Icon"
+                      className="w-8 h-8 mr-2 group-hover:rotate-12 transition-transform duration-300"
+                      width={800}
+                      height={500}
+                    />
+                    <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
                                                                     hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 
                                                                     group-hover:bg-gradient-to-l">
-                                                        Services
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h2 className="text-4xl font-normal text-center text-[#54169C] mb-12">Related Services</h2>
-            
-                                            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                                                {relatedData.map((item, index) => (
-                                                    <Link key={index} href={item.link}>
-                                                        <div className="relative group bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center h-full hover:-translate-y-1">
-                                                            {/* Gradient Ring Effect */}
-                                                            <div className="w-20 h-20 mb-4 rounded-full bg-gradient-to-br from-[#C084FC]/9 to-[#A78BFA]/60 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                                                <Image src={item.icon} alt={item.title} width={40} height={40} />
-                                                            </div>
-            
-                                                            {/* Title */}
-                                                            <h3 className="text-base font-normal text-gray-800 leading-tight group-hover:text-[#6D28D9] transition duration-300">
-                                                                {item.title}
-                                                            </h3>
-            
-                                                            {/* Bottom Glow Accent */}
-                                                            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-1 rounded-full bg-gradient-to-r from-[#E879F9] to-[#A78BFA] opacity-0 group-hover:opacity-100 transition duration-300"></span>
-                                                        </div>
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </section>
+                      Services
+                    </div>
+                  </div>
+                </div>
+                <h2 className="text-4xl font-normal text-center text-[#54169C] mb-12">Related Services</h2>
+
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {relatedData.map((item, index) => (
+                    <Link key={index} href={item.link}>
+                      <div className="relative group bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center h-full hover:-translate-y-1">
+                        {/* Gradient Ring Effect */}
+                        <div className="w-20 h-20 mb-4 rounded-full bg-gradient-to-br from-[#C084FC]/9 to-[#A78BFA]/60 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          <Image src={item.icon} alt={item.title} width={40} height={40} />
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-base font-normal text-gray-800 leading-tight group-hover:text-[#6D28D9] transition duration-300">
+                          {item.title}
+                        </h3>
+
+                        {/* Bottom Glow Accent */}
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-1 rounded-full bg-gradient-to-r from-[#E879F9] to-[#A78BFA] opacity-0 group-hover:opacity-100 transition duration-300"></span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
