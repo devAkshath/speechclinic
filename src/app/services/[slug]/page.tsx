@@ -42,8 +42,10 @@ function TextComponent({ section }: { section: TextSection }) {
     );
 }
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-    const service = getServiceBySlug(params.slug);
+export default async function ServicePage({ params }: { params: { slug: string } }) {
+
+  const service = await getServiceBySlug(params.slug);
+
 
     if (!service) notFound();
 
