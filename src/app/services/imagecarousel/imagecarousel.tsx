@@ -17,7 +17,7 @@ interface CarouselProps {
   height?: string;
 }
 
-const ImageCarousel: React.FC<CarouselProps> = ({
+const imagecarousel: React.FC<CarouselProps> = ({
   images,
   autoplaySpeed = 4000,
   transitionDuration = 500,
@@ -173,4 +173,4 @@ const ImageCarousel: React.FC<CarouselProps> = ({
   );
 };
 
-export default ImageCarousel;
+export default imagecarousel;
