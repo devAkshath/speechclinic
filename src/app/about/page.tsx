@@ -17,7 +17,7 @@ export default function About() {
         <div className="px-6 md:px-40 py-20 text-center">
           <h2 className="text-4xl font-medium mb-4">About Us</h2>
           <p className="text-lg">
-            Our speech clinic provides personalized therapy services designed to enhance <br/>communication skills and empower individuals of all ages to reach their fullest potential.
+            Our speech clinic provides personalized therapy services designed to enhance <br />communication skills and empower individuals of all ages to reach their fullest potential.
           </p>
         </div>
         <HalfWaveBackground />
@@ -35,8 +35,8 @@ export default function About() {
                 src="/verified.png"
                 alt="Verified Icon"
                 className="w-8 h-8 mr-1"
-              width={30}
-                                            height={30}
+                width={30}
+                height={30}
               />
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
                 About
@@ -100,53 +100,58 @@ export default function About() {
         <div className="relative max-w-6xl mx-auto transition-transform duration-700">
           <div className="p-1 bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-3xl hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-500">
             <div className="bg-white rounded-2xl p-8 md:p-16 transition-all duration-500">
-            <div className="text-center max-w-3xl mx-auto relative">
-                {/* Badge */}
-                <div className="inline-flex items-center justify-center mb-3">
-                  <img
-                    src="/verified.png"
-                    alt="Verified Icon"
-                    className="w-6 h-6 mr-1 animate-bounce-slow transition-transform duration-300"
-                    
-                  />
-                  <div className="text-sm font-medium text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-4 py-1 rounded-2xl animate-pulse-slow">
-                    Meet Our Founder
+              <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 max-w-6xl mx-auto transition-transform duration-700">
+                {/* Left Side: Text Content */}
+                <div className="md:w-3/5 text-center md:text-left">
+                  {/* Badge */}
+                  <div className="inline-flex items-center justify-center mb-3">
+                    <img
+                      src="/verified.png"
+                      alt="Verified Icon"
+                      className="w-6 h-6 mr-1 animate-bounce-slow"
+                    />
+                    <div className="text-sm font-medium text-white bg-gradient-to-r from-[#DA159B] to-[#54169C] px-4 py-1 rounded-2xl animate-pulse-slow">
+                      Meet Our Founder
+                    </div>
                   </div>
+
+                  {/* Heading */}
+                  <h2 className="text-4xl font-medium leading-tight mb-4 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
+                    Sana Shareef
+                  </h2>
+
+                  {/* Subtitle */}
+                  <p className="text-lg font-light mb-4 text-gray-600 relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
+                    Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
+                  </p>
+
+                  {/* Badges */}
+                  <div className="inline-flex gap-3 flex-wrap justify-center md:justify-start mb-8">
+                    {[
+                      "Master's from Isabel, Spain",
+                      "Oral Placement Therapist",
+                      "Feeding Therapy",
+                      "Sensory Integration",
+                    ].map((badge, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] hover:text-white hover:border-transparent transform hover:scale-105 transition-all duration-300"
+                        style={{ animationDelay: `${index * 100}ms` }}
+                      >
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-600 leading-relaxed">
+                    With a Master&apos;s in Speech & Language Therapy and over 8 years of clinical experience, Sana&apos;s vision has transformed countless lives. She&apos;s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region&apos;s first advanced AAC app.
+                  </p>
                 </div>
 
-                {/* Heading */}
-                <h2 className="text-4xl font-medium leading-tight mb-4 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
-                  Sana Shareef
-                </h2>
-
-                {/* Subtitle */}
-                <p className="text-lg font-light mb-4 text-gray-600 transition-colors duration-300 relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
-                  Founder of SpeechSync | Apraxia Specialist | 8+ Years in Speech Therapy
-                </p>
-
-                {/* Badges */}
-                <div className="inline-flex gap-3 flex-wrap justify-center mb-8">
-                  {[
-                    "Master's from Isabel, Spain",
-                    "Oral Placement Therapist",
-                    "Feeding Therapy",
-                    "Sensory Integration",
-                  ].map((badge, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] hover:text-white hover:border-transparent transform hover:scale-105 transition-all duration-300"
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                      }}
-                    >
-                      {badge}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Founder Image */}
-                <div className="relative w-48 h-48 mx-auto mb-6">
-                  <div className="relative rounded-full shadow-2xl w-48 h-48 overflow-hidden border-4 border-white/50 hover:border-[#DA159B] hover:shadow-[#DA159B]/30 transition-all duration-500">
+                {/* Right Side: Profile Image */}
+                <div className="md:w-2/5 flex justify-center md:justify-end">
+                  <div className="relative w-60 h-60 rounded-full overflow-hidden border-4 border-white/50 shadow-2xl hover:shadow-[#DA159B]/30 hover:border-[#DA159B] transition-all duration-500">
                     <Image
                       src="/teams/sana-shareef.jpg"
                       alt="Sana Shareef"
@@ -157,11 +162,6 @@ export default function About() {
                     />
                   </div>
                 </div>
-
-                {/* Description */}
-                <p className="text-gray-600 leading-relaxed transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#DA159B] after:to-[#54169C] hover:after:w-full after:transition-all after:duration-300">
-                  With a Master&apos;s in Speech & Language Therapy and over 8 years of clinical experience, Sana&lsquo;s vision has transformed countless lives. She&lsquo;s a trailblazer in oral placement therapy and the innovator behind SpeechSync — the region&lsquo;s first advanced AAC app.
-                </p>
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function About() {
       {/* Why Choose Us Section */}
 
       <section className="relative bg-gradient-to-br from-[#F8F5FF] to-[#FFF5F9] py-20 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
-  
+
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
           {/* Content Section */}
           <div className="">
@@ -185,8 +185,8 @@ export default function About() {
                 src="/verified.png"
                 alt="Verified Icon"
                 className="w-8 h-8 mr-2  group-hover:rotate-12 transition-transform duration-300"
-               width={30}
-                                            height={30}
+                width={30}
+                height={30}
               />
               <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
                             hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 
@@ -198,7 +198,7 @@ export default function About() {
             {/* Enhanced Heading with gradient effect */}
             <h2 className="text-4xl md:text-5xl font-medium leading-tight bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent
                           hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500 mt-2">
-              Why We&apos;re the <br/>Right Choice for You
+              Why We&apos;re the <br />Right Choice for You
             </h2>
 
             {/* Enhanced Description */}

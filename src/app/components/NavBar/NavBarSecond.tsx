@@ -266,10 +266,10 @@ export default function NavBarSecond() {
         </div>
         <div className="mt-6">
           <Link
-            href="#"
+            href="/contact"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
-            Let&apos;s Talk
+          Contact Us
           </Link>
         </div>
       </div>
