@@ -332,10 +332,10 @@ export default function NavBarSecond() {
         </div>
         <div className="mt-6">
           <Link
-            href="#"
+      href="/contact"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
-            Let&apos;s Talk
+            Contact Us
           </Link>
         </div>
       </div>
@@ -368,13 +368,16 @@ export default function NavBarSecond() {
                 <FaClock /> Mon - Sat (09AM - 7PM)
               </span>
               <div className="flex gap-3">
-                <Link href="#"><FaLinkedin /></Link>
-                <Link href="#"><FaYoutube /></Link>
-                <Link href="#"><FaInstagram /></Link>
-                <Link href="#"><FaFacebook /></Link>
+                <Link href="https://www.linkedin.com/company/the-speech-clinic-dubai/"><FaLinkedin /></Link>
+                <Link href="https://www.youtube.com/watch?v=yOn2uiDbp08"><FaYoutube /></Link>
+                <Link href="https://www.instagram.com/thespeechclinic_dubai/"><FaInstagram /></Link>
+                <Link href="https://www.facebook.com/people/The-Speech-Clinic-Dubai/100088752805760/"><FaFacebook /></Link>
               </div>
             </div>
           </div>
+
+
+      
 
         </div>
 
@@ -382,7 +385,7 @@ export default function NavBarSecond() {
 
           <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link>
           <ul className="flex gap-6 text-gray-800 text-sm font-medium">
-            <li><Link href="./">Home</Link></li>
+            <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/AllServicesPage">Services</Link></li>
 
@@ -444,10 +447,10 @@ export default function NavBarSecond() {
           </ul>
           <div className="flex items-center gap-4">
             <Link
-              href="#"
+         href="/contact"
               className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
             >
-              Let&apos;s Talk <FaComments />
+              Contact Us<FaComments />
             </Link>
             {/* <button
               onClick={toggleWideMenu}

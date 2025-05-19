@@ -39,8 +39,8 @@ export default function ServicePage() {
           <div className="w-full md:w-2/3">
             <div className="relative">
               <Image
-                     width={500}
-                                                        height={300}
+                width={500}
+                height={300}
                 src="/3.jpg"
                 alt="Therapy Session"
                 className="rounded-4xl w-full h-[450px] object-cover"
@@ -106,16 +106,17 @@ export default function ServicePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="rounded-2xl overflow-hidden">
                   <Image
-                         width={500}
-                                                        height={300}
+                    width={500}
+                    height={300}
                     src="blogimage2.jpg"
                     alt="Speech Therapy Session"
                     className="w-full h-[350px] object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden">
-                  <Image       width={500}
-                                                        height={300}
+                  <Image
+                    width={500}
+                    height={300}
                     src="blogimage3.png"
                     alt="Speech Therapy Session"
                     className="w-full h-[350px] object-cover"
@@ -178,36 +179,9 @@ export default function ServicePage() {
           <div className="grid grid-cols-3 md:grid-cols-6 gap-4 my-2">
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <Image       width={500}
-                                                        height={300}
-                  src="/brain-icon.svg"
-                  alt="Speech Therapy"
-                  className="w-12 h-12"
-                />
-              </div>
-              <span className="text-sm text-center mt-2">
-                Oral Placement Therapy
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="bg-gray-100 p-4 rounded-lg">
-                <Image       width={500}
-                                                        height={300}
-                  src="/brain-icon.svg"
-                  alt="Speech Therapy"
-                  className="w-12 h-12"
-                />
-              </div>
-              <span className="text-sm text-center mt-2">
-                Oral Placement Therapy
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="bg-gray-100 p-4 rounded-lg">
-                <Image       width={500}
-                                                        height={300}
+                <Image
+                  width={500}
+                  height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -221,8 +195,8 @@ export default function ServicePage() {
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
                 <Image
-                       width={500}
-                                                        height={300}
+                  width={500}
+                  height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -235,8 +209,9 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <Image       width={500}
-                                                        height={300}
+                <Image
+                  width={500}
+                  height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -249,8 +224,9 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <Image       width={500}
-                                                        height={300}
+                <Image
+                  width={500}
+                  height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -263,8 +239,9 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <Image       width={500}
-                                                        height={300}
+                <Image
+                  width={500}
+                  height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"
@@ -277,8 +254,39 @@ export default function ServicePage() {
 
             <div className="flex flex-col items-center">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <Image       width={500}
-                                                        height={300}
+                <Image
+                  width={500}
+                  height={300}
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
+              </div>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 p-4 rounded-lg">
+                <Image
+                  width={500}
+                  height={300}
+                  src="/brain-icon.svg"
+                  alt="Speech Therapy"
+                  className="w-12 h-12"
+                />
+              </div>
+              <span className="text-sm text-center mt-2">
+                Oral Placement Therapy
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 p-4 rounded-lg">
+                <Image
+                  width={500}
+                  height={300}
                   src="/brain-icon.svg"
                   alt="Speech Therapy"
                   className="w-12 h-12"

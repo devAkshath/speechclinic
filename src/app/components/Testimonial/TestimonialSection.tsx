@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, } from "react";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 
@@ -13,7 +13,7 @@ const testimonials = [
   {
     name: "Person Two",
     designation: "Father",
-    text: "This clinic was recommended to me by my sonu2019s doctor and i canu2019t thank her enough. Within 2 months of attending my son had an amazing progress...",
+    text: "This clinic was recommended to me by my son's doctor and I can’t thank her enough. Within 2 months of attending, my son had amazing progress...",
   },
   {
     name: "Person Three",
@@ -22,42 +22,17 @@ const testimonials = [
   },
   {
     name: "Person Four",
-    designation: "Father",
-    text: "I am incredibly grateful to the entire team at the Speech Clinic for their outstanding support in helping my daughter, Nigella, with her speech develo..",
+    designation: "Mother",
+    text: "I am incredibly grateful to the entire team at the Speech Clinic for their outstanding support in helping my daughter, Nigella, with her speech development...",
   },
 ];
 
 const Testimonial: React.FC = () => {
-  const [startIndex, setStartIndex] = useState(0);
   const [numVisible, setNumVisible] = useState(1);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    const swipeThreshold = 50; 
-    const distance = touchStartX - touchEndX;
-
-    if (
-      distance > swipeThreshold &&
-      startIndex < testimonials.length - numVisible
-    ) {
-      handleScroll("right");
-    } else if (distance < -swipeThreshold && startIndex > 0) {
-      handleScroll("left");
-    }
-
-    setTouchStartX(0);
-    setTouchEndX(0);
-  };
 
   const calculateVisibleItems = () => {
     const width = window.innerWidth;
@@ -68,28 +43,57 @@ const Testimonial: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setNumVisible(calculateVisibleItems());
+      const visible = calculateVisibleItems();
+      setNumVisible(visible);
+      setCurrentIndex(visible); // reset index
     };
-    setNumVisible(calculateVisibleItems());
+
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const extendedTestimonials = [
+    ...testimonials.slice(-numVisible),
+    ...testimonials,
+    ...testimonials.slice(0, numVisible),
+  ];
+
+  const totalSlides = extendedTestimonials.length;
+
   const handleScroll = (direction: "left" | "right") => {
-    if (isAnimating) return;
-    setIsAnimating(true);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) =>
+      direction === "left" ? prev - 1 : prev + 1
+    );
+  };
 
-    if (direction === "left") {
-      setStartIndex((prev) => Math.max(0, prev - 1));
-    } else {
-      setStartIndex((prev) =>
-        Math.min(testimonials.length - numVisible, prev + 1)
-      );
+  const handleTransitionEnd = () => {
+    setIsTransitioning(false);
+    if (currentIndex >= testimonials.length + numVisible) {
+      setCurrentIndex(numVisible);
+    } else if (currentIndex < numVisible) {
+      setCurrentIndex(testimonials.length + numVisible - 1);
     }
+  };
 
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 400);
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    const distance = touchStartX - touchEndX;
+    const threshold = 50;
+    if (distance > threshold) {
+      handleScroll("right");
+    } else if (distance < -threshold) {
+      handleScroll("left");
+    }
   };
 
   return (
@@ -120,13 +124,10 @@ const Testimonial: React.FC = () => {
         </p>
       </div>
 
-      <div className="relative">
+      <div className="relative w-full">
         <button
           onClick={() => handleScroll("left")}
-          disabled={startIndex === 0}
-          className={`absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md transition-all hover:bg-gray-700  ${
-            startIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md hover:bg-gray-700"
         >
           <FaChevronLeft size={24} />
         </button>
@@ -140,16 +141,17 @@ const Testimonial: React.FC = () => {
           <div
             className="flex transition-transform duration-500 ease-in-out gap-6"
             style={{
-              transform: `translateX(-${startIndex * (100 / numVisible)}%)`,
-              width: `${(testimonials.length * 100) / numVisible}%`,
+              transform: `translateX(-${(100 / totalSlides) * currentIndex}%)`,
+              width: `${(100 / numVisible) * totalSlides}%`,
             }}
+            onTransitionEnd={handleTransitionEnd}
           >
-            {testimonials.map((testimonial, idx) => (
+            {extendedTestimonials.map((testimonial, idx) => (
               <div
                 key={idx}
                 className="bg-white border border-[#DA159B] rounded-2xl shadow-lg p-4 sm:p-5 md:p-6 relative w-full text-left"
                 style={{
-                  flex: `0 0 ${100 / testimonials.length}%`,
+                  flex: `400 0 ${80 / totalSlides}%`,
                 }}
               >
                 <div className="absolute top-0 left-0 h-[80px] w-full flex items-center justify-between px-0 text-white text-lg font-medium">
@@ -167,9 +169,7 @@ const Testimonial: React.FC = () => {
                   <p className="relative pt-6 px-2">{testimonial.text}</p>
                   <div className="flex mt-4 text-yellow-400">
                     {[...Array(5)].map((_, starIdx) => (
-                      <i key={starIdx} className="fas fa-star">
-                           <FaStar size={24} />
-                      </i>
+                      <FaStar key={starIdx} size={20} />
                     ))}
                   </div>
                 </div>
@@ -180,12 +180,7 @@ const Testimonial: React.FC = () => {
 
         <button
           onClick={() => handleScroll("right")}
-          disabled={startIndex >= testimonials.length - numVisible}
-          className={`absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md transition-all hover:bg-gray-700 ${
-            startIndex >= testimonials.length - numVisible
-              ? "opacity-50 cursor-not-allowed"
-              : ""
-          }`}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md hover:bg-gray-700"
         >
           <FaChevronRight size={24} />
         </button>
@@ -193,13 +188,13 @@ const Testimonial: React.FC = () => {
 
       <div className="flex justify-center mt-8 space-x-2">
         {Array.from({
-          length: Math.ceil(testimonials.length / numVisible),
+          length: testimonials.length - numVisible + 1,
         }).map((_, idx) => (
           <button
             key={idx}
-            onClick={() => setStartIndex(idx * numVisible)}
+            onClick={() => setCurrentIndex(idx + numVisible)}
             className={`w-3 h-3 rounded-full ${
-              idx === Math.floor(startIndex / numVisible)
+              idx === currentIndex - numVisible
                 ? "bg-gradient-to-r from-[#54169C] to-[#DA159B]"
                 : "bg-gray-300"
             }`}
