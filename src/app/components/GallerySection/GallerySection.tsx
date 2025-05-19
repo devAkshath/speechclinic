@@ -222,13 +222,15 @@ export default function Gallery() {
           if (el) boxesRef.current[15] = el;
         }}
         className="cursor-pointer box inline-flex items-center justify-center mb-10 mt-10"
-      > <Link href="/gallery" >
-        <div
-          style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className="text-md  text-white bg-black px-8 py-1 rounded-2xl"
-        >
-          View All
-        </div>
+      >
+        {" "}
+        <Link href="/gallery">
+          <div
+            style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+            className="text-md  text-white bg-black px-8 py-1 rounded-2xl"
+          >
+            View All
+          </div>
         </Link>
       </div>
       {/* Mobile View - Embla Carousel */}
@@ -270,229 +272,221 @@ export default function Gallery() {
         </div>
       </div>
       {/* Features Row */}
-      <div className="flex flex-wrap justify-center  gap-6 ">
+      <div className="flex flex-wrap justify-center gap-8">
         {features.map((feature, index) => (
           <div
             key={index}
             ref={(el) => {
               featureRefs.current[index] = el;
             }}
-            className=" box  bg-[#4F4052] text-white p-6 rounded-[30px]   shadow-2xl relative overflow-hidden text-left w-[340px] lg:w-[300px] sm:w-[328px] "
+            className="feature-box bg-[#4F4052] text-white p-6 rounded-[30px] shadow-2xl relative overflow-hidden text-left w-[340px] lg:w-[300px] sm:w-[328px] cursor-pointer transition-transform duration-300 ease-out hover:scale-105 hover:shadow-[0_8px_32px_rgba(79,64,82,0.3)]"
           >
-            <div className="absolute top-0 left-0 w-full h-full"></div>
+            {/* Gradient Background Shift */}
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tl from-[#54169C] to-[#DA159B] opacity-0 transition-opacity duration-300 ease-out hover:opacity-10"></div>
 
             {/* Row 1: Icon + Number */}
             <div className="flex items-center gap-4 mb-4">
-              <div className="bg-white text-black w-20 h-20 flex items-center justify-center rounded-[10px] rounded-tr-[40px] text-2xl">
-                <Image
+              <div className="feature-icon-container bg-white text-black w-20 h-20 flex items-center justify-center rounded-[10px] rounded-tr-[40px] text-2xl overflow-hidden transition-transform duration-300 ease hover:rotate-1">
+                <img
                   src={feature.icon}
                   alt={`feature-${index}`}
-                  width={80}
-                  height={80}
-                  objectFit="contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
-
-              <div
-                style={{ fontFamily: "HuluStyle", fontWeight: 300 }}
-                className="bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent text-8xl font-light"
-              >
+              <div className="bg-gradient-to-tl from-[#54169C] to-[#DA159B] bg-clip-text text-transparent text-8xl font-light">
                 {String(index + 1).padStart(2, "0")}
               </div>
             </div>
 
             {/* Row 2: Title */}
-            <h3
-              style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-              className="text-2xl font-semibold mb-2"
-            >
+            <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 ease-out">
               {feature.title}
             </h3>
 
             {/* Row 3: Description */}
-            <p
-              style={{ fontFamily: "HuluStyle", fontWeight: 300 }}
-              className="text-md text-gray-200"
-            >
+            <p className="feature-text-gray-200 text-md text-gray-200 transition-colors duration-300 ease-out group-hover:text-white font-light">
               {feature.desc}
             </p>
           </div>
         ))}
       </div>
-            {isDesktop ? (
-              <>
-                 <RectangleSvg>
-        {/* New Section - Two Column Row */}
-        <div className="flex flex-col lg:flex-row justify-center mx-auto   max-w-[1300px] items-start md:items-center mt-0 gap-6 lg:gap- px-4 text-left md:text-center">
-          {/* Left Column */}
-          <div className="max-w-md space-y-4 lg:text-left">
-            {/* Row 1: Label */}
-            <div
-              ref={(el) => {
-                if (el) boxesRef.current[4] = el;
-              }}
-              className="box inline-flex items-center justify-center md:justify-center  mb-2"
-            >
-              <Image
-                src="/verified.png"
-                alt="Verified Icon"
-                className="w-8 h-8 mr-2"
-                width={800}
-                height={500}
-              />
-              <div
-                style={{ fontFamily: "HuluStyle", fontWeight: 400,
-                  fontSize: "clamp(0.5rem, 2.0vw, 1.5rem)" }}
-                className="text-2xl  text-black bg-transparent  px-0 py-0 rounded-2xl"
-              >
-                Gestalt Language Therapy
-              </div>
-            </div>
-
-            {/* Row 2: Heading */}
-            <h2
-              ref={(el) => {
-                if (el) boxesRef.current[5] = el;
-              }}
-              style={{
-                fontFamily: "HuluStyle",
-                fontWeight: 500,
-                fontSize: "clamp(1rem, 2.2vw, 3rem)",
-              }}
-              className="box text-4xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
-            >
-              Fostering Communication Through Meaningful Language
-            </h2>
-
-            {/* Row 3: Description */}
-            <p
-              ref={(el) => {
-                if (el) boxesRef.current[6] = el;
-              }}
-              style={{
-                fontFamily: "HuluStyle",
-                fontWeight: 400,
-                fontSize: "clamp(0.5rem, 1.8vw, 1.2rem)",
-              }}
-              className=" box text-lg text-gray-700   py-2"
-            >
-              Our Gestalt Language Therapy focuses on supporting children who
-              learn language in chunks, helping them progress toward meaningful,
-              independent communication.
-            </p>
-
-            {/* Row 4: Button */}
-            <button
-              ref={(el) => {
-                if (el) boxesRef.current[7] = el;
-              }}
-              style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-              className="cursor-pointer box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
-            >
-              Get Started
-            </button>
-          </div>
-
-          {/* Right Column: Image */}
-          <div className="w-full flex justify-center items-center">
-            <div className="relative w-[clamp(80px,30vw,900px)]">
-              <Image
-              width={800}
-              height={500}
-                src="/galleryimage.jpg"
-                alt="Therapy Session"
-                className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
-              />
-              <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
-                <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
-                  <div
-                    className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
-                     border-l-[clamp(12px,1.8vw,23px)] border-l-white 
-                     border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-transparent py-12   px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
-          {/* Stats Row */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
-            {/* Stat Box Component */}
-            {[
-              {
-                icon: "/peopleicon.svg",
-                count: "7320",
-                label: "+ Clients",
-                refIndex: 9,
-              },
-              {
-                icon: "/groupicon.svg",
-                count: "1500",
-                label: "+ Staffs",
-                refIndex: 10,
-              },
-              {
-                icon: "/builbicon.svg",
-                count: "50",
-                label: "+ Projects",
-                refIndex: 11,
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                ref={(el) => {
-                  if (el) boxesRef.current[item.refIndex] = el;
-                }}
-                className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[40px] px-6 py-6 text-center gap-4"
-              >
-                <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
+      {isDesktop ? (
+        <>
+          <RectangleSvg>
+            {/* New Section - Two Column Row */}
+            <div className="flex flex-col lg:flex-row justify-center mx-auto   max-w-[1300px] items-start md:items-center mt-0 gap-6 lg:gap- px-4 text-left md:text-center">
+              {/* Left Column */}
+              <div className="max-w-md space-y-4 lg:text-left">
+                {/* Row 1: Label */}
+                <div
+                  ref={(el) => {
+                    if (el) boxesRef.current[4] = el;
+                  }}
+                  className="box inline-flex items-center justify-center md:justify-center  mb-2"
+                >
                   <Image
-                    src={item.icon}
-                    alt={item.label}
-                    className="w-15 h-15"
+                    src="/verified.png"
+                    alt="Verified Icon"
+                    className="w-8 h-8 mr-2"
                     width={800}
                     height={500}
                   />
-                </div>
-                <div
-                  style={{
-                    fontFamily: "HuluStyle",
-                    fontWeight: 500,
-                    fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                  }}
-                  className="text-gray-600 flex items-center gap-1"
-                >
-                  {item.count}
-                  <span
+                  <div
                     style={{
                       fontFamily: "HuluStyle",
                       fontWeight: 400,
-                      fontSize: "clamp(1.5rem, 1vw, 2rem)",
+                      fontSize: "clamp(0.5rem, 2.0vw, 1.5rem)",
                     }}
-                    className="text-xl md:text-3xl text-gray-600"
+                    className="text-2xl  text-black bg-transparent  px-0 py-0 rounded-2xl"
                   >
-                    {item.label}
-                  </span>
+                    Gestalt Language Therapy
+                  </div>
+                </div>
+
+                {/* Row 2: Heading */}
+                <h2
+                  ref={(el) => {
+                    if (el) boxesRef.current[5] = el;
+                  }}
+                  style={{
+                    fontFamily: "HuluStyle",
+                    fontWeight: 500,
+                    fontSize: "clamp(1rem, 2.2vw, 3rem)",
+                  }}
+                  className="box text-4xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
+                >
+                  Fostering Communication Through Meaningful Language
+                </h2>
+
+                {/* Row 3: Description */}
+                <p
+                  ref={(el) => {
+                    if (el) boxesRef.current[6] = el;
+                  }}
+                  style={{
+                    fontFamily: "HuluStyle",
+                    fontWeight: 400,
+                    fontSize: "clamp(0.5rem, 1.8vw, 1.2rem)",
+                  }}
+                  className=" box text-lg text-gray-700   py-2"
+                >
+                  Our Gestalt Language Therapy focuses on supporting children
+                  who learn language in chunks, helping them progress toward
+                  meaningful, independent communication.
+                </p>
+
+                {/* Row 4: Button */}
+                <button
+                  ref={(el) => {
+                    if (el) boxesRef.current[7] = el;
+                  }}
+                  style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                  className="cursor-pointer box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
+                >
+                  Get Started
+                </button>
+              </div>
+
+              {/* Right Column: Image */}
+              <div className="w-full flex justify-center items-center">
+                <div className="relative w-[clamp(80px,30vw,900px)]">
+                  <Image
+                    width={800}
+                    height={500}
+                    src="/galleryimage.jpg"
+                    alt="Therapy Session"
+                    className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
+                    <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
+                      <div
+                        className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
+                     border-l-[clamp(12px,1.8vw,23px)] border-l-white 
+                     border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
+                      ></div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </RectangleSvg>
-              </>
-            ) : (
-              <div className="flex flex-col lg:flex-row justify-center  items-start md:items-center mt-0 gap-6 lg:gap- px-4 text-left md:text-center">
-                <div className="">
-          {/* Left Column */}
-          <div className="mx-auto space-y-4 lg:text-left">
-            {/* Row 1: Label */}
-            <div
-              ref={(el) => {
-                if (el) boxesRef.current[4] = el;
-              }}
-              className="box inline-flex items-center justify-center mt-10 mb-3 "
+            </div>
+
+            <div className="bg-transparent py-12   px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
+              {/* Stats Row */}
+              <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+                {/* Stat Box Component */}
+                {[
+                  {
+                    icon: "/peopleicon.svg",
+                    count: "7320",
+                    label: "+ Clients",
+                    refIndex: 9,
+                  },
+                  {
+                    icon: "/groupicon.svg",
+                    count: "1500",
+                    label: "+ Staffs",
+                    refIndex: 10,
+                  },
+                  {
+                    icon: "/builbicon.svg",
+                    count: "50",
+                    label: "+ Projects",
+                    refIndex: 11,
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    ref={(el) => {
+                      if (el) boxesRef.current[item.refIndex] = el;
+                    }}
+                    className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[40px] px-6 py-6 text-center gap-4"
+                  >
+                    <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
+                      <Image
+                        src={item.icon}
+                        alt={item.label}
+                        className="w-15 h-15"
+                        width={800}
+                        height={500}
+                      />
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "HuluStyle",
+                        fontWeight: 500,
+                        fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                      }}
+                      className="text-gray-600 flex items-center gap-1"
+                    >
+                      {item.count}
+                      <span
+                        style={{
+                          fontFamily: "HuluStyle",
+                          fontWeight: 400,
+                          fontSize: "clamp(1.5rem, 1vw, 2rem)",
+                        }}
+                        className="text-xl md:text-3xl text-gray-600"
+                      >
+                        {item.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </RectangleSvg>
+        </>
+      ) : (
+        <div className="flex flex-col lg:flex-row justify-center  items-start md:items-center mt-0 gap-6 lg:gap- px-4 text-left md:text-center">
+          <div className="">
+            {/* Left Column */}
+            <div className="mx-auto space-y-4 lg:text-left">
+              {/* Row 1: Label */}
+              <div
+                ref={(el) => {
+                  if (el) boxesRef.current[4] = el;
+                }}
+                className="box inline-flex items-center justify-center mt-10 mb-3 "
               >
                 <Image
                   src="/verified.png"
@@ -505,182 +499,189 @@ export default function Gallery() {
                   style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
                   className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl"
                 >
-                 Gestalt Language Therapy
+                  Gestalt Language Therapy
                 </div>
+              </div>
+
+              {/* Row 2: Heading */}
+              <h2
+                ref={(el) => {
+                  if (el) boxesRef.current[5] = el;
+                }}
+                style={{
+                  fontFamily: "HuluStyle",
+                  fontWeight: 500,
+                }}
+                className="box text-4xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
+              >
+                Fostering Communication Through Meaningful Language
+              </h2>
+
+              {/* Row 3: Description */}
+              <p
+                ref={(el) => {
+                  if (el) boxesRef.current[6] = el;
+                }}
+                style={{
+                  fontFamily: "HuluStyle",
+                  fontWeight: 400,
+                }}
+                className=" box text-lg text-gray-700   py-2"
+              >
+                Our Gestalt Language Therapy focuses on supporting children who
+                learn language in chunks, helping them progress toward
+                meaningful, independent communication.
+              </p>
+
+              {/* Row 4: Button */}
+              <button
+                ref={(el) => {
+                  if (el) boxesRef.current[7] = el;
+                }}
+                style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] mb-10 font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
+              >
+                Get Started
+              </button>
             </div>
 
-            {/* Row 2: Heading */}
-            <h2
+            {/* Right Column: Image */}
+            <div
               ref={(el) => {
-                if (el) boxesRef.current[5] = el;
-              }}
-              style={{
-                fontFamily: "HuluStyle",
-                fontWeight: 500,
-                }}
-              className="box text-4xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
-            >
-              Fostering Communication Through Meaningful Language
-            </h2>
-
-            {/* Row 3: Description */}
-            <p
-              ref={(el) => {
-                if (el) boxesRef.current[6] = el;
-              }}
-              style={{
-                fontFamily: "HuluStyle",
-                fontWeight: 400,
-              }}
-              className=" box text-lg text-gray-700   py-2"
-            >
-              Our Gestalt Language Therapy focuses on supporting children who
-              learn language in chunks, helping them progress toward meaningful,
-              independent communication.
-            </p>
-
-            {/* Row 4: Button */}
-            <button
-              ref={(el) => {
-                if (el) boxesRef.current[7] = el;
-              }}
-              style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-              className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] mb-10 font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
-            >
-              Get Started
-            </button>
-          </div>
-
-          {/* Right Column: Image */}
-          <div   ref={(el) => {
                 if (el) boxesRef.current[8] = el;
-              }} className="w-full flex justify-center items-center box">
-            <div className="relative">
-              <Image
-              width={800}
-              height={500}
-                src="/galleryimage.jpg"
-                alt="Therapy Session"
-                className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
-              />
-              <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
-                <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
-                  <div
-                    className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
+              }}
+              className="w-full flex justify-center items-center box"
+            >
+              <div className="relative">
+                <Image
+                  width={800}
+                  height={500}
+                  src="/galleryimage.jpg"
+                  alt="Therapy Session"
+                  className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
+                />
+                <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
+                  <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
+                    <div
+                      className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
                      border-l-[clamp(12px,1.8vw,23px)] border-l-white 
                      border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
-                  ></div>
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-transparent py-12   px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
-          {/* Stats Row */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
-            {/* Stat Box Component */}
-            {[
-              {
-                icon: "/peopleicon.svg",
-                count: "7320",
-                label: "+ Clients",
-                refIndex: 9,
-              },
-              {
-                icon: "/groupicon.svg",
-                count: "1500",
-                label: "+ Staffs",
-                refIndex: 10,
-              },
-              {
-                icon: "/builbicon.svg",
-                count: "50",
-                label: "+ Projects",
-                refIndex: 11,
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                ref={(el) => {
-                  if (el) boxesRef.current[item.refIndex] = el;
-                }}
-                className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[40px] px-6 py-6 text-center gap-4"
-              >
-                <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
-                  <Image
-                    src={item.icon}
-                    alt={item.label}
-                    className="w-15 h-15"
-                    width={800}
-                    height={500}
-                  />
-                </div>
+          <div className="bg-transparent py-12   px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
+            {/* Stats Row */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+              {/* Stat Box Component */}
+              {[
+                {
+                  icon: "/peopleicon.svg",
+                  count: "7320",
+                  label: "+ Clients",
+                  refIndex: 9,
+                },
+                {
+                  icon: "/groupicon.svg",
+                  count: "1500",
+                  label: "+ Staffs",
+                  refIndex: 10,
+                },
+                {
+                  icon: "/builbicon.svg",
+                  count: "50",
+                  label: "+ Projects",
+                  refIndex: 11,
+                },
+              ].map((item, index) => (
                 <div
-                  style={{
-                    fontFamily: "HuluStyle",
-                    fontWeight: 500,
-                    fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                  key={index}
+                  ref={(el) => {
+                    if (el) boxesRef.current[item.refIndex] = el;
                   }}
-                  className="text-gray-600 flex items-center gap-1"
+                  className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[40px] px-6 py-6 text-center gap-4"
                 >
-                  {item.count}
-                  <span
+                  <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
+                    <Image
+                      src={item.icon}
+                      alt={item.label}
+                      className="w-15 h-15"
+                      width={800}
+                      height={500}
+                    />
+                  </div>
+                  <div
                     style={{
                       fontFamily: "HuluStyle",
-                      fontWeight: 400,
-                      fontSize: "clamp(1.5rem, 1vw, 2rem)",
+                      fontWeight: 500,
+                      fontSize: "clamp(1.5rem, 3vw, 2rem)",
                     }}
-                    className="text-xl md:text-3xl text-gray-600"
+                    className="text-gray-600 flex items-center gap-1"
                   >
-                    {item.label}
-                  </span>
+                    {item.count}
+                    <span
+                      style={{
+                        fontFamily: "HuluStyle",
+                        fontWeight: 400,
+                        fontSize: "clamp(1.5rem, 1vw, 2rem)",
+                      }}
+                      className="text-xl md:text-3xl text-gray-600"
+                    >
+                      {item.label}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-              </div>
-            )}
-   
+      )}
       {/* Message Box */}
-      <div     ref={(el) => {
+      <div
+        ref={(el) => {
           if (el) boxesRef.current[12] = el;
-        }} className="box relative border-2 border-transparent rounded-3xl px-8 sm:px-6 pt-0 pb-2 max-w-[1610px] mx-auto  space-y-4">
-      <h3
-        style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
-        className="text-3xl sm:text-3xl md:text-5xl text-gray-600 text-center"
+        }}
+        className="box relative border-2 border-transparent rounded-3xl px-8 sm:px-6 pt-0 pb-2 max-w-[1610px] mx-auto  space-y-4"
       >
-        Your Voice Matters
-      </h3>
-      <h2
-        style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}
-        className="text-2xl sm:text-3xl md:text-6xl font-bold bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text pb-3 text-transparent text-center"
-      >
-        Let&apos;s Strengthen It Together!
-      </h2>
-      <p
-        style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}
-        className="text-xl text-gray-600 max-w-xl mx-auto text-center pt-3"
-      >
-        Every voice deserves to be heard. Whether for therapy, guidance, or support, our specialists are here to help. Start the journey to confident communication today!
-      </p>
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 pt-6">
-        <Image
-          src="/verified.png"
-          alt="WhatsApp"
-          className="w-8 h-8"
-          width={800}
-          height={500}
-        />
-        <button
-          style={{ fontFamily: 'HuluStyle', fontWeight: 500 }}
-          className="bg-white border border-white text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-2 rounded-2xl hover:bg-white-50 transition font-medium"
+        <h3
+          style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+          className="text-3xl sm:text-3xl md:text-5xl text-gray-600 text-center"
         >
-          Reach Out Now
-        </button>
+          Your Voice Matters
+        </h3>
+        <h2
+          style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
+          className="text-2xl sm:text-3xl md:text-6xl font-bold bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text pb-3 text-transparent text-center"
+        >
+          Let&apos;s Strengthen It Together!
+        </h2>
+        <p
+          style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+          className="text-xl text-gray-600 max-w-xl mx-auto text-center pt-3"
+        >
+          Every voice deserves to be heard. Whether for therapy, guidance, or
+          support, our specialists are here to help. Start the journey to
+          confident communication today!
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 pt-6">
+          <Image
+            src="/verified.png"
+            alt="WhatsApp"
+            className="w-8 h-8"
+            width={800}
+            height={500}
+          />
+          <button
+            style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
+            className="bg-white border border-white text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-2 rounded-2xl hover:bg-white-50 transition font-medium"
+          >
+            Reach Out Now
+          </button>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

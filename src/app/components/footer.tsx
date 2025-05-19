@@ -34,7 +34,8 @@ const Footer = () => {
               learning, and daily life skills for children, fostering growth through expert care.
             </p>
             <p className="opacity-80">
-              © Copyright {Year} The Speech Clinic. All Rights Reserved.
+              © Copyright {Year} The Speech Clinic. All Rights Reserved. <br/>
+Powered By : Erratum Solutions
             </p>
           </div>
 
@@ -43,10 +44,10 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-meduim mb-8">Company</h3>
               <ul className="space-y-4">
-                <li><a href="#" className="hover:text-gray-400 font-light">About Us</a></li>
-                <li><a href="#" className="hover:text-gray-400 font-light">Contact Us</a></li>
-                <li><a href="#" className="hover:text-gray-400 font-light">Terms Of Service</a></li>
-                <li><a href="#" className="hover:text-gray-400 font-light">Privacy Policy</a></li>
+                <li><a href="/about" className="hover:text-gray-400 font-light">About Us</a></li>
+                <li><a href="/Contact" className="hover:text-gray-400 font-light">Contact Us</a></li>
+                <li><a href="/termscondition" className="hover:text-gray-400 font-light">Terms Of Service</a></li>
+                <li><a href="/privacypolicy" className="hover:text-gray-400 font-light">Privacy Policy</a></li>
               </ul>
             </div>
             <div>
@@ -55,7 +56,7 @@ const Footer = () => {
                 <li><a href="#" className="hover:text-gray-400 font-light">Speech Therapist</a></li>
                 <li><a href="#" className="hover:text-gray-400 font-light">Occupational Therapist</a></li>
                 <li><a href="#" className="hover:text-gray-400 font-light">Physio Therapist</a></li>
-                <li><a href="#" className="hover:text-gray-400 font-light">ABA Therapist</a></li>
+                <li><a href="" className="hover:text-gray-400 font-light">ABA Therapist</a></li>
                 <li><a href="#" className="hover:text-gray-400 font-light">School Readiness Program</a></li>
                 <li><a href="#" className="hover:text-gray-400 font-light">Feeding Therapy</a></li>
               </ul>
@@ -72,15 +73,18 @@ const Footer = () => {
             {/* Uncomment to enable social icons */}
             
             <div className="flex mt-4 space-x-4 text-xl">
-              <a href="#" className="hover:text-gray-400"><FaLinkedinIn /></a>
-              <a href="#" className="hover:text-gray-400"><FaYoutube /></a>
-              <a href="#" className="hover:text-gray-400"><FaInstagram /></a>
-              <a href="#" className="hover:text-gray-400"><FaFacebook /></a>
+              <a href="https://www.linkedin.com/company/the-speech-clinic-dubai" className="hover:text-gray-400"><FaLinkedinIn /></a>
+              <a href="https://www.youtube.com/@thespeechclinic" className="hover:text-gray-400"><FaYoutube /></a>
+              <a href="https://instagram.com/thespeechclinic_dubai" className="hover:text-gray-400"><FaInstagram /></a>
+              <a href="https://facebook.com/profile.php?id=100088752805760" className="hover:text-gray-400"><FaFacebook /></a>
             </div> 
            
           </div>
         </div>
+{/* <div>© Copyright 2025 The Speech Clinic. All Rights Reserved.
+</div> */}
       </div>
+      
     </footer>
     </div>
   );

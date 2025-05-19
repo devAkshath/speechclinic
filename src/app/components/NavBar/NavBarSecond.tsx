@@ -132,18 +132,18 @@ export default function NavBarSecond() {
 
         {/* ✅ HIGHLIGHTED: onClick added to close menu on link click */}
         <ul className="space-y-4 mt-6 py-5 text-gray-800">
-          <li className="text-lg font-bold">
+          <li className="text-lg ">
             <Link href="./" onClick={handleMobileLinkClick}>
               Home
             </Link>
           </li>
-          <li className="text-lg font-bold">
+          <li className="text-lg ">
             <Link href="/about" onClick={handleMobileLinkClick}>
               About
             </Link>
           </li>
 
-          <li className="text-lg font-bold">
+          <li className="text-lg ">
             <Link href='/AllServicesPage'>Services</Link>
           </li>
 
@@ -152,7 +152,7 @@ export default function NavBarSecond() {
             {/* Trigger Button */}
             <button
               onClick={toggleProductDropdown}
-              className="flex items-center text-lg font-bold gap-1 cursor-pointer transition-colors duration-300"
+              className="flex items-center text-lg  gap-1 cursor-pointer transition-colors duration-300"
             >
               Products
               <svg
@@ -203,9 +203,14 @@ export default function NavBarSecond() {
             </div>
           </div>
 
-          <li className="text-lg font-bold">
+          <li className="text-lg ">
             <Link href="/team" onClick={handleMobileLinkClick}>
               Teams
+            </Link>
+          </li>
+          <li className="text-lg ">
+            <Link href="/gallery" onClick={handleMobileLinkClick}>
+              Gallery
             </Link>
           </li>
 

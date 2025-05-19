@@ -42,11 +42,15 @@ function TextComponent({ section }: { section: TextSection }) {
     );
 }
 
-export default async function ServicePage({ params }: { params: { slug: string } }) {
 
-  const service = await getServiceBySlug(params.slug);
+export default async function ServicePage({
+    params,
+  }: {
+    params: { slug: string };
+  }) {
+    const { slug } = await params;
 
-
+    const service = getServiceBySlug(slug);
     if (!service) notFound();
 
     return (
@@ -57,7 +61,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
 
             <div className="font-normal pt-10">
                 <HeroVideo
-                    title={service.title}
+                    title={service?.title}
                     videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
                 />
 

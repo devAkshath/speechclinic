@@ -11,7 +11,7 @@ export default function FloatingWidget() {
         <a
           data-social="facebook"
           aria-label="facebook"
-          href="https://facebook.com/"
+          href="https://facebook.com/profile.php?id=100088752805760"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -52,7 +52,7 @@ export default function FloatingWidget() {
         <a
           data-social="instagram"
           aria-label="Instagram"
-          href="https://www.instagram.com/"
+          href="https://instagram.com/thespeechclinic_dubai"
         >
           <div className="filled"></div>
           <svg
@@ -75,7 +75,7 @@ export default function FloatingWidget() {
         <a
           data-social="Whatsapp"
           aria-label="Whatsapp"
-          href="https://youtube.com/"
+          href="https://api.whatsapp.com/send?phone=+971508857146&text=Hi"
         >
           <div className="filled"></div>
           <svg
