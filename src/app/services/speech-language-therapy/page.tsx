@@ -4,7 +4,7 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 import Link from "next/link";
-import ImageCarousel from "../imageCarousel/imagecarousel";
+import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
 const relatedData = [
   {
