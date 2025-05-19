@@ -4,7 +4,8 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 import Link from "next/link";
-import ImageCarousel from "../imagecarousel/ImageCarousel";
+import ImageCarousel from "../imageCarousel/imagecarousel";
+
 const relatedData = [
   {
     icon: "/physical-therapy.svg",
