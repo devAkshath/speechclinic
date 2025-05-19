@@ -88,9 +88,7 @@
   }
 }
 
-:has(:checked) {
-  --stripe-color: #000;
-}
+
 :has(:checked) .hero,
 :has(:checked) .hero::after {
   filter: blur(10px) opacity(50%) saturate(200%);
