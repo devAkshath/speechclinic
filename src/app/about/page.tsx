@@ -1,4 +1,3 @@
-import MasonryGrid from "../components/Features/mansoryimages";
 import NavBarSecond from "../components/NavBar/NavBarSecond";
 import HalfWaveBackground from "../components/svgs/halfcarve";
 import Image from "next/image";
@@ -26,7 +25,14 @@ export default function About() {
       <section className="text-blackpy-20 md:py-20 px-4 md:px-10 overflow-hidden relative ">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 text-black rounded-xl">
           <div className="max-w-xl">
-            <MasonryGrid />
+            {/* Full-width Ball Pit Image */}
+            <Image
+              width={900}
+              height={800}
+              src="/therapypromo.jpg"
+              alt=""
+              className="w-auto h-auto  object-cover"
+            />
           </div>
 
           <div className="max-w-xl text-center lg:text-left">
@@ -172,6 +178,7 @@ export default function About() {
 
 
 
+
       {/* Why Choose Us Section */}
 
       <section className="relative bg-gradient-to-br from-[#F8F5FF] to-[#FFF5F9] py-20 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
@@ -256,7 +263,7 @@ export default function About() {
           </div>
 
           {/* Enhanced Image Section */}
-          <div className="relative group">
+          {/* <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-[#DA159B]/20 to-[#54169C]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#DA159B]/10 to-[#54169C]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <Image
@@ -272,7 +279,30 @@ export default function About() {
                             group-hover:from-[#54169C] group-hover:to-[#DA159B] transition-all duration-500">100%</div>
               <p className="text-sm text-gray-700 group-hover:text-[#54169C] transition-colors duration-300">Family Satisfaction</p>
             </div>
+          </div> */}
+          {/* Enhanced Video Section */}
+          {/* Enhanced Video Section */}
+          <div className="relative group h-full">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#DA159B]/20 to-[#54169C]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#DA159B]/10 to-[#54169C]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <video
+              src="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="rounded-2xl shadow-xl w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg transform group-hover:scale-110 transition-all duration-300
+                border border-[#54169C]/10 hover:border-[#DA159B]/20 hidden sm:block">
+              <div className="text-2xl font-bold bg-gradient-to-r from-[#DA159B] to-[#54169C] bg-clip-text text-transparent
+                  group-hover:from-[#54169C] group-hover:to-[#DA159B] transition-all duration-500">100%</div>
+              <p className="text-sm text-gray-700 group-hover:text-[#54169C] transition-colors duration-300">Family Satisfaction</p>
+            </div>
           </div>
+
         </div>
       </section>
 

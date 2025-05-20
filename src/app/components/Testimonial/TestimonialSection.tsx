@@ -127,7 +127,7 @@ const Testimonial: React.FC = () => {
       <div className="relative w-full">
         <button
           onClick={() => handleScroll("left")}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md hover:bg-gray-700"
+          className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md hover:bg-gray-700"
         >
           <FaChevronLeft size={24} />
         </button>
@@ -180,7 +180,7 @@ const Testimonial: React.FC = () => {
 
         <button
           onClick={() => handleScroll("right")}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md hover:bg-gray-700"
+          className="hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 min-w-[44px] min-h-[44px] rounded-full z-10 shadow-md hover:bg-gray-700"
         >
           <FaChevronRight size={24} />
         </button>

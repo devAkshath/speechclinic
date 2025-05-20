@@ -2,7 +2,7 @@ import NavBarSecond from "../../components/NavBar/NavBarSecond";
 import Image from "next/image";
 import HeroVideo from "@/app/components/Services/ServiceHeroVideo";
 import Srvicesider from "@/app/components/Services/ServiceAside";
-import InlineVideoSection from "@/app/components/Services/InlineVideoSection";
+import InlineVideo from "../../components/Services/InlineVideoSection";
 
 
 export default function grouptherapy() {
@@ -30,11 +30,25 @@ export default function grouptherapy() {
             <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
               Group Therapy service
             </h2>
-            <InlineVideoSection
-              thumbnailSrc="/3.jpg"
-              caption="Watch Our Group Therapy Services"
-              videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
-            />
+                   <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-6 md:pt-8 md:pb-1 md:px-10
+                                            shadow-[20px_20px_40px_rgba(218,21,155,0.1)]
+                                            before:absolute before:inset-0 before:rounded-[2.5rem] before:-z-10
+                                            before:border-[3px] before:border-[#54169C]/30
+                                            before:translate-x-0 before:translate-y-0
+                                            before:transition-all before:duration-300
+                                            after:absolute after:inset-0 after:rounded-[2.5rem] after:-z-10
+                                            after:border-[3px] after:border-transparent
+                                            after:translate-x-0 after:translate-y-0
+                                            after:transition-all after:duration-300
+                                            hover:before:translate-x-2 hover:before:translate-y-2
+                                            hover:after:border-[#DA159B]/30 
+                                            hover:after:-translate-x-2 hover:after:-translate-y-2">
+                              <InlineVideo
+                                thumbnailSrc="/3.jpg"
+                                caption="Watch Our Group Therapy service Services"
+                                videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+                              />
+                            </div>
             <p>
               In the Occupational Therapy group session we focus on developing
               and enhancing the skills that help children engage in daily
@@ -42,7 +56,7 @@ export default function grouptherapy() {
               environments.
             </p>
 
-            <div className="border-3 border-[#5e12f5] rounded-4xl p-8">
+            <div className=" rounded-4xl p-8">
               <div className="flex flex-col gap-6">
                 {/* Heading and Description */}
 

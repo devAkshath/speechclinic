@@ -79,7 +79,14 @@ export default function TherapyPromo() {
 
   return (
     <div className="bg-transparent text-gray-800">
-      <div className=" mx-auto  max-w-[1280px]  px-0 lg:px-0    sm:px-6 md:px-8 lg:py-18 py-10">
+     <div
+  className="mx-auto max-w-[1280px] lg:py-6 py-10"
+  style={{
+    paddingLeft: "clamp(0rem, 5vw, 0.8rem)",
+    paddingRight: "clamp(0rem, 5vw, 0.8rem)",
+  }}
+>
+
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Left Column */}
           <div className="space-y-12">

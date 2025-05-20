@@ -90,7 +90,7 @@ body {
   animation-delay: -2s;
   -webkit-animation-duration: 7s;
   animation-duration: 7s;
-  fill: #FFF0F5;
+  fill: #bcb1bd;
 }
 
 .svg-waves__parallax > use:nth-child(2) {
@@ -98,7 +98,7 @@ body {
   animation-delay: -3s;
   -webkit-animation-duration: 10s;
   animation-duration: 10s;
-  fill: #FFE4E1;
+  fill: #a393a4;
 }
 
 .svg-waves__parallax > use:nth-child(3) {
@@ -106,7 +106,7 @@ body {
   animation-delay: -4s;
   -webkit-animation-duration: 13s;
   animation-duration: 13s;
-  fill: #FFE9ED;
+  fill: #716273;
 }
 
 .svg-waves__parallax > use:nth-child(4) {
@@ -114,7 +114,7 @@ body {
   animation-delay: -5s;
   -webkit-animation-duration: 20s;
   animation-duration: 20s;
-  fill: #3F3243;
+  fill: #FDECF5;
 }
 
 @-webkit-keyframes move-forever {
@@ -500,4 +500,34 @@ body, html {
 .feature-box:hover .feature-text-gray-200 {
   color: white;
   transition: color 0.3s ease;
+}
+
+
+
+
+.viewAllButton {
+  padding: 1.3em 3em;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #fff;
+ background: linear-gradient(to top right, #54169C, #DA159B);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.viewAllButton:hover {
+  background-color: #DA159B;
+ box-shadow: 0px 15px 20px rgba(118, 21, 155, 0.4); 
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.viewAllButton:active {
+  transform: translateY(-1px);
 }

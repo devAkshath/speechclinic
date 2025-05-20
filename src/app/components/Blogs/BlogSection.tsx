@@ -220,7 +220,7 @@ export default function Blogs() {
          <Link href="/BlogsMore" >
            <button
                     style={{ fontFamily: "HuluStyle", fontWeight: 400 ,}}
-                    className="cursor-pointer bg-gray-800 mt-30 text-white py-1 px-6 rounded-[30px]  font-medium hover:from-gray-400 hover:to-gray-400 transition duration-300"
+                    className="cursor-pointer viewAllButton bg-gray-800 mt-20 text-white py-1 px-4 rounded-[30px]  font-medium hover:from-gray-400 hover:to-gray-400 transition duration-300"
                   >
                     View All
                   </button></Link>

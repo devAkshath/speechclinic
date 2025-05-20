@@ -4,6 +4,7 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 import Link from "next/link";
+import { FaCheckCircle } from "react-icons/fa";
 
 const relatedData = [
     {
@@ -97,8 +98,59 @@ export default function FeedingTherapy() {
                                                 <p className="my-3">We use a combination of proven, playful methods to help individuals overcome feeding challenges. Each approach is tailored to meet your specific needs, ensuring progress at your own pace.</p>
                                             </div>
 
-                                            <div className=" p-6  my-3">
-                                                <h1 className="text-3xl leading-tight my-4 text-gray-800 ">Common Feeding Challenges We Address:</h1>
+                                            <div className="max-w-3xl  mx-auto">
+                                                <h1 className="text-2xl font-extrabold text-gray-800 flex items-center gap-2">
+                                                    <h2 className="">1.</h2>
+                                                    SOS Approach to Feeding:
+                                                </h1>
+
+                                                <p className="p-4">The Sequential Oral Sensory (SOS) Approach is all about making food less intimidating. It starts with play and exploration – no pressure, just fun! By gradually introducing new textures, tastes, and even colors of food, we help children feel more comfortable and confident around meals. The goal is to go from simple exploration to actually eating and enjoying a variety of foods.</p>
+                                                <div className="p-4 -mt-3">
+                                                    <h2 className="text-2xl leading-tight text-gray-800 mb-4">What’s Included?</h2>
+                                                    <ul className="space-y-3 text-gray-700">
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="text-pink-500 text-lg mt-1 shrink-0" />
+                                                            <span>Exploring foods without the pressure to eat them</span>
+                                                        </li>
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="text-pink-500 text-lg mt-1 shrink-0" />
+                                                            <span>Creating positive associations with different textures and tastes</span>
+                                                        </li>
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="text-pink-500 text-lg mt-1 shrink-0" />
+                                                            <span>Moving at your pace – no rush, just steady progress</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div className="max-w-3xl my-2 mx-auto">
+                                                <h1 className="text-2xl font-extrabold text-gray-800 flex items-center gap-2">
+                                                    <h2 className="">2.</h2>
+                                                    TalkTools Feeding Therapy:
+                                                </h1>
+
+                                                <p className="p-4">TalkTools is a unique, hands-on therapy that uses specific tools and exercises to strengthen and coordinate the muscles needed for chewing and swallowing. Whether your child struggles with oral-motor skills or sensory sensitivities, TalkTools focuses on improving mouth strength and coordination so that eating becomes easier, safer, and more enjoyable.</p>
+                                                <div className="p-4 -mt-3">
+                                                    <h2 className="text-2xl leading-tight text-gray-800 mb-4">What’s Included?</h2>
+                                                    <ul className="space-y-3 text-gray-700">
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="text-pink-500 text-lg mt-1 shrink-0" />
+                                                            <span>Fun oral-motor exercises to strengthen mouth muscles</span>
+                                                        </li>
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="text-pink-500 text-lg mt-1 shrink-0" />
+                                                            <span>Tools that make chewing and swallowing easier and more comfortable</span>
+                                                        </li>
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="text-pink-500 text-lg mt-1 shrink-0" />
+                                                            <span>Personalized therapy plans that evolve as you progress</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div className=" p-4">
+                                                <h1 className="text-2xl leading-tight my-4 text-gray-800 ">Common Feeding Challenges We Address:</h1>
                                                 <div className="space-y-4">
                                                     <div className="border-l-4 border-[#5B21B6] bg-[#FAF9FF] p-4 rounded-md shadow-sm hover:shadow-md transition">
                                                         <h3 className="text-lg font-normal text-[#5B21B6]">Picky Eating:</h3>
@@ -126,7 +178,7 @@ export default function FeedingTherapy() {
 
                                             </div>
                                             <div className=" p-6">
-                                                <h1 className="text-3xl leading-tight my-1 text-gray-800 ">What to Expect in Feeding Therapy:</h1>
+                                                <h1 className="text-2xl leading-tight my-1 text-gray-800 ">What to Expect in Feeding Therapy:</h1>
                                                 <p className="text-sm my-4 text-gray-600 mt-6">
                                                     Every session is designed to be interactive, engaging, and full of fun activities! We know that feeding therapy doesn&apos;t have to be a chore, and we make sure every step is a positive experience.
                                                 </p>
@@ -148,7 +200,7 @@ export default function FeedingTherapy() {
                                             </div>
                                             {/* NEW */}
                                             <div className=" p-6">
-                                                <h1 className="text-3xl leading-tight my-1 text-gray-800 ">Ready to Get Started?</h1>
+                                                <h1 className="text-2xl leading-tight my-1 text-gray-800 ">Ready to Get Started?</h1>
                                                 <p className="text-sm my-4 text-gray-600 mt-6">
                                                     Feeding therapy at our clinic is all about taking one step at a time no pressure, just progress. We&apos;re here to make mealtimes enjoyable again, so that both you and your child feel confident around food.
 
@@ -161,47 +213,47 @@ export default function FeedingTherapy() {
                             </div>
                         </section>
                         <section className=" py-14 px-4 sm:px-6">
-              <div className="max-w-7xl mx-auto">
-                <div className="flex justify-center">
-                  <div className="inline-flex items-center justify-center mb-4 animate-fade-in group">
-                    <Image
-                      src="/verified.png"
-                      alt="Verified Icon"
-                      className="w-8 h-8 mr-2 group-hover:rotate-12 transition-transform duration-300"
-                      width={800}
-                      height={500}
-                    />
-                    <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
+                            <div className="max-w-7xl mx-auto">
+                                <div className="flex justify-center">
+                                    <div className="inline-flex items-center justify-center mb-4 animate-fade-in group">
+                                        <Image
+                                            src="/verified.png"
+                                            alt="Verified Icon"
+                                            className="w-8 h-8 mr-2 group-hover:rotate-12 transition-transform duration-300"
+                                            width={800}
+                                            height={500}
+                                        />
+                                        <div className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl 
                                                                     hover:scale-105 hover:shadow-lg hover:shadow-[#DA159B]/30 transition-all duration-300 
                                                                     group-hover:bg-gradient-to-l">
-                      Services
-                    </div>
-                  </div>
-                </div>
-                <h2 className="text-4xl font-normal text-center text-[#54169C] mb-12">Related Services</h2>
+                                            Services
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 className="text-4xl font-normal text-center text-[#54169C] mb-12">Related Services</h2>
 
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  {relatedData.map((item, index) => (
-                    <Link key={index} href={item.link}>
-                      <div className="relative group bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center h-full hover:-translate-y-1">
-                        {/* Gradient Ring Effect */}
-                        <div className="w-20 h-20 mb-4 rounded-full bg-gradient-to-br from-[#C084FC]/9 to-[#A78BFA]/60 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          <Image src={item.icon} alt={item.title} width={40} height={40} />
-                        </div>
+                                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                                    {relatedData.map((item, index) => (
+                                        <Link key={index} href={item.link}>
+                                            <div className="relative group bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center h-full hover:-translate-y-1">
+                                                {/* Gradient Ring Effect */}
+                                                <div className="w-20 h-20 mb-4 rounded-full bg-gradient-to-br from-[#C084FC]/9 to-[#A78BFA]/60 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                    <Image src={item.icon} alt={item.title} width={40} height={40} />
+                                                </div>
 
-                        {/* Title */}
-                        <h3 className="text-base font-normal text-gray-800 leading-tight group-hover:text-[#6D28D9] transition duration-300">
-                          {item.title}
-                        </h3>
+                                                {/* Title */}
+                                                <h3 className="text-base font-normal text-gray-800 leading-tight group-hover:text-[#6D28D9] transition duration-300">
+                                                    {item.title}
+                                                </h3>
 
-                        {/* Bottom Glow Accent */}
-                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-1 rounded-full bg-gradient-to-r from-[#E879F9] to-[#A78BFA] opacity-0 group-hover:opacity-100 transition duration-300"></span>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </section>
+                                                {/* Bottom Glow Accent */}
+                                                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-1 rounded-full bg-gradient-to-r from-[#E879F9] to-[#A78BFA] opacity-0 group-hover:opacity-100 transition duration-300"></span>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>

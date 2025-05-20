@@ -227,7 +227,7 @@ export default function Gallery() {
         <Link href="/gallery">
           <div
             style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-            className="text-md  text-white bg-black px-8 py-1 rounded-2xl"
+            className="text-md viewAllButton text-white bg-black px-8 py-1 rounded-2xl"
           >
             View All
           </div>
@@ -439,7 +439,7 @@ export default function Gallery() {
                     ref={(el) => {
                       if (el) boxesRef.current[item.refIndex] = el;
                     }}
-                    className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[40px] px-6 py-6 text-center gap-4"
+                    className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[25px] px-6 py-6 text-center gap-4"
                   >
                     <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
                       <Image

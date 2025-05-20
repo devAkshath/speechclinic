@@ -17,15 +17,13 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
     <div className="relative min-h-screen bg-transparent flex flex-col w-full ">
-      {/* <div className="w-full -z-500 absolute top-100 pointer-events-none hidden lg:block">
-        <FooterCurve />
-      </div> */}
-
       <header className="absolute top-0 w-full z-50 px-0 pl">
         <Navbar />
       </header>
       <Hero />
-      <div className="relative rounded-3xl overflow-hidden group cursor-pointer sm:hidden flex flex-col gap-4 pt-0 pb-5 pl-4.5 pr-4.5 items-center w-full">
+      <div className="relative rounded-3xl overflow-hidden group cursor-pointer sm:hidden flex flex-col gap-4 pt-0 pb-5 pl-4.5 pr-4.5 items-center w-full -mt-18">
+
+      {/* <div className="relative rounded-3xl overflow-hidden group cursor-pointer sm:hidden flex flex-col gap-4 pt-0 pb-5  pl-4.5 pr-4.5 items-center w-full"> */}
         <div className="w-full aspect-w-16 aspect-h-9 relative  rounded-3xl">
           {!isPlaying ? (
             <>

@@ -4,7 +4,7 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 import Link from "next/link";
-
+import { FaChild } from "react-icons/fa";
 const relatedData = [
   {
     icon: '/physical-therapy.svg',
@@ -92,16 +92,24 @@ export default function OccupationalTherapy() {
                   </div>
                   <p className="my-6">Occupational therapists support children with developmental delays, physical impairments, or sensory issues by designing personalized interventions. These therapeutic activities promote improvements in motor skills, emotional regulation, and self-esteem, helping children succeed in school, at home, and in their communities.</p>
                   <div>
-                    <h1 className="text-3xl font-normal leading-tight mb-6 text-gray-800 ">Sensory Integration</h1>
+                    <h1 className="text-3xl font-normal leading-tight mb-6 text-gray-800 "></h1>
+                    <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 flex items-center gap-2">
+                      <FaChild className="text-pink-500 text-lg" />
+                      Sensory Integration
+                    </h1>
                     <p className="my-4">Sensory integration is a neurological process that organizes and interprets sensory information from the environment. This involves processing input from various senses, including sight ( visual), sound ( auditory), touch ( tactile), taste ( gustatory), and smell ( olfactory), as well as proprioceptive (body position), vestibular (balance and movement) senses and interoception ( feeling of knowing what is happening in our body).</p>
 
                     <p className="my-3">At The Speech Clinic, our therapists are experts and certified in Sensory Integration from the University Of Southern California ( USC) and Collaborative For Leadership In Ayres Sensory Integration (CLASI).
 
-                      Difficulties in sensory integration can lead to challenges in everyday activities, often seen in individuals with conditions like autism spectrum disorder (ASD), attention deficit hyperactivity disorder (ADHD), and sensory processing disorder (SPD). At The Speech Clinic, we use personalized therapeutic approaches to focus on improving sensory processing skills and help the children process and respond to sensory information more effectively, improving their ability to engage with the world. By using targeted sensory activities, therapists support children in developing skills like focus, coordination, and emotional regulation, making everyday tasks more manageable. We have a well-equipped sensory room and a moveable sensory pod called Sensory On the Go ( SOG) to create a calming space for our kids to self-regulate.</p>
+                      Difficulties in sensory integration can lead to challenges in everyday activities, often seen in individuals with conditions like autism spectrum disorder (ASD), attention deficit hyperactivity disorder (ADHD), and sensory processing disorder (SPD). At The Speech Clinic, we use personalized therapeutic approaches to focus on improving sensory processing skills and help the children process and respond to sensory information more effectively, improving their ability to engage with the world. By using targeted sensory activities, therapists support children in developing skills like focus, coordination, and emotional regulation, making everyday tasks more manageable. We have a well-equipped sensory room and a moveable sensory pod called Sensory On the Go ( SOG) to create a calming space for our kids to self-regulate. themselves</p>
                   </div>
                   <div className="space-y-8">
                     <div className="   ">
-                      <h1 className="text-3xl font-normal leading-tight mb-6 text-gray-800 ">     Red Flags of SPD</h1>
+                      {/* <h1 className="text-3xl font-normal leading-tight mb-6 text-gray-800 ">     </h1> */}
+                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Red Flags of SPD
+                      </h1>
 
                       <p>Recognizing red flags for Sensory Processing Disorder (SPD) is essential for early intervention and support.</p>
 
@@ -213,7 +221,12 @@ export default function OccupationalTherapy() {
                   </div>
                   <div className="space-y-8">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Gross motor skills</h1>
+                      {/* <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">
+   <FaChild className="text-pink-500 text-lg" />Gross motor skills</h1> */}
+                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Gross motor skills
+                      </h1>
 
                       <p>Gross motor skills are abilities that involve large muscle groups to perform tasks requiring coordination, balance, and strength. These skills are fundamental for physical activities and play a vital role in daily life.</p>
 
@@ -275,7 +288,11 @@ export default function OccupationalTherapy() {
 
                   <div className="space-y-8">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Fine motor skills</h1>
+                      {/* <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Fine motor skills</h1> */}
+                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Fine motor skills
+                      </h1>
                       <p>Fine motor skills are the abilities required to use the small muscles in the hands, fingers, and wrists to perform precise and coordinated tasks. These skills involve hand-eye coordination and are essential for daily activities, particularly those requiring detailed movements.</p>
                       <p className="my-2"> These skills help children do things like picking up small objects, drawing, writing, feeding themselves, and getting dressed. Developing strong fine motor skills is essential for a child&apos;s independence and confidence in everyday activities, as well as for tasks they will need for school.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
@@ -355,7 +372,11 @@ export default function OccupationalTherapy() {
 
                   <div className="space-y-8">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Interactive Metronome (IM)</h1>
+
+                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Interactive Metronome (IM)
+                      </h1>
                       <p>The Interactive Metronome is a specialized tool used primarily in therapeutic and performance contexts to help individuals improve their timing, coordination, and cognitive functioning. It is an auditory and visual metronome system designed to help people with various developmental, cognitive, and motor skill issues. The system provides real-time feedback to users as they synchronize their movements or actions with a rhythm or beat.</p>
                       <p className="my-2">  At The{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
@@ -401,7 +422,10 @@ export default function OccupationalTherapy() {
 
                   <div className="space-y-8">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Virtual Reality</h1>
+                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Virtual Reality
+                      </h1>
                       <p>Virtual reality (VR) refers to a computer-generated simulation or environment that replicates real-world or imagined settings, allowing users to interact with and experience them in an immersive way. VR typically uses specialized equipment like headsets, gloves, or motion controllers to create a sense of presence and enable interaction with the virtual environment.</p>
                       <p className="my-2">By creating controlled, interactive environments, VR helps children practice skills like social interaction, motor coordination, and sensory integration. The use of VR in therapy promotes neuroplasticity, motivating children to complete tasks while improving both cognitive and physical development. This innovative approach provides a safe and effective way to enhance children&lsquo;s therapeutic experiences.</p>
                       <ul className="space-y-4 mt-6 relative p-2">
@@ -437,7 +461,10 @@ export default function OccupationalTherapy() {
                   </div>
                   <div className="space-y-8">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Movement based learning ( Brain Gym)</h1>
+                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Movement based learning ( Brain Gym)
+                      </h1>
                       <p>Movement-Based Learning and Brain Gym are approaches that integrate physical movement into the learning process to enhance brain function, improve focus, and boost cognitive development. These techniques are often used in educational settings, therapy, and developmental support, particularly for children, but they can benefit people of all ages.</p>
                       <p className="my-2">  At The{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
@@ -488,7 +515,10 @@ export default function OccupationalTherapy() {
 
                   <div className="space-y-8">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">DIR Floor Time</h1>
+                      <h1 className="text-2xl font-extrabold leading-tight mb-3 my-2 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        DIR Floor Time
+                      </h1>
                       <p>(Developmental, Individual-differences, Relationship-based Floor Time) is an approach to therapy and early childhood education that focuses on supporting the social, emotional, and developmental growth of children, particularly those with autism spectrum disorder (ASD) or other developmental challenges.
 
                         In DIR Floor Time,our therapists engage with the child on the floor in a playful, child-directed way. The goal is to encourage emotional connections, build communication skills, and foster cognitive development through interactive play. The &quot;floor time&quot; part refers to the physical act of getting down to the child&apos;s level to facilitate engagement in a natural and comfortable environment.</p>
@@ -533,7 +563,10 @@ export default function OccupationalTherapy() {
                   </div>
                   <div className="space-y-8">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Group Therapy</h1>
+                      <h1 className="text-2xl font-extrabold leading-tight mb-3 my-2 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Group Therapy
+                      </h1>
                       <p>In the Occupational Therapy group session we focus on developing and enhancing the skills that help children engage in daily activities and participate in their social, academic, and home environments.</p>
                       <p className="my-2">  At The{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
@@ -548,7 +581,10 @@ export default function OccupationalTherapy() {
                   {/* new */}
                   <div className="space-y-8 my-2">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Play Therapy</h1>
+                      <h1 className="text-2xl font-extrabold leading-tight mb-3 my-2 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Play Therapy
+                      </h1>
                       <p>Play is a spontaneous, enjoyable, and intrinsically motivating activity that allows individuals, particularly children, to explore, create, and develop skills. It can be solitary or social, structured or unstructured, and is essential for cognitive, social, emotional, and physical development. Through play, children experiment with their environment, test boundaries, and engage in imaginative activities that support learning and growth.</p>
 
                       <ul className="space-y-4 mt-6 relative p-2">
@@ -576,7 +612,10 @@ export default function OccupationalTherapy() {
                   </div>
                   <div className="space-y-8 my-2">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Visual Motor Integration</h1>
+                      <h1 className="text-2xl font-extrabold leading-tight mb-3 my-2 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Visual Motor Integration
+                      </h1>
                       <p>Visual-motor integration (VMI) refers to the ability to coordinate visual input (what we see) with motor output (how we physically respond). This skill is crucial for activities that require hand-eye coordination, such as writing, drawing, catching a ball, or typing.</p>
 
                       <p className="my-2">It&apos;s crucial for everyday activities and plays a key role in early childhood development, affecting learning and academic performance. Challenges with VMI can lead to difficulties in school and daily life.   At The{" "}
@@ -609,7 +648,10 @@ export default function OccupationalTherapy() {
                   </div>
                   <div className="space-y-8 my-2">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Hand writing</h1>
+                      <h1 className="text-2xl font-extrabold leading-tight mb-3 my-2 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Hand writing
+                      </h1>
                       <p>Handwriting is a fundamental skill that plays a key role in communication, academic achievement, personal expression and cognitive development. It involves the coordinated use of fine motor skills, hand-eye coordination, and cognitive processes.</p>
                       <p className="my-2">  At The{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
@@ -635,7 +677,11 @@ export default function OccupationalTherapy() {
                   </div>
                   <div className="space-y-8 my-2">
                     <div className="  ">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">Cognitive Skills</h1>
+
+                      <h1 className="text-2xl font-extrabold leading-tight mb-3 my-2 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        Cognitive Skills
+                      </h1>
                       <p>Cognition refers to the mental processes involved in acquiring knowledge and understanding. It encompasses a wide range of mental activities, including thinking, learning, memory, perception, problem-solving, reasoning, decision-making, and language use. Essentially, cognition is how we process information from the world around us and use it to navigate daily life.</p>
                       <p className="my-2">Occupational therapists work with children , helping them overcome challenges related to attention, focus, and memory that may impact school performance and social skills by addressing cognitive development through therapeutic interventions.   At The{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
@@ -663,7 +709,10 @@ export default function OccupationalTherapy() {
                   </div>
                   <div className="space-y-8 my-4">
                     <div className="">
-                      <h1 className="text-2xl font-extrabold leading-tight mb-6 text-gray-800 ">ADL skills</h1>
+                       <h1 className="text-2xl font-extrabold leading-tight mb-3 my-2 text-gray-800 flex items-center gap-2">
+                        <FaChild className="text-pink-500 text-lg" />
+                        ADL skills
+                      </h1>
                       <p>ADLs (Activities of Daily Living) refer to the essential self-care tasks that children perform to maintain their well-being and independence.</p>
                       <p className="my-2">For children with developmental delays, disabilities, or injuries, therapy may focus on enhancing their ability to perform ADLs through specialized techniques, tools, and adaptive strategies, ultimately promoting greater independence and improving their overall quality of life.   At The{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
