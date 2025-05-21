@@ -10,6 +10,7 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
+import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
 function ListingComponent({ section }: { section: ListingSection }) {
   return (
@@ -106,36 +107,25 @@ export default async function ServicePage({
                       />
                     </div>
 
-                    <p className="text-muted-foreground my-4">
+                    <p className="text-muted-foreground my-2">
                       {service.description}
                     </p>
                   </div>
                 </div>
               </div>
 
-              {Array.isArray(service.galleryimages) &&
-                service.galleryimages.length > 0 && (
-                  <div className="unique-image-slider overflow-hidden">
-                    <div className="unique-image-slider-track flex gap-4 animate-slide">
-                      {service.galleryimages.map((img, index) => (
-                        <div
-                          key={index}
-                          className="unique-image-slide flex-shrink-0 w-60 h-40 rounded-lg overflow-hidden"
-                        >
-                          {/* <img src={img} alt="" className="w-full h-full object-cover rounded-lg" /> */}
-                          <Image
-                            src={img}
-                            alt="Speech Clinic Logo"
-                            width={130}
-                            height={200}
-                            priority
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+
+              {Array.isArray(service.galleryimages) && (
+                <ImageCarousel
+                  images={service.galleryimages.map((img, index) => ({
+                    src: img,
+                    alt: `Gallery image ${index + 1}`,
+                  }))}
+                  height="h-[400px]"
+                  autoplaySpeed={4000}
+                />
+              )}
+
 
               {/* Sections */}
               <div className="prose prose-lg dark:prose-invert max-w-none">
