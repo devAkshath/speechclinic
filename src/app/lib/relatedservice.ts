@@ -390,8 +390,13 @@ const services: Service[] = [
                     "<strong>Enhanced social interaction and peer skills<strong>"
             },
             {
+                type: "text",
+                content:
+                    "These clubs helps our children to develop a range of social behaviours such as :"
+            },
+            {
                 type: "listing",
-                title: "These clubs helps our children to develop a range of social behaviours such as :",
+                title: "",
                 items: [
                     "Sharing space",
                     "Taking turns and sharing",
@@ -412,8 +417,13 @@ const services: Service[] = [
                     "<strong>Boosting language skills<strong>"
             },
             {
+                type: "text",
+                content:
+                    "Language acquisition happens here through a variety of fun and creative activities. We work on language aspects like :"
+            },
+            {
                 type: "listing",
-                title: "Language acquisition happens here through a variety of fun and creative activities. We work on language aspects like :",
+                title: "",
                 items: [
                     "Vocabulary building",
                     "Utterance length building",

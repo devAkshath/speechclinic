@@ -1,6 +1,7 @@
 import NavBarSecond from '../components/NavBar/NavBarSecond';
 import Image from 'next/image';
 import Link from 'next/link';
+import BubbleText from './BubbleText';
 
 const services = [
   {
@@ -68,7 +69,8 @@ export default function AllServicesPage() {
         <NavBarSecond />
       </header>
     <section className="w-full bg-white py-1">
-  <div className="relative flex items-center justify-center h-[500px] overflow-hidden">
+<div className="relative flex items-center justify-center h-[250px] sm:h-[300px] md:h-[400px] lg:h-[400px] xl:h-[400px] overflow-hidden">
+
     {/* Gradient background positioned absolutely */}
     <div className="absolute inset-0 z-0 mt-10">
  {/* <svg
@@ -125,7 +127,7 @@ export default function AllServicesPage() {
 
     {/* Centered heading text */}
     <div className="z-10 text-center">
-      <h1 className="text-8xl font-medium text-black">Services</h1>
+        <BubbleText />
     </div>
   </div>
 </section>
