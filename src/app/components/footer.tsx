@@ -62,7 +62,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/Contact"
+                      href="/contactus"
                       className="hover:text-gray-400 font-normal"
                     >
                       Contact Us

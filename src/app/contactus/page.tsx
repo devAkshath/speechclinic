@@ -109,47 +109,59 @@ const App: React.FC = () => {
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-10 bg-gradient-to-tr from-[#DA159B] to-[#54169C] flex items-center justify-center">
-             <div>
-  <h3 className="text-white text-3xl font-medium mb-6">
-    Get in Touch
-  </h3>
-  <p className="text-pink-100 mb-8">
-    Fill out the form and our team will get back to you within
-    24 hours.
-  </p>
+                <div>
+                  <h3 className="text-white text-3xl font-medium mb-6">
+                    Get in Touch
+                  </h3>
+                  <p className="text-pink-100 mb-8">
+                    Fill out the form and our team will get back to you within
+                    24 hours.
+                  </p>
 
-  {/* Location */}
-  <div className="flex items-center mb-6">
-    <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4 overflow-hidden">
-      <img src="/gallery1.svg" alt="Location Icon" className="w-full h-full object-cover" />
-    </div>
-    <span className="text-white">
-      Dubai healthcare city, Building 47
-    </span>
-  </div>
+                  {/* Location */}
+                  <div className="flex items-center mb-6">
+                    <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4 overflow-hidden">
+                      <img
+                        src="/gallery1.svg"
+                        alt="Location Icon"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span className="text-white">
+                      Dubai healthcare city, Building 47
+                    </span>
+                  </div>
 
-  {/* Phone */}
-  <div className="flex items-center mb-6">
-    <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4 overflow-hidden">
-      <img src="/gallery2.svg" alt="Phone Icon" className="w-full h-full object-cover" />
-    </div>
-    <span className="text-white">
-      +971-508857146
-      <br />
-      +971-4433 9891
-    </span>
-  </div>
+                  {/* Phone */}
+                  <div className="flex items-center mb-6">
+                    <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4 overflow-hidden">
+                      <img
+                        src="/gallery2.svg"
+                        alt="Phone Icon"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span className="text-white">
+                      +971-508857146
+                      <br />
+                      +971-4433 9891
+                    </span>
+                  </div>
 
-  {/* Email */}
-  <div className="flex items-center mb-8">
-    <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4 overflow-hidden">
-      <img src="/gallery3.svg" alt="Email Icon" className="w-full h-full object-cover" />
-    </div>
-    <span className="text-white">info@thespeechclinic.ae</span>
-  </div>
+                  {/* Email */}
+                  <div className="flex items-center mb-8">
+                    <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4 overflow-hidden">
+                      <img
+                        src="/gallery3.svg"
+                        alt="Email Icon"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span className="text-white">info@thespeechclinic.ae</span>
+                  </div>
 
-  {/* Social Media */}
-  {/* <div className="flex space-x-4">
+                  {/* Social Media */}
+                  {/* <div className="flex space-x-4">
     <a
       href="#"
       className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200 cursor-pointer"
@@ -175,8 +187,7 @@ const App: React.FC = () => {
       <img src="/gallery1.svg" alt="LinkedIn" className="w-full h-full object-cover" />
     </a>
   </div> */}
-</div>
-
+                </div>
               </div>
               <div className="p-10">
                 <form onSubmit={handleSubmit}>
@@ -319,8 +330,8 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-    {/* Social Media Section */}
-{/* <section className="py-16 bg-white">
+      {/* Social Media Section */}
+      {/* <section className="py-16 bg-white">
   <div className="container mx-auto px-6 text-center">
     <h2 className="text-3xl font-bold mb-4 text-gray-800">
       Connect With Us
@@ -366,9 +377,8 @@ const App: React.FC = () => {
         <p className="mt-2 text-gray-700 font-medium">YouTube</p>
       </a>
     </div> */}
-  {/* </div>
-</section> */} 
-
+      {/* </div>
+</section> */}
     </div>
   );
 };

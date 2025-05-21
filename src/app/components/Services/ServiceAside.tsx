@@ -186,7 +186,7 @@ export default function Srvicesider({
                     <div className="pb-6 text-center">
                         <h3 className="text-xl font-normal text-white mb-4">Contact For Services</h3>
                         <Link
-                            href="/contact"
+                            href="/contactus"
                             className="inline-block bg-[#DA159B] text-white px-8 py-2 rounded-full font-normal hover:bg-[#ec4899] transition-colors duration-200 shadow-md hover:shadow-lg"
                         >
                             Contact us

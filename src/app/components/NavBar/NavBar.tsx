@@ -286,7 +286,7 @@ export default function Navbar() {
 
               <div className="flex items-center gap-4">
                 <Link
-                  href="/contact"
+                  href="/contactus"
                   className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
                 >
                   Contact Us <FaComments />
@@ -505,7 +505,7 @@ export default function Navbar() {
         </div>
         <div className="mt-6">
           <Link
-            href="/contact"
+            href="/contactus"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
             Contact Us
@@ -624,7 +624,7 @@ export default function Navbar() {
         </div>
         <div className="mt-6">
           <Link
-            href="/contact"
+            href="/contactus"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
             Contact Us
@@ -735,7 +735,7 @@ export default function Navbar() {
             </ul>
             <div className="flex items-center gap-4">
               <Link
-                href="/contact"
+                href="/contactus"
                 className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
               >
                 Contact Us <FaComments />
