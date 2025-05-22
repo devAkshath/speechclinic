@@ -6,46 +6,45 @@ import ServiceCard from "./ServiceCards";
 import Image from "next/image";
 
 export default function ServiceSection() {
-
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
-  
-    useEffect(() => {
-      const boxes = boxesRef.current;
-  
-      function checkBoxes() {
-        const isMobile = window.innerWidth <= 768;
-        const triggerBottom = (window.innerHeight / 4) * 4;
-  
-        boxes.forEach((box, index) => {
-          if (!box) return;
-          const boxTop = box.getBoundingClientRect().top;
-  
-          if (isMobile) {
-            if (boxTop < triggerBottom) {
-              box.classList.add("show");
-            } else {
-              box.classList.remove("show");
-            }
+
+  useEffect(() => {
+    const boxes = boxesRef.current;
+
+    function checkBoxes() {
+      const isMobile = window.innerWidth <= 768;
+      const triggerBottom = (window.innerHeight / 4) * 4;
+
+      boxes.forEach((box, index) => {
+        if (!box) return;
+        const boxTop = box.getBoundingClientRect().top;
+
+        if (isMobile) {
+          if (boxTop < triggerBottom) {
+            box.classList.add("show");
           } else {
-            setTimeout(() => {
-              box.classList.add("show");
-            }, index * 150);
+            box.classList.remove("show");
           }
-        });
-      }
-  
-      window.addEventListener("scroll", checkBoxes);
-      window.addEventListener("resize", checkBoxes);
-      window.addEventListener("load", checkBoxes);
-  
-      checkBoxes();
-  
-      return () => {
-        window.removeEventListener("scroll", checkBoxes);
-        window.removeEventListener("resize", checkBoxes);
-        window.removeEventListener("load", checkBoxes);
-      };
-    }, []);
+        } else {
+          setTimeout(() => {
+            box.classList.add("show");
+          }, index * 150);
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkBoxes);
+    window.addEventListener("resize", checkBoxes);
+    window.addEventListener("load", checkBoxes);
+
+    checkBoxes();
+
+    return () => {
+      window.removeEventListener("scroll", checkBoxes);
+      window.removeEventListener("resize", checkBoxes);
+      window.removeEventListener("load", checkBoxes);
+    };
+  }, []);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -56,17 +55,48 @@ export default function ServiceSection() {
   const autoplayInterval = useRef<NodeJS.Timeout | null>(null);
 
   const therapyImages = [
-    { src: "/aba-therapy.svg", title: "ABA Therapy",  href:"/services/aba-therapy" },
-    { src: "/feeding-therapy.svg", title: "Feeding Therapy",href: "/services/feeding-therapy" },
-    { src: "/group-therapy.svg", title: "Group Therapy", href: "/services/GroupTherapy" },
+    {
+      src: "/occupational-therapy.svg",
+      title: "Occupational\nTherapy",
+      href: "/services/occupational-therapy",
+    },
+    {
+      src: "/speech-and-language-therapy.svg",
+      title: "Speech &\nLanguage Therapy",
+      href: "/services/speech-language-therapy",
+    },
+    {
+      src: "/physical-therapy.svg",
+      title: "Physical Therapy",
+      href: "/services/physical-therapy",
+    },
+
+    {
+      src: "/aba-therapy.svg",
+      title: "ABA Therapy",
+      href: "/services/aba-therapy",
+    },
+    {
+      src: "/school-readiness-program.svg",
+      title: "School Readiness Program",
+      href: "/services/school-readiness-program",
+    },
+
+    {
+      src: "/feeding-therapy.svg",
+      title: "Feeding Therapy",
+      href: "/services/feeding-therapy",
+    },
+    {
+      src: "/group-therapy.svg",
+      title: "Group Therapy",
+      href: "/services/GroupTherapy",
+    },
     {
       src: "/neuro-integrative-therapy.svg",
       title: "Neuro Integrative\nTherapy",
-      href: "/services/neuro-integrative-therapy" },
-    { src: "/occupational-therapy.svg", title: "Occupational\nTherapy" ,href: "/services/OccupationalTherapy"  },
-    { src: "/physical-therapy.svg", title: "Physical Therapy",href: "/services/physical-therapy"  },
-    { src: "/school-readiness-program.svg", title: "School Readiness"  ,href: "/services/school-readiness-program"  },
-    { src: "/speech-and-language-therapy.svg", title: "Speech &\nLanguage",href: "/services/speech-language-therapy" },
+      href: "/services/neuro-integrative-therapy",
+    },
   ];
 
   useEffect(() => {
@@ -76,7 +106,7 @@ export default function ServiceSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => { 
+  useEffect(() => {
     if (!emblaApi || !isSmallScreen) return;
 
     const autoplay = () => {
@@ -112,10 +142,13 @@ export default function ServiceSection() {
   ));
 
   return (
-    <div  className="bg-transparent flex flex-col items-center justify-center p-6 lg:pt-50 sm:p-8">
-      <div  ref={(el) => {
+    <div className="bg-transparent flex flex-col items-center justify-center p-6 lg:pt-50 sm:p-8">
+      <div
+        ref={(el) => {
           if (el) boxesRef.current[0] = el;
-        }} className="box inline-flex items-center justify-center mb-3">
+        }}
+        className="box inline-flex items-center justify-center mb-3"
+      >
         <Image
           src="/verified.png"
           alt="Verified Icon"
@@ -123,28 +156,42 @@ export default function ServiceSection() {
           width={800}
           height={500}
         />
-        <div style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl">
+        <div
+          style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+          className="text-md font-light text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl"
+        >
           Our Services
         </div>
       </div>
-      <h2  ref={(el) => {
+      <h2
+        ref={(el) => {
           if (el) boxesRef.current[1] = el;
-        }} style={{ fontFamily: 'HuluStyle', fontWeight: 400 }}  className=" box text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2">
+        }}
+        style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+        className=" box text-gray-500 text-3xl sm:text-4xl font-medium text-center mb-2"
+      >
         We Believe Everyone Deserves
       </h2>
-      <div  className="relative inline-block">
-        <h1  ref={(el) => {
-          if (el) boxesRef.current[2] = el;
-        }} style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent">
+      <div className="relative inline-block">
+        <h1
+          ref={(el) => {
+            if (el) boxesRef.current[2] = el;
+          }}
+          style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
+          className="box text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text text-transparent"
+        >
           Our Quality Care
         </h1>
       </div>
 
       <div className="mt-8 w-full flex justify-center">
         {isSmallScreen ? (
-          <div  ref={(el) => {
-            if (el) boxesRef.current[3] = el;
-          }}className="box w-full">
+          <div
+            ref={(el) => {
+              if (el) boxesRef.current[3] = el;
+            }}
+            className="box w-full"
+          >
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6 px-0 py-0">
                 {services.map((service, index) => (
@@ -170,7 +217,9 @@ export default function ServiceSection() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-4 lg:gap-10 gap-0 md:gap-3  mt-8 md:grid">{services}</div>
+          <div className="grid grid-cols-4 lg:gap-10 gap-0 md:gap-3  mt-8 md:grid">
+            {services}
+          </div>
         )}
       </div>
     </div>

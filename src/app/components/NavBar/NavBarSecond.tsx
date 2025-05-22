@@ -138,13 +138,13 @@ export default function NavBarSecond() {
             </Link>
           </li>
           <li className="text-lg ">
-            <Link href="/about" onClick={handleMobileLinkClick}>
+            <Link href="/about-us" onClick={handleMobileLinkClick}>
               About
             </Link>
           </li>
 
           <li className="text-lg ">
-            <Link href='/AllServicesPage'>Services</Link>
+            <Link href='/services'>Services</Link>
           </li>
 
 
@@ -192,7 +192,7 @@ export default function NavBarSecond() {
                     }`}
                 >
                   <Link
-                    href="/SpeechingCardPage"
+                    href="/speeching-cards"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     onClick={handleProductLinkClick}
                   >
@@ -204,7 +204,7 @@ export default function NavBarSecond() {
           </div>
 
           <li className="text-lg ">
-            <Link href="/team" onClick={handleMobileLinkClick}>
+            <Link href="/teams" onClick={handleMobileLinkClick}>
               Teams
             </Link>
           </li>
@@ -266,7 +266,7 @@ export default function NavBarSecond() {
         </div>
         <div className="mt-6">
           <Link
-            href="/contactus"
+            href="/contact-us"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
           Contact Us
@@ -332,7 +332,7 @@ export default function NavBarSecond() {
         </div>
         <div className="mt-6">
           <Link
-      href="/contactus"
+      href="/contact-us"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
             Contact Us
@@ -386,8 +386,8 @@ export default function NavBarSecond() {
           <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={120} height={60} priority /></Link>
           <ul className="flex gap-6 text-gray-800 text-sm font-medium">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/AllServicesPage">Services</Link></li>
+            <li><Link href="/about-us">About</Link></li>
+            <li><Link href="/services">Services</Link></li>
 
             <div className="relative inline-block text-left" ref={productDropdownRef}>
               {/* Trigger Button */}
@@ -432,7 +432,7 @@ export default function NavBarSecond() {
                       }`}
                   >
                     <Link
-                      href="/SpeechingCardPage"
+                      href="/speeching-cards"
                       className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     >
                       SpeechCard
@@ -442,12 +442,12 @@ export default function NavBarSecond() {
               </div>
             </div>
 
-            <li><Link href="/team">Teams</Link></li>
+            <li><Link href="/teams">Teams</Link></li>
             <li><Link href="/gallery">Gallery</Link></li>
           </ul>
           <div className="flex items-center gap-4">
             <Link
-         href="/contactus"
+         href="/contact-us"
               className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
             >
               Contact Us<FaComments />

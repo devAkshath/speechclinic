@@ -7,7 +7,6 @@ import Image from "next/image";
 import HeroRecMobile from "./HeroRecMobile";
 
 export default function Hero() {
-  
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
 
   useEffect(() => {
@@ -53,11 +52,14 @@ export default function Hero() {
     <main className="relative w-full min-h-screen flex items-center justify-center px-4">
       {/* === Backgrounds === */}
       {isDesktop && (
-        <div className="absolute  top-[clamp(104rem, 200vw, 200rem)]  px-[clamp(1rem, 5vw, 5rem)] max-w-[1840px] h-full z-10"   style={{ 
-    paddingLeft: "clamp(1rem, 5vw, 5rem)", 
-    paddingRight: "clamp(1rem, 5vw, 5rem)", 
-    top: "clamp(2rem, 10vw, 10rem)"
-  }}>
+        <div
+          className="absolute  top-[clamp(104rem, 200vw, 200rem)]  px-[clamp(1rem, 5vw, 5rem)] max-w-[1840px] h-full z-10"
+          style={{
+            paddingLeft: "clamp(1rem, 5vw, 5rem)",
+            paddingRight: "clamp(1rem, 5vw, 5rem)",
+            top: "clamp(2rem, 10vw, 10rem)",
+          }}
+        >
           <HeroSvg />
         </div>
       )}
@@ -83,9 +85,11 @@ export default function Hero() {
                   style={{ fontFamily: "HuluStyle", fontWeight: 300 }}
                   className="text-[clamp(1rem,1.2vw,1.25rem)] text-gray-900"
                 >
-                  At The Speech Clinic, we provide specialized therapy <br />{" "}
-                  designed to improve speech and communication skills, <br />{" "}
-                  tailored to children with autism.
+                  The Speech Clinic is a pediatric therapy center located in{" "}
+                  <br /> Dubai Healthcare City, dedicated to empowering
+                  children,
+                  <br /> through evidence based neurodiversity affirming
+                  interventions.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -185,8 +189,6 @@ export default function Hero() {
           </div>
         </HeroRecMobile>
       )}
- 
-
     </main>
   );
 }

@@ -30,7 +30,7 @@ export default function FeedingTherapy() {
             <div className="font-normal">
                 <HeroVideo
                     title="Feeding Therapy"
-                    videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+                    videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/feeding%20therapy.mp4"
                 />
 
                 {/* Content Section */}
@@ -40,8 +40,11 @@ export default function FeedingTherapy() {
                     <Srvicesider />
                     {/* Main Content on the right */}
                     <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
+                             <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
+                     Feeding Therapy
+                        </h2>
                         <section className="relative overflow-hidden ">
-                            <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">Feeding Therapy</h2>
+
                             <div className="container mx-auto px-2">
                                 <div>
                                     <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-10 md:pt-8 md:pb-1 md:px-10
@@ -66,7 +69,7 @@ export default function FeedingTherapy() {
                                     <div className="relative z-10 my-6">
 
                                         <div>
-                                            <p className="mb-6">At our                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">      {" "}
+                                            <p className="mb-6">At our  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">      {" "}
                                                 Speech Clinic
                                             </span>, in Dubai, we understand that feeding difficulties can affect both the physical and emotional well-being of individuals. Our Feeding Therapy services are designed to help children and adults overcome challenges such as picky eating, swallowing issues, and sensory sensitivities to food.
                                             </p>
@@ -100,7 +103,7 @@ export default function FeedingTherapy() {
 
                                             <div className="max-w-3xl  mx-auto">
                                                 <h1 className="text-2xl font-extrabold text-gray-800 flex items-center gap-2">
-                                                    <h2 className="">1.</h2>
+                                                    <span className="">1.</span>
                                                     SOS Approach to Feeding:
                                                 </h1>
 
@@ -125,7 +128,7 @@ export default function FeedingTherapy() {
                                             </div>
                                             <div className="max-w-3xl my-2 mx-auto">
                                                 <h1 className="text-2xl font-extrabold text-gray-800 flex items-center gap-2">
-                                                    <h2 className="">2.</h2>
+                                                    <span >2.</span> 
                                                     TalkTools Feeding Therapy:
                                                 </h1>
 

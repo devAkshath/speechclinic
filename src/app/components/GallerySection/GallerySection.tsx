@@ -339,7 +339,7 @@ export default function Gallery() {
                     }}
                     className="text-2xl  text-black bg-transparent  px-0 py-0 rounded-2xl"
                   >
-                    Gestalt Language Therapy
+                    Innovative service highlights
                   </div>
                 </div>
 
@@ -351,15 +351,16 @@ export default function Gallery() {
                   style={{
                     fontFamily: "HuluStyle",
                     fontWeight: 500,
-                    fontSize: "clamp(1rem, 2.2vw, 3rem)",
+                    fontSize: "clamp(0.5rem, 1.2vw, 3rem)",
                   }}
-                  className="box text-4xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
+                  className="box text-2xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
                 >
-                  Fostering Communication Through Meaningful Language
+                  At The Speech Clinic, we blend science, compassion and
+                  technology to create truly transformative therapy experiences
                 </h2>
 
                 {/* Row 3: Description */}
-                <p
+                <div
                   ref={(el) => {
                     if (el) boxesRef.current[6] = el;
                   }}
@@ -368,15 +369,44 @@ export default function Gallery() {
                     fontWeight: 400,
                     fontSize: "clamp(0.5rem, 1.8vw, 1.2rem)",
                   }}
-                  className=" box text-lg text-gray-700   py-2"
+                  className="box text-lg text-gray-700 py-1 space-y-2"
                 >
-                  Our Gestalt Language Therapy focuses on supporting children
-                  who learn language in chunks, helping them progress toward
-                  meaningful, independent communication.
-                </p>
+                  <ul className="space-y-2">
+                    {[
+                      "Speech sync – Our innovative AAC",
+                      "Gestalt language support",
+                      "Sensory smart sessions",
+                      "Interactive metronome",
+                      "Virtual reality",
+                      "Mobile sensory room – SOG POD",
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] flex items-center justify-center">
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path d="M5 13l4 4L19 7"></path>
+                          </svg>
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="pt-">
+                    From fast track multidisciplinary assessments to parent
+                    empowerment coaching, every tool we use is designed to help
+                    your child grow, connect and thrive.
+                  </p>
+                </div>
 
                 {/* Row 4: Button */}
-                <button
+                {/* <button
                   ref={(el) => {
                     if (el) boxesRef.current[7] = el;
                   }}
@@ -384,7 +414,7 @@ export default function Gallery() {
                   className="cursor-pointer box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px]  font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
                 >
                   Get Started
-                </button>
+                </button> */}
               </div>
 
               {/* Right Column: Image */}
@@ -410,74 +440,74 @@ export default function Gallery() {
               </div>
             </div>
 
-            <div className="bg-transparent py-12   px-0 md:px-0 mx-auto max-w-[1450px] space-y-10">
-              {/* Stats Row */}
-              <div className="flex flex-wrap justify-center gap-6 md:gap-10">
-                {/* Stat Box Component */}
-                {[
-                  {
-                    icon: "/peopleicon.svg",
-                    count: "7320",
-                    label: "+ Clients",
-                    refIndex: 9,
-                  },
-                  {
-                    icon: "/groupicon.svg",
-                    count: "1500",
-                    label: "+ Staffs",
-                    refIndex: 10,
-                  },
-                  {
-                    icon: "/builbicon.svg",
-                    count: "50",
-                    label: "+ Projects",
-                    refIndex: 11,
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    ref={(el) => {
-                      if (el) boxesRef.current[item.refIndex] = el;
-                    }}
-                    className="box flex flex-1 flex-row items-center justify-center max-w-[320px]  md:max-w-md lg:max-w-lg border-3 border-pink-400 rounded-[25px] px-6 py-6 text-center gap-4"
-                  >
-                    <div className="bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 rounded-2xl">
-                      <Image
-                        src={item.icon}
-                        alt={item.label}
-                        className="w-15 h-15"
-                        width={800}
-                        height={500}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "HuluStyle",
-                        fontWeight: 500,
-                        fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                      }}
-                      className="text-gray-600 flex items-center gap-1"
-                    >
-                      {item.count}
-                      <span
-                        style={{
-                          fontFamily: "HuluStyle",
-                          fontWeight: 400,
-                          fontSize: "clamp(1.5rem, 1vw, 2rem)",
-                        }}
-                        className="text-xl md:text-3xl text-gray-600"
-                      >
-                        {item.label}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+           <div className="bg-transparent py-12 px-4 md:px-6 mx-auto max-w-[1450px] space-y-10">
+  {/* Stats Row */}
+  <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+    {[
+      {
+        icon: "/peopleicon.svg",
+        count: "7320",
+        label: "+ Clients",
+        refIndex: 9,
+      },
+      {
+        icon: "/groupicon.svg",
+        count: "1500",
+        label: "+ Staffs",
+        refIndex: 10,
+      },
+      {
+        icon: "/builbicon.svg",
+        count: "50",
+        label: "+ Projects",
+        refIndex: 11,
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        ref={(el) => {
+          if (el) boxesRef.current[item.refIndex] = el;
+        }}
+        className="flex flex-row items-center justify-start flex-grow sm:flex-none sm:max-w-[320px] md:max-w-[400px] lg:max-w-[580px] border-3 border-pink-400 rounded-[25px] px-4 md:px-6 py-5 md:py-6 gap-10 bg-white"
+      >
+        <div className="flex-shrink-0 bg-gradient-to-br from-[#DA159B] to-[#54169C] p-2 md:p-3  rounded-2xl">
+          <Image
+            src={item.icon}
+            alt={item.label}
+            className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16"
+            width={64}
+            height={64}
+          />
+        </div>
+        <div className="text-gray-600 text-left">
+          <div  
+            style={{
+              fontFamily: "HuluStyle",
+              fontWeight: 400,
+              fontSize: "clamp(1.25rem, 2vw, 2rem)",
+            }}
+          >
+            {item.count}
+          </div>
+          <div
+            style={{
+              fontFamily: "HuluStyle",
+              fontWeight: 400,
+              fontSize: "clamp(1rem, 1.3vw, 1.5rem)",
+            }}
+          >
+            {item.label}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
           </RectangleSvg>
         </>
       ) : (
-        <div className="flex flex-col lg:flex-row justify-center  items-start md:items-center mt-0 gap-6 lg:gap- px-4 text-left md:text-center">
+        <div className="flex flex-col lg:flex-row justify-center  items-start md:items-center mt-0 gap-6 lg:gap- px-5 text-left md:text-center">
           <div className="">
             {/* Left Column */}
             <div className="mx-auto space-y-4 lg:text-left">
@@ -499,7 +529,7 @@ export default function Gallery() {
                   style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
                   className="text-md  text-white bg-gradient-to-r from-[#54169C] to-[#DA159B] px-6 py-1 rounded-2xl"
                 >
-                  Gestalt Language Therapy
+                  Innovative service highlights
                 </div>
               </div>
 
@@ -512,29 +542,60 @@ export default function Gallery() {
                   fontFamily: "HuluStyle",
                   fontWeight: 500,
                 }}
-                className="box text-4xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
+                className="box text-2xl bg-gradient-to-tr from-[#54169C] to-[#DA159B] bg-clip-text text-transparent py-4"
               >
-                Fostering Communication Through Meaningful Language
+                At The Speech Clinic, we blend science, compassion and
+                technology to create truly transformative therapy experiences
               </h2>
 
               {/* Row 3: Description */}
-              <p
+              <div
                 ref={(el) => {
                   if (el) boxesRef.current[6] = el;
                 }}
                 style={{
                   fontFamily: "HuluStyle",
                   fontWeight: 400,
+                  fontSize: "clamp(1.0rem, 1.8vw, 2.2rem)",
                 }}
-                className=" box text-lg text-gray-700   py-2"
+                className="box text-lg text-gray-700 py-1 space-y-2"
               >
-                Our Gestalt Language Therapy focuses on supporting children who
-                learn language in chunks, helping them progress toward
-                meaningful, independent communication.
-              </p>
+                <ul className="space-y-2">
+                  {[
+                    "Speech sync – Our innovative AAC",
+                    "Gestalt language support",
+                    "Sensory smart sessions",
+                    "Interactive metronome",
+                    "Virtual reality",
+                    "Mobile sensory room – SOG POD",
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-[#DA159B] to-[#54169C] flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path d="M5 13l4 4L19 7"></path>
+                        </svg>
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="pt-2 pb-4">
+                  From fast track multidisciplinary assessments to parent
+                  empowerment coaching, every tool we use is designed to help
+                  your child grow, connect and thrive.
+                </p>
+              </div>
 
               {/* Row 4: Button */}
-              <button
+              {/* <button
                 ref={(el) => {
                   if (el) boxesRef.current[7] = el;
                 }}
@@ -542,7 +603,7 @@ export default function Gallery() {
                 className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] mb-10 font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
               >
                 Get Started
-              </button>
+              </button> */}
             </div>
 
             {/* Right Column: Image */}
@@ -650,7 +711,7 @@ export default function Gallery() {
           style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
           className="text-3xl sm:text-3xl md:text-5xl text-gray-600 text-center"
         >
-          Your Voice Matters
+          Research Driven. Innovation Lead. Therapy That Transforms
         </h3>
         <h2
           style={{ fontFamily: "HuluStyle", fontWeight: 500 }}

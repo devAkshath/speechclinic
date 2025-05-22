@@ -1,16 +1,25 @@
 'use client';
 import Link from 'next/link';
-import Image from "next/image";
+// import Image from "next/image";
+import { useState } from 'react'
+
+export default function Srvicesider() {
+    const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const phone = '9567235742'; // Your updated number
+  const text = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+  window.open(whatsappUrl, '_blank');
+};
 
 
-export default function Srvicesider({
-//     showRelatedServices = false,
-//     relatedServicesData = [],
-// }: {
-//     showRelatedServices?: boolean;
-//     relatedServicesData?: RelatedService[];
-}
-) {
     return (
 
         <aside className="space-y-8 order-2 lg:order-1">
@@ -24,7 +33,7 @@ export default function Srvicesider({
 
                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
                     <Link
-                        href="/services/vocabulary-support"
+                        href="/services/speech-language-therapy"
                         className="flex items-center justify-between p-4  hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">Speech and Language Therapy</span>
@@ -35,7 +44,7 @@ export default function Srvicesider({
                         </div>
                     </Link>
                     <Link
-                        href="/services/language-therapy"
+                        href="/services/occupational-therapy"
                         className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">Occupational Therapy</span>
@@ -46,7 +55,7 @@ export default function Srvicesider({
                         </div>
                     </Link>
                     <Link
-                        href="/services/hearing-screenings"
+                        href="/services/physical-therapy"
                         className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">Physical Therapy</span>
@@ -57,7 +66,7 @@ export default function Srvicesider({
                         </div>
                     </Link>
                     <Link
-                        href="/services/Expressive Language"
+                        href="/services/aba-therapy"
                         className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">ABA Therapy</span>
@@ -69,7 +78,7 @@ export default function Srvicesider({
                     </Link>
 
                     <Link
-                        href="/services/therapeutic-listening"
+                        href="/services/school-readiness-program"
                         className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">School Readiness Program</span>
@@ -80,7 +89,7 @@ export default function Srvicesider({
                         </div>
                     </Link>
                     <Link
-                        href="/services/evaluations-speech"
+                        href="/services/neuro-integrative-therapy"
                         className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">Neuro Integrative Therapy</span>
@@ -91,7 +100,7 @@ export default function Srvicesider({
                         </div>
                     </Link>
                     <Link
-                        href="/services/occupational-therapy"
+                        href="/services/feeding-therapy"
                         className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">Feeding Therapy</span>
@@ -102,7 +111,7 @@ export default function Srvicesider({
                         </div>
                     </Link>
                     <Link
-                        href="/services/pediatric-hand-therapy"
+                        href="/services/group-therapy"
                         className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 group text-gray-800 border-b border-gray-100 hover:text-pink-500"
                     >
                         <span className="text-lg font-normal">Group Therapy</span>
@@ -148,7 +157,7 @@ export default function Srvicesider({
             )} */}
             {/* Contact Box */}
             <div className="space-y-4">
-                <Link href="/report"
+                {/* <Link href="/report"
                     className="flex items-center bg-[#54169C]  text-white p-4 rounded-lg  hover:bg-purple-600 transition-colors"
                 >
                     <div className="mr-3">
@@ -157,7 +166,7 @@ export default function Srvicesider({
                         </svg>
                     </div>
                     <span className="font-normal">Company Report 2019</span>
-                </Link>
+                </Link> */}
 
                 <Link href="/brochure"
                     className="flex items-center bg-[#DA159B]    text-white p-4 rounded-lg hover:bg-pink-900 transition-colors"
@@ -171,7 +180,59 @@ export default function Srvicesider({
                 </Link>
 
 
-                <div className="relative bg-[#54169C] rounded-2xl shadow-lg mt-8 overflow-hidden">
+                <div className=" flex items-center justify-center ">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="w-full max-w-md bg-[#54169C]/70 p-8 rounded-lg shadow-lg space-y-4"
+                    >
+                        <h2 className="text-3xl text-white font-meduim text-center mb-4">Fill Form</h2>
+
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                            className="w-full p-3 rounded-md border-none focus:ring-2 focus:ring-pink-400 outline-none bg-white"
+                        />
+
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            className="w-full p-3 rounded-md border-none focus:ring-2 focus:ring-pink-400 outline-none bg-white"
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
+                            required
+                            className="w-full p-3 rounded-md order border-pink-100 focus:ring-2 focus:ring-pink-400 outline-none bg-white"
+                        />
+
+                        <textarea
+                            placeholder="Message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            required
+                            rows={4}
+                            className="w-full p-3 rounded-md border border-pink-100 focus:ring-2 focus:ring-pink-400 outline-none bg-white"
+                        />
+
+                        <button
+                            type="submit"
+                            className="w-full bg-pink-500 hover:bg-pink-600 text-white font-meduim py-3 rounded-md transition duration-200"
+                        >
+                         Send
+                        </button>
+                    </form>
+                </div>
+
+                {/* <div className="relative bg-[#54169C] rounded-2xl shadow-lg mt-8 overflow-hidden">
                     <div className="h-48 relative">
                         <Image
                             src="/blogimage2.jpg"
@@ -192,7 +253,7 @@ export default function Srvicesider({
                             Contact us
                         </Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         </aside>
 

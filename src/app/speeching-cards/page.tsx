@@ -1,5 +1,5 @@
 "use client";
-import styles from "../SpeechingCardPage/zoomParallax.module.css";
+import styles from "../speeching-cards/zoomParallax.module.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Lenis from "@studio-freight/lenis";

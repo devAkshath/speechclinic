@@ -26,18 +26,21 @@ export default function SchoolReadinessProgram() {
             <div className="font-normal">
                 <HeroVideo
                     title="School Readiness Program"
-                    videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+                    videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/SCHOOL%20COMBINED.mp4"
                 />
 
                 {/* Content Section */}
                 <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Sidebar on the left */}
 
-                    <Srvicesider   />
+                    <Srvicesider />
                     {/* Main Content on the right */}
                     <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
+                        <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
+                            School Readiness Program
+                        </h2>
                         <section className="relative overflow-hidden ">
-                            <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">School Readiness Program</h2>
+
                             <div className="container mx-auto px-2">
                                 <div>
                                     <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-6 md:pt-8 md:pb-1 md:px-10
@@ -61,7 +64,7 @@ export default function SchoolReadinessProgram() {
                                     </div>
                                     <div className="relative z-10 my-6">
                                         <div>
-                                            <p className="mb-6">LEVEL UP refers to a structured school readiness initiative at The Speech Clinic Dubai designed to help children develop the essential skills needed for a smooth transition into a learning environment. It focuses on fostering cognitive, social, emotional, and physical growth through individualized support, empowering children to participate, learn, and thrive at their own pace.
+                                            <p className="mb-6">LEVEL UP refers to a structured school readiness program initiative at The Speech Clinic Dubai designed to help children develop the essential skills needed for a smooth transition into a learning environment. It focuses on fostering cognitive, social, emotional, and physical growth through individualized support, empowering children to participate, learn, and thrive at their own pace.
                                             </p>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                                                 <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">

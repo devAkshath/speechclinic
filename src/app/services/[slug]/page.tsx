@@ -63,7 +63,11 @@ export default async function ServicePage({
       <div className="font-normal pt-10">
         <HeroVideo
           title={service?.title}
-          videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+          // videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+          videoUrl={
+            service.herovideo ||
+            "https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+          }
         />
 
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">

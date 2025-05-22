@@ -202,7 +202,7 @@ export default function Navbar() {
                   <Link href="./">Home</Link>
                 </li>
                 <li>
-                  <Link href="/about">About</Link>
+                  <Link href="/about-us">About</Link>
                 </li>
                 <div
                   className="relative inline-block text-left"
@@ -264,7 +264,7 @@ export default function Navbar() {
                         }`}
                       >
                         <Link
-                          href="/SpeechingCardPage"
+                          href="/speeching-cards"
                           className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                         >
                           SpeechCard
@@ -274,10 +274,10 @@ export default function Navbar() {
                   </div>
                 </div>
                 <li>
-                  <Link href="/AllServicesPage">Services</Link>
+                  <Link href="/services">Services</Link>
                 </li>
                 <li>
-                  <Link href="/team">Teams</Link>
+                  <Link href="/teams">Teams</Link>
                 </li>
                 <li>
                   <Link href="/gallery">Gallery</Link>
@@ -286,7 +286,7 @@ export default function Navbar() {
 
               <div className="flex items-center gap-4">
                 <Link
-                  href="/contactus"
+                  href="/contact-us"
                   className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
                 >
                   Contact Us <FaComments />
@@ -348,13 +348,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="text-lg font-medium">
-            <Link href="/about" onClick={handleMobileLinkClick}>
+            <Link href="/about-us" onClick={handleMobileLinkClick}>
               About
             </Link>
           </li>
 
           <li className="text-lg font-medium">
-            <Link href="/AllServicesPage">Services</Link>
+            <Link href="/services">Services</Link>
           </li>
 
           <div
@@ -421,7 +421,7 @@ export default function Navbar() {
                   }`}
                 >
                   <Link
-                    href="/SpeechingCardPage"
+                    href="/speeching-cards"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     onClick={() => {
                       setIsMobileProductOpen(false);
@@ -436,7 +436,7 @@ export default function Navbar() {
           </div>
 
           <li className="text-lg font-medium">
-            <Link href="/team" onClick={handleMobileLinkClick}>
+            <Link href="/teams" onClick={handleMobileLinkClick}>
               Teams
             </Link>
           </li>
@@ -505,7 +505,7 @@ export default function Navbar() {
         </div>
         <div className="mt-6">
           <Link
-            href="/contactus"
+            href="/contact-us"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
             Contact Us
@@ -624,7 +624,7 @@ export default function Navbar() {
         </div>
         <div className="mt-6">
           <Link
-            href="/contactus"
+            href="/contact-us"
             className="bg-gradient-to-r from-[#DA159B] to-[#54169C] text-white px-6 py-3 rounded-full flex items-center gap-1 w-full justify-center"
           >
             Contact Us
@@ -651,10 +651,10 @@ export default function Navbar() {
                 <Link href="./">Home</Link>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <Link href="/about-us">About</Link>
               </li>
               <li>
-                <Link href="/AllServicesPage">Services</Link>
+                <Link href="/services">Services</Link>
               </li>
 
               <div
@@ -716,7 +716,7 @@ export default function Navbar() {
                       }`}
                     >
                       <Link
-                        href="/SpeechingCardPage"
+                        href="/speeching-cards"
                         className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                       >
                         SpeechCard
@@ -727,7 +727,7 @@ export default function Navbar() {
               </div>
 
               <li>
-                <Link href="/team">Teams</Link>
+                <Link href="/teams">Teams</Link>
               </li>
               <li>
                 <Link href="/gallery">Gallery</Link>
@@ -735,7 +735,7 @@ export default function Navbar() {
             </ul>
             <div className="flex items-center gap-4">
               <Link
-                href="/contactus"
+                href="/contact-us"
                 className="bg-gradient-to-r from-[#DA159B] to-[#54169C] shadow-md text-white px-4 py-2 rounded-2xl flex items-center gap-2"
               >
                 Contact Us <FaComments />

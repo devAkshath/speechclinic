@@ -17,7 +17,7 @@ export default function PhysicalTherapy() {
       <div className="text-gray-700">
         <HeroVideo
           title="ABA Therapy"
-          videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/DEPT%20OF%20ABA.mp4"
         />
 
         {/* Content Section */}
@@ -27,8 +27,11 @@ export default function PhysicalTherapy() {
           <Srvicesider  />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
+              <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
+                           ABA Therapy
+                        </h2>
             <section className="relative overflow-hidden ">
-              <h2 className="text-5xl  leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500 font-normal ">ABA Therapy</h2>
+             
               <div className="container mx-auto px-2">
                 <div>
                   <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-6 md:pt-8 md:pb-1 md:px-10

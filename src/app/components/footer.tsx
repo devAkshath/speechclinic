@@ -56,13 +56,16 @@ const Footer = () => {
                 <h3 className="text-xl font-meduim mb-8 ">Company</h3>
                 <ul className="space-y-4">
                   <li>
-                    <a href="/about" className="hover:text-gray-400 font-normal">
+                    <a
+                      href="/about-us"
+                      className="hover:text-gray-400 font-normal"
+                    >
                       About Us
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/contactus"
+                      href="/contact-us"
                       className="hover:text-gray-400 font-normal"
                     >
                       Contact Us
@@ -70,7 +73,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/termscondition"
+                      href="/terms-and-conditions"
                       className="hover:text-gray-400 font-normal"
                     >
                       Terms Of Service
@@ -78,7 +81,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/privacypolicy"
+                      href="/privacy-policy"
                       className="hover:text-gray-400 font-normal"
                     >
                       Privacy Policy
@@ -90,33 +93,67 @@ const Footer = () => {
                 <h3 className="text-xl font-meduim mb-8">Services</h3>
                 <ul className="space-y-4">
                   <li>
-                    <a href="#" className="hover:text-gray-400 font-normal">
-                      Speech Therapist
+                    <a
+                      href="services/occupational-therapy"
+                      className="hover:text-gray-400 font-normal"
+                    >
+                      Occupational Therapy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-gray-400 font-normal">
-                      Occupational Therapist
+                    <a
+                      href="services/speech-language-therapy"
+                      className="hover:text-gray-400 font-normal"
+                    >
+                      Speech & Language Therapy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-gray-400 font-normal">
-                      Physio Therapist
+                    <a
+                      href="services/physical-therapy"
+                      className="hover:text-gray-400 font-normal"
+                    >
+                      Physical Therapy
                     </a>
                   </li>
                   <li>
-                    <a href="" className="hover:text-gray-400 font-normal">
-                      ABA Therapist
+                    <a
+                      href="services/aba-therapy"
+                      className="hover:text-gray-400 font-normal"
+                    >
+                      ABA Therapy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-gray-400 font-normal">
+                    <a
+                      href="services/school-readiness-program"
+                      className="hover:text-gray-400 font-normal"
+                    >
                       School Readiness Program
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-gray-400 font-normal">
+                    <a
+                      href="services/feeding-therapy"
+                      className="hover:text-gray-400 font-normal"
+                    >
                       Feeding Therapy
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="services/group-therapy"
+                      className="hover:text-gray-400 font-normal"
+                    >
+                      Group Therapy
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="services/neuro-integrative-therapy"
+                      className="hover:text-gray-400 font-normal"
+                    >
+                      Neuro Integrative Therapy
                     </a>
                   </li>
                 </ul>
@@ -126,7 +163,7 @@ const Footer = () => {
             {/* Column 4: Contact Info */}
             <div className="space-y-4">
               <h3 className="text-xl font-meduim mb-8">Get In Touch</h3>
-              <p>Dubai Healthcare City, Building 47, Unit 301 & 302</p>
+              <p>Dubai Healthcare City, Building 47 <br/> Unit  301, 302, 303 & 304</p>
               <p>+971-508857146</p>
               <p>info@thespeechclinic.ae</p>
 

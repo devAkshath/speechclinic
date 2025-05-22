@@ -1,15 +1,43 @@
 import NavBarSecond from '../components/NavBar/NavBarSecond';
 import Image from 'next/image';
 import Link from 'next/link';
-import BubbleText from './BubbleText';
+import BubbleText from '../AllServicesPage/BubbleText';
 
 const services = [
+    {
+    title: 'Occupational Therapy',
+    description: 'Our Occupational Therapy department specializes in advanced...',
+    image: '/occupational-therapy.svg',
+    color: 'text-pink-500',
+    link:"/services/occupational-therapy" ,
+  },
+    {
+    title: 'Speech & Language Therapy',
+    description: 'Our Speech Therapy department incorporates the latest advanc...',
+    image: '/speech-and-language-therapy.svg',
+    color: 'text-purple-500',
+    link:"/services/speech-language-therapy" ,
+  },
+    {
+    title: 'Physical Therapy',
+    description: 'Pediatric physiotherapy is dedicated to enhance the physical...',
+    image: '/physical-therapy.svg',
+    color: 'text-purple-500',
+    link: "/services/physical-therapy",
+  },
   {
     title: 'ABA Therapy',
     description: 'At our ABA Therapy department, we prioritize a child-friendl...',
     image: '/aba-therapy.svg',
     color: 'text-pink-500',
     link: '/services/aba-therapy',
+  },
+   {
+    title: 'School Readiness Program',
+    description: 'Our School Readiness Program is designed to prepare young ch...',
+    image: '/school-readiness-program.svg',
+    color: 'text-pink-500',
+    link: "/services/school-readiness-program",
   },
   {
     title: 'Feeding Therapy',
@@ -32,34 +60,10 @@ const services = [
     color: 'text-purple-500',
     link: '/services/neuro-integrative-therapy',
   },
-  {
-    title: 'Occupational Therapy',
-    description: 'Our Occupational Therapy department specializes in advanced...',
-    image: '/occupational-therapy.svg',
-    color: 'text-pink-500',
-    link:"/services/OccupationalTherapy" ,
-  },
-  {
-    title: 'Physical Therapy',
-    description: 'Pediatric physiotherapy is dedicated to enhance the physical...',
-    image: '/physical-therapy.svg',
-    color: 'text-purple-500',
-    link: "/services/physical-therapy",
-  },
-  {
-    title: 'School Readiness Therapy',
-    description: 'Our School Readiness Program is designed to prepare young ch...',
-    image: '/school-readiness-program.svg',
-    color: 'text-pink-500',
-    link: "/services/school-readiness-program",
-  },
-  {
-    title: 'Speech & Language Therapy',
-    description: 'Our Speech Therapy department incorporates the latest advanc...',
-    image: '/speech-and-language-therapy.svg',
-    color: 'text-purple-500',
-    link:"/services/speech-language-therapy" ,
-  },
+
+
+ 
+
 ];
 
 export default function AllServicesPage() {

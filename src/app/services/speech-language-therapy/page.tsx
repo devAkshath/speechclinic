@@ -98,7 +98,7 @@ export default function SchoolReadinessProgram() {
       <div className="font-normal">
         <HeroVideo
           title="Speech And Language Therapy"
-          videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/DEPT%20OF%20SPEECH.mp4"
         />
 
         {/* Content Section */}
@@ -107,16 +107,16 @@ export default function SchoolReadinessProgram() {
           <Srvicesider />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
+                 <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
+                            Speech And Language Therapy
+                        </h2>
             <section className="relative overflow-hidden ">
-              <h2 className="text-5xl font-normal leading-tight mb-6 text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500  ">
-                Speech And Language Therapy
-              </h2>
               <div className="container mx-auto px-2">
                 <p className="my-4">
-                  Welcome to the Speech and Language Department At The{" "}
+                  Welcome to the Speech and Language Department At{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
                     {" "}
-                    Speech Clinic
+                     The Speech Clinic
                   </span>
                   , Dubai
                 </p>

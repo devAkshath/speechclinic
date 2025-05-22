@@ -116,7 +116,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover w-full h-full rounded-4xl"
+              className="w-full h-48 sm:h-64 md:h-80 lg:h-[400px] object-cover rounded-2xl"
               priority={index === 0}
             />
             {showCaptions && image.caption && (
