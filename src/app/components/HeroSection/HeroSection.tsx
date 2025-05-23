@@ -3,7 +3,6 @@
 import { useMediaQuery } from "react-responsive";
 import HeroSvg from "../herocurve/wave";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import HeroRecMobile from "./HeroRecMobile";
 
 export default function Hero() {
@@ -109,26 +108,25 @@ export default function Hero() {
               </div>
 
               {/* Right content - Image */}
-              <div className="w-full flex justify-center items-center">
-                <div className="relative w-[clamp(280px,37vw,900px)]">
-                  <Image
-                    width={800}
-                    height={500}
-                    src="/galleryimage.jpg"
-                    alt="Therapy Session"
-                    className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 bg-white/90 p-[clamp(4px,0.8vw,6px)] rounded-full shadow-lg backdrop-blur-3xl">
-                    <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
-                      <div
-                        className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
-                     border-l-[clamp(12px,1.8vw,23px)] border-l-white 
-                     border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="w-full flex justify-center items-center">
+  <div className="relative w-[clamp(280px,37vw,900px)]">
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="rounded-[2rem] w-full aspect-[6/4] object-cover"
+    >
+      <source
+        src="https://speechclinic.b-cdn.net/website/videos/speechsync-hero-video.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+ 
+  </div>
+</div>
+
             </div>
           </div>
         </div>
