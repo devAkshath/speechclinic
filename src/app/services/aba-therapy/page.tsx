@@ -3,8 +3,35 @@ import Image from "next/image";
 import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
+import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
 
+const getCarouselImages = () => [
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/aba/aba-01.jpg",
+    alt: "adl",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/aba/aba-02.jpg",
+    alt: "Brain gym",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/aba/aba-03.jpg",
+    alt: "City skyline",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/aba/sce-01.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/aba/sce-02.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/aba/sce-03.jpg",
+    alt: "Forest trail",
+  },
+];
 
 
 export default function PhysicalTherapy() {
@@ -59,47 +86,13 @@ export default function PhysicalTherapy() {
 
 
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                        <div className="group relative overflow-hidden rounded-[2.5rem] shadow-lg transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#DA159B]/20 to-[#54169C]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                          <Image
-                            src="/speech-therapy-02.jpg"
-                            alt="Physical Therapy Session 1"
-                            width={500}
-                            height={300}
-                            className="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
-                            <div className="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                              <h3 className="text-2xl font-medium text-white mb-2">ABA Therapy Session</h3>
-                              <p className="text-white/90 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                Engaging therapeutic activities designed to support children&apos;s development through structured play and learning
-                              </p>
-                            </div>
-                          </div>
-                        </div>
+                     <ImageCarousel
+                      images={getCarouselImages()}
+                      height="h-[400px]"
+                      autoplaySpeed={4000}
+                    />
 
-                        <div className="group relative overflow-hidden rounded-[2.5rem] shadow-lg transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#54169C]/20 to-[#DA159B]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                          <Image
-                            src="/speech-therapy-01.jpg"
-                            alt="Physical Therapy Session 2"
-                            width={500}
-                            height={300}
-                            className="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
-                            <div className="transform transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                              <h3 className="text-2xl font-medium text-white mb-2">Interactive Learning</h3>
-                              <p className="text-white/90 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                Customized therapy approaches that adapt to each child&apos;s unique needs and learning style
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] p-8 mb-12
+                      <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] p-8 mb-12 mt-12
                         shadow-[20px_20px_40px_rgba(218,21,155,0.1)]
                         before:absolute before:inset-0 before:rounded-[2.5rem] before:-z-10
                         before:border-[3px] before:border-[#54169C]/30

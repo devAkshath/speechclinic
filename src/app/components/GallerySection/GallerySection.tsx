@@ -717,16 +717,9 @@ export default function Gallery() {
           style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
           className="text-2xl sm:text-3xl md:text-6xl font-bold bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text pb-3 text-transparent text-center"
         >
-          Let&apos;s Strengthen It Together!
+         Elevating therapy with precision, passion and possibility
         </h2>
-        <p
-          style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className="text-xl text-gray-600 max-w-xl mx-auto text-center pt-3"
-        >
-          Every voice deserves to be heard. Whether for therapy, guidance, or
-          support, our specialists are here to help. Start the journey to
-          confident communication today!
-        </p>
+     
         <div className="flex flex-col sm:flex-row justify-center items-center gap-2 pt-6">
           <Image
             src="/verified.png"

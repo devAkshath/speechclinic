@@ -90,7 +90,7 @@ export default function ServiceSection() {
     {
       src: "/group-therapy.svg",
       title: "Group Therapy",
-      href: "/services/GroupTherapy",
+      href: "/services/group-therapy",
     },
     {
       src: "/neuro-integrative-therapy.svg",

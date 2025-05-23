@@ -95,10 +95,10 @@ const Expertise = () => {
               if (el) boxesRef.current[1] = el;
             }}
             style={{ fontFamily: "HuluStyle", fontWeight: 500 }}
-            className="box text-3xl font-semibold text-gray-700 leading-snug"
+            className="box text-3xl font-semibold bg-gradient-to-r from-[#54169C] to-[#DA159B] bg-clip-text pt-3 text-transparent leading-snug"
           >
             Expertise that evolves
-            <br />
+          
             with your child
           </h2>
 

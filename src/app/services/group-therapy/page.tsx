@@ -30,19 +30,15 @@ export default function grouptherapy() {
       <header className="absolute top-0 w-full">
         <NavBarSecond />
       </header>
-
       <div className="text-gray-700">
         <HeroVideo
-          title="Group Therapy"
+          title="Group Therapy service"
           videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/ALL%20DEPARTMENTS%20COMBINED.mp4"
         />
-
         {/* Content Section */}
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Sidebar on the left */}
-
           <Srvicesider
-
           />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
@@ -69,20 +65,20 @@ export default function grouptherapy() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
                 {" "}
                 The Speech Clinic
-              </span> Speech Clinic Dubai, our Group Therapy Services are designed to support the development of communication skills in a collaborative and socially enriching environment. Group sessions provide clients with the opportunity to practice language, social interaction, and pragmatic communication in real-time with peers, under the guidance of licensed speech-language pathologists.
+              </span>  our Group Therapy Services are designed to support the development of communication skills in a collaborative and socially enriching environment. Group sessions provide clients with the opportunity to practice language, social interaction, and pragmatic communication in real-time with peers, under the guidance of licensed speech-language pathologists.
             </p>
 
             <div className=" rounded-4xl ">
-                {/* Heading and Description */}
+              {/* Heading and Description */}
 
-                {/* Images */}
-                <div >
-                  <ImageCarousel
-                    images={getCarouselImages()}
-                    height="h-[500px]"
-                    autoplaySpeed={4000}
-                  />
-                </div>
+              {/* Images */}
+              <div >
+                <ImageCarousel
+                  images={getCarouselImages()}
+                  height="h-[500px]"
+                  autoplaySpeed={4000}
+                />
+              </div>
             </div>
 
             <p>
@@ -138,8 +134,7 @@ export default function grouptherapy() {
 
             </div>
             <p className="-mt-6" >Each Language Booster Club is formed based on age, language level, and specific developmental needs to ensure maximum benefit for all participants.
-</p>
-           
+            </p>
           </div>
         </div>
       </div>

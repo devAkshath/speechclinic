@@ -4,6 +4,53 @@ import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
 import InlineVideo from "../../components/Services/InlineVideoSection";
 import Link from "next/link";
+import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
+
+
+const getCarouselImages = () => [
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/balance-training/SCE-106.jpg",
+    alt: "adl",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/balance-training/SCE-109.jpg",
+    alt: "Brain gym",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/core-strengthening-exercises/OT%207.jpg",
+    alt: "City skyline",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/core-strengthening-exercises/foam%20roller%20exercises.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/functional-electrical-stimulation/Electrical%20stimulation.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/functional-electrical-stimulation/SCE-93.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/gait-functional-training/SCE-96.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/plyometric-resistance-band-exercise/resistance%20band%20strengthening%20exercises.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/stretching/PHYSIO%202.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/treadmill-training-gait-correction/SCE-159.jpg",
+    alt: "Forest trail",
+  },
+
+];
+
 const relatedData = [
   {
       icon: '/physical-therapy.svg',
@@ -53,6 +100,25 @@ const relatedData = [
 
 ];
 
+const otherService = [
+  {
+      icon: '/physical-therapy.svg',
+      title: 'Functional Electrical Stimulation',
+      link: '/services/functional-electrical-stimulation',
+  },
+  {
+      icon: '/physical-therapy.svg',
+      title: 'gait-and-functional-training',
+      link: '/services/Gait and Functional Training',
+  },
+  {
+      icon: '/physical-therapy.svg',
+      title: 'Orthotic and Equipment Prescription ',
+      link: '/services/orthotic-and-equipment-prescription',
+  },
+  
+];
+
 
 
 export default function PhysicalTherapy() {
@@ -64,7 +130,7 @@ export default function PhysicalTherapy() {
 
       <div className="text-gray-700">
         <HeroVideo
-          title="Physical Therapy"
+          title="Physio Therapy "
           videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/department%20of%20physio%20therapy.mp4"
         />
 
@@ -76,7 +142,7 @@ export default function PhysicalTherapy() {
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
              <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
-                       Physical Therapy
+                       Physio Therapy 
                         </h2>
             <section className="relative overflow-hidden ">
 
@@ -97,35 +163,20 @@ export default function PhysicalTherapy() {
                                   hover:after:-translate-x-2 hover:after:-translate-y-2">
                     <InlineVideo
                       thumbnailSrc="/galleryimage.jpg"
-                      caption="Watch Our Physical TherapyServices"
+                      caption="Watch Our Physio Therapy Services"
                       videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
                     />
                   </div>
                   <div className="relative z-10 my-6">
                     <div>
                       <p className="mb-6">Pediatric physiotherapy at The Speech Clinic Dubai, is a specialized branch of physical therapy dedicated to promoting the optimal physical development and functional independence of infants, children, and adolescents.</p>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                          <Image
-                            src="/speech-therapy-02.jpg"
-                            alt="Physical Therapy Session 1"
-                            width={500}
-                            height={300}
-                            className="w-full h-[300px] object-cover"
-                          />
-                        </div>
-                        <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                          <Image
-                            src="/speech-therapy-01.jpg"
-                            alt="Physical Therapy Session 2"
-                            width={500}
-                            height={300}
-                            className="w-full h-[300px] object-cover"
-                          />
-                        </div>
-                      </div>
+                   <ImageCarousel
+                        images={getCarouselImages()}
+                        height="h-[400px]"
+                        autoplaySpeed={4000}
+                      />
 
-                      <div className="space-y-6">
+                      <div className="space-y-6 mt-12">
                         <div className="bg-gradient-to-r from-[#54169C]/10 via-white to-[#DA159B]/10 p-6 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 flex items-center gap-4">
                           <div className="flex items-center gap-4">
                             <span className="text-[#54169C] text-3xl animate-pulse">✦</span>
@@ -148,7 +199,7 @@ export default function PhysicalTherapy() {
                         {" "}Speech Clinic Dubai</span> , The Pediatric Physical Therapy department utilizes a variety of therapy techniques.</p>
                   </div>
                   {/* 2 */}
-                  <div>
+                  {/* <div>
                     <h1 className="text-3xl font-normal leading-tight mb-6 text-gray-800 ">Functional Electrical Stimulation:</h1>
                     <div className="space-y-6">
                       <div className="bg-gradient-to-r from-[#54169C]/10 via-white to-[#DA159B]/10 p-6 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 flex items-center gap-4">
@@ -167,9 +218,9 @@ export default function PhysicalTherapy() {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   {/* 3 */}
-                  <div className="my-6">
+                  {/* <div className="my-6">
                     <h1 className="text-3xl font-normal  leading-tight mb-6 text-gray-800 ">Gait and Functional Training:</h1>
                     <div className="space-y-6">
                       <div className="bg-gradient-to-r from-[#54169C]/10 via-white to-[#DA159B]/10 p-6 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 flex items-center gap-4">
@@ -195,9 +246,9 @@ export default function PhysicalTherapy() {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   {/* 4 */}
-                  <div className="my-6">
+                  {/* <div className="my-6">
                     <h1 className="text-3xl font-normal leading-tight mb-6 text-gray-800 ">Orthotic and Equipment Prescription:</h1>
                     <div className="space-y-6">
                       <div className="bg-gradient-to-r from-[#54169C]/10 via-white to-[#DA159B]/10 p-6 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 flex items-center gap-4">
@@ -209,7 +260,7 @@ export default function PhysicalTherapy() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <p>At The{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
@@ -262,8 +313,34 @@ export default function PhysicalTherapy() {
                     </Link>
                   ))}
                 </div>
+                 <div className="max-w-7xl mx-auto">
+           
+                <h2 className="text-4xl font-normal text-center text-[#54169C] mb-12 mt-6">Other Services</h2>
+
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {otherService.map((item, index) => (
+                    <Link key={index} href={item.link}>
+                      <div className="relative group bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center h-full hover:-translate-y-1">
+                        {/* Gradient Ring Effect */}
+                        <div className="w-20 h-20 mb-4 rounded-full bg-gradient-to-br from-[#C084FC]/9 to-[#A78BFA]/60 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          <Image src={item.icon} alt={item.title} width={40} height={40} />
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-base font-normal text-gray-800 leading-tight group-hover:text-[#6D28D9] transition duration-300">
+                          {item.title}
+                        </h3>
+
+                        {/* Bottom Glow Accent */}
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-1 rounded-full bg-gradient-to-r from-[#E879F9] to-[#A78BFA] opacity-0 group-hover:opacity-100 transition duration-300"></span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
               </div>
             </section>
+         
           </div>
         </div>
       </div>

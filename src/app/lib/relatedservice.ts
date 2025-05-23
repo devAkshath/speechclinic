@@ -32,7 +32,7 @@ const services: Service[] = [
       "The K-SLP methods shape a child's best approximation of words toward full adult forms. It follows motor learning principles to improve speech movement patterns. The goal is to make speech more natural, intelligible, and effective for everyday interactions.",
     heroimage: "/galleryimage3.jpg",
     galleryimages: [
-      "/galleryimage3.jpg",
+      "/galxleryimage3.jpg",
       "/galleryimage2.jpeg",
       "/galleryimage1.jpeg",
     ],
@@ -43,22 +43,7 @@ const services: Service[] = [
         content:
           "At The Speech Clinic, the Kaufman Speech to Language Protocol (K-SLP) is used to support children with childhood apraxia of speech (CAS), speech sound disorders, and expressive language delays. Our therapists focus on shaping speech-motor skills by working with the child's existing consonants, vowels, and syllable structures, gradually guiding them toward clearer, more coordinated speech. Using structured cueing techniques, repetition, and reinforcement, we help children build a strong speech foundation. This approach not only improves speech clarity but also enhances functional communication and social interactions. At The Speech Clinic, K-SLP is tailored to each child's unique abilities, ensuring steady progress toward confident, effective verbal communication.",
       },
-      {
-        type: "text",
-        caption: "More than words",
-        content:
-          "More than is the program of Hanen Center which facilitates communication in children with autism spectrum disorder. This program incorporates child's sensory preferences in the play making the action more interactive and fun. Rock and Owl are the two techniques of this program u00a0 which we follow in the speech clinic.",
-      },
-      {
-        type: "text",
-        content:
-          "More than Words provides evidence-based strategies to develop communication intent, interaction, and joint attention in children with social communication delays. It also promotes turn-taking and back-and-forth interaction in children. We find both the rock and owl techniques are the best techniques for young children with delays in beginning interaction moreover help clinicians to pair with children easily.",
-      },
-      {
-        type: "text",
-        content:
-          "Rock techniques; ROCK is an acronym used to promote turn-taking and engagement in interactions, this strategy creates multiple opportunities to hear and learn, and uses cues and prompts to encourage interactions since the play incorporates the child's sensory preference which Ensures the interaction remains enjoyable and motivating).OWL Technique is a strategy used in child-centered communication, particularly in speech and language therapy, to promote engagement and interaction like Rock. It involves watching the child closely to understand their interests, actions, and communication attempt a nd and Paying attention to gestures, facial expressions, and vocalization. It focuses on listening to what the child trying to communicate verbally or nonverbally thus encouraging the child to independently communicate.",
-      },
+  
     ],
   },
   {
@@ -75,7 +60,7 @@ const services: Service[] = [
       {
         type: "text",
         content:
-          " At THE SPEECH CLINIC, we use Oral Placement Therapy (OPT) to enhance speech and feeding skills through a structured hierarchy of tools and movement-based prompts. Unlike traditional speech therapy, OPT provides targeted sensory input to improve speech clarity, sentence length, and oral coordination. It is beneficial for individuals of all ages, especially those with muscle awareness, coordination, or sensitivity challenges. OPT helps with conditions such as apraxia, dysarthria, feeding difficulties, and expressive language delays. By integrating OPT, we build essential motor skills for confident and effective communication.",
+          " At The Speech Clinic, we use Oral Placement Therapy (OPT) to enhance speech and feeding skills through a structured hierarchy of tools and movement-based prompts. Unlike traditional speech therapy, OPT provides targeted sensory input to improve speech clarity, sentence length, and oral coordination. It is beneficial for individuals of all ages, especially those with muscle awareness, coordination, or sensitivity challenges. OPT helps with conditions such as apraxia, dysarthria, feeding difficulties, and expressive language delays. By integrating OPT, we build essential motor skills for confident and effective communication.",
       },
     ],
   },
@@ -765,6 +750,559 @@ const services: Service[] = [
       },
     ],
   },
+  {
+    slug: "sensory-integration",
+    title: "Sensory Integration",
+    description:
+      "Sensory integration is a neurological process that organizes and interprets sensory information from the environment. This involves processing input from various senses, including sight ( visual), sound ( auditory) , touch ( tactile) , taste ( gustatory), and smell ( olfactory), as well as proprioceptive (body position) , vestibular (balance and movement) senses and interoception ( feeling of knowing what is happening in our body).",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content: "At The Speech Clinic, our therapists are experts and certified in Sensory Integration from the University Of Southern California ( USC) and Collaborative For Leadership In Ayres Sensory Integration (CLASI). Difficulties in sensory integration can lead to challenges in everyday activities, often seen in individuals with conditions like autism spectrum disorder (ASD), attention deficit hyperactivity disorder (ADHD), and sensory processing disorder (SPD). At The Speech Clinic, we use personalized therapeutic approaches to focus on improving sensory processing skills and help the children process and respond to sensory information more effectively, improving their ability to engage with the world. By using targeted sensory activities, therapists support children in developing skills like focus, coordination, and emotional regulation, making everyday tasks more manageable. We have a well-equipped sensory room and a moveable sensory pod called Sensory On the Go ( SOG) to create a calming space for our kids to self-regulate. themselves",
+      },
+      {
+        type: "text",
+        caption:
+          "Red Flags of SPD:"
+      },
+      {
+        type: "text",
+        content:
+          "Recognizing red flags for Sensory Processing Disorder (SPD) is essential for early intervention and support.",
+      },
+
+      {
+        type: "text",
+        caption:
+          "Infants and Toddlers:"
+      },
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Grooming Difficulties: Resistance to activities like bathing, haircuts, or nail trimming.",
+          "Eating Challenges: Refusal to eat certain food textures, flavors, or temperatures.",
+          "Mess Aversion: Distress over getting hands or face dirty during meals or play.",
+          "Clothing Sensitivity: Avoidance of specific fabrics or clothing styles due to discomfort.",
+          "Social Withdrawal: Reluctance to engage with others, including family members."
+        ],
+
+      },
+      {
+        type: "text",
+        caption:
+          "Preschoolers:"
+      },
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Sensory Sensitivities: Overreaction to touch, noise, smells, or crowds.",
+          "Motor Skill Challenges: Clumsiness, poor coordination, or difficulty with tasks like running or jumping.",
+          "Social Difficulties: Trouble making friends or engaging in group activities.",
+          "Routine Disruptions: Difficulty transitioning between activities or adapting to changes."
+        ],
+      },
+      {
+        type: "text",
+        caption:
+          "School-Aged Children:"
+      },
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Academic Challenges: Struggles with handwriting, sitting still, or completing assignments.",
+          "Behavioral Issues: Impulsivity, distractibility, or excessive movement in classroom settings.",
+          "Peer Relationships: Difficulty understanding social cues or maintaining friendships."
+        ],
+
+      },
+      {
+        type: "text",
+        caption:
+          "Adolescents and Adults:"
+      },
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Emotional Regulation: Low self-esteem, fear of failure, or avoidance of new tasks.",
+          "Physical Coordination: Clumsiness, slow movements, or challenges with motor tasks.",
+          "Sensory Sensitivities: Overreaction to touch, noise, smells, or crowded environments."
+        ],
+
+      },
+    ],
+  },
+
+  {
+    slug: "Gross-motor-skills",
+    title: "Gross motor skills",
+    description:
+      "",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "Gross motor skills are abilities that involve large muscle groups to perform tasks requiring coordination, balance, and strength. These skills are fundamental for physical activities and play a vital role in daily life.",
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Helps in crawling, walking, running, jumping, climbing, and maintaining balance.",
+          "Helps them build independence, gain confidence, and participate in physical activities like sports and play.",
+          "Strengthening these skills also supports better posture, coordination, and overall physical health, allowing children to interact with the world around them more effectively.",
+        ],
+      },
+      {
+        type: "text",
+        caption:
+          "Examples of Gross Motor Skills:"
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Locomotion Skills: Walking, running, skipping, jumping, climbing, crawling.",
+          "Postural Control: Balancing, sitting up, standing, riding a bicycle.",
+          "Manipulative Skills: Throwing, catching, kicking, swinging a bat, swimming.",
+          "Stability and Coordination: Walking on uneven surfaces, jumping rope, somersaults, dancing."
+        ],
+      },
+
+
+    ],
+  },
+
+  {
+    slug: "fine-motor-skills",
+    title: "Fine motor skills",
+    description:
+      "Fine motor skills are the abilities required to use the small muscles in the hands, fingers, and wrists to perform precise and coordinated tasks. These skills involve hand-eye coordination and are essential for daily activities, particularly those requiring detailed movements.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content: "These skills help children do things like picking up small objects, drawing, writing, feeding themselves, and getting dressed. Developing strong fine motor skills is essential for a child's independence and confidence in everyday activities, as well as for tasks they will need for school.",
+      },
+      {
+        type: "text",
+        caption:
+          "Examples:"
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Grasping objects",
+          "Using utensils (e.g., eating with a fork and spoon)",
+          "Building with small blocks or Legos",
+          "Puzzles or stacking objects",
+          "Using a keyboard or a touchscreen device",
+          "Tying shoelaces",
+          "Buttoning clothes",
+          "Zipping zippers",
+          "Holding a pencil or crayon",
+          "Writing letters or numbers",
+          "Cutting with scissors"
+        ],
+
+      },
+    ],
+  },
+
+
+  {
+    slug: "interactive-metronome",
+    title: "Interactive Metronome (IM)",
+    description:
+      "The Interactive Metronome is a specialized tool used primarily in therapeutic and performance contexts to help individuals improve their timing, coordination, and cognitive functioning. It is an auditory and visual metronome system designed to help people with various developmental, cognitive, and motor skill issues. The system provides real-time feedback to users as they synchronize their movements or actions with a rhythm or beat.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "At The Speech Clinic, our therapists are certified and qualified in IM."
+      },
+      {
+        type: "text",
+        caption:
+          "Key Features of IM:"
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Timing & Rhythm Training: Train individuals to improve their response times, rhythm, and ability to follow beats. It involves tasks where a person taps, claps, or performs other movements in sync with a rhythmic sound.",
+          "Real-Time Feedback: The system gives instant auditory and visual feedback based on how accurately the user is able to follow the rhythm. The goal is to hit the target timing as closely as possible.",
+          "Cognitive & Motor Improvement: It is used in a wide range of contexts, including rehabilitation for brain injuries, ADHD treatment, motor coordination improvement, and more.",
+          "Customization: The settings in the software can be adjusted based on the needs of the user, making it adaptable to different skill levels and rehabilitation needs.",
+          "Performance Tracking: It tracks progress over time, which can be helpful for both therapists and individuals to see improvements in performance and timing skills."
+        ],
+      },
+      {
+        type: "text",
+        content:
+          "The goal of Interactive Metronome therapy is to improve attention, memory, motor coordination, and processing speed, helping individuals gain better control over their movements, improve focus, and enhance overall cognitive performance."
+      },
+    ],
+  },
+
+  {
+    slug: "virtual-reality",
+    title: "Virtual Reality",
+    description:
+      "Virtual reality (VR) refers to a computer-generated simulation or environment that replicates real-world or imagined settings, allowing users to interact with and experience them in an immersive way. VR typically uses specialized equipment like headsets, gloves, or motion controllers to create a sense of presence and enable interaction with the virtual environment.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "By creating controlled, interactive environments, VR helps children practice skills like social interaction, motor coordination, and sensory integration. The use of VR in therapy promotes neuroplasticity, motivating children to complete tasks while improving both cognitive and physical development. This innovative approach provides a safe and effective way to enhance children‘s therapeutic experiences."
+      },
+      {
+        type: "text",
+        caption:
+          "Benefits of Virtual Reality:"
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Immersive Learning: VR engages multiple senses, enhancing learning and memory retention by providing an interactive and immersive experience.",
+          "Safe Exploration: It allows for the simulation of dangerous or inaccessible environments, such as hazardous workspaces or historical settings, without the risks associated with physical exploration.",
+          "Increased Engagement: VR tends to captivate users, improving focus and engagement, which is particularly useful in education and training settings.",
+          "Enhanced Empathy: VR can simulate the perspectives of others, such as in experiences that simulate disabilities or different cultural contexts. This can promote empathy and understanding."
+        ],
+
+      },
+
+    ],
+  },
+
+
+  {
+    slug: "movement-based-learning",
+    title: "Movement based learning ( Brain Gym)",
+    description:
+      "Movement-Based Learning and Brain Gym are approaches that integrate physical movement into the learning process to enhance brain function, improve focus, and boost cognitive development. These techniques are often used in educational settings, therapy, and developmental support, particularly for children, but they can benefit people of all ages.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "At The Speech Clinic, our OT's are certified in brain gym and mastering the children to achieve higher cognitive skills",
+      },
+      {
+        type: "text",
+        caption:
+          "Benefits of Movement-Based Learning and Brain Gym:"
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Improved Focus: Movement helps learners stay engaged and focused, especially in classrooms or settings where attention spans may be short.",
+          "Enhanced Cognitive Function: Regular movement stimulates blood flow to the brain, which supports better cognitive functioning, including memory, problem-solving, and creative thinking.",
+          "Stress Reduction: Physical activity can help release stress and anxiety, creating a more relaxed and conducive environment for learning.",
+          "Physical Coordination: Helps improve motor skills and coordination, especially in children who may have difficulties with these areas.",
+          "Emotional Regulation: Movement exercises can help regulate emotions and reduce feelings of frustration or nervousness, which can negatively affect learning.",
+          "Children with ADHD or Learning Disabilities: Movement-based techniques help channel energy positively, improve focus, and reduce restlessness."
+        ],
+
+
+      },
+
+    ],
+  },
+
+  {
+    slug: "play-therapy",
+    title: "Play Therapy",
+    description:
+      "",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          'Play is a spontaneous, enjoyable, and intrinsically motivating activity that allows individuals, particularly children, to explore, create, and develop skills. It can be solitary or social, structured or unstructured, and is essential for cognitive, social, emotional, and physical development. Through play, children experiment with their environment, test boundaries, and engage in imaginative activities that support learning and growth.'
+      },
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Supports Holistic Development: Play contributes to physical, cognitive, social, and emotional growth.",
+          "Builds Resilience: Play, especially games involving challenges or rules, helps children learn how to handle failure and overcome obstacles.",
+          "Strengthens Family Bonds: Engaging in play with family members fosters communication and emotional connection."
+        ],
+
+
+
+      },
+
+    ],
+  },
+
+  {
+    slug: "visual-motor-integration",
+    title: "Visual Motor Integration",
+    description:
+      "Visual-motor integration (VMI) refers to the ability to coordinate visual input (what we see) with motor output (how we physically respond). This skill is crucial for activities that require hand-eye coordination, such as writing, drawing, catching a ball, or typing.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "It's crucial for everyday activities and plays a key role in early childhood development, affecting learning and academic performance. Challenges with VMI can lead to difficulties in school and daily life. At The Speech Clinic ,our therapists use different approaches to strengthen visual-motor coordination, hand-eye coordination, cognitive abilities, and overall functioning."
+      },
+      {
+        type: "text",
+        caption:
+          "It plays a significant role in:"
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "School skills: Writing, copying, and drawing.",
+          "Sports: Catching, hitting, and kicking a ball.",
+          "Daily activities: Things like cooking, cleaning, grooming,buttoning, putting shoe laces.",
+        ],
+
+
+      },
+
+    ],
+  },
+
+
+  {
+    slug: "hand-writing",
+    title: "Hand writing",
+    description:
+      "Handwriting is a fundamental skill that plays a key role in communication, academic achievement, personal expression and cognitive development. It involves the coordinated use of fine motor skills, hand-eye coordination, and cognitive processes.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "At The Speech Clinic, our therapists use the approaches like 'Handwriting without tears', multi-sensory techniques, modeling and demonstration, use different writing tools to master the handwriting skills."
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Developmental Factors: The factors contributing to the development of handwriting skills include fine motor skills, hand-eye coordination, cognitive factors, practice and exposure, ergonomics and posture, and environmental factors.",
+          "Learning Environment: The learning environment, such as classroom settings or home practices, plays a role in handwriting development. Children benefit from being in an environment that encourages writing and offers tools like lined paper, proper pencils, and writing exercises."
+        ],
+      },
+
+    ],
+  },
+
+
+  {
+    slug: "cognitive-skills",
+    title: "Cognitive skills",
+    description:
+      "Cognition refers to the mental processes involved in acquiring knowledge and understanding. It encompasses a wide range of mental activities, including thinking, learning, memory, perception, problem-solving, reasoning, decision-making, and language use. Essentially, cognition is how we process information from the world around us and use it to navigate daily life.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "Occupational therapists work with children , helping them overcome challenges related to attention, focus, and memory that may impact school performance and social skills by addressing cognitive development through therapeutic interventions. At The Speech Clinic, our therapists support children in reaching their full potential and achieving greater independence in everyday tasks.",
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "The factors contribute to the development of cognitive skills are attention , Perception, memory,learning ,Problem-solving,language,reasoning and judgment.",
+        ],
+      },
+
+    ],
+  },
+
+
+  {
+    slug: "adl-skills",
+    title: "ADL skills",
+    description: "ADLs (Activities of Daily Living) refer to the essential self-care tasks that children perform to maintain their well-being and independence.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "For children with developmental delays, disabilities, or injuries, therapy may focus on enhancing their ability to perform ADLs through specialized techniques, tools, and adaptive strategies, ultimately promoting greater independence and improving their overall quality of life. At The Speech Clinic, we are training the children to become independent in their ADL skills and will be focusing on the following areas"
+      },
+      {
+        type: "text",
+        caption:
+          "Basic ADLs ( BADLs) typically include:"
+      },
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Bathing and Showering: Cleaning oneself to maintain hygiene.",
+          "Personal Hygiene and Grooming: Tasks such as brushing and styling hair.",
+          "Dressing: Selecting and putting on appropriate clothing.",
+          "Toilet Hygiene: Using the restroom and cleaning oneself afterward.",
+          "Functional Mobility: Moving from one place to another, including walking and transferring between positions like sitting and standing.",
+          "Self-Feeding: Eating food and drinks independently."
+        ],
+
+      },
+
+      {
+        type: "text",
+        content:
+          "Instrumental Activities of Daily Living (IADLs), which are more complex tasks that support independent living in a community setting. IADLs include:"
+      },
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Managing Finances",
+          "Handling Transportation: Navigating public transit.",
+          "Preparing Meals",
+          "Shopping for Groceries and Other Necessities",
+          "Performing Housework and Basic Home Maintenance",
+          "Managing Medications",
+          "Using Communication Devices: Like telephones."
+        ],
+
+
+      },
+
+      {
+        type: "text",
+        content:
+          "Mastery of both BADLs and IADLs is essential for maintaining autonomy and quality of life. Our OT's will evaluate these skills to identify areas where individuals may need assistance or support, aiming to promote independence and well-being."
+      },
+
+
+    ],
+  },
+
+  {
+    slug: "functional-electrical-stimulation",
+    title: "Functional Electrical Stimulation",
+    description:
+      "",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "At The Speech Clinic Dubai, Functional Electrical Stimulation (FES) offers numerous benefits for pediatric patients with neuromuscular conditions, helping improve muscle strength, coordination, and overall functional abilities. By stimulating weak or inactive muscles, FES enhances motor control, supports gait training, and aids in postural stability.",
+          "It plays a crucial role in neuroplasticity, reinforcing correct movement patterns and promoting long-term motor learning. Additionally, FES helps reduce muscle spasticity, stiffness, and contractures, making movement easier and more efficient."
+        ],
+
+      },
+
+    ],
+  },
+  {
+    slug: "gait-and-functional-training",
+    title: "Gait and Functional Training",
+    description:
+      "",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+
+      {
+        type: "listing",
+        title: "",
+        items: [
+          "Gait training is a vital component of pediatric physiotherapy at The Speech Clinic Dubai, focused on improving walking patterns and enhancing mobility to achieve a more efficient and functional walking.",
+          "Gait training program addresses abnormalities in posture, stride, and balance, enhancing independence and confidence in movement, allowing children to navigate their environment with greater ease.",
+          "Functional training at The Speech Clinic Dubai is designed to help children develop the skills they need for daily activities. By improving their ability to perform these activities independently, functional training boosts confidence and supports children in reaching developmental milestones more effectively."
+        ],
+
+
+      },
+
+    ],
+  },
+  {
+    slug: "orthotic-and-equipment-prescription",
+    title: "Orthotic and Equipment Prescription",
+    description:
+      "At The Speech Clinic Dubai, we offer expert orthotic and equipment prescriptions to support children's mobility and overall physical function. Recommending and fitting orthotic devices, braces, splints, or adaptive equipment to support proper alignment, improve mobility, and enhance independence in activities of daily living.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+
+    
+
+    ],
+  },
+  {
+    slug: "more-than-words",
+    title: "More than Words",
+    description:
+   "More than is the program of Hanen Center which facilitates communication in children with autism spectrum disorder. This program incorporates child's sensory preferences in the play making the action more interactive and fun. Rock and Owl are the two techniques of this program u00a0 which we follow in the speech clinic.",
+    heroimage: "/galleryimage3.jpg",
+    galleryimages: ["/galleryimage3.jpg"],
+    excerpt: "",
+    sections: [
+      {
+        type: "text",
+        content:
+          "More than Words provides evidence-based strategies to develop communication intent, interaction, and joint attention in children with social communication delays. It also promotes turn-taking and back-and-forth interaction in children. We find both the rock and owl techniques are the best techniques for young children with delays in beginning interaction moreover help clinicians to pair with children easily.",
+      },
+      {
+        type: "text",
+        content:
+          "Rock techniques; ROCK is an acronym used to promote turn-taking and engagement in interactions, this strategy creates multiple opportunities to hear and learn, and uses cues and prompts to encourage interactions since the play incorporates the child's sensory preference which Ensures the interaction remains enjoyable and motivating).OWL Technique is a strategy used in child-centered communication, particularly in speech and language therapy, to promote engagement and interaction like Rock. It involves watching the child closely to understand their interests, actions, and communication attempt a nd and Paying attention to gestures, facial expressions, and vocalization. It focuses on listening to what the child trying to communicate verbally or nonverbally thus encouraging the child to independently communicate.",
+      },
+
+    ],
+  },
+
+
 ];
 
 export function getrelatedservice(): Service[] {

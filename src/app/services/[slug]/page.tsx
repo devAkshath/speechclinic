@@ -82,14 +82,16 @@ export default async function ServicePage({
               {/* Title and Hero Image */}
               <div className="flex flex-col lg:flex-row items-start justify-between gap-6">
                 <div className="flex-1">
-                  <h1 className="text-5xl font-normal text-gray-800 mb-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#DA159B] hover:to-[#54169C] transition-all duration-500">
+
+
+                  <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
                     {service.title}
-                  </h1>
+                  </h2>
 
                   <div className="container mx-auto px-2 py-10">
 
                     <div
-                      className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-5 pb-6 px-6 sm:px-8 md:pt-10 md:pb-10 md:px-10 shadow-[20px_20px_40px_rgba(218,21,155,0.1)] 
+                      className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-5 -mt-10 pb-6 px-6 sm:px-8 md:pt-10 md:pb-10 md:px-10 shadow-[20px_20px_40px_rgba(218,21,155,0.1)] 
                                                                         before:absolute before:inset-0 before:rounded-[2.5rem] before:-z-10 before:border-[3px] before:border-[#54169C]/30 before:translate-x-0 before:translate-y-0 before:transition-all before:duration-300 
                                                                         after:absolute after:inset-0 after:rounded-[2.5rem] after:-z-10 after:border-[3px] after:border-transparent after:translate-x-0 after:translate-y-0 after:transition-all after:duration-300 
                                                                         hover:before:translate-x-2 hover:before:translate-y-2 hover:after:border-[#DA159B]/30 hover:after:-translate-x-2 hover:after:-translate-y-2"
@@ -103,7 +105,7 @@ export default async function ServicePage({
                       />
                     </div>
 
-                    <p className="text-muted-foreground my-2">
+                    <p className="prose prose-lg dark:prose-invert max-w-none my-5">
                       {service.description}
                     </p>
                   </div>

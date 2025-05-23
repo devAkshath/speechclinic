@@ -230,14 +230,14 @@ export default function NavBarSecond() {
               <FaPhone />
             </span>
             <a href="tel:+9715088571468" className="hover:underline">
-              +971-5088571468
+             +971-508857146
             </a>
           </span>
           <span className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaClock />
             </span>
-            Mon - Sat (09AM - 7PM)
+            Mon - Sat (9AM - 7PM)
           </span>
         </div>
 

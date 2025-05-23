@@ -113,6 +113,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({
             }`}
           >
             <Image
+              unoptimized
               src={image.src}
               alt={image.alt}
               fill
@@ -130,15 +131,22 @@ const ImageCarousel: React.FC<CarouselProps> = ({
 
       {/* Arrows */}
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-pink-600 bg-opacity-50 hover:bg-opacity-70 text-white w-10 h-10 rounded-full hidden md:flex items-center justify-center z-30"
+        className="cursor-pointer absolute left-4 top-1/2 transform -translate-y-1/2 
+            bg-gradient-to-r from-[#DA159B] to-[#54169C] bg-opacity-10 hover:bg-opacity-70 text-white w-11 h-11
+             rounded-full hidden md:flex items-center justify-center z-30 
+             transition-all duration-300 hover:scale-125 active:scale-95 hover:shadow-lg"
         onClick={() => navigateSlide(-1)}
         aria-label="Previous slide"
         disabled={isTransitioning}
       >
         <FaChevronLeft size={24} />
       </button>
+
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-pink-600 bg-opacity-50 hover:bg-opacity-70 text-white w-10 h-10 rounded-full hidden md:flex items-center justify-center z-30"
+        className="cursor-pointer absolute right-4 top-1/2 transform -translate-y-1/2 
+             bg-gradient-to-r from-[#DA159B] to-[#54169C] bg-opacity-10 hover:bg-opacity-70 text-white w-11 h-11 
+             rounded-full hidden md:flex items-center justify-center z-30 
+             transition-all duration-300 hover:scale-125 active:scale-95 hover:shadow-lg"
         onClick={() => navigateSlide(1)}
         aria-label="Next slide"
         disabled={isTransitioning}

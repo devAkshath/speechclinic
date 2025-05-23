@@ -154,7 +154,7 @@ export default function Navbar() {
                       {" "}
                       <FaMobile />
                     </span>{" "}
-                    +971-5088571468
+                   +971-508857146
                   </Link>
                 </span>
                 <span className="flex items-center gap-2">
@@ -162,7 +162,7 @@ export default function Navbar() {
                     <span className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white">
                       <FaClock />{" "}
                     </span>
-                    Mon - Sat (09AM - 7PM)
+                    Mon - Sat (9AM - 7PM)
                   </Link>
                 </span>
               </div>

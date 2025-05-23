@@ -15,7 +15,7 @@ export default function HeroVideo({ title, videoUrl, showWave = true }: HeroVide
   useEffect(() => {
     const timeout = setTimeout(() => {
       setFadeOut(true);
-    }, 3000); // Fade after 3 seconds
+    }, 3000); 
 
     return () => clearTimeout(timeout);
   }, []);

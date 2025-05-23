@@ -2,7 +2,6 @@ import NavBarSecond from "../../components/NavBar/NavBarSecond";
 import Image from "next/image";
 import Srvicesider from "../../components/Services/ServiceAside";
 import HeroVideo from "../../components/Services/ServiceHeroVideo";
-import InlineVideo from "../../components/Services/InlineVideoSection";
 import Link from "next/link";
 import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
@@ -67,23 +66,36 @@ const relatedData = [
     title: "Language Booster Club",
     link: "/services/language-booster-club",
   },
+  {
+    icon: "/physical-therapy.svg",
+    title: "More than words",
+    link: "/services/more-than-words",
+  },
 ];
 
 const getCarouselImages = () => [
   {
-    src: "/speech-therapy-02.jpg",
-    alt: "Mountain landscape",
+    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/adl/SCE-188.jpg",
+    alt: "adl",
   },
   {
-    src: "/speech-therapy-01.jpg",
-    alt: "Beach scene",
+    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/beckman-stretches/BECKMEN%20STRETCHES%202.jpg",
+    alt: "Brain gym",
   },
   {
-    src: "/speech-therapy-02.jpg",
+    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/language-boooster-group/LANGUAGE%20BOOSTER%20GROUP.jpg",
     alt: "City skyline",
   },
   {
-    src: "/speech-therapy-01.jpg",
+    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/dir-floortime/DIR%20FLOOR%20TIME.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/dir-floortime/DIR%20FLOORTIMR%202.jpg",
+    alt: "Forest trail",
+  },
+  {
+    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/dir-floortime/SCE-51.jpg",
     alt: "Forest trail",
   },
 ];
@@ -107,39 +119,32 @@ export default function SchoolReadinessProgram() {
           <Srvicesider />
           {/* Main Content on the right */}
           <div className="lg:col-span-2 space-y-6 order-1 lg:order-2 ">
-                 <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
-                            Speech And Language Therapy
-                        </h2>
+            <h2 className="text-5xl font-normal leading-tight mb-6 -mt-20 text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] transition-all duration-500">
+              Speech And Language Therapy
+            </h2>
             <section className="relative overflow-hidden ">
               <div className="container mx-auto px-2">
                 <p className="my-4">
                   Welcome to the Speech and Language Department At{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DA159B] to-[#54169C] font-meduim">
                     {" "}
-                     The Speech Clinic
+                    The Speech Clinic
                   </span>
                   , Dubai
                 </p>
                 <div>
                   <div
-                    className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-9 pb-1 px-6 md:pt-8 md:pb-1 md:px-10
-                                  shadow-[20px_20px_40px_rgba(218,21,155,0.1)]
-                                  before:absolute before:inset-0 before:rounded-[2.5rem] before:-z-10
-                                  before:border-[3px] before:border-[#54169C]/30
-                                  before:translate-x-0 before:translate-y-0
-                                  before:transition-all before:duration-300
-                                  after:absolute after:inset-0 after:rounded-[2.5rem] after:-z-10
-                                  after:border-[3px] after:border-transparent
-                                  after:translate-x-0 after:translate-y-0
-                                  after:transition-all after:duration-300
-                                  hover:before:translate-x-2 hover:before:translate-y-2
-                                  hover:after:border-[#DA159B]/30 
-                                  hover:after:-translate-x-2 hover:after:-translate-y-2"
+                    className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] pt-5 pb-6 px-6 sm:px-8 md:pt-10 md:pb-10 md:px-10 shadow-[20px_20px_40px_rgba(218,21,155,0.1)] 
+                                                                                                                           before:absolute before:inset-0 before:rounded-[2.5rem] before:-z-10 before:border-[3px] before:border-[#54169C]/30 before:translate-x-0 before:translate-y-0 before:transition-all before:duration-300 
+                                                                                                                           after:absolute after:inset-0 after:rounded-[2.5rem] after:-z-10 after:border-[3px] after:border-transparent after:translate-x-0 after:translate-y-0 after:transition-all after:duration-300 
+                                                                                                                            hover:before:translate-x-2 hover:before:translate-y-2 hover:after:border-[#DA159B]/30 hover:after:-translate-x-2 hover:after:-translate-y-2"
                   >
-                    <InlineVideo
-                      thumbnailSrc="/galleryimage.jpg"
-                      caption="Watch Our Speech And Language Therapy"
-                      videoUrl="https://media.thespeechclinic.ae/website/videos/speechsync-hero-video.mp4"
+                    <Image
+                      width={900}
+                      height={500}
+                      src='/gallery/PROMPT 2.jpg'
+                      alt="Speech Therapy Session"
+                      className="w-full h-48 sm:h-64 md:h-80 lg:h-[400px] object-cover rounded-2xl"
                     />
                   </div>
                   <div className="relative z-10 my-6">

@@ -12,7 +12,7 @@ export default function Srvicesider() {
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
-  const phone = '9567235742'; // Your updated number
+  const phone = '+971508857146'; 
   const text = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
