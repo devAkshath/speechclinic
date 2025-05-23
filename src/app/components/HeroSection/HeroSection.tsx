@@ -2,10 +2,12 @@
 
 import { useMediaQuery } from "react-responsive";
 import HeroSvg from "../herocurve/wave";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import HeroRecMobile from "./HeroRecMobile";
 
 export default function Hero() {
+  const [isPlaying, setIsPlaying] = useState(false);
   const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
 
   useEffect(() => {
@@ -108,25 +110,49 @@ export default function Hero() {
               </div>
 
               {/* Right content - Image */}
-            <div className="w-full flex justify-center items-center">
-  <div className="relative w-[clamp(280px,37vw,900px)]">
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="rounded-[2rem] w-full aspect-[6/4] object-cover"
-    >
-      <source
-        src="https://speechclinic.b-cdn.net/website/videos/speechsync-hero-video.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
- 
-  </div>
-</div>
-
+              <div className="w-full flex justify-center items-center">
+                {!isPlaying ? (
+                  <div className="relative w-[clamp(280px,37vw,900px)]">
+                    <Image
+                      width={800}
+                      height={500}
+                      src="/galleryimage.jpg"
+                      alt="Therapy Session"
+                      className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
+                    />
+                    <div className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <button
+                        onClick={() => setIsPlaying(true)}
+                        className=" cursor-pointer w-20 h-20 absolute -bottom-50 right-60 bg-white/90 p-[clamp(4px,0.8vw,6px)]  bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                      >
+                        <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
+                          <div
+                            className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
+                     border-l-[clamp(12px,1.8vw,23px)] border-l-white 
+                     border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
+                          ></div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-[clamp(280px,37vw,900px)]">
+                    <video
+                      autoPlay
+                        controls
+                      loop
+                      playsInline
+                      className="rounded-[2rem] w-full aspect-[6/4] object-cover"
+                    >
+                      <source
+                        src="https://speechclinic.b-cdn.net/website/videos/SPEECH%20CLINIC%20MAIN%20VIDEO%20REVISED.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
