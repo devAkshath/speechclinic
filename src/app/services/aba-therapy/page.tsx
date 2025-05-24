@@ -8,27 +8,27 @@ import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
 const getCarouselImages = () => [
   {
-    src: "https://speechclinic.b-cdn.net/website/images/aba/aba-01.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/aba/aba-01.jpg",
     alt: "adl",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/aba/aba-02.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/aba/aba-02.jpg",
     alt: "Brain gym",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/aba/aba-03.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/aba/aba-03.jpg",
     alt: "City skyline",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/aba/sce-01.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/aba/sce-01.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/aba/sce-02.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/aba/sce-02.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/aba/sce-03.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/aba/sce-03.jpg",
     alt: "Forest trail",
   },
 ];
@@ -44,7 +44,7 @@ export default function PhysicalTherapy() {
       <div className="text-gray-700">
         <HeroVideo
           title="ABA Therapy"
-          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/DEPT%20OF%20ABA.mp4"
+          videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/DEPT%20OF%20ABA.mp4"
         />
 
         {/* Content Section */}

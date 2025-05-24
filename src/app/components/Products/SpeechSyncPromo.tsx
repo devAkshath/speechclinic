@@ -37,21 +37,21 @@ const SpeechSyncCard: React.FC = () => {
           />
         </g>
         <g transform="translate(7200,700) scale(5) ">
-        <path
-          d="M38 169c-27,-36 -19,-87 17,-114 36,-27 87,-19 114,17 27,36 19,87 -17,114 -36,27 -88,19 -114,-17z"
-          fill="none"
-          stroke="#FF1CB7"
-          strokeWidth="52.496"
-          strokeOpacity="0.49"
-        />
-        <path
-          d="M6 51c-10,-14 -7,-34 7,-45 14,-10 34,-7 45,7 10,14 7,34 -7,45 -14,10 -34,7 -45,-7z"
-          fill="none"
-          stroke="#BF87FF"
-          strokeWidth="6.56154"
-          strokeOpacity="0.49"
-        />
-      </g>
+          <path
+            d="M38 169c-27,-36 -19,-87 17,-114 36,-27 87,-19 114,17 27,36 19,87 -17,114 -36,27 -88,19 -114,-17z"
+            fill="none"
+            stroke="#FF1CB7"
+            strokeWidth="52.496"
+            strokeOpacity="0.49"
+          />
+          <path
+            d="M6 51c-10,-14 -7,-34 7,-45 14,-10 34,-7 45,7 10,14 7,34 -7,45 -14,10 -34,7 -45,-7z"
+            fill="none"
+            stroke="#BF87FF"
+            strokeWidth="6.56154"
+            strokeOpacity="0.49"
+          />
+        </g>
       </svg>
 
       {/* Content */}
@@ -92,7 +92,7 @@ const SpeechSyncCard: React.FC = () => {
               style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
               className="text-lg text-gray-800 bg-white px-6 py-1 rounded-2xl"
             >
-              
+
               Our Products
             </div>
           </div>
@@ -119,12 +119,10 @@ const SpeechSyncCard: React.FC = () => {
           </p>
 
           {/* Row 4: Button */}
-          <button
-            style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-            className="cursor-pointer inline-flex items-center justify-start bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-pink-600 transition duration-300 "
-          >
+          <a href="/products/speechsync" style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+            className="cursor-pointer inline-flex items-center justify-start bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-pink-600 transition duration-300">
             Discover More
-          </button>
+          </a>
         </div>
       </div>
     </div>

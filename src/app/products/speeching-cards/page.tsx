@@ -12,7 +12,7 @@ import {
 } from "framer-motion";
 import EnterpriseFeatures from "./FeartureCards";
 import TypesCard from "./TypesOfCard";
-import NavBarSecond from "../components/NavBar/NavBarSecond";
+import NavBarSecond from "../../components/NavBar/NavBarSecond";
 
 const images = [
   "/speechcard1.svg",
@@ -29,7 +29,7 @@ const images = [
   "/speechcard1.svg",
 ];
 
-export default function Home() {
+export default function SpeechingCardsPage() {
   const OverlayCopy = ({ svgPath }: { svgPath: string }) => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -46,22 +46,22 @@ export default function Home() {
 
     return (
       <motion.div
-      ref={targetRef}
-      style={{ y: smoothY }}
-      className="absolute left-0 top-0 z-[9] flex h-screen w-full items-center justify-center pointer-events-none"
-    >
-      <div className="bg-white w-[650px] h-[200px] rounded-[40px] backdrop-blur-lg flex items-center justify-center overflow-hidden">
-        <Image
-          src={svgPath}
-          alt="Speeching Cards Logo"
-          className="w-[650px] h-[650px] object-fill"
-          width={650}
-          height={650}
-          priority
-        />
-      </div>
-    </motion.div>
-    
+        ref={targetRef}
+        style={{ y: smoothY }}
+        className="absolute left-0 top-0 z-[9] flex h-screen w-full items-center justify-center pointer-events-none"
+      >
+        <div className="bg-white w-[650px] h-[200px] rounded-[40px] backdrop-blur-lg flex items-center justify-center overflow-hidden">
+          <Image
+            src={svgPath}
+            alt="Speeching Cards Logo"
+            className="w-[650px] h-[650px] object-fill"
+            width={650}
+            height={650}
+            priority
+          />
+        </div>
+      </motion.div>
+
     );
   };
 
@@ -150,16 +150,16 @@ export default function Home() {
             <p className="text-lg text-black/80 mb-6">
               Welcome to our fun and exciting Flash Card Series! These cards are
               designed to make learning key concepts both fun and engaging.
-              You’ll dive into exploring questions like “What?”, “Where?”,
-              “When?”, and “Who?”, helping you build essential communication
+              You&lsquo;ll dive into exploring questions like &ldquo;What?&ldquo;, &ldquo;Where?&quot;,
+              &quot;When?&quot;, and &quot;Who?&quot;, helping you build essential communication
               skills while thinking about the world around you. With our
-              Sequencing Cards, you’ll master the order of events, and you’ll
+              Sequencing Cards, you&apos;ll master the order of events, and you&apos;ll
               easily distinguish between Yes and No answers. Each card is
               thoughtfully created to make learning not only easier but also
               more enjoyable. Jump in and discover just how much you can learn!
               Our expertly crafted Speeching Cards are perfect for both
               clinicians and parents, offering a fun and effective way to
-              improve communication skills. Whether you’re working on
+              improve communication skills. Whether you&apos;re working on
               articulation, language development, or social communication, these
               flashcards cater to all age groups and therapy goals, ensuring a
               personalized and interactive learning experience.
@@ -182,9 +182,7 @@ export default function Home() {
             activities.
           </p>
           <a
-            href="https://www.yourwebsite.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact-us"
             className="inline-block px-6 py-3 bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white rounded-full shadow-lg hover:scale-105 transition font-light text-lg"
           >
             Contact Now

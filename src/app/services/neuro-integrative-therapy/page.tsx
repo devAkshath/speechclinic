@@ -7,7 +7,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 const getCarouselImages = () => [
   {
-    src: "https://speechclinic.b-cdn.net/website/images/aba/aba-01.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/aba/aba-01.jpg",
     alt: "Mountain landscape",
   },
   {
@@ -34,7 +34,7 @@ export default function NeuroIntegrativeTherapy() {
       <div className="font-normal">
         <HeroVideo
           title="Neuro Integrative Therapy"
-          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/NEURO%20INTEGRATIVE%20THERAPY.mp4"
+          videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/NEURO%20INTEGRATIVE%20THERAPY.mp4"
         />
 
         {/* Content Section */}

@@ -66,12 +66,6 @@ const relatedData = [
   },
   {
     icon: '/physical-therapy.svg',
-    title: 'Group Therapy',
-    link: '/services/group-therapy'
-    ,
-  },
-  {
-    icon: '/physical-therapy.svg',
     title: 'Play Therapy',
     link: '/services/play-therapy'
     ,
@@ -104,27 +98,27 @@ const relatedData = [
 ];
 const getCarouselImages = () => [
   {
-    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/adl/SCE-188.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/occupational-therapy/adl/SCE-188.jpg",
     alt: "adl",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/brain-gym/brain%20gym%202.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/occupational-therapy/brain-gym/brain%20gym%202.jpg",
     alt: "Brain gym",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/brain-gym/OT%204.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/occupational-therapy/brain-gym/OT%204.jpg",
     alt: "City skyline",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/fine-motor/OLIVE%20MEDIA%20UAE-6249.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/occupational-therapy/fine-motor/OLIVE%20MEDIA%20UAE-6249.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/handwriting/OT%20HANDWRITING.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/occupational-therapy/handwriting/OT%20HANDWRITING.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/visual-motor-integration/visual%20motor%20integration.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/occupational-therapy/visual-motor-integration/visual%20motor%20integration.jpg",
     alt: "Forest trail",
   },
 ];
@@ -138,7 +132,7 @@ export default function OccupationalTherapy() {
       <div className="text-gray-700">
         <HeroVideo
           title="Occupational Therapy"
-          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/DEPARTMENT%20OF%20OT.mp4"
+          videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/DEPARTMENT%20OF%20OT.mp4"
         />
 
         {/* Content Section */}

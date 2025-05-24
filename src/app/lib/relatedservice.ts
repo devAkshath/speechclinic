@@ -50,7 +50,7 @@ const services: Service[] = [
     slug: "oral-placement-therapy",
     title: "Oral Placement Therapy",
     herovideo:
-      "https://speechclinic.b-cdn.net/website/videos/Speech%20Therapies/ORAL%20PLACEMENT%20THERAPY.mp4",
+      "https://media.thespeechclinic.ae/website/videos/Speech%20Therapies/ORAL%20PLACEMENT%20THERAPY.mp4",
     description:
       "Oral Placement Therapy (OPT) is a specialized speech therapy approach which enhances oral motor skills for speech and feeding by using tactile and proprioceptive inputs. It helps improve speech clarity and feeding in individuals with conditions like apraxia, dysarthria, and expressive language delays.",
     heroimage: "/galleryimage3.jpg",
@@ -68,7 +68,7 @@ const services: Service[] = [
     slug: "prompt-therapy",
     title: "PROMPT Therapy",
     herovideo:
-      "https://speechclinic.b-cdn.net/website/videos/COMBINED%20VIDEOS/PROMPT%20COMBINED.mp4",
+      "https://media.thespeechclinic.ae/website/videos/COMBINED%20VIDEOS/PROMPT%20COMBINED.mp4",
     description:
       "PROMPT FOR RESTRUCTURING ORALMUSCULAR PHONETIC TARGETS is an evidence-based technique where oral structures are guided using clinician hands to produce sounds or words. It helps in refining oral movements to plan better speech production.",
     heroimage: "/galleryimage3.jpg",
@@ -229,7 +229,7 @@ const services: Service[] = [
     slug: "makaton",
     title: "Makaton",
     herovideo:
-      "https://speechclinic.b-cdn.net/website/videos/COMBINED%20VIDEOS/MAKATON%20COMBINED.mp4",
+      "https://media.thespeechclinic.ae/website/videos/COMBINED%20VIDEOS/MAKATON%20COMBINED.mp4",
     description:
       "Makaton is a language program that uses Speech, Signs and Symbols for basic communication. It helps to develop language skills and facilitate social interaction.",
     heroimage: "/galleryimage3.jpg",
@@ -586,7 +586,7 @@ const services: Service[] = [
     slug: "reflex-lntegration",
     title: "Reflex Integration",
     herovideo:
-      "https://speechclinic.b-cdn.net/website/videos/COMBINED%20VIDEOS/relax%20integration.mp4",
+      "https://media.thespeechclinic.ae/website/videos/COMBINED%20VIDEOS/relax%20integration.mp4",
     description:
       "Reflex integration refers to the process by which primitive reflexes automatic, involuntary movements that are present at birth are inhibited or 'integrated' into more complex, voluntary motor control as the child matures. These reflexes are essential for early development, but if they remain active beyond the expected developmental stage, they can interfere with normal movement, posture, coordination, and behavior.",
     heroimage: "/galleryimage3.jpg",

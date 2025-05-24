@@ -38,15 +38,10 @@ const Footer = () => {
                 width={800}
                 height={500}
               />
-              <p>
-                Speech Clinic offers specialized therapy services to enhance
-                communication, learning, and daily life skills for children,
-                fostering growth through expert care.
-              </p>
               <p className="opacity-80">
-                © Copyright {Year} The Speech Clinic. All Rights Reserved.{" "}
+                © Copyright {Year}. The Speech Clinic.<br />All Rights Reserved.{" "}
                 <br />
-                Powered By : Erratum Solutions
+                Powered By: <a href="https://erratums.com" target="_blank">Erratum Solutions</a>
               </p>
             </div>
 
@@ -89,73 +84,25 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
+              
               <div>
                 <h3 className="text-xl font-meduim mb-8">Services</h3>
                 <ul className="space-y-4">
-                  <li>
-                    <a
-                      href="services/occupational-therapy"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      Occupational Therapy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="services/speech-language-therapy"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      Speech & Language Therapy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="services/physical-therapy"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      Physical Therapy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="services/aba-therapy"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      ABA Therapy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="services/school-readiness-program"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      School Readiness Program
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="services/feeding-therapy"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      Feeding Therapy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="services/group-therapy"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      Group Therapy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="services/neuro-integrative-therapy"
-                      className="hover:text-gray-400 font-normal"
-                    >
-                      Neuro Integrative Therapy
-                    </a>
-                  </li>
+                  {[
+                    { path: 'occupational-therapy', label: 'Occupational Therapy' },
+                    { path: 'speech-language-therapy', label: 'Speech & Language Therapy' },
+                    { path: 'physical-therapy', label: 'Physical Therapy' },
+                    { path: '', label: 'All Services' }
+                  ].map((service) => (
+                    <li key={service.path}>
+                      <a
+                        href={`/services/${service.path}`}
+                        className="hover:text-gray-400 font-normal"
+                      >
+                        {service.label}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -163,11 +110,13 @@ const Footer = () => {
             {/* Column 4: Contact Info */}
             <div className="space-y-4">
               <h3 className="text-xl font-meduim mb-8">Get In Touch</h3>
-              <p>Dubai Healthcare City, Building 47 <br/> Unit  301, 302, 303 & 304</p>
-              <p>+971-508857146</p>
-              <p>info@thespeechclinic.ae</p>
+              <p><a href="https://www.google.com/maps?ll=25.229031,55.322413&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=14517416241218903551" target="_blank" className="hover:text-gray-400">
+                Dubai Healthcare City, Building 47 <br /> Unit  301, 302, 303 & 304</a>
+              </p>
+              <p><a href="tel:+971508857146" className="hover:text-gray-400">+971-508857146</a></p>
+              <p><a href="mailto:info@thespeechclinic.ae" className="hover:text-gray-400">info@thespeechclinic.ae</a></p>
 
-              {/* Uncomment to enable social icons */}
+              {/* Uncomment to enable social cons */}
 
               <div className="flex mt-4 space-x-4 text-xl">
                 <a

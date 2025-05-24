@@ -4,7 +4,7 @@ export type Movie = {
 };
 
 // Main movie set
-export const moviesSet1 = [
+export const gallerySet1 = [
   { poster: "gallery/articulation-1.jpg", name: "image1" },
   { poster: "gallery/beckman stretches.jpg", name: "image2" },
   { poster: "gallery/PROMPT 2.jpg", name: "image3" },
@@ -15,7 +15,7 @@ export const moviesSet1 = [
 ];
 
 // Different image sets
-export const moviesSet2 = [
+export const gallerySet2 = [
   { poster: "gallery/beckman-3.jpg", name: "image8" },
   { poster: "gallery/MAKATON2.jpg", name: "image9" },
   { poster: "gallery/myofunctional 1.jpg", name: "image10" },
@@ -35,15 +35,15 @@ export const moviesSet2 = [
 //   { poster: "gallery/image21.jpg", name: "image21" },
 // ];
 
-export const randomMoviesSet1 = moviesSet1
+export const randomGallerySet1 = gallerySet1
   .sort(() => Math.random() - 0.5)
-  .concat(moviesSet1.sort(() => Math.random() - 0.5))
-  .concat(moviesSet1.sort(() => Math.random() - 0.5));
+  .concat(gallerySet1.sort(() => Math.random() - 0.5))
+  .concat(gallerySet1.sort(() => Math.random() - 0.5));
 
-export const randomMoviesSet2 = moviesSet2
+export const randomGallerySet2 = gallerySet2
   .sort(() => Math.random() - 0.5)
-  .concat(moviesSet2.sort(() => Math.random() - 0.5))
-  .concat(moviesSet2.sort(() => Math.random() - 0.5))
+  .concat(gallerySet2.sort(() => Math.random() - 0.5))
+  .concat(gallerySet2.sort(() => Math.random() - 0.5))
   .sort(() => Math.random() - 0.5);
 
 // export const randomMoviesSet3 = moviesSet3

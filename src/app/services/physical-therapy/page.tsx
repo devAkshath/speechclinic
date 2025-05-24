@@ -9,43 +9,43 @@ import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
 const getCarouselImages = () => [
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/balance-training/SCE-106.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/balance-training/SCE-106.jpg",
     alt: "adl",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/balance-training/SCE-109.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/balance-training/SCE-109.jpg",
     alt: "Brain gym",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/core-strengthening-exercises/OT%207.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/core-strengthening-exercises/OT%207.jpg",
     alt: "City skyline",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/core-strengthening-exercises/foam%20roller%20exercises.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/core-strengthening-exercises/foam%20roller%20exercises.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/functional-electrical-stimulation/Electrical%20stimulation.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/functional-electrical-stimulation/Electrical%20stimulation.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/functional-electrical-stimulation/SCE-93.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/functional-electrical-stimulation/SCE-93.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/gait-functional-training/SCE-96.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/gait-functional-training/SCE-96.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/plyometric-resistance-band-exercise/resistance%20band%20strengthening%20exercises.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/plyometric-resistance-band-exercise/resistance%20band%20strengthening%20exercises.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/stretching/PHYSIO%202.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/stretching/PHYSIO%202.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/physiotherapy/treadmill-training-gait-correction/SCE-159.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/physiotherapy/treadmill-training-gait-correction/SCE-159.jpg",
     alt: "Forest trail",
   },
 
@@ -131,7 +131,7 @@ export default function PhysicalTherapy() {
       <div className="text-gray-700">
         <HeroVideo
           title="Physio Therapy "
-          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/department%20of%20physio%20therapy.mp4"
+          videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/department%20of%20physio%20therapy.mp4"
         />
 
         {/* Content Section */}

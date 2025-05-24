@@ -8,7 +8,7 @@ import HeroRecMobile from "./HeroRecMobile";
 
 export default function Hero() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
+  const boxesRef = useRef<(HTMLDivElement | HTMLButtonElement | HTMLAnchorElement)[]>([]);
 
   useEffect(() => {
     const boxes = boxesRef.current;
@@ -94,59 +94,56 @@ export default function Hero() {
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <button
-                    style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                  <a href="/about-us" style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
                     className="cursor-pointer bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px] font-medium hover:from-purple-600 hover:to-pink-900 transition duration-300"
                   >
                     About Us
-                  </button>
-                  <button
-                    style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
+                  </a>
+                  <a href="/contact-us" style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
                     className="cursor-pointer bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[30px]  font-medium hover:from-pink-600 hover:to-purple-900 transition duration-300"
                   >
                     Get In Touch
-                  </button>
+                  </a>
                 </div>
               </div>
 
               {/* Right content - Image */}
               <div className="w-full flex justify-center items-center">
                 {!isPlaying ? (
-       <div className="relative w-[clamp(280px,37vw,900px)]">
-  <Image
-    width={800}
-    height={500}
-    src="/galleryimage.jpg"
-    alt="Therapy Session"
-    className="rounded-[2rem] w-full aspect-[6/4] object-cover"
-  />
-  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-    <button
-      onClick={() => setIsPlaying(true)}
-      className="cursor-pointer w-20 h-20 bg-white/70 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-    >
-      <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
-        <div
-          className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
+                  <div className="relative w-[clamp(280px,37vw,900px)]">
+                    <Image
+                      width={800}
+                      height={500}
+                      src="/galleryimage.jpg"
+                      alt="Therapy Session"
+                      className="rounded-[2rem] w-full  aspect-[6/4] object-cover"
+                    />
+                    <div className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <button
+                        onClick={() => setIsPlaying(true)}
+                        className=" cursor-pointer w-20 h-20 absolute -bottom-50 right-60 bg-white/90 p-[clamp(4px,0.8vw,6px)]  bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                      >
+                        <div className="w-[clamp(40px,4vw,64px)] h-[clamp(40px,4vw,64px)] bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full flex items-center justify-center">
+                          <div
+                            className="w-0 h-0 border-t-[clamp(8px,1vw,16px)] border-t-transparent 
                      border-l-[clamp(12px,1.8vw,23px)] border-l-white 
                      border-b-[clamp(8px,1vw,16px)] border-b-transparent ml-1"
-        ></div>
-      </div>
-    </button>
-  </div>
-</div>
-
+                          ></div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
                 ) : (
                   <div className="relative w-[clamp(280px,37vw,900px)]">
                     <video
                       autoPlay
-                        controls
+                      controls
                       loop
                       playsInline
                       className="rounded-[2rem] w-full aspect-[6/4] object-cover"
                     >
                       <source
-                        src="https://speechclinic.b-cdn.net/website/videos/SPEECH%20CLINIC%20MAIN%20VIDEO%20REVISED.mp4"
+                        src="https://media.thespeechclinic.ae/website/videos/hero-main.mp4"
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
@@ -187,22 +184,22 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap justify-center space-x-4">
-              <button
+              <a href="/about-us"
                 ref={(el) => {
                   if (el) boxesRef.current[2] = el;
                 }}
                 className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
               >
                 About Us
-              </button>
-              <button
+              </a>
+              <a href="/contact-us"
                 ref={(el) => {
                   if (el) boxesRef.current[3] = el;
                 }}
                 className="box bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white py-2 px-6 rounded-[40px] font-medium hover:from-pink-600 hover:to-red-600 transition duration-300"
               >
                 Get In Touch
-              </button>
+              </a>
             </div>
 
             <div

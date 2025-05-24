@@ -35,7 +35,7 @@ export default function FeedingTherapy() {
             <div className="font-normal">
                 <HeroVideo
                     title="Feeding Therapy"
-                    videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/feeding%20therapy.mp4"
+                    videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/feeding%20therapy.mp4"
                 />
 
                 {/* Content Section */}

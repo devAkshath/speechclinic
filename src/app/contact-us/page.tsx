@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import NavBarSecond from "../components/NavBar/NavBarSecond";
+
 const App: React.FC = () => {
   const [formData, setFormData] = useState({
     guardianName: "",
@@ -10,6 +11,7 @@ const App: React.FC = () => {
     guardianMobile: "",
     message: "",
   });
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -21,11 +23,13 @@ const App: React.FC = () => {
       [name]: value,
     }));
   };
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission logic would go here
     console.log("Form submitted:", formData);
   };
+  
   return (
     <div className="min-h-screen bg-white">
       <header>
@@ -61,11 +65,18 @@ const App: React.FC = () => {
                 Our Office
               </h3>
               <p className="text-gray-600">
-                Dubai healthcare city
-                <br />
-                Building 47
-                <br />
-                Unit 301 & 302
+                <a
+                  href="https://www.google.com/maps?ll=25.229031,55.322413&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=14517416241218903551"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Dubai healthcare city
+                  <br />
+                  Building 47
+                  <br />
+                  Unit 301 & 302
+                </a>
               </p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-8 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
@@ -79,7 +90,14 @@ const App: React.FC = () => {
               <h3 className="text-xl font-medium mb-2 text-gray-800">
                 Email Us
               </h3>
-              <p className="text-gray-600">info@thespeechclinic.ae</p>
+              <p className="text-gray-600">
+                <a
+                  href="mailto:info@thespeechclinic.ae"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  info@thespeechclinic.ae
+                </a>
+              </p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-8 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
               <div className="w-16 h-16 mx-auto bg-pink-100 rounded-full flex items-center justify-center mb-6 overflow-hidden">
@@ -93,11 +111,21 @@ const App: React.FC = () => {
                 Call Us
               </h3>
               <p className="text-gray-600">
-                +971-508857146
+                <a
+                  href="tel:+971508857146"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  +971-508857146
+                </a>
                 <br />
-                +971-4433 9891
+                <a
+                  href="tel:+97144339891"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  +971-4433 9891
+                </a>
                 <br />
-                Monday-Saturday (09.00AM - 07.00PM)
+                Mon - Sat (9AM - 7PM)
               </p>
             </div>
           </div>
@@ -106,7 +134,7 @@ const App: React.FC = () => {
       {/* Contact Form Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-10 bg-gradient-to-tr from-[#DA159B] to-[#54169C] flex items-center justify-center">
                 <div>
@@ -128,7 +156,14 @@ const App: React.FC = () => {
                       />
                     </div>
                     <span className="text-white">
-                      Dubai healthcare city, Building 47
+                      <a
+                        href="https://www.google.com/maps?ll=25.229031,55.322413&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=14517416241218903551"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-pink-200 transition-colors"
+                      >
+                        Dubai healthcare city, Building 47
+                      </a>
                     </span>
                   </div>
 
@@ -142,9 +177,19 @@ const App: React.FC = () => {
                       />
                     </div>
                     <span className="text-white">
-                      +971-508857146
+                      <a
+                        href="tel:+971508857146"
+                        className="hover:text-pink-200 transition-colors"
+                      >
+                        +971-508857146
+                      </a>
                       <br />
-                      +971-4433 9891
+                      <a
+                        href="tel:+97144339891"
+                        className="hover:text-pink-200 transition-colors"
+                      >
+                        +971-4433 9891
+                      </a>
                     </span>
                   </div>
 
@@ -157,113 +202,95 @@ const App: React.FC = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <span className="text-white">info@thespeechclinic.ae</span>
+                    <span className="text-white">
+                      <a
+                        href="mailto:info@thespeechclinic.ae"
+                        className="hover:text-pink-200 transition-colors"
+                      >
+                        info@thespeechclinic.ae
+                      </a>
+                    </span>
                   </div>
 
-                  {/* Social Media */}
-                  {/* <div className="flex space-x-4">
-    <a
-      href="#"
-      className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200 cursor-pointer"
-    >
-      <img src="/gallery1.svg" alt="Facebook" className="w-full h-full object-cover" />
-    </a>
-    <a
-      href="#"
-      className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200 cursor-pointer"
-    >
-      <img src="/gallery2.svg" alt="Twitter" className="w-full h-full object-cover" />
-    </a>
-    <a
-      href="#"
-      className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200 cursor-pointer"
-    >
-      <img src="/gallery3.svg" alt="Instagram" className="w-full h-full object-cover" />
-    </a>
-    <a
-      href="#"
-      className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200 cursor-pointer"
-    >
-      <img src="/gallery1.svg" alt="LinkedIn" className="w-full h-full object-cover" />
-    </a>
-  </div> */}
                 </div>
               </div>
-              <div className="p-10">
+              <div className="full p-10">
                 <form onSubmit={handleSubmit}>
-                  <div className="mb-6">
-                    <label
-                      htmlFor="guardianName"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Guardian Name
-                    </label>
-                    <input
-                      type="text"
-                      id="guardianName"
-                      name="guardianName"
-                      value={formData.guardianName}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm"
-                      placeholder="Enter guardian's full name"
-                      required
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <label
-                      htmlFor="guardianEmail"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Guardian Email
-                    </label>
-                    <input
-                      type="email"
-                      id="guardianEmail"
-                      name="guardianEmail"
-                      value={formData.guardianEmail}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm"
-                      placeholder="guardian@example.com"
-                      required
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <label
-                      htmlFor="childName"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Child Name
-                    </label>
-                    <input
-                      type="text"
-                      id="childName"
-                      name="childName"
-                      value={formData.childName}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm"
-                      placeholder="Enter child's full name"
-                      required
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <label
-                      htmlFor="childAge"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Child Age
-                    </label>
-                    <input
-                      type="number"
-                      id="childAge"
-                      name="childAge"
-                      value={formData.childAge}
-                      onChange={handleChange}
-                      min="0"
-                      max="18"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                      placeholder="Enter child's age"
-                      required
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label
+                        htmlFor="guardianName"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
+                        Guardian Name
+                      </label>
+                      <input
+                        type="text"
+                        id="guardianName"
+                        name="guardianName"
+                        value={formData.guardianName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm"
+                        placeholder="Enter guardian's full name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="guardianEmail"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
+                        Guardian Email
+                      </label>
+                      <input
+                        type="email"
+                        id="guardianEmail"
+                        name="guardianEmail"
+                        value={formData.guardianEmail}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm"
+                        placeholder="guardian@example.com"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="childName"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
+                        Child Name
+                      </label>
+                      <input
+                        type="text"
+                        id="childName"
+                        name="childName"
+                        value={formData.childName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm"
+                        placeholder="Enter child's full name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="childAge"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
+                        Child Age
+                      </label>
+                      <input
+                        type="number"
+                        id="childAge"
+                        name="childAge"
+                        value={formData.childAge}
+                        onChange={handleChange}
+                        min="0"
+                        max="18"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-sm [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                        placeholder="Enter child's age"
+                        required
+                      />
+                    </div>
                   </div>
                   <div className="mb-6">
                     <label
@@ -322,7 +349,7 @@ const App: React.FC = () => {
           <div className="rounded-xl overflow-hidden shadow-lg h-96 relative">
             <iframe
               title="The Speech Clinic Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.473867723274!2d55.3161399!3d25.2297218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4347e5d3f0c3%3A0xa6f1ae6b3fbd55bb!2sDubai%20Healthcare%20City%2C%20Building%2047!5e0!3m2!1sen!2sae!4v1713500000000!5m2!1sen!2sae"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7218.468674642141!2d55.322413!3d25.229031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d0c9a8d4fd9%3A0xc9783927a256ddff!2sThe%20Speech%20Clinic%20Dubai!5e0!3m2!1sen!2sin!4v1748097006542!5m2!1sen!2sin"
               className="w-full h-full border-2 border-pink-300 shadow-sm rounded-3xl"
               allowFullScreen
               loading="lazy"

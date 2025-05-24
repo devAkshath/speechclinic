@@ -398,11 +398,6 @@ export default function Gallery() {
                       </li>
                     ))}
                   </ul>
-                  <p className="pt-">
-                    From fast track multidisciplinary assessments to parent
-                    empowerment coaching, every tool we use is designed to help
-                    your child grow, connect and thrive.
-                  </p>
                 </div>
 
                 {/* Row 4: Button */}
@@ -587,11 +582,6 @@ export default function Gallery() {
                     </li>
                   ))}
                 </ul>
-                <p className="pt-2 pb-4">
-                  From fast track multidisciplinary assessments to parent
-                  empowerment coaching, every tool we use is designed to help
-                  your child grow, connect and thrive.
-                </p>
               </div>
 
               {/* Row 4: Button */}

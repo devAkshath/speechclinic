@@ -180,11 +180,11 @@ export default function NavBarSecond() {
                     }`}
                 >
                   <Link
-                    href="/speechsync"
+                    href="/products/speechsync"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     onClick={handleProductLinkClick}
                   >
-                    SpeechSync
+                    SpeechSync AAC
                   </Link>
                 </li>
                 <li
@@ -192,11 +192,11 @@ export default function NavBarSecond() {
                     }`}
                 >
                   <Link
-                    href="/speeching-cards"
+                    href="/products/speeching-cards"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     onClick={handleProductLinkClick}
                   >
-                    SpeechCard
+                    Speeching Card
                   </Link>
                 </li>
               </ul>
@@ -229,7 +229,7 @@ export default function NavBarSecond() {
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaPhone />
             </span>
-            <a href="tel:+9715088571468" className="hover:underline">
+            <a href="tel:+971508857146" className="hover:underline">
              +971-508857146
             </a>
           </span>
@@ -282,7 +282,7 @@ export default function NavBarSecond() {
         <button onClick={toggleWideMenu} aria-label="Close Menu" className=" text-xl absolute top-4 my-4 right-4"><FaTimes /></button>
         <Link href="/"><Image src="/speechcliniclogo.svg" alt="Speech Clinic Logo" width={130} height={200} priority /></Link>
         <h1 className=" my-6 py-3 h-6  font-extrabold text-lg">About Us</h1>
-        <p>There are many variations of passages available sure there majority have suffered alteration in some form...</p>
+        <p>Speech Clinic offers specialized therapy services to enhance communication, learning, and daily life skills....</p>
         <div className="space-y-2 mt-8">
           <span className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
@@ -296,15 +296,15 @@ export default function NavBarSecond() {
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaPhone />
             </span>
-            <a href="tel:+9715088571468" className="hover:underline">
-              +971-5088571468
+            <a href="tel:+971508857146" className="hover:underline">
+              +971-508857146
             </a>
           </span>
           <span className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaClock />
             </span>
-            Mon - Sat (09AM - 7PM)
+            Mon - Sat (9AM - 7PM)
           </span>
         </div>
         <h1 className=" my-3 py-3 h-6  font-extrabold text-lg">Follow Us</h1>
@@ -358,14 +358,14 @@ export default function NavBarSecond() {
               </span>
               <span className="flex items-center gap-2">
                 <FaPhone />
-                <a href="tel:+9715088571468" className="hover:underline">
-                  +971-5088571468
+                <a href="tel:+971508857146" className="hover:underline">
+                  +971-508857146
                 </a>
               </span>
             </div>
             <div className="flex gap-4 items-center">
               <span className="flex items-center gap-2">
-                <FaClock /> Mon - Sat (09AM - 7PM)
+                <FaClock /> Mon - Sat (9AM - 7PM)
               </span>
               <div className="flex gap-3">
                 <Link href="https://www.linkedin.com/company/the-speech-clinic-dubai/"><FaLinkedin /></Link>
@@ -421,10 +421,10 @@ export default function NavBarSecond() {
                       }`}
                   >
                     <Link
-                      href="/speechsync"
+                      href="/products/speechsync"
                       className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     >
-                      SpeechSync
+                      SpeechSync AAC
                     </Link>
                   </li>
                   <li
@@ -432,10 +432,10 @@ export default function NavBarSecond() {
                       }`}
                   >
                     <Link
-                      href="/speeching-cards"
+                      href="/products/speeching-cards"
                       className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     >
-                      SpeechCard
+                      Speeching Card
                     </Link>
                   </li>
                 </ul>

@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import NavBarSecond from "../components/NavBar/NavBarSecond";
-import Productfeatures from "../components/ProductFeatures/Features";
+import NavBarSecond from "../../components/NavBar/NavBarSecond";
+import Productfeatures from "../../components/ProductFeatures/Features";
 
 const aboutimages = [
   "/products/Untitled-ko8o.png",
@@ -13,7 +13,7 @@ const aboutimages = [
 ];
 
 import { BsPlayCircleFill } from "react-icons/bs";
-import FAQSection from "../components/ProductFeatures/Faq";
+import FAQSection from "../../components/ProductFeatures/Faq";
 
 const bubbleColors = ["#DA159B", "#54169C", "#FFA9E7", "#D8B4FE"];
 
@@ -26,7 +26,7 @@ type Bubble = {
   duration: string;
 };
 
-export default function Hero() {
+export default function SpeechSyncPage() {
   // hero bubbles
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
@@ -100,22 +100,24 @@ export default function Hero() {
             </p>
 
             <div className="flex gap-6 mb-16 justify-center sm:justify-start">
-              <div className="overflow-hidden rounded-xl">
+              <a href="https://play.google.com/store/apps/details?id=com.speechclinic.speechsync" target="_blank"
+                className="overflow-hidden rounded-xl">
                 <Image
                   src="/products/button-google-play.svg"
                   alt="Google Play"
                   width={190}
                   height={90}
                 />
-              </div>
-              <div className="overflow-hidden rounded-xl">
+              </a>
+              <a href="https://apps.apple.com/in/app/speechsync-aac/id6557073110" target="_blank"
+                className="overflow-hidden rounded-xl">
                 <Image
                   src="/products/button-appstore.svg"
                   alt="App Store"
                   width={170}
                   height={200}
                 />
-              </div>
+              </a>
             </div>
           </div>
 
@@ -196,7 +198,7 @@ export default function Hero() {
 
             <div className="mt-6 flex justify-center md:justify-start">
               <a
-                href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+                href="https://youtube.com/watch?v=mKaxbXSL6TE&t=2s"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 py-3 "
@@ -212,11 +214,10 @@ export default function Hero() {
             {aboutimages.map((img, index) => (
               <div
                 key={index}
-                className={`absolute transition-all duration-700 ease-in-out  ${
-                  index === current
-                    ? "opacity-100 scale-100 z-20"
-                    : "opacity-0 scale-95 blur-sm z-10"
-                }`}
+                className={`absolute transition-all duration-700 ease-in-out  ${index === current
+                  ? "opacity-100 scale-100 z-20"
+                  : "opacity-0 scale-95 blur-sm z-10"
+                  }`}
               >
                 <Image
                   src={img}
@@ -258,7 +259,7 @@ export default function Hero() {
             empowers every child&apos;s voice.
           </p>
           <a
-            href="https://www.yourwebsite.com" // replace with your actual link
+            href="https://speechsync.ae" // replace with your actual link
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-gradient-to-br from-[#DA159B] to-[#54169C] text-white rounded-full shadow-lg hover:scale-105 transition font-light text-lg"

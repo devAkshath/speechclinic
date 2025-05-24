@@ -3,6 +3,15 @@ import HalfWaveBackground from "../components/svgs/halfcarve";
 import Image from "next/image";
 import Testimonial from "../components/Testimonial/TestimonialSection";
 import Expertise from "../components/Expertise/ExpertiseSection";
+import { Metadata } from "next";
+
+const SITE_TITLE = "About The Speech Clinic Dubai | Experts in Pediatric Speech & Language Therapy";
+const SITE_DESCRIPTION = "Learn about The Speech Clinic Dubai — a leading center for pediatric speech and language therapy. Meet our passionate team dedicated to helping children communicate confidently through innovative, evidence-based care.";
+export const metadata: Metadata = {
+  title: SITE_TITLE, description: SITE_DESCRIPTION,
+  openGraph: { title: SITE_TITLE, description: SITE_DESCRIPTION },
+  twitter: { title: SITE_TITLE, description: SITE_DESCRIPTION }
+};
 
 export default function About() {
   return (

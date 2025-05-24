@@ -75,27 +75,27 @@ const relatedData = [
 
 const getCarouselImages = () => [
   {
-    src: "https://speechclinic.b-cdn.net/website/images/occupational-therapy/adl/SCE-188.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/occupational-therapy/adl/SCE-188.jpg",
     alt: "adl",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/beckman-stretches/BECKMEN%20STRETCHES%202.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/speech-therapy/beckman-stretches/BECKMEN%20STRETCHES%202.jpg",
     alt: "Brain gym",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/language-boooster-group/LANGUAGE%20BOOSTER%20GROUP.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/speech-therapy/language-boooster-group/LANGUAGE%20BOOSTER%20GROUP.jpg",
     alt: "City skyline",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/dir-floortime/DIR%20FLOOR%20TIME.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/speech-therapy/dir-floortime/DIR%20FLOOR%20TIME.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/dir-floortime/DIR%20FLOORTIMR%202.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/speech-therapy/dir-floortime/DIR%20FLOORTIMR%202.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/speech-therapy/dir-floortime/SCE-51.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/speech-therapy/dir-floortime/SCE-51.jpg",
     alt: "Forest trail",
   },
 ];
@@ -110,7 +110,7 @@ export default function SchoolReadinessProgram() {
       <div className="font-normal">
         <HeroVideo
           title="Speech And Language Therapy"
-          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/DEPT%20OF%20SPEECH.mp4"
+          videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/DEPT%20OF%20SPEECH.mp4"
         />
 
         {/* Content Section */}

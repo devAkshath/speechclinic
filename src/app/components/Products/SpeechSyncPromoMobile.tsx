@@ -57,7 +57,7 @@ const SpeechSyncPromoMobile: React.FC = () => {
         </h2>
         <p
           style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-          className=" text-white text-base font-light"
+          className=" text-white text-base font-light px-6 py-5"
         >
           Empowering communication with advanced speech therapy tools. Our
           products are designed to support children with autism and speech

@@ -10,8 +10,6 @@ import Testimonial from "./components/Testimonial/TestimonialSection";
 import Blogs from "./components/Blogs/BlogSection";
 import { useState } from "react";
 import Image from "next/image";
-// import AnimatedCurveLine from "./components/herocurve/animatedline";
-// import FooterCurve from "./components/herocurve/footercurve";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -57,7 +55,7 @@ export default function Home() {
             </>
           ) : (
             <video
-              src="https://speechclinic.b-cdn.net/website/videos/SPEECH%20CLINIC%20MAIN%20VIDEO%20REVISED.mp4"
+              src="https://media.thespeechclinic.ae/website/videos/hero-main.mp4"
               controls
               autoPlay
               className="w-full h-auto object-cover rounded-3xl"

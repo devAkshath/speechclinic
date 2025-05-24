@@ -147,14 +147,14 @@ export default function Navbar() {
                 </span>
                 <span className="flex items-center gap-2">
                   <Link
-                    href="tel:+9715088571468"
+                    href="tel:+971508857146"
                     className="flex items-center gap-2"
                   >
                     <span className="bg-gradient-to-bl from-[#DA159B] to-[#54169C] rounded-lg p-1 text-white">
                       {" "}
                       <FaMobile />
                     </span>{" "}
-                   +971-508857146
+                    +971-508857146
                   </Link>
                 </span>
                 <span className="flex items-center gap-2">
@@ -216,9 +216,8 @@ export default function Navbar() {
                   >
                     Products
                     <svg
-                      className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
+                      className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
@@ -234,40 +233,37 @@ export default function Navbar() {
 
                   {/* Dropdown */}
                   <div
-                    className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${
-                      isOpen
-                        ? "opacity-100 scale-100 translate-y-0"
-                        : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
-                    }`}
+                    className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isOpen
+                      ? "opacity-100 scale-100 translate-y-0"
+                      : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
+                      }`}
                   >
                     {/* Dropdown Items */}
                     <ul className="flex flex-col gap-2 p-3">
                       <li
-                        className={`transition-all duration-300 ease-out ${
-                          isOpen
-                            ? "opacity-100 translate-y-0 delay-100"
-                            : "opacity-0 -translate-y-2 delay-0"
-                        }`}
+                        className={`transition-all duration-300 ease-out ${isOpen
+                          ? "opacity-100 translate-y-0 delay-100"
+                          : "opacity-0 -translate-y-2 delay-0"
+                          }`}
                       >
                         <Link
-                          href="/speechsync"
+                          href="/products/speechsync"
                           className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                         >
-                          SpeechSync
+                          SpeechSync AAC
                         </Link>
                       </li>
                       <li
-                        className={`transition-all duration-300 ease-out ${
-                          isOpen
-                            ? "opacity-100 translate-y-0 delay-200"
-                            : "opacity-0 -translate-y-2 delay-0"
-                        }`}
+                        className={`transition-all duration-300 ease-out ${isOpen
+                          ? "opacity-100 translate-y-0 delay-200"
+                          : "opacity-0 -translate-y-2 delay-0"
+                          }`}
                       >
                         <Link
-                          href="/speeching-cards"
+                          href="/products/speeching-cards"
                           className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                         >
-                          SpeechCard
+                          Speeching Card
                         </Link>
                       </li>
                     </ul>
@@ -295,7 +291,7 @@ export default function Navbar() {
                 <button
                   onClick={toggleWideMenu}
                   aria-label="Toggle Wide Menu"
-                  className="text-white text-xl"
+                  className="text-white text-xl cursor-pointer"
                 >
                   {isWideMenuOpen ? <FaTimes /> : <CustomMenuIcon />}
                   {/* {isWideMenuOpen ? <FaTimes /> : <FaBars />} */}
@@ -321,9 +317,8 @@ export default function Navbar() {
       {/*  CHANGED: Add ref to this Mobile Sidebar */}
       <div
         ref={mobileMenuRef}
-        className={`fixed top-0 right-0 h-full w-full sm:w-3/4 sm:max-w-xs bg-white p-6 transform ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out z-100`}
+        className={`fixed top-0 right-0 h-full w-full sm:w-3/4 sm:max-w-xs bg-white p-6 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out z-100`}
       >
         <button
           onClick={toggleMobileMenu}
@@ -369,9 +364,8 @@ export default function Navbar() {
             >
               Products
               <svg
-                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${
-                  isMobileProductOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isMobileProductOpen ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -387,48 +381,45 @@ export default function Navbar() {
 
             {/* Dropdown */}
             <div
-              className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${
-                isMobileProductOpen
-                  ? "opacity-100 scale-100 translate-y-0"
-                  : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
-              }`}
+              className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isMobileProductOpen
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
+                }`}
             >
               {/* Dropdown Items */}
               <ul className="flex flex-col gap-2 p-3">
                 <li
-                  className={`transition-all duration-300 ease-out ${
-                    isMobileProductOpen
-                      ? "opacity-100 translate-y-0 delay-100"
-                      : "opacity-0 -translate-y-2 delay-0"
-                  }`}
+                  className={`transition-all duration-300 ease-out ${isMobileProductOpen
+                    ? "opacity-100 translate-y-0 delay-100"
+                    : "opacity-0 -translate-y-2 delay-0"
+                    }`}
                 >
                   <Link
-                    href="/speechsync"
+                    href="/products/speechsync"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     onClick={() => {
                       setIsMobileProductOpen(false);
                       setIsMobileMenuOpen(false);
                     }}
                   >
-                    SpeechSync
+                    SpeechSync AAC
                   </Link>
                 </li>
                 <li
-                  className={`transition-all duration-300 ease-out ${
-                    isMobileProductOpen
-                      ? "opacity-100 translate-y-0 delay-200"
-                      : "opacity-0 -translate-y-2 delay-0"
-                  }`}
+                  className={`transition-all duration-300 ease-out ${isMobileProductOpen
+                    ? "opacity-100 translate-y-0 delay-200"
+                    : "opacity-0 -translate-y-2 delay-0"
+                    }`}
                 >
                   <Link
-                    href="/speeching-cards"
+                    href="/products/speeching-cards"
                     className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                     onClick={() => {
                       setIsMobileProductOpen(false);
                       setIsMobileMenuOpen(false);
                     }}
                   >
-                    SpeechCard
+                    Speeching Card
                   </Link>
                 </li>
               </ul>
@@ -467,17 +458,17 @@ export default function Navbar() {
             </span>{" "}
             <a
               style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-              href="tel:+9715088571468"
+              href="tel:+971508857146"
               className="hover:underline"
             >
-              +971-5088571468
+              +971-508857146
             </a>
           </span>
           <span className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaClock />
             </span>{" "}
-            Mon - Sat (09AM - 7PM)
+            Mon - Sat (9AM - 7PM)
           </span>
         </div>
         <h1 className=" my-3 py-3 h-6  font-medium text-lg">Follow Us</h1>
@@ -516,9 +507,8 @@ export default function Navbar() {
       {/*  CHANGED: Add ref to this Wide Menu Sidebar */}
       <div
         ref={wideMenuRef} // ✅ CHANGED
-        className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white p-6 transform ${
-          isWideMenuOpen ? "translate-x-0 shadow-2xl " : "translate-x-full"
-        } transition-transform duration-300 ease-in-out z-100`}
+        className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white p-6 transform ${isWideMenuOpen ? "translate-x-0 shadow-2xl " : "translate-x-full"
+          } transition-transform duration-300 ease-in-out z-100`}
       >
         <button
           onClick={toggleWideMenu}
@@ -543,14 +533,7 @@ export default function Navbar() {
         >
           About Us
         </h1>
-        <p
-          style={{ fontFamily: "HuluStyle", fontWeight: 300 }}
-          className=" text-md"
-        >
-          There are many variations of passages available sure there majority
-          have suffered alteration in some form by inject humour or randomised
-          words which don&apos;t look even slightly believable.
-        </p>
+        <p>Speech Clinic offers specialized therapy services to enhance communication, learning, and daily life skills for children, fostering growth through expert care.</p>
         <div className="space-y-2 mt-8">
           <span className="flex items-center gap-3 text-gray-800">
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
@@ -570,10 +553,10 @@ export default function Navbar() {
             </span>
             <a
               style={{ fontFamily: "HuluStyle", fontWeight: 400 }}
-              href="tel:+9715088571468"
+              href="tel:+971508857146"
               className="hover:underline"
             >
-              +971-5088571468
+              +971-508857146
             </a>
           </span>
           <span
@@ -583,7 +566,7 @@ export default function Navbar() {
             <span className="bg-gradient-to-r from-[#DA159B] to-[#54169C] rounded-full p-2 text-white">
               <FaClock />
             </span>
-            Mon - Sat (09AM - 7PM)
+            Mon - Sat (9AM - 7PM)
           </span>
         </div>
 
@@ -668,9 +651,8 @@ export default function Navbar() {
                 >
                   Products
                   <svg
-                    className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 mt-0.5 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -686,40 +668,37 @@ export default function Navbar() {
 
                 {/* Dropdown */}
                 <div
-                  className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${
-                    isOpen
-                      ? "opacity-100 scale-100 translate-y-0"
-                      : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
-                  }`}
+                  className={`absolute mt-3 w-56 rounded-xl border border-gray-100 bg-white/70 backdrop-blur-md shadow-2xl ring-1 ring-[#DA159B]/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform origin-top z-50 ${isOpen
+                    ? "opacity-100 scale-100 translate-y-0"
+                    : "opacity-0 scale-95 -translate-y-4 pointer-events-none duration-300 ease-in"
+                    }`}
                 >
                   {/* Dropdown Items */}
                   <ul className="flex flex-col gap-2 p-3">
                     <li
-                      className={`transition-all duration-300 ease-out ${
-                        isOpen
-                          ? "opacity-100 translate-y-0 delay-100"
-                          : "opacity-0 -translate-y-2 delay-0"
-                      }`}
+                      className={`transition-all duration-300 ease-out ${isOpen
+                        ? "opacity-100 translate-y-0 delay-100"
+                        : "opacity-0 -translate-y-2 delay-0"
+                        }`}
                     >
                       <Link
-                        href="/speechsync"
+                        href="/products/speechsync"
                         className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                       >
-                        SpeechSync
+                        SpeechSync AAC
                       </Link>
                     </li>
                     <li
-                      className={`transition-all duration-300 ease-out ${
-                        isOpen
-                          ? "opacity-100 translate-y-0 delay-200"
-                          : "opacity-0 -translate-y-2 delay-0"
-                      }`}
+                      className={`transition-all duration-300 ease-out ${isOpen
+                        ? "opacity-100 translate-y-0 delay-200"
+                        : "opacity-0 -translate-y-2 delay-0"
+                        }`}
                     >
                       <Link
-                        href="/speeching-cards"
+                        href="/products/speeching-cards"
                         className="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gradient-to-r from-[#DA159B] to-[#54169C] hover:text-white transition duration-300 hover:shadow-md"
                       >
-                        SpeechCard
+                        Speeching Card
                       </Link>
                     </li>
                   </ul>

@@ -2,6 +2,7 @@ import NavBarSecond from "../components/NavBar/NavBarSecond";
 import Image from "next/image";
 import Link from "next/link";
 import HeroVideo from "../components/Services/ServiceHeroVideo";
+import { Metadata } from "next";
 
 const services = [
   {
@@ -70,6 +71,14 @@ const services = [
   },
 ];
 
+const SITE_TITLE = "Therapy & Mental Health Services in Dubai | Speech, Language & Psychological Support | The Speech Clinic Dubai";
+const SITE_DESCRIPTION = "The Speech Clinic Dubai offers comprehensive care including speech therapy, language development, occupational therapy, and mental health services for children, teens, and adults. Compassionate, expert support for overall well-being.";
+export const metadata: Metadata = {
+  title: SITE_TITLE, description: SITE_DESCRIPTION,
+  openGraph: { title: SITE_TITLE, description: SITE_DESCRIPTION },
+  twitter: { title: SITE_TITLE, description: SITE_DESCRIPTION }
+};
+
 export default function AllServicesPage() {
   return (
     <div className="flex flex-col items-center">
@@ -84,7 +93,7 @@ export default function AllServicesPage() {
           {/* Centered heading text */}
           <HeroVideo
             title="Services"
-            videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/ALL%20DEPARTMENTS%20COMBINED.mp4"
+            videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/ALL%20DEPARTMENTS%20COMBINED.mp4"
           />
         </div>
       </section>

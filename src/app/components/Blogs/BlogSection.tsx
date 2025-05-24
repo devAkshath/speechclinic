@@ -132,8 +132,8 @@ export default function Blogs() {
       {/* Heading */}
       <h2  ref={(el) => {
             if (el) boxesRef.current[1] = el;
-          }} style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-3xl text-gray-700 leading-snug py-5">
-        Our Latest News <br /> & Blog
+          }} style={{ fontFamily: 'HuluStyle', fontWeight: 500 }} className="box text-3xl text-gray-700 leading-snug py-5 mb-5">
+        Our Blogs & Latest News
       </h2>
 
       {/* Desktop Cards */}

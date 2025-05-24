@@ -15,47 +15,47 @@ import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
 const getCarouselImages = () => [
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/LEVEL%20UP.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/LEVEL%20UP.jpg",
     alt: "adl",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-10.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-10.jpg",
     alt: "Brain gym",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-13.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-13.jpg",
     alt: "City skyline",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-14.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-14.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-16.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-16.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-17.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-17.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-2.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-2.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-4.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-4.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-6.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-6.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-7.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-7.jpg",
     alt: "Forest trail",
   },
   {
-    src: "https://speechclinic.b-cdn.net/website/images/school-readiness/SCE-8.jpg",
+    src: "https://media.thespeechclinic.ae/website/images/school-readiness/SCE-8.jpg",
     alt: "Forest trail",
   },
 ];
@@ -70,7 +70,7 @@ export default function SchoolReadinessProgram() {
       <div className="font-normal">
         <HeroVideo
           title="School Readiness Program"
-          videoUrl="https://speechclinic.b-cdn.net/website/videos/department%20video/SCHOOL%20COMBINED.mp4"
+          videoUrl="https://media.thespeechclinic.ae/website/videos/department%20video/SCHOOL%20COMBINED.mp4"
         />
 
         {/* Content Section */}

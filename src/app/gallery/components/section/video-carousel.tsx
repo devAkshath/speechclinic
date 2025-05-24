@@ -3,8 +3,8 @@ import Image from "next/image";
 import {
   Movie,
 
-  randomMoviesSet1,
-  randomMoviesSet2,
+  randomGallerySet1,
+  randomGallerySet2,
 } from "../../movies";
 import { Button } from "../button";
 import {
@@ -127,9 +127,9 @@ export const VideoCarousel = () => {
         transition={{ duration: 0.1 }}
         className="-mt-[calc((100vh-(300px*(16/9)))/2)] space-y-3 pt-4 md:-mt-[calc((100vh-(60vw*(9/16)))/2)]"
       >
-        <SmallVideoCarousel movies={randomMoviesSet1}  direction="left"  />
+        <SmallVideoCarousel movies={randomGallerySet1}  direction="left"  />
         <div className="[--carousel-offset:-32px] [--duration:54s]">
-          <SmallVideoCarousel movies={randomMoviesSet2}  direction="right" />
+          <SmallVideoCarousel movies={randomGallerySet2}  direction="right" />
         </div>
          {/* <div className="[--carousel-offset:-22px] [--duration:64s] ">
           <SmallVideoCarousel movies={randomMoviesSet3}  direction="left" />
